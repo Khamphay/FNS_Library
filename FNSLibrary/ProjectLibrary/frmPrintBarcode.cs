@@ -68,7 +68,7 @@ namespace ProjectLibrary
 
                     //table.Rows.Add(data[i], image);
                 //}
-                cryDm.Load(@"C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\CRBarcode.rpt");
+                cryDm.Load(@"C:\Users\Khamphay Muas\Documents\GitHub\FNS_Library\FNSLibrary\ProjectLibrary\CRBarcode.rpt");
                 cryDm.SetDataSource(table);
                 crystalReportViewer1.ReportSource = cryDm;
             //}

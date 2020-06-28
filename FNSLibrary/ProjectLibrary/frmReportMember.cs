@@ -51,7 +51,7 @@ namespace ProjectLibrary
             da = new SqlDataAdapter(cmd);
             da.Fill(ds, "tbMember");
             crd= new ReportDocument();
-            crd.Load(@"C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\CrReportMember.rpt");
+            crd.Load(@"C:\Users\Khamphay Muas\Documents\GitHub\FNS_Library\FNSLibrary\ProjectLibrary\CrReportMember.rpt");
             crd.SetDataSource(ds);
             crystalReportViewer1.ReportSource = crd;
             crystalReportViewer1.Refresh();
