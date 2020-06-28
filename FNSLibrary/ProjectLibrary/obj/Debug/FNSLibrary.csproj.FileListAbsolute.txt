@@ -1,0 +1,286 @@
+D:\FNSLibrary\ProjectLibrary\obj\Debug\FNSLibrary.csprojAssemblyReference.cache
+D:\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmAuthor.resources
+D:\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmBooks.resources
+D:\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmBooksDetial.resources
+D:\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmCard.resources
+D:\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmCost.resources
+D:\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmDetpart.resources
+D:\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmDeskTop.resources
+D:\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmCategory.resources
+D:\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmEditUser.resources
+D:\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmFine.resources
+D:\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmHome.resources
+D:\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmMember.resources
+D:\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmRegister.resources
+D:\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmRentBook.resources
+D:\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmReservation.resources
+D:\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmReserve.resources
+D:\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmSearch.resources
+D:\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmStaff.resources
+D:\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmTable.resources
+D:\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmType.resources
+D:\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmNewUser.resources
+D:\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.Properties.Resources.resources
+D:\FNSLibrary\ProjectLibrary\obj\Debug\FNSLibrary.csproj.GenerateResource.cache
+D:\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.exe
+D:\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.pdb
+D:\FNSLibrary\ProjectLibrary\bin\Debug\ProjectLibrary.exe.config
+D:\FNSLibrary\ProjectLibrary\bin\Debug\ProjectLibrary.exe
+D:\FNSLibrary\ProjectLibrary\bin\Debug\ProjectLibrary.pdb
+D:\FNSLibrary\ProjectLibrary\bin\Debug\Guna.UI.dll
+D:\FNSLibrary\ProjectLibrary\obj\Debug\FNSLibrary.csproj.CopyComplete
+D:\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmAddNewBook.resources
+D:\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.Form1.resources
+D:\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmLogin.resources
+D:\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmReserveInfor.resources
+D:\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmReturnBooks.resources
+D:\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmBookLost.resources
+D:\FNSLibrary\ProjectLibrary\bin\Debug\AxShockwaveFlashObjects.dll
+D:\FNSLibrary\ProjectLibrary\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+D:\FNSLibrary\ProjectLibrary\bin\Debug\CrystalDecisions.ReportSource.dll
+D:\FNSLibrary\ProjectLibrary\bin\Debug\CrystalDecisions.Shared.dll
+D:\FNSLibrary\ProjectLibrary\bin\Debug\CrystalDecisions.Windows.Forms.dll
+D:\FNSLibrary\ProjectLibrary\bin\Debug\ShockwaveFlashObjects.dll
+D:\FNSLibrary\ProjectLibrary\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+D:\FNSLibrary\ProjectLibrary\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+D:\FNSLibrary\ProjectLibrary\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+D:\FNSLibrary\ProjectLibrary\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+D:\FNSLibrary\ProjectLibrary\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+D:\FNSLibrary\ProjectLibrary\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+D:\FNSLibrary\ProjectLibrary\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+D:\FNSLibrary\ProjectLibrary\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+D:\FNSLibrary\ProjectLibrary\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+D:\FNSLibrary\ProjectLibrary\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+D:\FNSLibrary\ProjectLibrary\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+D:\FNSLibrary\ProjectLibrary\bin\Debug\stdole.dll
+D:\FNSLibrary\ProjectLibrary\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+D:\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmReportBooksLost.resources
+D:\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmShowRentBooks.resources
+D:\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmPrintBarcode.resources
+D:\FNSLibrary\ProjectLibrary\bin\Debug\BarcodeStandard.dll
+D:\FNSLibrary\ProjectLibrary\bin\Debug\System.Drawing.Common.dll
+D:\FNSLibrary\ProjectLibrary\bin\Debug\zxing.dll
+D:\FNSLibrary\ProjectLibrary\bin\Debug\zxing.presentation.dll
+D:\FNSLibrary\ProjectLibrary\bin\Debug\zxing.pdb
+D:\FNSLibrary\ProjectLibrary\bin\Debug\zxing.xml
+D:\FNSLibrary\ProjectLibrary\bin\Debug\zxing.presentation.pdb
+D:\FNSLibrary\ProjectLibrary\bin\Debug\zxing.presentation.xml
+D:\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmReportMember.resources
+D:\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.HomePage.resources
+D:\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmEditType.resources
+D:\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmEditCateg.resources
+D:\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmEditDepart.resources
+D:\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmEditTable.resources
+D:\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmEditStaff.resources
+D:\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmEditAuthor.resources
+D:\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmMemberRentBooks.resources
+C:\Users\Khamphay Muas\OneDrive\Project\FNSLibrary\ProjectLibrary\bin\Debug\ProjectLibrary.exe.config
+C:\Users\Khamphay Muas\OneDrive\Project\FNSLibrary\ProjectLibrary\bin\Debug\ProjectLibrary.exe
+C:\Users\Khamphay Muas\OneDrive\Project\FNSLibrary\ProjectLibrary\bin\Debug\ProjectLibrary.pdb
+C:\Users\Khamphay Muas\OneDrive\Project\FNSLibrary\ProjectLibrary\bin\Debug\AxShockwaveFlashObjects.dll
+C:\Users\Khamphay Muas\OneDrive\Project\FNSLibrary\ProjectLibrary\bin\Debug\BarcodeStandard.dll
+C:\Users\Khamphay Muas\OneDrive\Project\FNSLibrary\ProjectLibrary\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\Khamphay Muas\OneDrive\Project\FNSLibrary\ProjectLibrary\bin\Debug\CrystalDecisions.ReportSource.dll
+C:\Users\Khamphay Muas\OneDrive\Project\FNSLibrary\ProjectLibrary\bin\Debug\CrystalDecisions.Shared.dll
+C:\Users\Khamphay Muas\OneDrive\Project\FNSLibrary\ProjectLibrary\bin\Debug\CrystalDecisions.Windows.Forms.dll
+C:\Users\Khamphay Muas\OneDrive\Project\FNSLibrary\ProjectLibrary\bin\Debug\System.Drawing.Common.dll
+C:\Users\Khamphay Muas\OneDrive\Project\FNSLibrary\ProjectLibrary\bin\Debug\zxing.dll
+C:\Users\Khamphay Muas\OneDrive\Project\FNSLibrary\ProjectLibrary\bin\Debug\zxing.presentation.dll
+C:\Users\Khamphay Muas\OneDrive\Project\FNSLibrary\ProjectLibrary\bin\Debug\ShockwaveFlashObjects.dll
+C:\Users\Khamphay Muas\OneDrive\Project\FNSLibrary\ProjectLibrary\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+C:\Users\Khamphay Muas\OneDrive\Project\FNSLibrary\ProjectLibrary\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Users\Khamphay Muas\OneDrive\Project\FNSLibrary\ProjectLibrary\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\Users\Khamphay Muas\OneDrive\Project\FNSLibrary\ProjectLibrary\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\Users\Khamphay Muas\OneDrive\Project\FNSLibrary\ProjectLibrary\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Users\Khamphay Muas\OneDrive\Project\FNSLibrary\ProjectLibrary\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Users\Khamphay Muas\OneDrive\Project\FNSLibrary\ProjectLibrary\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\Users\Khamphay Muas\OneDrive\Project\FNSLibrary\ProjectLibrary\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\Users\Khamphay Muas\OneDrive\Project\FNSLibrary\ProjectLibrary\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\Users\Khamphay Muas\OneDrive\Project\FNSLibrary\ProjectLibrary\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\Users\Khamphay Muas\OneDrive\Project\FNSLibrary\ProjectLibrary\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\Users\Khamphay Muas\OneDrive\Project\FNSLibrary\ProjectLibrary\bin\Debug\stdole.dll
+C:\Users\Khamphay Muas\OneDrive\Project\FNSLibrary\ProjectLibrary\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Users\Khamphay Muas\OneDrive\Project\FNSLibrary\ProjectLibrary\bin\Debug\zxing.pdb
+C:\Users\Khamphay Muas\OneDrive\Project\FNSLibrary\ProjectLibrary\bin\Debug\zxing.xml
+C:\Users\Khamphay Muas\OneDrive\Project\FNSLibrary\ProjectLibrary\bin\Debug\zxing.presentation.pdb
+C:\Users\Khamphay Muas\OneDrive\Project\FNSLibrary\ProjectLibrary\bin\Debug\zxing.presentation.xml
+C:\Users\Khamphay Muas\OneDrive\Project\FNSLibrary\ProjectLibrary\obj\Debug\FNSLibrary.csprojAssemblyReference.cache
+C:\Users\Khamphay Muas\OneDrive\Project\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.Form1.resources
+C:\Users\Khamphay Muas\OneDrive\Project\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmAddNewBook.resources
+C:\Users\Khamphay Muas\OneDrive\Project\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmAuthor.resources
+C:\Users\Khamphay Muas\OneDrive\Project\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmBookLost.resources
+C:\Users\Khamphay Muas\OneDrive\Project\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmBooks.resources
+C:\Users\Khamphay Muas\OneDrive\Project\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmBooksDetial.resources
+C:\Users\Khamphay Muas\OneDrive\Project\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmCard.resources
+C:\Users\Khamphay Muas\OneDrive\Project\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmCost.resources
+C:\Users\Khamphay Muas\OneDrive\Project\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmDetpart.resources
+C:\Users\Khamphay Muas\OneDrive\Project\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmDeskTop.resources
+C:\Users\Khamphay Muas\OneDrive\Project\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmCategory.resources
+C:\Users\Khamphay Muas\OneDrive\Project\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmEditAuthor.resources
+C:\Users\Khamphay Muas\OneDrive\Project\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmEditCateg.resources
+C:\Users\Khamphay Muas\OneDrive\Project\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmEditDepart.resources
+C:\Users\Khamphay Muas\OneDrive\Project\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmEditStaff.resources
+C:\Users\Khamphay Muas\OneDrive\Project\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmEditTable.resources
+C:\Users\Khamphay Muas\OneDrive\Project\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmEditType.resources
+C:\Users\Khamphay Muas\OneDrive\Project\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmEditUser.resources
+C:\Users\Khamphay Muas\OneDrive\Project\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmFine.resources
+C:\Users\Khamphay Muas\OneDrive\Project\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmHome.resources
+C:\Users\Khamphay Muas\OneDrive\Project\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmLogin.resources
+C:\Users\Khamphay Muas\OneDrive\Project\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmMember.resources
+C:\Users\Khamphay Muas\OneDrive\Project\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmMemberRentBooks.resources
+C:\Users\Khamphay Muas\OneDrive\Project\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmPrintBarcode.resources
+C:\Users\Khamphay Muas\OneDrive\Project\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmRegister.resources
+C:\Users\Khamphay Muas\OneDrive\Project\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmRentBook.resources
+C:\Users\Khamphay Muas\OneDrive\Project\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmReportBooksLost.resources
+C:\Users\Khamphay Muas\OneDrive\Project\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmReportMember.resources
+C:\Users\Khamphay Muas\OneDrive\Project\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmReservation.resources
+C:\Users\Khamphay Muas\OneDrive\Project\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmReserve.resources
+C:\Users\Khamphay Muas\OneDrive\Project\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmReserveInfor.resources
+C:\Users\Khamphay Muas\OneDrive\Project\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmReturnBooks.resources
+C:\Users\Khamphay Muas\OneDrive\Project\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmSearch.resources
+C:\Users\Khamphay Muas\OneDrive\Project\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmShowRentBooks.resources
+C:\Users\Khamphay Muas\OneDrive\Project\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmStaff.resources
+C:\Users\Khamphay Muas\OneDrive\Project\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmTable.resources
+C:\Users\Khamphay Muas\OneDrive\Project\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmType.resources
+C:\Users\Khamphay Muas\OneDrive\Project\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmNewUser.resources
+C:\Users\Khamphay Muas\OneDrive\Project\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.HomePage.resources
+C:\Users\Khamphay Muas\OneDrive\Project\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.Properties.Resources.resources
+C:\Users\Khamphay Muas\OneDrive\Project\FNSLibrary\ProjectLibrary\obj\Debug\FNSLibrary.csproj.GenerateResource.cache
+C:\Users\Khamphay Muas\OneDrive\Project\FNSLibrary\ProjectLibrary\obj\Debug\FNSLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Khamphay Muas\OneDrive\Project\FNSLibrary\ProjectLibrary\obj\Debug\FNSLibrary.csproj.CopyComplete
+C:\Users\Khamphay Muas\OneDrive\Project\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.exe
+C:\Users\Khamphay Muas\OneDrive\Project\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.pdb
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\ProjectLibrary.exe.config
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\ProjectLibrary.exe
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\ProjectLibrary.pdb
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\AxShockwaveFlashObjects.dll
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\BarcodeStandard.dll
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\CrystalDecisions.ReportSource.dll
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\CrystalDecisions.Shared.dll
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\CrystalDecisions.Windows.Forms.dll
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\Microsoft.ReportViewer.Design.dll
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\Microsoft.ReportViewer.WebForms.DLL
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\System.Drawing.Common.dll
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\zxing.dll
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\zxing.presentation.dll
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\ShockwaveFlashObjects.dll
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\EnvDTE.dll
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\stdole.dll
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\Microsoft.MSXML.dll
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\zxing.pdb
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\zxing.xml
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\zxing.presentation.pdb
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\zxing.presentation.xml
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\obj\Debug\FNSLibrary.csprojAssemblyReference.cache
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.exe.config
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.Form1.resources
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmAddNewBook.resources
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmAuthor.resources
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmBookLost.resources
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmBooks.resources
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmBooksDetial.resources
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmCard.resources
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmCost.resources
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmDetpart.resources
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmCategory.resources
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmEditAuthor.resources
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmEditCateg.resources
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmEditDepart.resources
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmEditStaff.resources
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmEditTable.resources
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmEditType.resources
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmEditUser.resources
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmFine.resources
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmHome.resources
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmLogin.resources
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmMember.resources
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmMemberRentBooks.resources
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmPrintBarcode.resources
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmRegister.resources
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmRentBook.resources
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmReportBooksLost.resources
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmReportMember.resources
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmReservation.resources
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmReserve.resources
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmReserveInfor.resources
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmReturnBooks.resources
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmSearch.resources
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmPrintMemberCard.resources
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmStaff.resources
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmTable.resources
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmType.resources
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmNewUser.resources
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.HomePage.resources
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.Properties.Resources.resources
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\obj\Debug\FNSLibrary.csproj.GenerateResource.cache
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\obj\Debug\FNSLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\obj\Debug\FNSLibrary.csproj.CopyComplete
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.exe
+C:\Users\Khamphay Muas\Documents\Libary\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.pdb
