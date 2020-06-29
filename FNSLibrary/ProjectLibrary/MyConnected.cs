@@ -10,10 +10,13 @@ namespace ProjectLibrary
 {
     class MyConnected
     {
+
+        public static string ServerName, batabase, UserID, Pass;
+
         static SqlConnection con = new SqlConnection();
         public static SqlConnection getConnect()
         {
-            string strpath = @"Data Source=DELL-INSPIRON-1\SQLEXPRESS;Initial Catalog=db_Libary;Persist Security Info=True; User ID=Khamphay;Password=1234;";
+            string strpath = @"Data Source="+ ServerName + ";Initial Catalog="+ batabase + ";Persist Security Info=True; User ID="+ UserID + ";Password="+ Pass+ ";";
             try
             {
                 if (con.State == ConnectionState.Open)

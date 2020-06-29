@@ -416,3 +416,15 @@ C:\Users\Khamphay Muas\Documents\GitHub\FNS_Library\FNSLibrary\ProjectLibrary\ob
 C:\Users\Khamphay Muas\Documents\GitHub\FNS_Library\FNSLibrary\ProjectLibrary\obj\Debug\FNSLibrary.csproj.CopyComplete
 C:\Users\Khamphay Muas\Documents\GitHub\FNS_Library\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.exe
 C:\Users\Khamphay Muas\Documents\GitHub\FNS_Library\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.pdb
+C:\Users\Khamphay Muas\Documents\GitHub\FNS_Library\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmLocalAddress.resources
+C:\Users\Khamphay Muas\Documents\GitHub\FNS_Library\FNSLibrary\ProjectLibrary\bin\Debug\x86\sqlite3.dll
+C:\Users\Khamphay Muas\Documents\GitHub\FNS_Library\FNSLibrary\ProjectLibrary\bin\Debug\x64\sqlite3.dll
+C:\Users\Khamphay Muas\Documents\GitHub\FNS_Library\FNSLibrary\ProjectLibrary\bin\Debug\EntityFramework.dll
+C:\Users\Khamphay Muas\Documents\GitHub\FNS_Library\FNSLibrary\ProjectLibrary\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Khamphay Muas\Documents\GitHub\FNS_Library\FNSLibrary\ProjectLibrary\bin\Debug\System.Data.SQLite.dll
+C:\Users\Khamphay Muas\Documents\GitHub\FNS_Library\FNSLibrary\ProjectLibrary\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\Khamphay Muas\Documents\GitHub\FNS_Library\FNSLibrary\ProjectLibrary\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\Khamphay Muas\Documents\GitHub\FNS_Library\FNSLibrary\ProjectLibrary\bin\Debug\EntityFramework.xml
+C:\Users\Khamphay Muas\Documents\GitHub\FNS_Library\FNSLibrary\ProjectLibrary\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Khamphay Muas\Documents\GitHub\FNS_Library\FNSLibrary\ProjectLibrary\bin\Debug\System.Data.SQLite.xml
+C:\Users\Khamphay Muas\Documents\GitHub\FNS_Library\FNSLibrary\ProjectLibrary\bin\Debug\System.Data.SQLite.dll.config
