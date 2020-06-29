@@ -19,6 +19,21 @@ namespace ProjectLibrary
             _staff = staff;
         }
 
+        private void ClearData()
+        {
+            for (int i = 0; i < data.Length; i++)
+            {
+                data[i] = "";
+            }
+            txtid.Clear();
+            txtname.Clear();
+            txtsurename.Clear();
+            txttel.Clear();
+            radimal.Checked = true;
+            txtid.Enabled = true;
+            gender = "";
+        }
+
         string gender = "";
         public string[] data = new string[5];
         public bool edit = false;
@@ -34,13 +49,20 @@ namespace ProjectLibrary
             }
             if (edit == false)
             {
-                _staff.Save(txtid.Text, txtname.Text, txtsurename.Text, gender, txttel.Text);
+                // Return 1 "Complete action" If Return 0 "Don't complete action"
+                if(_staff.Save(txtid.Text, txtname.Text, txtsurename.Text, gender, txttel.Text) == 1)
+                {
+                    ClearData();
+                }
             }
             else
             {
-                _staff.Edit(txtid.Text, txtname.Text, txtsurename.Text, gender, txttel.Text);
-                edit = false;
-                this.Close();
+                // Return 1 "Complete action" If Return 0 "Don't complete action"
+                if (_staff.Edit(txtid.Text, txtname.Text, txtsurename.Text, gender, txttel.Text) == 1)
+                {
+                    edit = false;
+                    this.Close();
+                }                
             }
         }
 
@@ -69,17 +91,7 @@ namespace ProjectLibrary
 
         private void btClear_Click(object sender, EventArgs e)
         {
-           for(int i=0; i < data.Length; i++)
-            {
-                data[i] = "";
-            }
-            txtid.Clear();
-            txtname.Clear();
-            txtsurename.Clear();
-            txttel.Clear();
-            radimal.Checked = true;
-            txtid.Enabled = true;
-            gender = "";
+            ClearData();
         }
 
         private void txttel_KeyPress(object sender, KeyPressEventArgs e)

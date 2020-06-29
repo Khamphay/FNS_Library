@@ -34,6 +34,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmType));
             this.dgvtype = new Guna.UI.WinForms.GunaDataGridView();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ed = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dele = new System.Windows.Forms.DataGridViewImageColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.btsave = new Guna.UI.WinForms.GunaAdvenceButton();
@@ -41,10 +45,6 @@
             this.gunaSeparator1 = new Guna.UI.WinForms.GunaSeparator();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label20 = new System.Windows.Forms.Label();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ed = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dele = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvtype)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -60,7 +60,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvtype.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvtype.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            this.dgvtype.BackgroundColor = System.Drawing.Color.White;
+            this.dgvtype.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.dgvtype.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvtype.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvtype.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -111,7 +111,7 @@
             this.dgvtype.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
             this.dgvtype.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
             this.dgvtype.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dgvtype.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.dgvtype.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.dgvtype.ThemeStyle.GridColor = System.Drawing.Color.DimGray;
             this.dgvtype.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.White;
             this.dgvtype.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -130,13 +130,55 @@
             this.dgvtype.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvtype_CellContentClick);
             this.dgvtype.Click += new System.EventHandler(this.gunaGroupBox1_Click);
             // 
+            // Column2
+            // 
+            this.Column2.FillWeight = 50F;
+            this.Column2.HeaderText = "ລະຫັດປະເພດ";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column3.DividerWidth = 1;
+            this.Column3.HeaderText = "ປະເພດປຶ້ມ";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Ed
+            // 
+            this.Ed.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCellsExceptHeader;
+            this.Ed.DividerWidth = 1;
+            this.Ed.FillWeight = 40F;
+            this.Ed.HeaderText = "";
+            this.Ed.Image = ((System.Drawing.Image)(resources.GetObject("Ed.Image")));
+            this.Ed.MinimumWidth = 50;
+            this.Ed.Name = "Ed";
+            this.Ed.ReadOnly = true;
+            this.Ed.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Ed.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Ed.ToolTipText = "Edit";
+            this.Ed.Width = 50;
+            // 
+            // dele
+            // 
+            this.dele.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCellsExceptHeader;
+            this.dele.DividerWidth = 1;
+            this.dele.FillWeight = 40F;
+            this.dele.HeaderText = "";
+            this.dele.Image = ((System.Drawing.Image)(resources.GetObject("dele.Image")));
+            this.dele.MinimumWidth = 50;
+            this.dele.Name = "dele";
+            this.dele.ReadOnly = true;
+            this.dele.ToolTipText = "Delete";
+            this.dele.Width = 50;
+            // 
             // label1
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Saysettha OT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(413, 62);
+            this.label1.Location = new System.Drawing.Point(33, 66);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(52, 24);
             this.label1.TabIndex = 38;
@@ -144,9 +186,8 @@
             // 
             // txtSearch
             // 
-            this.txtSearch.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtSearch.Font = new System.Drawing.Font("Saysettha OT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.Location = new System.Drawing.Point(466, 58);
+            this.txtSearch.Location = new System.Drawing.Point(86, 62);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(280, 34);
             this.txtSearch.TabIndex = 37;
@@ -155,7 +196,7 @@
             // 
             // btsave
             // 
-            this.btsave.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btsave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btsave.Animated = true;
             this.btsave.AnimationHoverSpeed = 3F;
             this.btsave.AnimationSpeed = 2F;
@@ -176,7 +217,7 @@
             this.btsave.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btsave.ImageSize = new System.Drawing.Size(30, 30);
             this.btsave.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btsave.Location = new System.Drawing.Point(296, 55);
+            this.btsave.Location = new System.Drawing.Point(831, 62);
             this.btsave.Name = "btsave";
             this.btsave.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(206)))));
             this.btsave.OnHoverBorderColor = System.Drawing.Color.White;
@@ -260,49 +301,6 @@
             this.label20.Size = new System.Drawing.Size(93, 24);
             this.label20.TabIndex = 0;
             this.label20.Text = "ຂໍ້ມູນປະເພດ";
-            // 
-            // Column2
-            // 
-            this.Column2.FillWeight = 50F;
-            this.Column2.HeaderText = "ລະຫັດປະເພດ";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column3.DividerWidth = 1;
-            this.Column3.HeaderText = "ປະເພດປຶ້ມ";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Ed
-            // 
-            this.Ed.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCellsExceptHeader;
-            this.Ed.DividerWidth = 1;
-            this.Ed.FillWeight = 40F;
-            this.Ed.HeaderText = "";
-            this.Ed.Image = ((System.Drawing.Image)(resources.GetObject("Ed.Image")));
-            this.Ed.MinimumWidth = 50;
-            this.Ed.Name = "Ed";
-            this.Ed.ReadOnly = true;
-            this.Ed.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Ed.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Ed.ToolTipText = "Edit";
-            this.Ed.Width = 50;
-            // 
-            // dele
-            // 
-            this.dele.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCellsExceptHeader;
-            this.dele.DividerWidth = 1;
-            this.dele.FillWeight = 40F;
-            this.dele.HeaderText = "";
-            this.dele.Image = ((System.Drawing.Image)(resources.GetObject("dele.Image")));
-            this.dele.MinimumWidth = 50;
-            this.dele.Name = "dele";
-            this.dele.ReadOnly = true;
-            this.dele.ToolTipText = "Delete";
-            this.dele.Width = 50;
             // 
             // frmType
             // 

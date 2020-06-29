@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using Guna.UI.WinForms;
 using Guna.UI;
+using System.Runtime.Remoting.Messaging;
 
 namespace ProjectLibrary
 {
@@ -98,7 +99,8 @@ namespace ProjectLibrary
                 MessageBox.Show("Error show data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        public void Save(string id, string fname, string lname, string tel)
+        // Return 1 "Complete action" If Return 0 "Don't complete action"
+        public int Save(string id, string fname, string lname, string tel)
         {
             try
             {
@@ -110,15 +112,17 @@ namespace ProjectLibrary
                 if (cmd.ExecuteNonQuery() == 1)
                 {
                     Show_Data();
+                    MyModel.fsh_action = 1;
                 }
-
             }
             catch (Exception ex)
             {
+                MyModel.fsh_action = 0;
                 MessageBox.Show("Error saving data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            return MyModel.fsh_action;
         }
-        public void Edit(string id, string fname, string lname, string tel)
+        public int Edit(string id, string fname, string lname, string tel)
         {
             try
             {
@@ -130,12 +134,15 @@ namespace ProjectLibrary
                 if (cmd.ExecuteNonQuery() == 1)
                 {
                     Show_Data();
+                    MyModel.fsh_action = 1;
                 }
             }
             catch (Exception ex)
             {
+                MyModel.fsh_action = 0;
                 MessageBox.Show("Error editing data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            return MyModel.fsh_action;
         }
         private void Delete(string id)
         {
@@ -232,6 +239,11 @@ namespace ProjectLibrary
         {
             //_ = dgvAuthor.Rows[e.RowIndex].DefaultCellStyle.BackColor=Color.Red;
             
+        }
+
+        private void panel1_Click(object sender, EventArgs e)
+        {
+            _home.Clear_PanelMenu();
         }
     }
 }

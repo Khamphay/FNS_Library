@@ -96,7 +96,8 @@ namespace ProjectLibrary
                 MessageBox.Show("Error saving data to table tbTableDetail: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        public void Save(string tbid, int tbqty)
+        // Return 1 "Complete action" If Return 0 "Don't complete action"
+        public int Save(string tbid, int tbqty)
         {
             try
             {
@@ -161,6 +162,7 @@ namespace ProjectLibrary
                     if (cmd.ExecuteNonQuery() == 1)
                     {
                         Show_data();
+                        MyModel.fsh_action = 1;
                     }
 
                 }
@@ -168,13 +170,12 @@ namespace ProjectLibrary
             }
             catch (Exception ex)
             {
+                MyModel.fsh_action = 0;
                 MessageBox.Show("Error saving data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            finally
-            {
-            }
+            return MyModel.fsh_action;
         }
-        public void Edit(string tbdid)
+        public int Edit(string tbdid)
         {
             try
             {
@@ -185,13 +186,16 @@ namespace ProjectLibrary
                 if (cmd.ExecuteNonQuery() == 1)
                 {
                     Show_data();
+                    MyModel.fsh_action = 1;
                 }
                 
             }
             catch (Exception ex)
             {
+                MyModel.fsh_action = 0;
                 MessageBox.Show("Error editing data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            return MyModel.fsh_action;
         }
         private void Delete(string tbid, string tbdid)
         {

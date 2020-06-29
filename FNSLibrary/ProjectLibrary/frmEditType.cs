@@ -39,12 +39,22 @@ namespace ProjectLibrary
         {
             if (edit == false)
             {
-                _type.Save(txtid.Text, txtname.Text);
+                // Return 1 "Complete action" If Return 0 "Don't complete action"
+                if(_type.Save(txtid.Text, txtname.Text) == 1)
+                {
+                    txtid.Clear();
+                    txtname.Clear();
+                }
             }else
             {
-                _type.Edit(txtid.Text, txtname.Text);
-                edit = false;
-                this.Close();
+                // Return 1 "Complete action" If Return 0 "Don't complete action"
+                if (_type.Edit(txtid.Text, txtname.Text) == 1)
+                {
+                    edit = false;
+                    this.Close();
+                    txtid.Clear();
+                    txtname.Clear();
+                }                
             }
         }
 

@@ -46,13 +46,23 @@ namespace ProjectLibrary
         {
             if (edit == false)
             {
-                _depart.Save(txtid.Text, txtname.Text);
+                // if return 1 "Complete" else if 0 "Don't complete"
+               if( _depart.Save(txtid.Text, txtname.Text) == 1)
+                {
+                    txtid.Clear();
+                    txtname.Clear();
+                }
             }
             else
             {
-                _depart.Edit(txtid.Text, txtname.Text);
-                edit = false;
-                this.Close();
+                // if return 1 "Complete" else if 0 "Don't complete"
+                if (_depart.Edit(txtid.Text, txtname.Text) == 1)
+                {
+                    edit = false;
+                    this.Close();
+                    txtid.Clear();
+                    txtname.Clear();
+                }
             }
         }
 

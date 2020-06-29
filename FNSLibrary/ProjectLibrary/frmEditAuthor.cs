@@ -85,13 +85,21 @@ namespace ProjectLibrary
         {
             if (edit == false)
             {
-                _author.Save(txtid.Text, txtfname.Text, txtlname.Text, txttel.Text);
+                // if return 1 "Complete" else if 0 "Don't complete"
+                if ( _author.Save(txtid.Text, txtfname.Text, txtlname.Text, txttel.Text) == 1)
+                {
+                    Clear_Data();
+                }
             }
             else
             {
-                _author.Edit(txtid.Text, txtfname.Text, txtlname.Text, txttel.Text);
-                edit = false;
-                this.Close();
+                // if return 1 "Complete" else if 0 "Don't complete"
+                if (_author.Edit(txtid.Text, txtfname.Text, txtlname.Text, txttel.Text) == 1)
+                {
+                    edit = false;
+                    Clear_Data();
+                    this.Close();
+                }
             }
         }
     }

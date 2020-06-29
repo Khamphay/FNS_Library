@@ -141,13 +141,25 @@ namespace ProjectLibrary
         {
             if (edit == false)
             {
-                _fmtable.Save(txtid.Text, int.Parse(txtQty.Text));
+                // Return 1 "Complete action" If Return 0 "Don't complete action"
+                if (_fmtable.Save(txtid.Text, int.Parse(txtQty.Text)) == 1)
+                {
+                    txtid.Clear();
+                    txtidd.Clear();
+                    txtQty.Clear();
+                }
             }
             else
             {
-                _fmtable.Edit(txtidd.Text);
-                edit = false;
-                this.Close();
+                // Return 1 "Complete action" If Return 0 "Don't complete action"
+                if (_fmtable.Edit(txtidd.Text) == 1)
+                {
+                    edit = false;
+                    this.Close();
+                    txtid.Clear();
+                    txtidd.Clear();
+                    txtQty.Clear();
+                }                
             }
         }
 

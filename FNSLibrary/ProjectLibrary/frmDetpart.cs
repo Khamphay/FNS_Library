@@ -70,22 +70,29 @@ namespace ProjectLibrary
                 MessageBox.Show("Error show data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        public void Save(string id, string name)
+        // Return 1 "Complete action" If Return 0 "Don't complete action"
+        public int Save(string id, string name)
         {
             try
             {
                 cmd = new SqlCommand("Insert Into tbDepart Values(@id,@name)", con);
                 cmd.Parameters.AddWithValue("id", id);
                 cmd.Parameters.AddWithValue("name", name);
-                cmd.ExecuteNonQuery();
-                Show_data();
+                if (cmd.ExecuteNonQuery() == 1)
+                {
+                    Show_data();
+                    MyModel.fsh_action=1;
+                }
+                
             }
             catch (Exception ex)
             {
+                MyModel.fsh_action = 0;
                 MessageBox.Show("Error saving data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            return MyModel.fsh_action;
         }
-        public void Edit(string id, string name)
+        public int Edit(string id, string name)
         {
             try
             {
@@ -94,11 +101,14 @@ namespace ProjectLibrary
                 cmd.Parameters.AddWithValue("name", name);
                 cmd.ExecuteNonQuery();
                 Show_data();
+                MyModel.fsh_action = 1;
             }
             catch (Exception ex)
             {
+                MyModel.fsh_action = 0;
                 MessageBox.Show("Error editing data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            return MyModel.fsh_action;
         }
         private void Delete(string id)
         {
@@ -169,6 +179,11 @@ namespace ProjectLibrary
         }
 
         private void dgvdepart_Click(object sender, EventArgs e)
+        {
+            _home.Clear_PanelMenu();
+        }
+
+        private void panel1_Click(object sender, EventArgs e)
         {
             _home.Clear_PanelMenu();
         }

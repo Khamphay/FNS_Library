@@ -16,6 +16,7 @@ namespace ProjectLibrary
         public static InputLanguage eng, lao;
         public static DataTable table;
         public static DataTable tablecard, table_staff;
+        public static int fsh_action;
         public static void getSwitchLanguage()
         {
             foreach (InputLanguage lg in InputLanguage.InstalledInputLanguages)

@@ -378,7 +378,6 @@ C:\Users\Khamphay Muas\Documents\GitHub\FNS_Library\FNSLibrary\ProjectLibrary\ob
 C:\Users\Khamphay Muas\Documents\GitHub\FNS_Library\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmAddNewBook.resources
 C:\Users\Khamphay Muas\Documents\GitHub\FNS_Library\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmAuthor.resources
 C:\Users\Khamphay Muas\Documents\GitHub\FNS_Library\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmBookLost.resources
-C:\Users\Khamphay Muas\Documents\GitHub\FNS_Library\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmBooks.resources
 C:\Users\Khamphay Muas\Documents\GitHub\FNS_Library\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmBooksDetial.resources
 C:\Users\Khamphay Muas\Documents\GitHub\FNS_Library\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmCard.resources
 C:\Users\Khamphay Muas\Documents\GitHub\FNS_Library\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmCost.resources
@@ -392,7 +391,6 @@ C:\Users\Khamphay Muas\Documents\GitHub\FNS_Library\FNSLibrary\ProjectLibrary\ob
 C:\Users\Khamphay Muas\Documents\GitHub\FNS_Library\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmEditType.resources
 C:\Users\Khamphay Muas\Documents\GitHub\FNS_Library\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmEditUser.resources
 C:\Users\Khamphay Muas\Documents\GitHub\FNS_Library\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmFine.resources
-C:\Users\Khamphay Muas\Documents\GitHub\FNS_Library\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmHome.resources
 C:\Users\Khamphay Muas\Documents\GitHub\FNS_Library\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmLogin.resources
 C:\Users\Khamphay Muas\Documents\GitHub\FNS_Library\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmMember.resources
 C:\Users\Khamphay Muas\Documents\GitHub\FNS_Library\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmMemberRentBooks.resources

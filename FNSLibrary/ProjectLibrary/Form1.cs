@@ -56,7 +56,6 @@ namespace ProjectLibrary
         }
         
         frmAuthor author;
-        frmBooks book;
         frmBooksDetial booksdetial;
         frmStaff emp;
         frmMember member;

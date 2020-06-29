@@ -47,13 +47,23 @@ namespace ProjectLibrary
         {
             if (edit == false)
             {
-                _cotg.Save(txtid.Text, txtname.Text);
+                // if return 1 "Complete" else if 0 "Don't complete"
+                if ( _cotg.Save(txtid.Text, txtname.Text) == 1)
+                {
+                    txtid.Clear();
+                    txtname.Clear();
+                }
             }
             else
             {
-                _cotg.Edit(txtid.Text, txtname.Text);
-                edit = false;
-                this.Close();
+                // if return 1 "Complete" else if 0 "Don't complete"
+               if( _cotg.Edit(txtid.Text, txtname.Text) == 1)
+                {
+                    txtid.Clear();
+                    txtname.Clear();
+                    edit = false;
+                    this.Close();
+                }
             }
         }
 
