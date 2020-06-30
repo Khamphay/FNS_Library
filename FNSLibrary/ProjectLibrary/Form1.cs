@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Data.SqlClient;
 using System.IO;
+using ProjectLibrary.MSDialog;
 
 namespace ProjectLibrary
 {
@@ -131,12 +132,12 @@ namespace ProjectLibrary
                     }
                     else
                     {
-                        MessageBox.Show("Check your Uesername and Password and try agrin", "Login", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MyMessageBox.ShowMesage("ຊື່ ແລະ ລະຫັດຜ່ານບໍ່ຖຶກຕ້ອງ. ກະລຸນາກວດສອບແລັວລອງໃໝ່ແລ້ວອີກຄັ້ງ", "Login", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error: " + ex.Message, "Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MyMessageBox.ShowMesage("ເກີດບັນຫາໃນການເຂົ້າລະບົບ: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 finally
                 {
@@ -145,7 +146,7 @@ namespace ProjectLibrary
             }
             else
             {
-                MessageBox.Show("Please enter Username and Password !", "Login", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MyMessageBox.ShowMesage("ຊື່ ແລະ ລະຫັດຜ່ານບໍ່ຖຶກຕ້ອງ. ກະລຸນາກວດສອບແລັວລອງໃໝ່ແລ້ວອີກຄັ້ງ", "Login", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -243,7 +244,7 @@ namespace ProjectLibrary
         }
         public void LogOut()
         {
-            DialogResult dialog = MessageBox.Show("Do you want to log out?", "Log out", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult dialog = MyMessageBox.ShowMesage("ທ່ານແນ່ໃຈທີ່ຈະອອກຈາກລະບົບບໍ່?", "Log out", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialog == DialogResult.Yes)
             {
                 //this.Hide();
@@ -276,7 +277,7 @@ namespace ProjectLibrary
         
         private void gunaAdvenceButton6_Click(object sender, EventArgs e)
         {
-            DialogResult dialog = MessageBox.Show("Are you sure to exit?", "Exit Programe", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult dialog = MyMessageBox.ShowMesage("ທ່ານແນ່ໃຈທີ່ຈະອອກຈາກໂປຣແກຣມບໍ່ ?", "Exit Programe", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
             if (dialog == DialogResult.Yes)
             {
                 Application.Exit();

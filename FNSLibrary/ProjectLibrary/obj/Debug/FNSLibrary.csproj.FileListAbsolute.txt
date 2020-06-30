@@ -428,3 +428,6 @@ C:\Users\Khamphay Muas\Documents\GitHub\FNS_Library\FNSLibrary\ProjectLibrary\bi
 C:\Users\Khamphay Muas\Documents\GitHub\FNS_Library\FNSLibrary\ProjectLibrary\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Khamphay Muas\Documents\GitHub\FNS_Library\FNSLibrary\ProjectLibrary\bin\Debug\System.Data.SQLite.xml
 C:\Users\Khamphay Muas\Documents\GitHub\FNS_Library\FNSLibrary\ProjectLibrary\bin\Debug\System.Data.SQLite.dll.config
+C:\Users\Khamphay Muas\Documents\GitHub\FNS_Library\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.MSDialog.DialogOK.resources
+C:\Users\Khamphay Muas\Documents\GitHub\FNS_Library\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.MSDialog.DialogYesNo.resources
+C:\Users\Khamphay Muas\Documents\GitHub\FNS_Library\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.MSDialog.DialogYesNoCancel.resources

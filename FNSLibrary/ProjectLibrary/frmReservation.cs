@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using ProjectLibrary.MSDialog;
+
 namespace ProjectLibrary
 {
     public partial class frmReservation : Form
@@ -127,7 +129,7 @@ namespace ProjectLibrary
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error load data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MyMessageBox.ShowMesage("ເກີດບັນຫາໃນການສະແດງຂໍ້ມູນ: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -187,12 +189,12 @@ namespace ProjectLibrary
                     }
                 }
                 dgvReserbooks.Rows.Clear();
-                MessageBox.Show("Reserve completed", "Reservation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MyMessageBox.ShowMesage("ບັນທືກການຈອງສຳເສັດແລ້ວ", "Save", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
 
             }catch(Exception ex)
             {
-                MessageBox.Show("Error save: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MyMessageBox.ShowMesage("ບັນທືກບໍ່ສຳເລັດເນື່ອງຈາກເກີດບັນຫາ: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -321,7 +323,7 @@ namespace ProjectLibrary
                 dr = cmd.ExecuteReader();
                 if (dr.HasRows)
                 {
-                    MessageBox.Show("You have reservaed ", "Warring", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MyMessageBox.ShowMesage("ບໍ່ສາມາດຈອງໄດ້ເນື່ອງຈາກທ່ານໄດ້ຈອງກ່ອນໜ້ານີ້ແລ້ວ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 /* else
                  {
@@ -331,7 +333,7 @@ namespace ProjectLibrary
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error checked reserved: " + ex.Message, "Warring", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MyMessageBox.ShowMesage("ເກີດບັນຫາໃນການກວດສອບຂໍ້ມູນການຈອງ: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using ProjectLibrary.MSDialog;
 
 namespace ProjectLibrary
 {
@@ -82,7 +83,7 @@ namespace ProjectLibrary
             }
             catch (Exception ex)
             {
-
+                MyMessageBox.ShowMesage("ເກີດບັນຫາໃນການສະແດງຂໍ້ມູນ: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void Show_Data()
@@ -136,7 +137,7 @@ namespace ProjectLibrary
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error show data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MyMessageBox.ShowMesage("ເກີດບັນຫາໃນການສະແດງຂໍ້ມູນ: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void frmMember_Load(object sender, EventArgs e)
@@ -186,7 +187,7 @@ namespace ProjectLibrary
             {
                 try
                 {
-                    DialogResult dialog = MessageBox.Show("Are you sure to delete this reccord?", "Warring", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+                    DialogResult dialog = MyMessageBox.ShowMesage("ທ່ານແນ່ໃຈທີ່ຈະລົບຂໍ້ມູນອອກບໍ່?", "Warring", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
                     if (dialog == DialogResult.Yes)
                     {
                         cmd = new SqlCommand("Delete From tbMember Where mid=@id", con);
@@ -197,7 +198,7 @@ namespace ProjectLibrary
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error delete data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MyMessageBox.ShowMesage("ລົບບໍ່ສຳເລັດເນື່ອງຈາກເກີດບັນຫາ: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }

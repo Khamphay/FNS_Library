@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using ProjectLibrary.MSDialog;
+
 namespace ProjectLibrary
 {
     public partial class frmRentBook : Form
@@ -273,7 +275,7 @@ namespace ProjectLibrary
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error Check data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MyMessageBox.ShowMesage("ເກີດບັນຫາໃນການກວດສອບຂໍ້ມູນການຢືມ: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void LoadBookID()
@@ -293,7 +295,8 @@ namespace ProjectLibrary
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error load books id: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MyMessageBox.ShowMesage("ເກີດບັນຫາໃນການສະແດງຂໍ້ມູນ: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
             }
             finally
             {
@@ -361,13 +364,12 @@ namespace ProjectLibrary
 
                         }
                     }
-                    MessageBox.Show("Rent completed", "Rention", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    dgvRentbooks.Rows.Clear();
+                    MyMessageBox.ShowMesage("ບັນທືກການຢືມສຳເສັດແລ້ວ", "Save", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     ClearData();
                 }
             }catch (Exception ex)
             {
-                MessageBox.Show("Error rention books: "+ex.Message, "Rention", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MyMessageBox.ShowMesage("ບັນທືກການຢືມບໍ່ສຳເລັດເນື່ອງຈາກເກີດບັນຫາ: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void ClearData()
@@ -485,7 +487,7 @@ namespace ProjectLibrary
                     }
                     else
                     {
-                        MessageBox.Show("This card is expire", "Warring", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MyMessageBox.ShowMesage("ບັດນີ້ໝົດອາຍຸແລ້ວ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         btsave.Enabled = false;
                     }
                 }

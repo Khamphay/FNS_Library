@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using ProjectLibrary.MSDialog;
 
 namespace ProjectLibrary
 {
@@ -55,7 +56,8 @@ namespace ProjectLibrary
                 cmbname.AutoCompleteSource = AutoCompleteSource.CustomSource;
             }catch(Exception ex)
             {
-                MessageBox.Show("Error load data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MyMessageBox.ShowMesage("ເກີດບັນຫາໃນການສະແດງຂໍ້ມູນ: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
             }
             finally
             {
@@ -74,20 +76,20 @@ namespace ProjectLibrary
                     cmd.Parameters.AddWithValue("pass", txtNewPass.Text);
                     if(cmd.ExecuteNonQuery() == 1)
                     {
-                        MessageBox.Show("Save Completed", "Save", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MyMessageBox.ShowMesage("ບັນທືກສຳເສັດແລ້ວ", "Save", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         Clear_Text();
                     }
                     
                 }
                 else
                 {
-                    MessageBox.Show("Please check your password and try agian", "Warring", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MyMessageBox.ShowMesage("ຊື່ ແລະ ລະຫັດບໍ່ຖຶກຕ້ອງ. ກະລຸນາກວດສອບແລັວລອງໃໝ່ແລ້ວອີກຄັ້ງ", "Save", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 
             }
             catch(Exception ex)
             {
-                MessageBox.Show("Error saving data: "+ex.Message, "Warring", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MyMessageBox.ShowMesage("ບັນທືກບໍ່ສຳເລັດເນື່ອງຈາກເກີດບັນຫາ: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
        private void Clear_Text()
@@ -124,7 +126,7 @@ namespace ProjectLibrary
             }
             else
             {
-                MessageBox.Show("This user had rigister!!!", "Warring", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MyMessageBox.ShowMesage("ມີບັນຊີຜູ້ໃຊ້ນີ້ແລ້ວ", "Save", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -143,7 +145,8 @@ namespace ProjectLibrary
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error typing data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MyMessageBox.ShowMesage("ເກີດບັນຫາໃນການສະແດງຂໍ້ມູນ: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
             }
         }
 
@@ -202,7 +205,8 @@ namespace ProjectLibrary
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error typing data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MyMessageBox.ShowMesage("ເກີດບັນຫາໃນການສະແດງຂໍ້ມູນ: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
             }
             finally
             {

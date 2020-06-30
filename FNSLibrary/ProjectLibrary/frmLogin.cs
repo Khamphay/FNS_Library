@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using ProjectLibrary.MSDialog;
 
 namespace ProjectLibrary
 {
@@ -31,7 +32,7 @@ namespace ProjectLibrary
 
         private void gunaAdvenceButton6_Click(object sender, EventArgs e)
         {
-            DialogResult dialog = MessageBox.Show("Are you sure to close login form?", "Closing Programe", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult dialog = MyMessageBox.ShowMesage("ທ່ານແນ່ໃຈທີ່ຈະອອກຈາກຟອມເຂົ້າສູ່ລະບົບບໍ່?", "Closing Programe", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialog == DialogResult.Yes)
             {
                 this.Close();

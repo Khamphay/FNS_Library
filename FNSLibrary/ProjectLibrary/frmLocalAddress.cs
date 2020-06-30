@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Data.SQLite;
+using ProjectLibrary.MSDialog;
 
 namespace ProjectLibrary
 {
@@ -21,28 +22,36 @@ namespace ProjectLibrary
 
         private void btConnect_Click(object sender, EventArgs e)
         {
-            MyConnected.ServerName = txtServer.Text;
-            MyConnected.batabase = txtDB.Text;
-            MyConnected.UserID = txtUser.Text;
-            MyConnected.Pass = txtPass.Text;
-
-            SqlConnection con = MyConnected.getConnect();
-
-            if (con.State == ConnectionState.Open)
+            try
             {
-                SQLiteConnection mysqlitecon = new SQLiteConnection("Data Source=dbServerName.sqlite3;");
-                mysqlitecon.Open();
-                SQLiteCommand cmd = new SQLiteCommand("Insert Into tbServer Values(@server, @db, @user, @pass);", mysqlitecon);
-                cmd.Parameters.AddWithValue("server", txtServer.Text);
-                cmd.Parameters.AddWithValue("db", txtDB.Text);
-                cmd.Parameters.AddWithValue("user", txtUser.Text);
-                cmd.Parameters.AddWithValue("pass", txtPass.Text);
-                if (cmd.ExecuteNonQuery() == 1)
+                MyConnected.ServerName = txtServer.Text;
+                MyConnected.batabase = txtDB.Text;
+                MyConnected.UserID = txtUser.Text;
+                MyConnected.Pass = txtPass.Text;
+
+                SqlConnection con = MyConnected.getConnect();
+
+                if (con.State == ConnectionState.Open)
                 {
-                    Form1 mainhome = new Form1();
-                    mainhome.Show();
-                    this.Hide();
-                }                
+                    SQLiteConnection mysqlitecon = new SQLiteConnection("Data Source=dbServerName.sqlite3;");
+                    mysqlitecon.Open();
+                    SQLiteCommand cmd = new SQLiteCommand("Insert Into tbServer Values(@server, @db, @user, @pass);", mysqlitecon);
+                    cmd.Parameters.AddWithValue("server", txtServer.Text);
+                    cmd.Parameters.AddWithValue("db", txtDB.Text);
+                    cmd.Parameters.AddWithValue("user", txtUser.Text);
+                    cmd.Parameters.AddWithValue("pass", txtPass.Text);
+                    if (cmd.ExecuteNonQuery() == 1)
+                    {
+                        MyMessageBox.ShowMesage("ເຊື່ອມຕໍ່ຖານຂໍ້ມູນສຳເລັດແລ້ວ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Form1 mainhome = new Form1();
+                        mainhome.Show();
+                        this.Hide();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MyMessageBox.ShowMesage("ເຊື່ອມຕໍ່ຖານຂໍ້ມູນສຳເລັເກີດບັນຫາ: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

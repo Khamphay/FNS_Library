@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using ProjectLibrary.MSDialog;
 
 namespace ProjectLibrary
 {
@@ -65,7 +66,7 @@ namespace ProjectLibrary
 
             }catch (Exception ex)
             {
-                MessageBox.Show("Error show data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MyMessageBox.ShowMesage("ເກີດບັນຫາໃນການສະແດງຂໍ້ມູນ: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void Delete()
@@ -97,7 +98,7 @@ namespace ProjectLibrary
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error delete data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MyMessageBox.ShowMesage("ລົບຂໍ້ມູນບໍ່ສຳເລັດເນື່ອງຈາກເກີດບັນຫາ: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void Shearch_Data()
@@ -121,6 +122,7 @@ namespace ProjectLibrary
             }
             catch (Exception ex)
             {
+                MyMessageBox.ShowMesage("ເກີດບັນຫາໃນການສະແດງຂໍ້ມູນ: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -167,8 +169,12 @@ namespace ProjectLibrary
 
         private void btdel_Click_1(object sender, EventArgs e)
         {
-            _home.Clear_PanelMenu(); ;
-            Delete();
+            _home.Clear_PanelMenu();
+            DialogResult dialog = MyMessageBox.ShowMesage("ທ່ານແນ່ໃຈທີ່ຈະລົບຂໍ້ມູນອອກບໍ່?", "Warring", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+            if (dialog == DialogResult.Yes)
+            {
+                Delete();
+            }
         }
 
         private void dgvbooks_CellClick(object sender, DataGridViewCellEventArgs e)

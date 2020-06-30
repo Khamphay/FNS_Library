@@ -7,6 +7,8 @@ using System.Globalization;
 using ZXing;
 using System.IO;
 using ProjectLibrary.Properties;
+using ProjectLibrary.MSDialog;
+
 namespace ProjectLibrary
 {
     public partial class frmRegister : Form
@@ -187,12 +189,12 @@ namespace ProjectLibrary
                 }
                 else
                 {
-                    MessageBox.Show("Please in check data and try agrian", "Warring", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MyMessageBox.ShowMesage("ກະລຸນາກວດສອບຂໍ້ມູນ ແລະ ລອງໃຫມ່ອີກຄັ້ງ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error save data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MyMessageBox.ShowMesage("ເກີດບັນຫາ: "+ex.Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void Edit()

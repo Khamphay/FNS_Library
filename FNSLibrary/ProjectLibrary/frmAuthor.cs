@@ -11,6 +11,7 @@ using System.Data.SqlClient;
 using Guna.UI.WinForms;
 using Guna.UI;
 using System.Runtime.Remoting.Messaging;
+using ProjectLibrary.MSDialog;
 
 namespace ProjectLibrary
 {
@@ -72,7 +73,7 @@ namespace ProjectLibrary
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error show data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MyMessageBox.ShowMesage("ເກີດບັນຫາໃນການສະແດງຂໍ້ມູນ: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void ShearchData()
@@ -96,7 +97,7 @@ namespace ProjectLibrary
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error show data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MyMessageBox.ShowMesage("ເກີດບັນຫາໃນການສະແດງຂໍ້ມູນ: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         // Return 1 "Complete action" If Return 0 "Don't complete action"
@@ -118,7 +119,7 @@ namespace ProjectLibrary
             catch (Exception ex)
             {
                 MyModel.fsh_action = 0;
-                MessageBox.Show("Error saving data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MyMessageBox.ShowMesage("ບັນທືກບໍ່ສຳເລັດເນື່ອງຈາກເກີດບັນຫາ: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return MyModel.fsh_action;
         }
@@ -140,7 +141,7 @@ namespace ProjectLibrary
             catch (Exception ex)
             {
                 MyModel.fsh_action = 0;
-                MessageBox.Show("Error editing data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MyMessageBox.ShowMesage("ແກ້ໄຂບໍ່ສຳເລັດເນື່ອງຈາກເກີດບັນຫາ: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return MyModel.fsh_action;
         }
@@ -148,7 +149,7 @@ namespace ProjectLibrary
         {
             try
             {
-                DialogResult dialog = MessageBox.Show("Are your sure ?", "Warring", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+                DialogResult dialog = MyMessageBox.ShowMesage("ທ່ານແນ່ໃຈທີ່ຈະລົບຂໍ້ມູນອອກບໍ່?", "Warring", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
                 if (dialog == DialogResult.Yes)
                 {
                     cmd = new SqlCommand("Delete From tbAthor Where athid=@id", con);
@@ -159,7 +160,7 @@ namespace ProjectLibrary
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error delete data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MyMessageBox.ShowMesage("ລົບບໍ່ສຳເລັດເນື່ອງຈາກເກີດບັນຫາ: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
        

@@ -319,6 +319,25 @@
     <Compile Include="HomePage.Designer.cs">
       <DependentUpon>HomePage.cs</DependentUpon>
     </Compile>
+    <Compile Include="MSDialog\MyMessageBox.cs" />
+    <Compile Include="MSDialog\DialogOK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MSDialog\DialogOK.Designer.cs">
+      <DependentUpon>DialogOK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MSDialog\DialogYesNo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MSDialog\DialogYesNo.Designer.cs">
+      <DependentUpon>DialogYesNo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MSDialog\DialogYesNoCancel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MSDialog\DialogYesNoCancel.Designer.cs">
+      <DependentUpon>DialogYesNoCancel.cs</DependentUpon>
+    </Compile>
     <Compile Include="MyConnected.cs" />
     <Compile Include="frmCost.cs">
       <SubType>Form</SubType>
@@ -529,6 +548,15 @@
     <EmbeddedResource Include="HomePage.resx">
       <DependentUpon>HomePage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MSDialog\DialogOK.resx">
+      <DependentUpon>DialogOK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MSDialog\DialogYesNo.resx">
+      <DependentUpon>DialogYesNo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MSDialog\DialogYesNoCancel.resx">
+      <DependentUpon>DialogYesNoCancel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -675,6 +703,11 @@
     <None Include="Resources\ATitle.png" />
     <None Include="Resources\ATitle2.png" />
     <None Include="Resources\ATitle3.png" />
+    <None Include="Resources\box_important_120px.png" />
+    <None Include="Resources\info_120px2.png" />
+    <None Include="Resources\warning_120px.png" />
+    <None Include="Resources\question_mark_120px.png" />
+    <None Include="Resources\high_risk_120px.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

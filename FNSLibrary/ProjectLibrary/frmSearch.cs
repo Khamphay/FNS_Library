@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using ProjectLibrary.MSDialog;
 
 namespace ProjectLibrary
 {
@@ -48,7 +49,7 @@ namespace ProjectLibrary
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message);
+                MyMessageBox.ShowMesage("ເກີດບັນຫາໃນການສະແດງຂໍ້ມູນ: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -82,7 +83,7 @@ namespace ProjectLibrary
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error in show data: " + ex.Message);
+                    MyMessageBox.ShowMesage("ເກີດບັນຫາໃນການສະແດງຂໍ້ມູນ: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 finally
                 {
@@ -116,7 +117,7 @@ namespace ProjectLibrary
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error in show data: " + ex.Message);
+                    MyMessageBox.ShowMesage("ເກີດບັນຫາໃນການສະແດງຂໍ້ມູນ: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 finally
                 {
@@ -152,7 +153,7 @@ namespace ProjectLibrary
             {
                 Shearch_Data(txtSearch.Text);
                 if (treeView_Books.Nodes.Count < 1) {
-                    MessageBox.Show("ບໍ່ມີປຶ້ມທ່ານກຳລັງຊອກຫາ", "Warring", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MyMessageBox.ShowMesage("ບໍ່ມີປຶ້ມທ່ານກຳລັງຊອກຫາ", "Warring", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             else

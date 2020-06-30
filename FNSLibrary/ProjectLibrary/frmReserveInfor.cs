@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using Guna.UI.WinForms;
+using ProjectLibrary.MSDialog;
 
 namespace ProjectLibrary
 {
@@ -126,7 +127,7 @@ namespace ProjectLibrary
                 barcode = "";
             }catch (Exception ex)
             {
-                MessageBox.Show("Error Load data: " + ex.Message, "Error");
+                MyMessageBox.ShowMesage("ລົບບໍ່ສຳເລັດເນື່ອງຈາກເກີດບັນຫາ: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void AddToRent()
@@ -194,7 +195,7 @@ namespace ProjectLibrary
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message, "Search", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MyMessageBox.ShowMesage("ເກີດບັນຫາໃນການສະແດງຂໍ້ມູນ: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -218,7 +219,8 @@ namespace ProjectLibrary
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MyMessageBox.ShowMesage("ເກີດບັນຫາໃນການສະແດງຂໍ້ມູນ: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
             }
             finally
             {
@@ -235,7 +237,7 @@ namespace ProjectLibrary
             }
             else
             {
-                MessageBox.Show("ກະລຸນາປ້ອນລະຫັດສະມາຊິກ", "Warring", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MyMessageBox.ShowMesage("ກະລຸນາປ້ອນລະຫັດສະມາຊິກ", "Warring", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

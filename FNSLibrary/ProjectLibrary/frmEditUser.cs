@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using ProjectLibrary.MSDialog;
 
 namespace ProjectLibrary
 {
@@ -44,13 +45,13 @@ namespace ProjectLibrary
                 cmd.Parameters.AddWithValue("pass", txtNewPass.Text);
                 if (cmd.ExecuteNonQuery() == 1)
                 {
-                    MessageBox.Show("Save completed", "Save", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                   MyMessageBox .ShowMesage("ບັນທືກສຳເສັດແລ້ວ", "Save", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Clear_Data();
                 }
             }
             catch(Exception ex)
             {
-                MessageBox.Show("Error saving data: " + ex.Message, "Warring", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MyMessageBox.ShowMesage("ບັນທືກບໍ່ສຳເລັດເນື່ອງຈາກເກີດບັນຫາ: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void Clear_Data()
@@ -128,12 +129,12 @@ namespace ProjectLibrary
                 }
                 else
                 {
-                    MessageBox.Show("Your old Password incorrent. Please check and try again!! ", "Edit user", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MyMessageBox.ShowMesage("ລະຫັດເກົ່າບໍ່ຖຶກຕ້ອງ. ກະລຸນາກວດສອບແລັວລອງໃໝ່ແລ້ວອີກຄັ້ງ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             else
             {
-                MessageBox.Show("Your Username incorrent. Please check and try again!!", "Edit user", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MyMessageBox.ShowMesage("ຊື່ຜູ້ໃຊ້ເກົ່າບໍ່ຖຶກຕ້ອງ. ກະລຸນາກວດສອບແລັວລອງໃໝ່ແລ້ວອີກຄັ້ງ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
