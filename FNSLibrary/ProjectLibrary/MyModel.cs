@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Printing;
 using System.Data;
+using System.Drawing;
 
 namespace ProjectLibrary
 {
@@ -65,6 +66,18 @@ namespace ProjectLibrary
             {
                 ev.Handled = true;
             }
+        }
+        public static void MouseHover(Image img, Color backcol, Color textcol, Button button )
+        {
+            button.Image = img;
+            button.BackColor = backcol;
+            button.ForeColor = textcol;
+        }
+        public static void MouseLeave(Image img, Color backcol, Color textcol, Button button )
+        {
+            button.Image = img;
+            button.BackColor = backcol;
+            button.ForeColor = textcol;
         }
     }
 }

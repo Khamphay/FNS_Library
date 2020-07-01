@@ -23,7 +23,10 @@ namespace ProjectLibrary.MSDialog
                         switch (icon)
                         {
                             case MessageBoxIcon.Information:
-                                msgOK.MessageIcon = ProjectLibrary.Properties.Resources.info;
+                                msgOK.MessageIcon = ProjectLibrary.Properties.Resources.done;
+                                break;
+                            case MessageBoxIcon.Question:
+                                msgOK.MessageIcon = ProjectLibrary.Properties.Resources.question;
                                 break;
                             case MessageBoxIcon.Warning:
                                 msgOK.MessageIcon = Properties.Resources.warning;
@@ -33,6 +36,31 @@ namespace ProjectLibrary.MSDialog
                                 break;
                         }
                         result = msgOK.ShowDialog();
+                    }
+                    break;
+
+                    //OKCancel
+                case MessageBoxButtons.OKCancel:
+                    using (DialogOKCancel msgOKCancel = new DialogOKCancel())
+                    {
+                        msgOKCancel.Text = header;
+                        msgOKCancel.Message = message;
+                        switch (icon)
+                        {
+                            case MessageBoxIcon.Information:
+                                msgOKCancel.MessageIcon = ProjectLibrary.Properties.Resources.info;
+                                break;
+                            case MessageBoxIcon.Question:
+                                msgOKCancel.MessageIcon = ProjectLibrary.Properties.Resources.question;
+                                break;
+                            case MessageBoxIcon.Warning:
+                                msgOKCancel.MessageIcon = Properties.Resources.warning;
+                                break;
+                            case MessageBoxIcon.Error:
+                                msgOKCancel.MessageIcon = Properties.Resources.error;
+                                break;
+                        }
+                        result = msgOKCancel.ShowDialog();
                     }
                     break;
                 //YesNo
@@ -45,6 +73,9 @@ namespace ProjectLibrary.MSDialog
                         {
                             case MessageBoxIcon.Warning:
                                 msgYseNo.MessageIcon = ProjectLibrary.Properties.Resources.warning;
+                                break;
+                            case MessageBoxIcon.Information:
+                                msgYseNo.MessageIcon = ProjectLibrary.Properties.Resources.info;
                                 break;
                             case MessageBoxIcon.Question:
                                 msgYseNo.MessageIcon = Properties.Resources.question;

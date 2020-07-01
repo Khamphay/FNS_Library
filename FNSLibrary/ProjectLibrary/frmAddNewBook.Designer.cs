@@ -98,7 +98,7 @@
             "ເສຍ"});
             this.cmbStatus.Location = new System.Drawing.Point(323, 416);
             this.cmbStatus.Name = "cmbStatus";
-            this.cmbStatus.Size = new System.Drawing.Size(113, 31);
+            this.cmbStatus.Size = new System.Drawing.Size(113, 42);
             this.cmbStatus.TabIndex = 10;
             this.cmbStatus.KeyDown += new System.Windows.Forms.KeyEventHandler(this.NextFocusBooks);
             // 
@@ -110,7 +110,7 @@
             this.label19.Location = new System.Drawing.Point(323, 389);
             this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(56, 23);
+            this.label19.Size = new System.Drawing.Size(82, 34);
             this.label19.TabIndex = 20;
             this.label19.Text = "ສະຖານະ";
             // 
@@ -121,7 +121,7 @@
             this.dateAuth.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateAuth.Location = new System.Drawing.Point(161, 417);
             this.dateAuth.Name = "dateAuth";
-            this.dateAuth.Size = new System.Drawing.Size(127, 30);
+            this.dateAuth.Size = new System.Drawing.Size(127, 41);
             this.dateAuth.TabIndex = 9;
             this.dateAuth.Value = new System.DateTime(2020, 4, 6, 0, 0, 0, 0);
             this.dateAuth.KeyDown += new System.Windows.Forms.KeyEventHandler(this.NextFocusBooks);
@@ -133,7 +133,7 @@
             this.cmbTable.FormattingEnabled = true;
             this.cmbTable.Location = new System.Drawing.Point(161, 349);
             this.cmbTable.Name = "cmbTable";
-            this.cmbTable.Size = new System.Drawing.Size(275, 31);
+            this.cmbTable.Size = new System.Drawing.Size(275, 42);
             this.cmbTable.TabIndex = 8;
             this.cmbTable.KeyDown += new System.Windows.Forms.KeyEventHandler(this.NextFocusBooks);
             // 
@@ -145,7 +145,7 @@
             this.label10.Location = new System.Drawing.Point(161, 322);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(53, 23);
+            this.label10.Size = new System.Drawing.Size(78, 34);
             this.label10.TabIndex = 14;
             this.label10.Text = "ລະຫັດຕູ້";
             // 
@@ -157,7 +157,7 @@
             this.label11.Location = new System.Drawing.Point(161, 390);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(59, 23);
+            this.label11.Size = new System.Drawing.Size(88, 34);
             this.label11.TabIndex = 15;
             this.label11.Text = "ແຕ່ງໃນປີ";
             // 
@@ -180,7 +180,7 @@
             this.cmbType.FormattingEnabled = true;
             this.cmbType.Location = new System.Drawing.Point(161, 281);
             this.cmbType.Name = "cmbType";
-            this.cmbType.Size = new System.Drawing.Size(275, 31);
+            this.cmbType.Size = new System.Drawing.Size(275, 42);
             this.cmbType.TabIndex = 7;
             this.cmbType.SelectedIndexChanged += new System.EventHandler(this.cmbType_SelectedIndexChanged);
             this.cmbType.KeyDown += new System.Windows.Forms.KeyEventHandler(this.NextFocusBooks);
@@ -192,7 +192,7 @@
             this.cmbCtg.FormattingEnabled = true;
             this.cmbCtg.Location = new System.Drawing.Point(161, 216);
             this.cmbCtg.Name = "cmbCtg";
-            this.cmbCtg.Size = new System.Drawing.Size(275, 31);
+            this.cmbCtg.Size = new System.Drawing.Size(275, 42);
             this.cmbCtg.TabIndex = 6;
             this.cmbCtg.SelectedIndexChanged += new System.EventHandler(this.cmbCtg_SelectedIndexChanged);
             this.cmbCtg.KeyDown += new System.Windows.Forms.KeyEventHandler(this.NextFocusBooks);
@@ -204,7 +204,7 @@
             this.txtISBN.Location = new System.Drawing.Point(323, 150);
             this.txtISBN.Margin = new System.Windows.Forms.Padding(6, 12, 6, 12);
             this.txtISBN.Name = "txtISBN";
-            this.txtISBN.Size = new System.Drawing.Size(113, 30);
+            this.txtISBN.Size = new System.Drawing.Size(113, 41);
             this.txtISBN.TabIndex = 5;
             this.txtISBN.Enter += new System.EventHandler(this.txtid_Enter);
             this.txtISBN.KeyDown += new System.Windows.Forms.KeyEventHandler(this.NextFocusBooks);
@@ -217,7 +217,7 @@
             this.txtname.Location = new System.Drawing.Point(161, 83);
             this.txtname.Margin = new System.Windows.Forms.Padding(6, 12, 6, 12);
             this.txtname.Name = "txtname";
-            this.txtname.Size = new System.Drawing.Size(275, 30);
+            this.txtname.Size = new System.Drawing.Size(275, 41);
             this.txtname.TabIndex = 2;
             this.txtname.KeyDown += new System.Windows.Forms.KeyEventHandler(this.NextFocusBooks);
             // 
@@ -228,7 +228,7 @@
             this.txtPage.Location = new System.Drawing.Point(161, 149);
             this.txtPage.Margin = new System.Windows.Forms.Padding(6, 12, 6, 12);
             this.txtPage.Name = "txtPage";
-            this.txtPage.Size = new System.Drawing.Size(72, 30);
+            this.txtPage.Size = new System.Drawing.Size(72, 41);
             this.txtPage.TabIndex = 3;
             this.txtPage.Text = "0";
             this.txtPage.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -244,7 +244,7 @@
             this.label7.Location = new System.Drawing.Point(161, 122);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(72, 23);
+            this.label7.Size = new System.Drawing.Size(106, 34);
             this.label7.TabIndex = 1;
             this.label7.Text = "ຈຳນວນໜ້າ";
             // 
@@ -255,7 +255,7 @@
             this.txtqty.Location = new System.Drawing.Point(245, 149);
             this.txtqty.Margin = new System.Windows.Forms.Padding(6, 12, 6, 12);
             this.txtqty.Name = "txtqty";
-            this.txtqty.Size = new System.Drawing.Size(66, 30);
+            this.txtqty.Size = new System.Drawing.Size(66, 41);
             this.txtqty.TabIndex = 4;
             this.txtqty.Text = "0";
             this.txtqty.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -272,7 +272,7 @@
             this.label5.Location = new System.Drawing.Point(245, 122);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(52, 23);
+            this.label5.Size = new System.Drawing.Size(77, 34);
             this.label5.TabIndex = 1;
             this.label5.Text = "ຈຳນວນ";
             // 
@@ -284,7 +284,7 @@
             this.label6.Location = new System.Drawing.Point(161, 190);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(70, 23);
+            this.label6.Size = new System.Drawing.Size(103, 34);
             this.label6.TabIndex = 1;
             this.label6.Text = "ຊື່ໝວດປື້ມ";
             // 
@@ -296,7 +296,7 @@
             this.label4.Location = new System.Drawing.Point(161, 253);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(75, 23);
+            this.label4.Size = new System.Drawing.Size(111, 34);
             this.label4.TabIndex = 1;
             this.label4.Text = "ຊື່ປະເພດປື້ມ";
             // 
@@ -307,7 +307,7 @@
             this.txtid.Location = new System.Drawing.Point(14, 84);
             this.txtid.Margin = new System.Windows.Forms.Padding(6, 12, 6, 12);
             this.txtid.Name = "txtid";
-            this.txtid.Size = new System.Drawing.Size(141, 30);
+            this.txtid.Size = new System.Drawing.Size(141, 41);
             this.txtid.TabIndex = 1;
             this.txtid.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtid.TextChanged += new System.EventHandler(this.txtid_TextChanged);
@@ -322,7 +322,7 @@
             this.label8.Location = new System.Drawing.Point(323, 123);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(43, 23);
+            this.label8.Size = new System.Drawing.Size(68, 34);
             this.label8.TabIndex = 1;
             this.label8.Text = "ISBN";
             // 
@@ -334,7 +334,7 @@
             this.label9.Location = new System.Drawing.Point(14, 56);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(63, 23);
+            this.label9.Size = new System.Drawing.Size(93, 34);
             this.label9.TabIndex = 1;
             this.label9.Text = "ລະຫັດປື້ມ";
             // 
@@ -346,7 +346,7 @@
             this.label1.Location = new System.Drawing.Point(14, 123);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(107, 23);
+            this.label1.Size = new System.Drawing.Size(155, 34);
             this.label1.TabIndex = 1;
             this.label1.Text = "ລະຫັດປື້ມ/ບາໂຄດ";
             // 
@@ -358,7 +358,7 @@
             this.label2.Location = new System.Drawing.Point(161, 55);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 23);
+            this.label2.Size = new System.Drawing.Size(56, 34);
             this.label2.TabIndex = 1;
             this.label2.Text = "ຊື່ປື້ມ";
             // 
@@ -514,7 +514,7 @@
             this.label20.Font = new System.Drawing.Font("Saysettha OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.Location = new System.Drawing.Point(26, 12);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(65, 24);
+            this.label20.Size = new System.Drawing.Size(99, 38);
             this.label20.TabIndex = 0;
             this.label20.Text = "ຂໍ້ມູນປື້ມ";
             // 
@@ -544,7 +544,7 @@
             this.label21.Font = new System.Drawing.Font("Saysettha OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.Location = new System.Drawing.Point(29, 12);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(85, 24);
+            this.label21.Size = new System.Drawing.Size(130, 38);
             this.label21.TabIndex = 0;
             this.label21.Text = "ຂໍ້ມູນຜູ້ແຕ່ງ";
             // 
@@ -555,7 +555,7 @@
             this.cmbAuthor1.FormattingEnabled = true;
             this.cmbAuthor1.Location = new System.Drawing.Point(475, 84);
             this.cmbAuthor1.Name = "cmbAuthor1";
-            this.cmbAuthor1.Size = new System.Drawing.Size(192, 31);
+            this.cmbAuthor1.Size = new System.Drawing.Size(192, 42);
             this.cmbAuthor1.TabIndex = 11;
             this.cmbAuthor1.SelectedIndexChanged += new System.EventHandler(this.cmbAuthor_SelectedIndexChanged);
             this.cmbAuthor1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.NextFocusAuthor);
@@ -567,7 +567,7 @@
             this.cmbAuthor2.FormattingEnabled = true;
             this.cmbAuthor2.Location = new System.Drawing.Point(475, 168);
             this.cmbAuthor2.Name = "cmbAuthor2";
-            this.cmbAuthor2.Size = new System.Drawing.Size(192, 31);
+            this.cmbAuthor2.Size = new System.Drawing.Size(192, 42);
             this.cmbAuthor2.TabIndex = 12;
             this.cmbAuthor2.SelectedIndexChanged += new System.EventHandler(this.cmbAuthor2_SelectedIndexChanged);
             this.cmbAuthor2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.NextFocusAuthor);
@@ -579,7 +579,7 @@
             this.cmbAuthor3.FormattingEnabled = true;
             this.cmbAuthor3.Location = new System.Drawing.Point(475, 247);
             this.cmbAuthor3.Name = "cmbAuthor3";
-            this.cmbAuthor3.Size = new System.Drawing.Size(192, 31);
+            this.cmbAuthor3.Size = new System.Drawing.Size(192, 42);
             this.cmbAuthor3.TabIndex = 13;
             this.cmbAuthor3.SelectedIndexChanged += new System.EventHandler(this.cmbAuthor3_SelectedIndexChanged);
             this.cmbAuthor3.KeyDown += new System.Windows.Forms.KeyEventHandler(this.NextFocusAuthor);
@@ -591,7 +591,7 @@
             this.cmbAuthor4.FormattingEnabled = true;
             this.cmbAuthor4.Location = new System.Drawing.Point(475, 325);
             this.cmbAuthor4.Name = "cmbAuthor4";
-            this.cmbAuthor4.Size = new System.Drawing.Size(192, 31);
+            this.cmbAuthor4.Size = new System.Drawing.Size(192, 42);
             this.cmbAuthor4.TabIndex = 14;
             this.cmbAuthor4.SelectedIndexChanged += new System.EventHandler(this.cmbAuthor4_SelectedIndexChanged);
             this.cmbAuthor4.KeyDown += new System.Windows.Forms.KeyEventHandler(this.NextFocusAuthor);
@@ -604,7 +604,7 @@
             this.label3.Location = new System.Drawing.Point(677, 56);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 23);
+            this.label3.Size = new System.Drawing.Size(102, 34);
             this.label3.TabIndex = 16;
             this.label3.Text = "ນາມສະກຸນ";
             // 
@@ -616,7 +616,7 @@
             this.label13.Location = new System.Drawing.Point(677, 141);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(69, 23);
+            this.label13.Size = new System.Drawing.Size(102, 34);
             this.label13.TabIndex = 16;
             this.label13.Text = "ນາມສະກຸນ";
             // 
@@ -628,7 +628,7 @@
             this.label15.Location = new System.Drawing.Point(677, 219);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(69, 23);
+            this.label15.Size = new System.Drawing.Size(102, 34);
             this.label15.TabIndex = 16;
             this.label15.Text = "ນາມສະກຸນ";
             // 
@@ -640,7 +640,7 @@
             this.label17.Location = new System.Drawing.Point(677, 298);
             this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(69, 23);
+            this.label17.Size = new System.Drawing.Size(102, 34);
             this.label17.TabIndex = 16;
             this.label17.Text = "ນາມສະກຸນ";
             // 
@@ -651,7 +651,7 @@
             this.txtSurname1.Location = new System.Drawing.Point(677, 84);
             this.txtSurname1.Margin = new System.Windows.Forms.Padding(6, 12, 6, 12);
             this.txtSurname1.Name = "txtSurname1";
-            this.txtSurname1.Size = new System.Drawing.Size(192, 30);
+            this.txtSurname1.Size = new System.Drawing.Size(192, 41);
             this.txtSurname1.TabIndex = 20;
             // 
             // txtSurname2
@@ -661,7 +661,7 @@
             this.txtSurname2.Location = new System.Drawing.Point(677, 168);
             this.txtSurname2.Margin = new System.Windows.Forms.Padding(6, 12, 6, 12);
             this.txtSurname2.Name = "txtSurname2";
-            this.txtSurname2.Size = new System.Drawing.Size(192, 30);
+            this.txtSurname2.Size = new System.Drawing.Size(192, 41);
             this.txtSurname2.TabIndex = 20;
             // 
             // txtSurname3
@@ -671,7 +671,7 @@
             this.txtSurname3.Location = new System.Drawing.Point(677, 247);
             this.txtSurname3.Margin = new System.Windows.Forms.Padding(6, 12, 6, 12);
             this.txtSurname3.Name = "txtSurname3";
-            this.txtSurname3.Size = new System.Drawing.Size(192, 30);
+            this.txtSurname3.Size = new System.Drawing.Size(192, 41);
             this.txtSurname3.TabIndex = 20;
             // 
             // txtSurname4
@@ -681,7 +681,7 @@
             this.txtSurname4.Location = new System.Drawing.Point(677, 325);
             this.txtSurname4.Margin = new System.Windows.Forms.Padding(6, 12, 6, 12);
             this.txtSurname4.Name = "txtSurname4";
-            this.txtSurname4.Size = new System.Drawing.Size(192, 30);
+            this.txtSurname4.Size = new System.Drawing.Size(192, 41);
             this.txtSurname4.TabIndex = 20;
             // 
             // label12
@@ -692,7 +692,7 @@
             this.label12.Location = new System.Drawing.Point(475, 56);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(74, 23);
+            this.label12.Size = new System.Drawing.Size(111, 34);
             this.label12.TabIndex = 16;
             this.label12.Text = "ຊື່ຜູ້ແຕ່ງທີ 1";
             // 
@@ -704,7 +704,7 @@
             this.label14.Location = new System.Drawing.Point(475, 141);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(74, 23);
+            this.label14.Size = new System.Drawing.Size(111, 34);
             this.label14.TabIndex = 16;
             this.label14.Text = "ຊື່ຜູ້ແຕ່ງທີ 2";
             // 
@@ -716,7 +716,7 @@
             this.label16.Location = new System.Drawing.Point(475, 219);
             this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(75, 23);
+            this.label16.Size = new System.Drawing.Size(111, 34);
             this.label16.TabIndex = 16;
             this.label16.Text = "ຊື່ຜູ້ແຕ່ງທີ 3";
             // 
@@ -728,7 +728,7 @@
             this.label18.Location = new System.Drawing.Point(475, 298);
             this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(74, 23);
+            this.label18.Size = new System.Drawing.Size(111, 34);
             this.label18.TabIndex = 16;
             this.label18.Text = "ຊື່ຜູ້ແຕ່ງທີ 4";
             // 
@@ -746,7 +746,7 @@
             // 
             // frmAddNewBook
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 35F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.ClientSize = new System.Drawing.Size(880, 538);
@@ -804,6 +804,7 @@
             this.Name = "frmAddNewBook";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add New Book";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmAddNewBook_FormClosing);
             this.Load += new System.EventHandler(this.frmAddNewBook_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

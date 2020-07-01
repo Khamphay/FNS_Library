@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DialogOK));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DialogOKCancel));
             this.btOK = new System.Windows.Forms.Button();
             this.lbMessage = new System.Windows.Forms.Label();
             this.picIcon = new System.Windows.Forms.PictureBox();

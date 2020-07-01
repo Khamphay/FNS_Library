@@ -68,7 +68,7 @@ namespace ProjectLibrary
 
                     //table.Rows.Add(data[i], image);
                 //}
-                cryDm.Load(@"C:\Users\Khamphay Muas\Documents\GitHub\FNS_Library\FNSLibrary\ProjectLibrary\CRBarcode.rpt");
+                cryDm.Load(Application.StartupPath+"\\CRBarcode.rpt");
                 cryDm.SetDataSource(table);
                 crystalReportViewer1.ReportSource = cryDm;
             //}
@@ -121,6 +121,11 @@ namespace ProjectLibrary
         {
             PrintPreview();
             this.Close();
+        }
+
+        private void frmPrintBarcode_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            MyModel.table.Rows.Clear();
         }
     }
 }

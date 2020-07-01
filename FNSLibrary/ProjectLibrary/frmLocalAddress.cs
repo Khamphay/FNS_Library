@@ -51,7 +51,7 @@ namespace ProjectLibrary
             }
             catch (Exception ex)
             {
-                MyMessageBox.ShowMesage("ເຊື່ອມຕໍ່ຖານຂໍ້ມູນສຳເລັເກີດບັນຫາ: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MyMessageBox.ShowMesage("ເຊື່ອມຕໍ່ຖານຂໍ້ມູນບໍ່ສຳເລັດເກີດບັນຫາ: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

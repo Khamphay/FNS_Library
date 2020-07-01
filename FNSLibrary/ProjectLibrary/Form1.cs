@@ -112,7 +112,7 @@ namespace ProjectLibrary
                             lbTel.Text = MyModel.staff[3];
 
                             login.Close();
-
+                            //Show Main menu
                             pnAdminMenu.Width = 609;
                             btBooksMenu.Enabled = true;
                             btPersonMenu.Enabled = true;
@@ -120,15 +120,13 @@ namespace ProjectLibrary
                             btReportMenu.Enabled = true;
                             btServiceMenu.Enabled = true;
                             ClickLogIn_Out();
-                            lbStatus.Text= "ສະຖານະ: ທ່ານໄດ້ເຂົ້າລະບົບແລ້ວ (ກະລຸນາອອກຈາກລະບົບເມື່ອບໍ່ໃຊ້ງານແລ້ວ).";
+                            lbStatus.Text= "ສະຖານະ: ທ່ານໄດ້ເຂົ້າລະບົບແລ້ວ (ກະລຸນາອອກຈາກລະບົບເມື່ອບໍ່ໃຊ້ງານແລ້ວ)";
 
                             MyModel.table_staff.Rows.Add(MyModel.staff[0], MyModel.staff[1], MyModel.staff[2], MyModel.staff[3]);
 
                         }
                         else
-                        {
-                            MessageBox.Show("Check your Uesername and Password and try agrin", "Login", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        }
+                            MyMessageBox.ShowMesage("ຊື່ ແລະ ລະຫັດຜ່ານບໍ່ຖຶກຕ້ອງ. ກະລຸນາກວດສອບແລັວລອງໃໝ່ແລ້ວອີກຄັ້ງ", "Login", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                     else
                     {
@@ -277,7 +275,7 @@ namespace ProjectLibrary
         
         private void gunaAdvenceButton6_Click(object sender, EventArgs e)
         {
-            DialogResult dialog = MyMessageBox.ShowMesage("ທ່ານແນ່ໃຈທີ່ຈະອອກຈາກໂປຣແກຣມບໍ່ ?", "Exit Programe", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+            DialogResult dialog = MyMessageBox.ShowMesage("ທ່ານແນ່ໃຈທີ່ຈະອອກຈາກໂປຣແກຣມບໍ່?", "Exit Programe", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
             if (dialog == DialogResult.Yes)
             {
                 Application.Exit();

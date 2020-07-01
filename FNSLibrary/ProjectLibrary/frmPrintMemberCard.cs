@@ -19,7 +19,7 @@ namespace ProjectLibrary
         public frmPrintMemberCard( DataTable cartable)
         {
             InitializeComponent();
-            rd.Load(@"C:\Users\Khamphay Muas\Documents\GitHub\FNS_Library\FNSLibrary\ProjectLibrary\CrMemberCard.rpt");
+            rd.Load(Application.StartupPath+"\\CrMemberCard.rpt");
             rd.SetDataSource(cartable);
         }
 

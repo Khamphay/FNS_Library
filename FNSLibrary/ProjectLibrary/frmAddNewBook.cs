@@ -11,6 +11,7 @@ using System.Data.SqlClient;
 using ZXing;
 using System.IO;
 using System.Drawing.Imaging;
+using ProjectLibrary.MSDialog;
 
 namespace ProjectLibrary
 {
@@ -189,7 +190,7 @@ namespace ProjectLibrary
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error load author data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MyMessageBox.ShowMesage("ເກີດບັນຫາໃນການສະແດງຂໍ້ມູນ: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -215,7 +216,7 @@ namespace ProjectLibrary
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error load table data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MyMessageBox.ShowMesage("ເກີດບັນຫາໃນການສະແດງຂໍ້ມູນ: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -254,7 +255,7 @@ namespace ProjectLibrary
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error max id: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MyMessageBox.ShowMesage("ເກີດບັນຫາໃນການສະແດງຂໍ້ມູນ: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -362,12 +363,12 @@ namespace ProjectLibrary
                         MyModel.table.Rows.Add(data[i], image);
                     }
                     ClearData();
-                    MessageBox.Show("Save Completed", "Save", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MyMessageBox.ShowMesage("ບັນທືກສຳເລັດແລ້ວ", "Save", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error saving data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MyMessageBox.ShowMesage("ບັນທືກບໍ່ສຳເລັດເນື່ອງຈາກເກີດບັນຫາ: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -410,13 +411,14 @@ namespace ProjectLibrary
                     }
                     _bookdt.Show_Data();
                     ClearData();
-                    MessageBox.Show("Edit Completed","Edit", MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    this.Close();
+                   // MyMessageBox.ShowMesage("ບັນທືກສຳເລັດແລ້ວ", "Save", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
 
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error saving data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MyMessageBox.ShowMesage("ແກ້ໄຂບໍ່ສຳເລັດເນື່ອງຈາກເກີດບັນຫາ: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void ClearData()
@@ -656,27 +658,29 @@ namespace ProjectLibrary
 
         private void gunaAdvenceButton1_Click(object sender, EventArgs e)
         {
-            //Print Barcode
-            int CountLine = txtid_Barcode.Lines.Length - 1;
-            string[] data = new string[CountLine];
-            for (int i = 0; i < CountLine; i++)
+            if (MyModel.table.Rows.Count <= 0)
             {
-                data[i] = txtid_Barcode.Lines[i];
-                PictureBox picBarCode = new PictureBox();
-                BarcodeWriter barcode = new BarcodeWriter() { Format = BarcodeFormat.CODE_128 };
+                //Print Barcode
+                int CountLine = txtid_Barcode.Lines.Length - 1;
+                string[] data = new string[CountLine];
+                for (int i = 0; i < CountLine; i++)
+                {
+                    data[i] = txtid_Barcode.Lines[i];
+                    PictureBox picBarCode = new PictureBox();
+                    BarcodeWriter barcode = new BarcodeWriter() { Format = BarcodeFormat.CODE_128 };
 
-                picBarCode.Name = "picBar" + i;
-                // MessageBox.Show(data[i]);
-                picBarCode.Image = barcode.Write(data[i]);
-                picBarCode.SizeMode = PictureBoxSizeMode.StretchImage;
-                picBarCode.Height = 80;
-                MemoryStream memo = new MemoryStream();
-                picBarCode.Image.Save(memo, ImageFormat.Png);
-                byte[] image = memo.ToArray();
+                    picBarCode.Name = "picBar" + i;
+                    // MessageBox.Show(data[i]);
+                    picBarCode.Image = barcode.Write(data[i]);
+                    picBarCode.SizeMode = PictureBoxSizeMode.StretchImage;
+                    picBarCode.Height = 80;
+                    MemoryStream memo = new MemoryStream();
+                    picBarCode.Image.Save(memo, ImageFormat.Png);
+                    byte[] image = memo.ToArray();
 
-                MyModel.table.Rows.Add(data[i], image);
+                    MyModel.table.Rows.Add(data[i], image);
+                }
             }
-
             //string[] data = new string[CountLine];
             //for (int i = 0; i < CountLine; i++)
             //{
@@ -699,6 +703,19 @@ namespace ProjectLibrary
         private void txtISBN_KeyPress(object sender, KeyPressEventArgs e)
         {
             MyModel.KeyISBN(e);
+        }
+
+        private void frmAddNewBook_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MyModel.table.Rows.Count > 0)
+            {
+                DialogResult result = MyMessageBox.ShowMesage("ຕ້ອງທີ່ຈະພີມບາໂຄດ (Barcode) ບໍ່?", "Ask", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (result == DialogResult.OK)
+                {
+                    frmPrintBarcode printBarC = new frmPrintBarcode(/*data,*/MyModel.table);
+                    printBarC.ShowDialog();
+                }
+            }
         }
 
         private void cmbType_SelectedIndexChanged(object sender, EventArgs e)

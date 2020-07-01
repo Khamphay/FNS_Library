@@ -44,7 +44,7 @@ namespace ProjectLibrary
                 da = new SqlDataAdapter("Select * From tbBook_Lost", con);
                 da.Fill(ds, "tbBook_Lost");
                 rd = new ReportDocument();
-                rd.Load(@"C:\Users\Khamphay Muas\Documents\GitHub\FNS_Library\FNSLibrary\ProjectLibrary\CrReportBookLost.rpt");
+                rd.Load(Application.StartupPath+"\\CrReportBookLost.rpt");
                 rd.SetDataSource(ds);
                 crystalReportViewer1.ReportSource = rd;
                 crystalReportViewer1.Refresh();
@@ -65,7 +65,7 @@ namespace ProjectLibrary
                 da = new SqlDataAdapter(cmd);
                 da.Fill(ds, "tbBook_Lost");
                 rd = new ReportDocument();
-                rd.Load(@"C:\Users\Khamphay Muas\Documents\GitHub\FNS_Library\FNSLibrary\ProjectLibrary\CrReportBookLost.rpt");
+                rd.Load(Application.StartupPath+"\\CrReportBookLost.rpt");
                 rd.SetDataSource(ds);
                 crystalReportViewer1.ReportSource = rd;
                 crystalReportViewer1.Refresh();
@@ -87,7 +87,7 @@ namespace ProjectLibrary
                 da = new SqlDataAdapter(cmd);
                 da.Fill(ds, "tbBook_Lost");
                 rd = new ReportDocument();
-                rd.Load(@"C:\Users\Khamphay Muas\Documents\GitHub\FNS_Library\FNSLibrary\ProjectLibrary\CrReportBookLost.rpt");
+                rd.Load(Application.StartupPath+"\\CrReportBookLost.rpt");
                 rd.SetDataSource(ds);
                 crystalReportViewer1.ReportSource = rd;
                 crystalReportViewer1.Refresh();
@@ -109,7 +109,7 @@ namespace ProjectLibrary
                 da = new SqlDataAdapter(cmd);
                 da.Fill(ds, "tbBook_Lost");
                 rd = new ReportDocument();
-                rd.Load(@"C:\Users\Khamphay Muas\Documents\GitHub\FNS_Library\FNSLibrary\ProjectLibrary\CrReportBookLost.rpt");
+                rd.Load(Application.StartupPath+"\\CrReportBookLost.rpt");
                 rd.SetDataSource(ds);
                 crystalReportViewer1.ReportSource = rd;
                 crystalReportViewer1.Refresh();

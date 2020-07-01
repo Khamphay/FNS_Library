@@ -72,6 +72,8 @@
             this.btSearch.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.btSearch.UseVisualStyleBackColor = true;
             this.btSearch.Click += new System.EventHandler(this.btSearch_Click);
+            this.btSearch.MouseLeave += new System.EventHandler(this.btSearch_MouseLeave);
+            this.btSearch.MouseHover += new System.EventHandler(this.btSearch_MouseHover);
             // 
             // btReservertion
             // 
@@ -91,6 +93,8 @@
             this.btReservertion.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.btReservertion.UseVisualStyleBackColor = true;
             this.btReservertion.Click += new System.EventHandler(this.button2_Click);
+            this.btReservertion.MouseLeave += new System.EventHandler(this.btReservertion_MouseLeave);
+            this.btReservertion.MouseHover += new System.EventHandler(this.btReservertion_MouseHover);
             // 
             // btLogin
             // 
@@ -110,6 +114,8 @@
             this.btLogin.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.btLogin.UseVisualStyleBackColor = true;
             this.btLogin.Click += new System.EventHandler(this.button1_Click);
+            this.btLogin.MouseLeave += new System.EventHandler(this.btLogin_MouseLeave);
+            this.btLogin.MouseHover += new System.EventHandler(this.btLogin_MouseHover);
             // 
             // HomePage
             // 

@@ -220,9 +220,10 @@
             // 
             // label7
             // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(163, 290);
+            this.label7.Location = new System.Drawing.Point(186, 304);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(237, 24);
             this.label7.TabIndex = 30;

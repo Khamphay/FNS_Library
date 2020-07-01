@@ -62,5 +62,35 @@ namespace ProjectLibrary
             frmSearch search = new frmSearch(_home);
             _home.ShowSubForm(search);
         }
+
+        private void btReservertion_MouseLeave(object sender, EventArgs e)
+        {
+            MyModel.MouseLeave(Properties.Resources.reserve_90px, Color.Transparent, Color.Black, btReservertion);
+        }
+
+        private void btReservertion_MouseHover(object sender, EventArgs e)
+        {
+            MyModel.MouseLeave(Properties.Resources.reserve_90px1, Color.Transparent, Color.WhiteSmoke, btReservertion);
+        }
+
+        private void btSearch_MouseHover(object sender, EventArgs e)
+        {
+            MyModel.MouseLeave(Properties.Resources.search_90px2, Color.Transparent, Color.WhiteSmoke, btSearch);
+        }
+
+        private void btSearch_MouseLeave(object sender, EventArgs e)
+        {
+            MyModel.MouseLeave(Properties.Resources.search_90px, Color.Transparent, Color.Black, btSearch);
+        }
+
+        private void btLogin_MouseHover(object sender, EventArgs e)
+        {
+            MyModel.MouseLeave(Properties.Resources.Login2, Color.Transparent, Color.WhiteSmoke, btLogin);
+        }
+
+        private void btLogin_MouseLeave(object sender, EventArgs e)
+        {
+            MyModel.MouseLeave(Properties.Resources.Login1, Color.Transparent, Color.Black, btLogin);
+        }
     }
 }

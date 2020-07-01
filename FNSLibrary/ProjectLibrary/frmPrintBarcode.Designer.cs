@@ -98,6 +98,7 @@
             this.Name = "frmPrintBarcode";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Print Barcode";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmPrintBarcode_FormClosed);
             this.Load += new System.EventHandler(this.frmPrintBarcode_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

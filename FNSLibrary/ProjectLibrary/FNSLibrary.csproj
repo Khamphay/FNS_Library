@@ -319,6 +319,12 @@
     <Compile Include="HomePage.Designer.cs">
       <DependentUpon>HomePage.cs</DependentUpon>
     </Compile>
+    <Compile Include="MSDialog\DialogOKCancel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MSDialog\DialogOKCancel.Designer.cs">
+      <DependentUpon>DialogOKCancel.cs</DependentUpon>
+    </Compile>
     <Compile Include="MSDialog\MyMessageBox.cs" />
     <Compile Include="MSDialog\DialogOK.cs">
       <SubType>Form</SubType>
@@ -548,6 +554,9 @@
     <EmbeddedResource Include="HomePage.resx">
       <DependentUpon>HomePage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MSDialog\DialogOKCancel.resx">
+      <DependentUpon>DialogOKCancel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MSDialog\DialogOK.resx">
       <DependentUpon>DialogOK.cs</DependentUpon>
     </EmbeddedResource>
@@ -708,6 +717,17 @@
     <None Include="Resources\warning_120px.png" />
     <None Include="Resources\question_mark_120px.png" />
     <None Include="Resources\high_risk_120px.png" />
+    <None Include="Resources\ok_127px.png" />
+    <None Include="Resources\reserve_127px.png" />
+    <None Include="Resources\reserve_100px_4.png" />
+    <None Include="Resources\reserve_90px.png" />
+    <None Include="Resources\reserve_90px2.png" />
+    <None Include="Resources\reserve_90px1.png" />
+    <None Include="Resources\google_web_search_90px.png" />
+    <None Include="Resources\google_web_search_90px2.png" />
+    <None Include="Resources\Untitled-6.png" />
+    <None Include="Resources\Login_System.png" />
+    <None Include="Resources\Login_System2.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

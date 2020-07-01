@@ -16,7 +16,7 @@ namespace ProjectLibrary
         static SqlConnection con = new SqlConnection();
         public static SqlConnection getConnect()
         {
-            string strpath = @"Data Source="+ ServerName + ";Initial Catalog="+ batabase + ";Persist Security Info=True; User ID="+ UserID + ";Password="+ Pass+ ";";
+            string strpath = @"Data Source="+ ServerName + ";Initial Catalog="+ batabase + ";Integrated Security=True; User ID="+ UserID + ";Password="+ Pass+ ";";
             try
             {
                 if (con.State == ConnectionState.Open)
