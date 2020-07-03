@@ -161,7 +161,6 @@ namespace ProjectLibrary
             id = e.RowIndex;
             _home.Clear_PanelMenu();
             newbook = new frmAddNewBook(this, data, lbID.Text);
-            //MessageBox.Show(data[1] + " " + data[3]);
             newbook.ShowDialog();
         }
 
@@ -176,7 +175,6 @@ namespace ProjectLibrary
         {
             _home.Clear_PanelMenu();
             newbook = new frmAddNewBook(this, data, lbID.Text);
-            //MessageBox.Show(data[1] + " " + data[3]);
             newbook.ShowDialog();
         }
 
@@ -203,7 +201,7 @@ namespace ProjectLibrary
                 }
                 try
                 {
-                    author = new string[4];
+                    author = new string[6];
 
                     cmd = new SqlCommand(@"Select tbBooks_Detail.bid, tbBooks_Detail.Qty, tbBooks_Detail.rentQty, tbBooks_Detail.reserQty, tbAthor.fname, tbAthor.lname, tbWrite.[Year] 
                     From tbBooks_Detail INNER JOIN tbWrite

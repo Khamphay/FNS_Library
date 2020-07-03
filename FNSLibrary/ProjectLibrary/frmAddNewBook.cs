@@ -30,27 +30,16 @@ namespace ProjectLibrary
                 txtqty.Enabled = false;
                 //Use sub Books ID
                 int indx = 0, count = 0;
-                //char[] ch = data[0].ToCharArray();
-
-                //for (int i = 0; i < ch.Length; i++)
-                //{
-                //    if (char.IsLetter(ch[i]))
-                //    {
-                //        indx += 1;
-                //    }
-                //}
-                //txtid.Text=data[0].Substring(0, indx);
                 txtid.Text = bid;
                 barcode = data[0];
                 txtname.Text = data[1];
                 txtPage.Text = data[2];
                 txtISBN.Text = data[3];
-                txtqty.Text = "1";
                 cname = data[4];
                 typename = data[5];
                 cmbTable.Text = data[6];
                 cmbStatus.SelectedItem = data[7];
-
+                txtqty.Text = (txtid_Barcode.Lines.Length - 1).ToString();
                 cmd = new SqlCommand("Select fname From tbAthor Inner Join tbWrite On tbAthor.athid=tbWrite.athid Where tbWrite.bid='" + txtid.Text + "'", con);
                 dr = cmd.ExecuteReader();
                 while (dr.Read())
@@ -459,7 +448,6 @@ namespace ProjectLibrary
             LoadType_name();
             Load_Author();
             Load_Table();
-
             cmbCtg.SelectedItem = cname;
             cmbType.SelectedItem = typename;
 
@@ -489,62 +477,65 @@ namespace ProjectLibrary
 
         private void txtqty_TextChanged(object sender, EventArgs e)
         {
-            txtid_Barcode.Clear();
-            int n = 0;
-            if (txtqty.Text != "")
+            if (txtqty.Enabled != false)
             {
-                n = int.Parse(txtqty.Text);
-                if (id > 0)
+                txtid_Barcode.Clear();
+                int n = 0;
+                if (txtqty.Text != "")
                 {
-                    for (int i = 1; i <= n; i++)
+                    n = int.Parse(txtqty.Text);
+                    if (id > 0)
                     {
-                        id += 1;
-                        if (id < 10)
+                        for (int i = 1; i <= n; i++)
                         {
-                            txtid_Barcode.Text += $"{txtid.Text}000{id}\n";
+                            id += 1;
+                            if (id < 10)
+                            {
+                                txtid_Barcode.Text += $"{txtid.Text}000{id}\n";
+                            }
+                            else if (id >= 10 && id < 100)
+                            {
+                                txtid_Barcode.Text += $"{txtid.Text}00{i}\n";
+                            }
+                            else if (id >= 100 && id < 1000)
+                            {
+                                txtid_Barcode.Text += $"{txtid.Text}0{id}\n";
+                            }
+                            else
+                            {
+                                txtid_Barcode.Text += $"{txtid.Text}{id}\n";
+                            }
+                            // MessageBox.Show("If: "+i.ToString());
                         }
-                        else if (id >= 10 && id < 100)
+                    }
+                    else
+                    {
+                        for (int i = 1; i <= n; i++)
                         {
-                            txtid_Barcode.Text += $"{txtid.Text}00{i}\n";
+                            if (i < 10)
+                            {
+                                txtid_Barcode.Text += $"{txtid.Text}000{i}\n";
+                            }
+                            else if (i >= 10 && i < 100)
+                            {
+                                txtid_Barcode.Text += $"{txtid.Text}00{i}\n";
+                            }
+                            else if (i >= 100 && i < 1000)
+                            {
+                                txtid_Barcode.Text += $"{txtid.Text}0{i}\n";
+                            }
+                            else
+                            {
+                                txtid_Barcode.Text += $"{txtid.Text}{i}\n";
+                            }
+                            // MessageBox.Show("Else: "+i.ToString());
                         }
-                        else if (id >= 100 && id < 1000)
-                        {
-                            txtid_Barcode.Text += $"{txtid.Text}0{id}\n";
-                        }
-                        else
-                        {
-                            txtid_Barcode.Text += $"{txtid.Text}{id}\n";
-                        }
-                        // MessageBox.Show("If: "+i.ToString());
                     }
                 }
                 else
                 {
-                    for (int i = 1; i <= n; i++)
-                    {
-                        if (i < 10)
-                        {
-                            txtid_Barcode.Text += $"{txtid.Text}000{i}\n";
-                        }
-                        else if (i >= 10 && i < 100)
-                        {
-                            txtid_Barcode.Text += $"{txtid.Text}00{i}\n";
-                        }
-                        else if (i >= 100 && i < 1000)
-                        {
-                            txtid_Barcode.Text += $"{txtid.Text}0{i}\n";
-                        }
-                        else
-                        {
-                            txtid_Barcode.Text += $"{txtid.Text}{i}\n";
-                        }
-                        // MessageBox.Show("Else: "+i.ToString());
-                    }
+                    txtid_Barcode.Clear();
                 }
-            }
-            else
-            {
-                txtid_Barcode.Clear();
             }
         }
 
