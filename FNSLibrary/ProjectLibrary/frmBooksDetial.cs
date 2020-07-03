@@ -33,7 +33,7 @@ namespace ProjectLibrary
         DataSet ds = new DataSet();
         AutoCompleteStringCollection my_auto;
         string[] colname = { "ລະຫັດບາໂຄດ", "ຊື່ປຶ້ມ", "ຈຳນວນໜ້າ", "ISBN", "ໝວດ", "ປະເພດ","ລະຫັດຕູ້","ສະຖານະ" };
-        int id = 0, count=0;
+        int id = 0, count=0, qty=0;
         string[] data = new string[9];
         string[] author;
         string[] no_data = null;
@@ -73,25 +73,34 @@ namespace ProjectLibrary
         {
             try
             {
+
                 cmd = new SqlCommand("Delete From tbBooks Where barcode=@barcode", con);
                 cmd.Parameters.AddWithValue("barcode", dgvbooks.Rows[id].Cells[0].Value.ToString());
                 cmd.ExecuteNonQuery();
 
-                int indx = 0;
-                char[] ch = dgvbooks.Rows[id].Cells[0].Value.ToString().ToCharArray();
-                string bid = "";
+                //int indx = 0;
+                //char[] ch = dgvbooks.Rows[id].Cells[0].Value.ToString().ToCharArray();
+                //string bid = "";
 
-                for (int i = 0; i < ch.Length; i++)
+                //for (int i = 0; i < ch.Length; i++)
+                //{
+                //    if (char.IsLetter(ch[i]))
+                //    {
+                //        indx += 1;
+                //    }
+                //}
+                //bid = dgvbooks.Rows[id].Cells[0].Value.ToString().Substring(0,indx);
+                if (qty > 1)
                 {
-                    if (char.IsLetter(ch[i]))
-                    {
-                        indx += 1;
-                    }
+                    cmd = new SqlCommand("Update tbBooks_Detail Set Qty-=1 Where bid='" + lbID.Text + "'", con);
+                    cmd.ExecuteNonQuery();
                 }
-                bid = dgvbooks.Rows[id].Cells[0].Value.ToString().Substring(0,indx);
-                cmd = new SqlCommand("Update tbBooks_Detail Set Qty-=1 Where bid='"+bid+"'", con);
-                cmd.ExecuteNonQuery();
-
+                else if(qty<=1)
+                {
+                    cmd = new SqlCommand("Delete From tbBooks_Detail Where bid='" + lbID.Text + "'", con);
+                    cmd.ExecuteNonQuery();
+                }
+                
                 Show_Data();
                 id = 0;
                 btdel.Enabled = false;
@@ -150,6 +159,10 @@ namespace ProjectLibrary
         private void dgvbooks_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             id = e.RowIndex;
+            _home.Clear_PanelMenu();
+            newbook = new frmAddNewBook(this, data, lbID.Text);
+            //MessageBox.Show(data[1] + " " + data[3]);
+            newbook.ShowDialog();
         }
 
         private void btsave_Click(object sender, EventArgs e)
@@ -170,7 +183,7 @@ namespace ProjectLibrary
         private void btdel_Click_1(object sender, EventArgs e)
         {
             _home.Clear_PanelMenu();
-            DialogResult dialog = MyMessageBox.ShowMesage("ທ່ານແນ່ໃຈທີ່ຈະລົບຂໍ້ມູນອອກບໍ່?", "Warring", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+            DialogResult dialog = MyMessageBox.ShowMesage("ທ່ານແນ່ໃຈທີ່ຈະລົບຂໍ້ມູນອອກບໍ່?", "Warning", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
             if (dialog == DialogResult.Yes)
             {
                 Delete();
@@ -197,27 +210,29 @@ namespace ProjectLibrary
                     ON tbBooks_Detail.bid = tbWrite.bid INNER JOIN tbAthor
                     ON tbWrite.athid = tbAthor.athid Where tbBooks_Detail.bname=N'" + dgvbooks.Rows[e.RowIndex].Cells[1].Value.ToString() + "'", con);
 
+                    //Set to Lable
                     dr = cmd.ExecuteReader();
                     while (dr.Read())
                     {
                         lbID.Text = dr["bid"].ToString();
                         lbBookName.Text = dgvbooks.Rows[e.RowIndex].Cells[1].Value.ToString();
-                        lbAllQty.Text = dr["Qty"].ToString();
+                        qty = int.Parse(dr["Qty"].ToString());
+                        lbAllQty.Text = qty.ToString() + " ຫົວ";
                         if (dr["rentQty"].ToString() != "")
                         {
-                            lbRentQty.Text = dr["rentQty"].ToString();
+                            lbRentQty.Text = dr["rentQty"].ToString() + " ຫົວ";
                         }
                         else
                         {
-                            lbRentQty.Text = "0";
+                            lbRentQty.Text = "0 ຫົວ";
                         }
                         if (dr["reserQty"].ToString() != "")
                         {
-                            lbReserveQty.Text = dr["reserQty"].ToString();
+                            lbReserveQty.Text = dr["reserQty"].ToString() + " ຫົວ";
                         }
                         else
                         {
-                            lbReserveQty.Text = "0";
+                            lbReserveQty.Text = "0 ຫົວ";
                         }
                         lbYear.Text = dr["Year"].ToString();
                         author[count] = dr["fname"].ToString()+" "+dr["lname"].ToString();
@@ -283,7 +298,6 @@ namespace ProjectLibrary
             this.Close();
             _home.ShowHomePage();
         }
-
 
         private void frmBooksDetial_Click(object sender, EventArgs e)
         {

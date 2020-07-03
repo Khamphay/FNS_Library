@@ -107,10 +107,10 @@
             // cbShowPass1
             // 
             this.cbShowPass1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.cbShowPass1.ImageCheckedOff = global::ProjectLibrary.Properties.Resources.eye_100pxFalse;
+            this.cbShowPass1.ImageCheckedOff = global::ProjectLibrary.Properties.Resources.eye1;
             this.cbShowPass1.ImageCheckedOn = ((System.Drawing.Image)(resources.GetObject("cbShowPass1.ImageCheckedOn")));
             this.cbShowPass1.ImageSize = new System.Drawing.Size(20, 20);
-            this.cbShowPass1.Location = new System.Drawing.Point(559, 132);
+            this.cbShowPass1.Location = new System.Drawing.Point(556, 166);
             this.cbShowPass1.Name = "cbShowPass1";
             this.cbShowPass1.Size = new System.Drawing.Size(27, 21);
             this.cbShowPass1.TabIndex = 27;
@@ -119,10 +119,10 @@
             // cbShowPass2
             // 
             this.cbShowPass2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.cbShowPass2.ImageCheckedOff = global::ProjectLibrary.Properties.Resources.eye_100pxFalse;
+            this.cbShowPass2.ImageCheckedOff = global::ProjectLibrary.Properties.Resources.eye1;
             this.cbShowPass2.ImageCheckedOn = ((System.Drawing.Image)(resources.GetObject("cbShowPass2.ImageCheckedOn")));
             this.cbShowPass2.ImageSize = new System.Drawing.Size(20, 20);
-            this.cbShowPass2.Location = new System.Drawing.Point(559, 197);
+            this.cbShowPass2.Location = new System.Drawing.Point(556, 232);
             this.cbShowPass2.Name = "cbShowPass2";
             this.cbShowPass2.Size = new System.Drawing.Size(27, 21);
             this.cbShowPass2.TabIndex = 27;
@@ -131,10 +131,10 @@
             // cbShowPass3
             // 
             this.cbShowPass3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.cbShowPass3.ImageCheckedOff = global::ProjectLibrary.Properties.Resources.eye_100pxFalse;
+            this.cbShowPass3.ImageCheckedOff = global::ProjectLibrary.Properties.Resources.eye1;
             this.cbShowPass3.ImageCheckedOn = ((System.Drawing.Image)(resources.GetObject("cbShowPass3.ImageCheckedOn")));
             this.cbShowPass3.ImageSize = new System.Drawing.Size(20, 20);
-            this.cbShowPass3.Location = new System.Drawing.Point(559, 262);
+            this.cbShowPass3.Location = new System.Drawing.Point(556, 297);
             this.cbShowPass3.Name = "cbShowPass3";
             this.cbShowPass3.Size = new System.Drawing.Size(27, 21);
             this.cbShowPass3.TabIndex = 28;

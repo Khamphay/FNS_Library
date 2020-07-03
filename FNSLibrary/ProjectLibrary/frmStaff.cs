@@ -157,7 +157,7 @@ namespace ProjectLibrary
         {
             try
             {
-                DialogResult dialog = MyMessageBox.ShowMesage("ທ່ານແນ່ໃຈທີ່ຈະລົບຂໍ້ມູນອອກບໍ່?", "Warring", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+                DialogResult dialog = MyMessageBox.ShowMesage("ທ່ານແນ່ໃຈທີ່ຈະລົບຂໍ້ມູນອອກບໍ່?", "Warning", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
                 if (dialog == DialogResult.Yes)
                 {
                     cmd = new SqlCommand("Delete From tbStaff Where empid=@id ", con);

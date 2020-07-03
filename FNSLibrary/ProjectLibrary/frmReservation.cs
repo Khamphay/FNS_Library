@@ -235,17 +235,24 @@ namespace ProjectLibrary
             //    if(!dr.HasRows)
             //    {
             //        dr.Close();
-            Save();
+            if (txtmemberid.Text != "")
+            {
+                Save();
+            }
+            else
+            {
+                MyMessageBox.ShowMesage("ກະລຸນາກວດສອບຂໍ້ມູນສະມາຊິກຂອງທ່ານ ແລ້ວລອງໃຫມ່ອີກຄັ້ງ", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            }
             //    }
             //    else
             //    {
-            //        MessageBox.Show("You have reservaed ", "Warring", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //        MessageBox.Show("You have reservaed ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             //        dr.Close();
             //    }
             //}
             //catch (Exception ex)
             //{
-            //    MessageBox.Show("Error checked reserved: "+ex.Message, "Warring", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    MessageBox.Show("Error checked reserved: "+ex.Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
             //    dr.Close();
             //}
         }
@@ -284,7 +291,7 @@ namespace ProjectLibrary
             //    }
             //    else
             //    {
-            //        //MessageBox.Show("Please select day of to date", "Warring");
+            //        //MessageBox.Show("Please select day of to date", "Warning");
             //        dateST.Value = DateTime.Now;
             //    }
         }

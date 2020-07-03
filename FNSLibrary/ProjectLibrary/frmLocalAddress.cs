@@ -20,7 +20,7 @@ namespace ProjectLibrary
             InitializeComponent();
         }
 
-        private void btConnect_Click(object sender, EventArgs e)
+        private void ConnectSQLServer()
         {
             try
             {
@@ -53,6 +53,10 @@ namespace ProjectLibrary
             {
                 MyMessageBox.ShowMesage("ເຊື່ອມຕໍ່ຖານຂໍ້ມູນບໍ່ສຳເລັດເກີດບັນຫາ: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+        private void btConnect_Click(object sender, EventArgs e)
+        {
+            ConnectSQLServer();
         }
 
         private void cbHasUP_CheckedChanged(object sender, EventArgs e)
@@ -89,6 +93,23 @@ namespace ProjectLibrary
             txtUser.Clear();
             txtPass.Clear();
             cbHasUP.Checked = false;
+        }
+
+        private void cbShow_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbShow.Checked == true)
+            {
+                txtPass.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                txtPass.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void txtPass_KeyUp(object sender, KeyEventArgs e)
+        {
+            ConnectSQLServer();
         }
     }
 }

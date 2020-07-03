@@ -1387,6 +1387,10 @@ namespace ProjectLibrary {
             
             private global::System.Data.DataColumn columndateREd;
             
+            private global::System.Data.DataColumn columnstaff;
+            
+            private global::System.Data.DataColumn columnDataColumn1;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public tbMemberDataTable() {
@@ -1518,6 +1522,22 @@ namespace ProjectLibrary {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn staffColumn {
+                get {
+                    return this.columnstaff;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn DataColumn1Column {
+                get {
+                    return this.columnDataColumn1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1553,7 +1573,7 @@ namespace ProjectLibrary {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tbMemberRow AddtbMemberRow(string mid, string fname, string lname, string gender, string tel, string village, string district, string province, System.DateTime birdate, string detpname, System.DateTime dateRgt, System.DateTime dateREd) {
+            public tbMemberRow AddtbMemberRow(string mid, string fname, string lname, string gender, string tel, string village, string district, string province, System.DateTime birdate, string detpname, System.DateTime dateRgt, System.DateTime dateREd, string staff, string DataColumn1) {
                 tbMemberRow rowtbMemberRow = ((tbMemberRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         mid,
@@ -1567,7 +1587,9 @@ namespace ProjectLibrary {
                         birdate,
                         detpname,
                         dateRgt,
-                        dateREd};
+                        dateREd,
+                        staff,
+                        DataColumn1};
                 rowtbMemberRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowtbMemberRow);
                 return rowtbMemberRow;
@@ -1609,6 +1631,8 @@ namespace ProjectLibrary {
                 this.columndetpname = base.Columns["detpname"];
                 this.columndateRgt = base.Columns["dateRgt"];
                 this.columndateREd = base.Columns["dateREd"];
+                this.columnstaff = base.Columns["staff"];
+                this.columnDataColumn1 = base.Columns["DataColumn1"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1638,6 +1662,10 @@ namespace ProjectLibrary {
                 base.Columns.Add(this.columndateRgt);
                 this.columndateREd = new global::System.Data.DataColumn("dateREd", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndateREd);
+                this.columnstaff = new global::System.Data.DataColumn("staff", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnstaff);
+                this.columnDataColumn1 = new global::System.Data.DataColumn("DataColumn1", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDataColumn1);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnmid}, true));
                 this.columnmid.AllowDBNull = false;
@@ -2188,6 +2216,14 @@ namespace ProjectLibrary {
             
             private global::System.Data.DataColumn columndate;
             
+            private global::System.Data.DataColumn columnstaffid;
+            
+            private global::System.Data.DataColumn columnfname;
+            
+            private global::System.Data.DataColumn columnlname;
+            
+            private global::System.Data.DataColumn columntel;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public tbBook_LostDataTable() {
@@ -2303,6 +2339,38 @@ namespace ProjectLibrary {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn staffidColumn {
+                get {
+                    return this.columnstaffid;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn fnameColumn {
+                get {
+                    return this.columnfname;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn lnameColumn {
+                get {
+                    return this.columnlname;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn telColumn {
+                get {
+                    return this.columntel;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -2338,7 +2406,7 @@ namespace ProjectLibrary {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tbBook_LostRow AddtbBook_LostRow(string barcode, string bname, int page, int qty, decimal cost, string catgname, string typename, string tbdid, System.DateTime date) {
+            public tbBook_LostRow AddtbBook_LostRow(string barcode, string bname, int page, int qty, decimal cost, string catgname, string typename, string tbdid, System.DateTime date, string staffid, string fname, string lname, string tel) {
                 tbBook_LostRow rowtbBook_LostRow = ((tbBook_LostRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -2350,7 +2418,11 @@ namespace ProjectLibrary {
                         catgname,
                         typename,
                         tbdid,
-                        date};
+                        date,
+                        staffid,
+                        fname,
+                        lname,
+                        tel};
                 rowtbBook_LostRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowtbBook_LostRow);
                 return rowtbBook_LostRow;
@@ -2390,6 +2462,10 @@ namespace ProjectLibrary {
                 this.columntypename = base.Columns["typename"];
                 this.columntbdid = base.Columns["tbdid"];
                 this.columndate = base.Columns["date"];
+                this.columnstaffid = base.Columns["staffid"];
+                this.columnfname = base.Columns["fname"];
+                this.columnlname = base.Columns["lname"];
+                this.columntel = base.Columns["tel"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2415,6 +2491,14 @@ namespace ProjectLibrary {
                 base.Columns.Add(this.columntbdid);
                 this.columndate = new global::System.Data.DataColumn("date", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndate);
+                this.columnstaffid = new global::System.Data.DataColumn("staffid", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnstaffid);
+                this.columnfname = new global::System.Data.DataColumn("fname", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnfname);
+                this.columnlname = new global::System.Data.DataColumn("lname", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnlname);
+                this.columntel = new global::System.Data.DataColumn("tel", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntel);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnlosid}, true));
                 this.columnlosid.AutoIncrement = true;
@@ -3297,6 +3381,38 @@ namespace ProjectLibrary {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string staff {
+                get {
+                    try {
+                        return ((string)(this[this.tabletbMember.staffColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'staff\' in table \'tbMember\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletbMember.staffColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string DataColumn1 {
+                get {
+                    try {
+                        return ((string)(this[this.tabletbMember.DataColumn1Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'DataColumn1\' in table \'tbMember\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletbMember.DataColumn1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IstelNull() {
                 return this.IsNull(this.tabletbMember.telColumn);
             }
@@ -3365,6 +3481,30 @@ namespace ProjectLibrary {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetdetpnameNull() {
                 this[this.tabletbMember.detpnameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsstaffNull() {
+                return this.IsNull(this.tabletbMember.staffColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetstaffNull() {
+                this[this.tabletbMember.staffColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsDataColumn1Null() {
+                return this.IsNull(this.tabletbMember.DataColumn1Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetDataColumn1Null() {
+                this[this.tabletbMember.DataColumn1Column] = global::System.Convert.DBNull;
             }
         }
         
@@ -3726,6 +3866,70 @@ namespace ProjectLibrary {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string staffid {
+                get {
+                    try {
+                        return ((string)(this[this.tabletbBook_Lost.staffidColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'staffid\' in table \'tbBook_Lost\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletbBook_Lost.staffidColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string fname {
+                get {
+                    try {
+                        return ((string)(this[this.tabletbBook_Lost.fnameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'fname\' in table \'tbBook_Lost\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletbBook_Lost.fnameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string lname {
+                get {
+                    try {
+                        return ((string)(this[this.tabletbBook_Lost.lnameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'lname\' in table \'tbBook_Lost\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletbBook_Lost.lnameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string tel {
+                get {
+                    try {
+                        return ((string)(this[this.tabletbBook_Lost.telColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'tel\' in table \'tbBook_Lost\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletbBook_Lost.telColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IstbdidNull() {
                 return this.IsNull(this.tabletbBook_Lost.tbdidColumn);
             }
@@ -3734,6 +3938,54 @@ namespace ProjectLibrary {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SettbdidNull() {
                 this[this.tabletbBook_Lost.tbdidColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsstaffidNull() {
+                return this.IsNull(this.tabletbBook_Lost.staffidColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetstaffidNull() {
+                this[this.tabletbBook_Lost.staffidColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsfnameNull() {
+                return this.IsNull(this.tabletbBook_Lost.fnameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetfnameNull() {
+                this[this.tabletbBook_Lost.fnameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IslnameNull() {
+                return this.IsNull(this.tabletbBook_Lost.lnameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetlnameNull() {
+                this[this.tabletbBook_Lost.lnameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IstelNull() {
+                return this.IsNull(this.tabletbBook_Lost.telColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SettelNull() {
+                this[this.tabletbBook_Lost.telColumn] = global::System.Convert.DBNull;
             }
         }
         

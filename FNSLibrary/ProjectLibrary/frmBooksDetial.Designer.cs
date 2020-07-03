@@ -391,33 +391,33 @@
             // lbReserveQty
             // 
             this.lbReserveQty.AutoSize = true;
-            this.lbReserveQty.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbReserveQty.Font = new System.Drawing.Font("Saysettha OT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbReserveQty.ForeColor = System.Drawing.Color.Black;
             this.lbReserveQty.Location = new System.Drawing.Point(111, 172);
             this.lbReserveQty.Name = "lbReserveQty";
-            this.lbReserveQty.Size = new System.Drawing.Size(44, 17);
+            this.lbReserveQty.Size = new System.Drawing.Size(46, 21);
             this.lbReserveQty.TabIndex = 0;
             this.lbReserveQty.Text = ".........";
             // 
             // lbRentQty
             // 
             this.lbRentQty.AutoSize = true;
-            this.lbRentQty.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbRentQty.Font = new System.Drawing.Font("Saysettha OT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbRentQty.ForeColor = System.Drawing.Color.Black;
             this.lbRentQty.Location = new System.Drawing.Point(111, 141);
             this.lbRentQty.Name = "lbRentQty";
-            this.lbRentQty.Size = new System.Drawing.Size(44, 17);
+            this.lbRentQty.Size = new System.Drawing.Size(46, 21);
             this.lbRentQty.TabIndex = 0;
             this.lbRentQty.Text = ".........";
             // 
             // lbAllQty
             // 
             this.lbAllQty.AutoSize = true;
-            this.lbAllQty.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAllQty.Font = new System.Drawing.Font("Saysettha OT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbAllQty.ForeColor = System.Drawing.Color.Black;
             this.lbAllQty.Location = new System.Drawing.Point(111, 112);
             this.lbAllQty.Name = "lbAllQty";
-            this.lbAllQty.Size = new System.Drawing.Size(44, 17);
+            this.lbAllQty.Size = new System.Drawing.Size(46, 21);
             this.lbAllQty.TabIndex = 0;
             this.lbAllQty.Text = ".........";
             // 

@@ -30,15 +30,16 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLocalAddress));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cbHasUP = new System.Windows.Forms.CheckBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.cbShow = new System.Windows.Forms.CheckBox();
             this.txtPass = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.txtUser = new System.Windows.Forms.TextBox();
             this.txtDB = new System.Windows.Forms.TextBox();
             this.txtServer = new System.Windows.Forms.TextBox();
+            this.cbHasUP = new System.Windows.Forms.CheckBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -49,6 +50,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cbShow);
             this.groupBox1.Controls.Add(this.txtPass);
             this.groupBox1.Controls.Add(this.txtUser);
             this.groupBox1.Controls.Add(this.txtDB);
@@ -66,13 +68,63 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "ປ້ອນຂໍ້ມູນ:";
             // 
+            // cbShow
+            // 
+            this.cbShow.AutoSize = true;
+            this.cbShow.Location = new System.Drawing.Point(394, 279);
+            this.cbShow.Name = "cbShow";
+            this.cbShow.Size = new System.Drawing.Size(15, 14);
+            this.cbShow.TabIndex = 7;
+            this.cbShow.UseVisualStyleBackColor = true;
+            this.cbShow.CheckedChanged += new System.EventHandler(this.cbShow_CheckedChanged);
+            // 
+            // txtPass
+            // 
+            this.txtPass.Enabled = false;
+            this.txtPass.Font = new System.Drawing.Font("Saysettha OT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPass.Location = new System.Drawing.Point(69, 271);
+            this.txtPass.Name = "txtPass";
+            this.txtPass.Size = new System.Drawing.Size(320, 30);
+            this.txtPass.TabIndex = 3;
+            this.txtPass.UseSystemPasswordChar = true;
+            this.txtPass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Next_Control);
+            this.txtPass.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtPass_KeyUp);
+            // 
+            // txtUser
+            // 
+            this.txtUser.Enabled = false;
+            this.txtUser.Font = new System.Drawing.Font("Saysettha OT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUser.Location = new System.Drawing.Point(69, 213);
+            this.txtUser.Name = "txtUser";
+            this.txtUser.Size = new System.Drawing.Size(320, 30);
+            this.txtUser.TabIndex = 2;
+            this.txtUser.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Next_Control);
+            // 
+            // txtDB
+            // 
+            this.txtDB.Font = new System.Drawing.Font("Saysettha OT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDB.Location = new System.Drawing.Point(69, 116);
+            this.txtDB.Name = "txtDB";
+            this.txtDB.Size = new System.Drawing.Size(320, 30);
+            this.txtDB.TabIndex = 1;
+            this.txtDB.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Next_Control);
+            // 
+            // txtServer
+            // 
+            this.txtServer.Font = new System.Drawing.Font("Saysettha OT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtServer.Location = new System.Drawing.Point(69, 52);
+            this.txtServer.Name = "txtServer";
+            this.txtServer.Size = new System.Drawing.Size(320, 30);
+            this.txtServer.TabIndex = 0;
+            this.txtServer.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Next_Control);
+            // 
             // cbHasUP
             // 
             this.cbHasUP.AutoSize = true;
             this.cbHasUP.Font = new System.Drawing.Font("Saysettha OT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbHasUP.Location = new System.Drawing.Point(69, 160);
             this.cbHasUP.Name = "cbHasUP";
-            this.cbHasUP.Size = new System.Drawing.Size(217, 36);
+            this.cbHasUP.Size = new System.Drawing.Size(140, 25);
             this.cbHasUP.TabIndex = 6;
             this.cbHasUP.Text = "ມີຊື່ ແລະ ລະຫັດຜ່ານ";
             this.cbHasUP.UseVisualStyleBackColor = true;
@@ -84,7 +136,7 @@
             this.label7.Font = new System.Drawing.Font("Saysettha OT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(69, 244);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(218, 32);
+            this.label7.Size = new System.Drawing.Size(140, 21);
             this.label7.TabIndex = 2;
             this.label7.Text = "ລະຫັດຜ່ານ (Password)";
             // 
@@ -94,19 +146,9 @@
             this.label6.Font = new System.Drawing.Font("Saysettha OT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(65, 191);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(124, 32);
+            this.label6.Size = new System.Drawing.Size(81, 21);
             this.label6.TabIndex = 2;
             this.label6.Text = "ຊື່ (User ID)";
-            // 
-            // txtPass
-            // 
-            this.txtPass.Enabled = false;
-            this.txtPass.Font = new System.Drawing.Font("Saysettha OT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPass.Location = new System.Drawing.Point(69, 271);
-            this.txtPass.Name = "txtPass";
-            this.txtPass.Size = new System.Drawing.Size(320, 42);
-            this.txtPass.TabIndex = 3;
-            this.txtPass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Next_Control);
             // 
             // label5
             // 
@@ -114,9 +156,9 @@
             this.label5.Font = new System.Drawing.Font("Saysettha OT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(69, 94);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(265, 32);
+            this.label5.Size = new System.Drawing.Size(175, 21);
             this.label5.TabIndex = 2;
-            this.label5.Text = "ຊື່ຖານຂໍ້ມູນ(Database Name)";
+            this.label5.Text = "ຊື່ຖານຂໍ້ມູນ (Database Name)";
             // 
             // label4
             // 
@@ -124,37 +166,9 @@
             this.label4.Font = new System.Drawing.Font("Saysettha OT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(69, 30);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(137, 32);
+            this.label4.Size = new System.Drawing.Size(91, 21);
             this.label4.TabIndex = 2;
             this.label4.Text = "Server Name";
-            // 
-            // txtUser
-            // 
-            this.txtUser.Enabled = false;
-            this.txtUser.Font = new System.Drawing.Font("Saysettha OT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUser.Location = new System.Drawing.Point(69, 213);
-            this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(320, 42);
-            this.txtUser.TabIndex = 2;
-            this.txtUser.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Next_Control);
-            // 
-            // txtDB
-            // 
-            this.txtDB.Font = new System.Drawing.Font("Saysettha OT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDB.Location = new System.Drawing.Point(69, 116);
-            this.txtDB.Name = "txtDB";
-            this.txtDB.Size = new System.Drawing.Size(320, 42);
-            this.txtDB.TabIndex = 1;
-            this.txtDB.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Next_Control);
-            // 
-            // txtServer
-            // 
-            this.txtServer.Font = new System.Drawing.Font("Saysettha OT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtServer.Location = new System.Drawing.Point(69, 52);
-            this.txtServer.Name = "txtServer";
-            this.txtServer.Size = new System.Drawing.Size(320, 42);
-            this.txtServer.TabIndex = 0;
-            this.txtServer.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Next_Control);
             // 
             // label1
             // 
@@ -162,7 +176,7 @@
             this.label1.Font = new System.Drawing.Font("Saysettha OT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(125, 37);
+            this.label1.Size = new System.Drawing.Size(86, 24);
             this.label1.TabIndex = 1;
             this.label1.Text = "ຄຳແນະນຳ:";
             // 
@@ -172,7 +186,7 @@
             this.label2.Font = new System.Drawing.Font("Saysettha OT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(105, 29);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(420, 37);
+            this.label2.Size = new System.Drawing.Size(274, 24);
             this.label2.TabIndex = 2;
             this.label2.Text = "1. ປ້ອນ Server Name ແລະ ຊື່ຖານຂໍ້ມູນ.";
             // 
@@ -182,7 +196,7 @@
             this.label3.Font = new System.Drawing.Font("Saysettha OT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(105, 62);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(538, 37);
+            this.label3.Size = new System.Drawing.Size(355, 24);
             this.label3.TabIndex = 2;
             this.label3.Text = "2. ປ້ອນຊື່ ແລະ ລະຫັດຜ່ານການເຂົ້າໃຊ້ຖານຂໍ້ມູນ (ຖ້າມີ).";
             // 
@@ -216,10 +230,10 @@
             // 
             // frmLocalAddress
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 38F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(475, 476);
+            this.ClientSize = new System.Drawing.Size(481, 493);
             this.Controls.Add(this.btCacel);
             this.Controls.Add(this.btConnect);
             this.Controls.Add(this.label3);
@@ -259,5 +273,6 @@
         private System.Windows.Forms.Button btConnect;
         private System.Windows.Forms.Button btCacel;
         private System.Windows.Forms.CheckBox cbHasUP;
+        private System.Windows.Forms.CheckBox cbShow;
     }
 }

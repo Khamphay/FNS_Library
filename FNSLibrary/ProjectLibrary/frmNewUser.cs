@@ -146,7 +146,6 @@ namespace ProjectLibrary
             catch (Exception ex)
             {
                 MyMessageBox.ShowMesage("ເກີດບັນຫາໃນການສະແດງຂໍ້ມູນ: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
             }
         }
 

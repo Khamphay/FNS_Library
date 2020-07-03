@@ -240,7 +240,7 @@
             // Column7
             // 
             this.Column7.DividerWidth = 1;
-            this.Column7.HeaderText = "ວັນທີຢືມ";
+            this.Column7.HeaderText = "ວັນທີ";
             this.Column7.Name = "Column7";
             this.Column7.ReadOnly = true;
             // 
@@ -318,11 +318,11 @@
             // lbTel
             // 
             this.lbTel.AutoSize = true;
-            this.lbTel.Font = new System.Drawing.Font("Phetsarath OT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTel.Font = new System.Drawing.Font("Saysettha OT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTel.ForeColor = System.Drawing.Color.Black;
             this.lbTel.Location = new System.Drawing.Point(888, 4);
             this.lbTel.Name = "lbTel";
-            this.lbTel.Size = new System.Drawing.Size(0, 23);
+            this.lbTel.Size = new System.Drawing.Size(0, 24);
             this.lbTel.TabIndex = 53;
             // 
             // label11
@@ -371,11 +371,11 @@
             // lbMemberID
             // 
             this.lbMemberID.AutoSize = true;
-            this.lbMemberID.Font = new System.Drawing.Font("Phetsarath OT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMemberID.Font = new System.Drawing.Font("Saysettha OT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbMemberID.ForeColor = System.Drawing.Color.Black;
             this.lbMemberID.Location = new System.Drawing.Point(353, 4);
             this.lbMemberID.Name = "lbMemberID";
-            this.lbMemberID.Size = new System.Drawing.Size(0, 23);
+            this.lbMemberID.Size = new System.Drawing.Size(0, 24);
             this.lbMemberID.TabIndex = 52;
             // 
             // label20
@@ -517,6 +517,8 @@
         private System.Windows.Forms.Label lbMemberID;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbCost;
+        private System.Windows.Forms.Label lbAllCost;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
@@ -527,7 +529,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewImageColumn Column8;
-        private System.Windows.Forms.Label lbAllCost;
-        private System.Windows.Forms.Label label2;
     }
 }

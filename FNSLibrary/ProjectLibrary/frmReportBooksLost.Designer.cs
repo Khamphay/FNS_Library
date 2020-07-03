@@ -197,7 +197,6 @@
             this.txtShearch.Name = "txtShearch";
             this.txtShearch.Size = new System.Drawing.Size(213, 34);
             this.txtShearch.TabIndex = 2;
-            this.txtShearch.TextChanged += new System.EventHandler(this.txtShearch_TextChanged);
             // 
             // panel2
             // 

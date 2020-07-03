@@ -90,7 +90,7 @@ namespace ProjectLibrary
                     }
                     else
                     {
-                        MessageBox.Show("This book has reservation", "Warring", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("This book has reservation", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                     
                 }
@@ -104,7 +104,7 @@ namespace ProjectLibrary
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error load data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MyMessageBox.ShowMesage("ເກີດບັນຫາໃນການສະແດງຂໍ້ມູນປຶ້ມ: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -171,7 +171,7 @@ namespace ProjectLibrary
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error load max id data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MyMessageBox.ShowMesage("ເກີດບັນຫາໃນການສະແດງລະຫັດການຈອງ: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -195,7 +195,7 @@ namespace ProjectLibrary
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error load member id: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MyMessageBox.ShowMesage("ເກີດບັນຫາໃນການສະແດງບັດ: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -220,7 +220,7 @@ namespace ProjectLibrary
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error load data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MyMessageBox.ShowMesage("ເກີດບັນຫາໃນການສະແດງຂໍ້ມູນ: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -231,12 +231,12 @@ namespace ProjectLibrary
         {
             try
             {
-                cmd = new SqlCommand("Select mbid From tbRent_Detail Where status=N'ກຳລັງຢືມ' AND mbid='" + txtmemberid.Text + "'", con);
+                cmd = new SqlCommand("Select mbid From tbRent_Detail Inner Join tbRent_Book On tbRent_Detail.rentid = tbRent_Book.rentid Where tbRent_Book.status=N'ກຳລັງຢືມ' AND tbRent_Detail.mbid='" + txtmemberid.Text + "'", con);
                 dr = cmd.ExecuteReader();
                 dr.Read();
                 if (dr.HasRows && dr["mbid"].ToString() == txtmemberid.Text)
                 {
-                    MessageBox.Show("This member is rented!!!", "Warring", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MyMessageBox.ShowMesage("ບໍ່ສາມາດຢືມໄດ້ເນື່ອງຈາກມີປຶ້ມທີ່ຢືມໄປແລ້ວ ແຕ່ຍັງບໍ່ໄດ້ສົ່ງຄືນ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     btsave.Enabled = false;
                     txtmemberid.Clear();
                     dr.Close();
@@ -307,20 +307,21 @@ namespace ProjectLibrary
         {
             try
             {
-                cmd = new SqlCommand("Insert into tbRent_Detail Values(@rid, @mid, @datest, @dated, @status)", con);
+                cmd = new SqlCommand("Insert into tbRent_Detail Values(@rid, @mid, @datest, @dated)", con);
                 cmd.Parameters.AddWithValue("rid", txtRentId.Text);
                 cmd.Parameters.AddWithValue("mid", txtmemberid.Text);
                 cmd.Parameters.AddWithValue("datest", dateST.Value);
                 cmd.Parameters.AddWithValue("dated", dateED.Value);
-                cmd.Parameters.AddWithValue("status", status);
+               
                 if (cmd.ExecuteNonQuery() == 1)
                 {
                     for(int i = 0; i < dgvRentbooks.Rows.Count; i++)
                     {
-                        cmd = new SqlCommand("Insert into tbRent_Book Values(@rid, @barcode, @qty)", con);
+                        cmd = new SqlCommand("Insert into tbRent_Book Values(@rid, @barcode, @qty, @status)", con);
                         cmd.Parameters.AddWithValue("rid", txtRentId.Text);
                         cmd.Parameters.AddWithValue("barcode", dgvRentbooks.Rows[i].Cells[0].Value.ToString());
                         cmd.Parameters.AddWithValue("qty", dgvRentbooks.Rows[i].Cells[3].Value.ToString());
+                        cmd.Parameters.AddWithValue("status", status);
                         if (cmd.ExecuteNonQuery() == 1)
                         {
                             cmd = new SqlCommand("Update tbBooks Set status=@status Where barcode=@barcode", con);
@@ -365,6 +366,7 @@ namespace ProjectLibrary
                         }
                     }
                     MyMessageBox.ShowMesage("ບັນທືກການຢືມສຳເສັດແລ້ວ", "Save", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    dgvRentbooks.Rows.Clear();
                     ClearData();
                 }
             }catch (Exception ex)

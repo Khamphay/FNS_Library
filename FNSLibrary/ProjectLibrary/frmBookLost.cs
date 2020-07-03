@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using ProjectLibrary.MSDialog;
 
 namespace ProjectLibrary
 {
@@ -26,6 +27,7 @@ namespace ProjectLibrary
         DataTable table;
         AutoCompleteStringCollection auto;
         decimal cost = 0, total = 0;
+        string rentid = "";
 
         private void Lost_Cost()
         {
@@ -73,6 +75,41 @@ namespace ProjectLibrary
                 dr.Close();
             }
         }
+        private void Show_Data()
+        {
+            try
+            {
+                if (cbAll.Checked == true)
+                {
+                    table = new DataTable();
+                    da = new SqlDataAdapter(@"Select * From vw_BookLost", con);
+                    da.Fill(table);
+                    for (int row = 0; row < table.Rows.Count; row++)
+                    {
+                        dgvBooksLost.Rows.Add(
+                            table.Rows[row][0].ToString(),
+                            table.Rows[row][1].ToString(),
+                            table.Rows[row][2].ToString(),
+                            table.Rows[row][3].ToString(),
+                            table.Rows[row][4].ToString(),
+                            table.Rows[row][5].ToString(),
+                            table.Rows[row][6].ToString(),
+                            table.Rows[row][7].ToString(),
+                            DateTime.Parse(table.Rows[row][8].ToString()).ToString("dd-MM-yyyy")
+                            );
+                    }
+                }
+                else
+                {
+                    dgvBooksLost.Rows.Clear();
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
         private void ShowBarcord()
         {
             //try
@@ -103,7 +140,7 @@ namespace ProjectLibrary
                 table = new DataTable();
                 table.Clear();
                 dgvBooksLost.Rows.Clear();
-                da = new SqlDataAdapter(@"SELECT barcode, bname, page, qty, name, typename, tbdid, datest, mbid, fname , lname, tel From vw_ShowLostBooks Where mbid='" + memberid + "' and status=N'ກຳລັງຢືມ'", con);
+                da = new SqlDataAdapter(@"SELECT barcode, bname, page, qty, name, typename, tbdid, datest, mbid, fname , lname, tel, rentid From vw_ShowLostBooks Where mbid='" + memberid + "' and status=N'ກຳລັງຢືມ'", con);
                 da.Fill(table);
                 for (int row = 0; row < table.Rows.Count; row++)
                 {
@@ -126,6 +163,7 @@ namespace ProjectLibrary
                     lbMemberID.Text = table.Rows[row][8].ToString();
                     lbMemberName.Text =$"{table.Rows[row][9].ToString()} {table.Rows[row][10].ToString()}";
                     lbTel.Text = table.Rows[row][11].ToString();
+                    rentid = table.Rows[row][12].ToString();
                 }
                 btsave.Enabled = true;
                 cbAll.Enabled = false;
@@ -140,18 +178,13 @@ namespace ProjectLibrary
         {
             try
             {
-                for(int couut = dgvBooksLost.Rows.Count-1; couut >= 0; couut--)
+                for (int couut = 0; couut< dgvBooksLost.RowCount; couut++)
                 {
-                    cmd = new SqlCommand("Insert into tbBook_Lost(barcode, bname, page, qty, cost, catgname, typename, tbdid, date) Values(@barcode, @bname, @page, @qty, @cost, @catgname, @typename, @tbdid,  @date)", con);
+                    cmd = new SqlCommand("Insert into tbBook_Lost(barcode, qty, cost, date) Values(@barcode, @qty, @cost,  @date)", con);
                     cmd.Parameters.AddWithValue("barcode", DbType.String).Value = dgvBooksLost.Rows[couut].Cells[0].Value.ToString();
-                    cmd.Parameters.AddWithValue("bname", DbType.String).Value = dgvBooksLost.Rows[couut].Cells[1].Value.ToString();
-                    cmd.Parameters.AddWithValue("page", DbType.Int64).Value = int.Parse(dgvBooksLost.Rows[couut].Cells[2].Value.ToString());
                     cmd.Parameters.AddWithValue("qty", DbType.Int64).Value = int.Parse(dgvBooksLost.Rows[couut].Cells[3].Value.ToString());
                     cmd.Parameters.AddWithValue("cost", DbType.Decimal).Value = decimal.Parse(dgvBooksLost.Rows[couut].Cells[4].Value.ToString());
-                    cmd.Parameters.AddWithValue("catgname", DbType.String).Value = dgvBooksLost.Rows[couut].Cells[5].Value.ToString();
-                    cmd.Parameters.AddWithValue("typename", DbType.String).Value = dgvBooksLost.Rows[couut].Cells[6].Value.ToString();
-                    cmd.Parameters.AddWithValue("tbdid", DbType.String).Value = dgvBooksLost.Rows[couut].Cells[7].Value.ToString();
-                    cmd.Parameters.AddWithValue("date", DbType.Date).Value = DateTime.Now;
+                    cmd.Parameters.AddWithValue("date", DbType.Date).Value = DateTime.Now.Date;
                     if (cmd.ExecuteNonQuery() == 1)
                     {
 
@@ -160,17 +193,21 @@ namespace ProjectLibrary
                         table.Clear();
                         da.Fill(table);
 
-                        //Delete out of from tbBooks
-                        cmd = new SqlCommand("Delete From tbBooks Where barcode='" + dgvBooksLost.Rows[couut].Cells[0].Value.ToString() + "'", con);
+                        //Update out of from tbRent_Book
+                        cmd = new SqlCommand("Update tbRent_Book Set status=N'ສົ່ງແລ້ວ' Where barcode='" + dgvBooksLost.Rows[couut].Cells[0].Value.ToString() + "'", con);
+                        cmd.ExecuteNonQuery();
+                        
+                        //Update out of from tbBooks
+                        cmd = new SqlCommand("Update tbBooks Set status=N'ເສຍ' Where barcode='" + dgvBooksLost.Rows[couut].Cells[0].Value.ToString() + "'", con);
                         cmd.ExecuteNonQuery();
 
                         //Delete Upadte Qty of tbBooks_Detial
-                        cmd = new SqlCommand("Update tbBooks_Detail Set bid='" + table.Rows[0][0].ToString() + "'", con);
+                        cmd = new SqlCommand("Update tbBooks_Detail Set rentQty+="+int.Parse(dgvBooksLost.Rows[couut].Cells[3].Value.ToString())+" Where bid='" + table.Rows[0][0].ToString() + "'", con);
                         cmd.ExecuteNonQuery();
-
-                        dgvBooksLost.Rows.RemoveAt(couut);
                     }
                 }
+                MyMessageBox.ShowMesage("ບັນທືກສຳເລັດແລ້ວ", "Save", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                dgvBooksLost.Rows.Clear();
                 if (dgvBooksLost.Rows.Count <= 0)
                 {
                     txtMemberID.Clear();
@@ -178,22 +215,30 @@ namespace ProjectLibrary
                     cbAll.Enabled = true;
                     cbAll.Checked = true;
                 }
-                
-            }
+
+        }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message, "Save error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MyMessageBox.ShowMesage("ບັນທືກບໍ່ສຳເລັດເນື່ອງຈາກເກີດບັນຫາ: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-        private void Delete(string barcode)
+}
+        private void Delete(string barcode, string bid, int qty)
         {
             try
             {
-                DialogResult result = MessageBox.Show("Are you sure to delete?", "Warring", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
-                    if (result == DialogResult.OK)
+                DialogResult dialog = MyMessageBox.ShowMesage("ທ່ານແນ່ໃຈທີ່ຈະລົບຂໍ້ມູນອອກບໍ່?", "Warning", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+                if (dialog == DialogResult.Yes)
                 {
                     cmd = new SqlCommand("Delete From tbBook_Lost Where barcode='" + barcode + "'", con);
-                    cmd.ExecuteNonQuery();
+                   // cmd.ExecuteNonQuery();
+                    MessageBox.Show("Delete: "+cmd.ExecuteNonQuery().ToString());
+
+                    cmd = new SqlCommand("Update tbBooks Set status=N'ຫວ່າງ' Where barcode='" + barcode + "'", con);
+                    MessageBox.Show("Update 1: "+cmd.ExecuteNonQuery().ToString()); 
+                    
+                    cmd = new SqlCommand("Update tbBooks_Detail Set Qty+="+qty+" Where bid='" + bid + "'", con);
+                    MessageBox.Show("Update 2: "+cmd.ExecuteNonQuery().ToString());
+
                 }
             }
             catch (Exception)
@@ -211,27 +256,7 @@ namespace ProjectLibrary
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if (cbAll.Checked == true)
-            {
-                table = new DataTable();
-                da = new SqlDataAdapter("Select * From tbBook_Lost", con);
-                da.Fill(table);
-                for (int row = 0; row < table.Rows.Count; row++)
-                {
-                    dgvBooksLost.Rows.Add(
-                        table.Rows[row][0].ToString(),
-                        table.Rows[row][2].ToString(),
-                        table.Rows[row][3].ToString(),
-                        table.Rows[row][4].ToString(),
-                        table.Rows[row][5].ToString(),
-                        table.Rows[row][6].ToString(),
-                        table.Rows[row][7].ToString());
-                }
-            }
-            else
-            {
-                dgvBooksLost.Rows.Clear();
-            }
+            Show_Data();
         }
 
         private void txtid_TextChanged(object sender, EventArgs e)
@@ -239,6 +264,7 @@ namespace ProjectLibrary
             cbAll.Checked = false;
             if (txtMemberID.Text != "")
             {
+                cbAll.Checked = false;
                 AddLostBooks(txtMemberID.Text);
             }
             else
@@ -246,12 +272,14 @@ namespace ProjectLibrary
                 dgvBooksLost.Rows.Clear();
                 cbAll.Enabled = true;
                 btsave.Enabled = false;
+                cbAll.Checked = true;
             }
         }
 
         private void frmBookLost_Load(object sender, EventArgs e)
         {
             //ShowBarcord();
+            cbAll.Checked = true;
             LoadMemberID();
             Lost_Cost();
             lbAllCost.ResetText();
@@ -280,7 +308,21 @@ namespace ProjectLibrary
             }
             else if(e.ColumnIndex == 9 && cbAll.Checked == true && cbAll.Enabled == true && txtMemberID.Text == "")
             {
-                Delete(dgvBooksLost.Rows[e.RowIndex].Cells[0].Value.ToString());
+                try
+                {
+                    cmd = new SqlCommand("Select bid From tbBooks Where barcode='" + dgvBooksLost.Rows[e.RowIndex].Cells[0].ToString() + "'", con);
+                    dr = cmd.ExecuteReader();
+                    dr.Read();
+                    Delete(dgvBooksLost.Rows[e.RowIndex].Cells[0].Value.ToString(), dr["bid"].ToString(), int.Parse(dgvBooksLost.Rows[e.RowIndex].Cells[3].ToString()));
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    dr.Close();
+                }
             }
         }
     }

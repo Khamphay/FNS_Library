@@ -234,7 +234,7 @@ namespace ProjectLibrary
                 }
                 else
                 {
-                    MessageBox.Show("Please in check data and try agrian", "Warring", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Please in check data and try agrian", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             catch (Exception ex)

@@ -54,7 +54,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lbQtyTotal = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -178,7 +178,7 @@
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.lbQtyTotal);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.label1);
@@ -355,16 +355,16 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "ຈຳນວນວັນທີ່ເກີນ:";
             // 
-            // label3
+            // lbQtyTotal
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Phetsarath OT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(30, 130);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(85, 23);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "ຈຳນວນທີ່ຢຶມ:";
+            this.lbQtyTotal.AutoSize = true;
+            this.lbQtyTotal.Font = new System.Drawing.Font("Phetsarath OT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbQtyTotal.ForeColor = System.Drawing.Color.Black;
+            this.lbQtyTotal.Location = new System.Drawing.Point(30, 130);
+            this.lbQtyTotal.Name = "lbQtyTotal";
+            this.lbQtyTotal.Size = new System.Drawing.Size(85, 23);
+            this.lbQtyTotal.TabIndex = 0;
+            this.lbQtyTotal.Text = "ຈຳນວນທີ່ຢຶມ:";
             // 
             // label2
             // 
@@ -706,7 +706,7 @@
         private Guna.UI.WinForms.GunaAdvenceButton btBookLost;
         private Guna.UI.WinForms.GunaAdvenceButton btsave;
         private System.Windows.Forms.Label lbRentQty;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbQtyTotal;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lbPrice;
         private System.Windows.Forms.Label label6;

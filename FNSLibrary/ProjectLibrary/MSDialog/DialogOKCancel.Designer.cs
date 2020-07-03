@@ -51,10 +51,11 @@
             // lbMessage
             // 
             this.lbMessage.AutoSize = true;
+            this.lbMessage.Font = new System.Drawing.Font("Saysettha OT", 9F);
             this.lbMessage.Location = new System.Drawing.Point(63, 43);
             this.lbMessage.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbMessage.Name = "lbMessage";
-            this.lbMessage.Size = new System.Drawing.Size(50, 21);
+            this.lbMessage.Size = new System.Drawing.Size(46, 19);
             this.lbMessage.TabIndex = 4;
             this.lbMessage.Text = "ສະແດງ";
             // 

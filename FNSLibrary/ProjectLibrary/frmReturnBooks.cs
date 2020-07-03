@@ -66,6 +66,9 @@ namespace ProjectLibrary
 
                     if (bid != "")
                     {
+                        cmd = new SqlCommand("Update tbRent_Book SET status=N'ສົ່ງແລ້ວ' Where barcode='" + dgvReturnbooks.Rows[i].Cells[0].Value.ToString() + "'", con);
+                        cmd.ExecuteNonQuery();
+
                         cmd = new SqlCommand("Update tbBooks SET status=N'ຫວ່າງ' Where barcode='" + dgvReturnbooks.Rows[i].Cells[0].Value.ToString() + "'", con);
                         cmd.ExecuteNonQuery();
 
@@ -107,7 +110,7 @@ namespace ProjectLibrary
             {
                 table = new DataTable();
                 table.Clear();
-                da = new SqlDataAdapter("Select rentid, bid, barcode, bname, page, name, typename, qty, tbdid, datest, dateed, mbid, fname, lname From vw_Return Where barcode='" + barcode+ "'", con);
+                da = new SqlDataAdapter("Select rentid, bid, barcode, bname, page, name, typename, qty, tbdid, datest, dateed, mbid, fname, lname, qty_total From vw_Return Where barcode='" + barcode+ "'", con);
                 da.Fill(table);
 
                 if (table.Rows.Count > 0)
@@ -118,10 +121,10 @@ namespace ProjectLibrary
                     lbMemberName.Text = table.Rows[0][12].ToString() + " " + table.Rows[0][13].ToString();
                     lbDateSt.Text = DateTime.Parse(table.Rows[0][9].ToString()).ToString("dd-MM-yyyy");
                     lbDateExpire.Text = DateTime.Parse(table.Rows[0][10].ToString()).ToString("dd-MM-yyyy");
-
+                    lbQtyTotal.Text = table.Rows[0][14].ToString()+" ຫົວ";
                     for (int i = 0; i < table.Rows.Count; i++)
                     {
-                        qty += int.Parse(table.Rows[0][7].ToString());
+                       // qty += int.Parse(table.Rows[0][7].ToString());
                         dgvReturnbooks.Rows.Add(
                             table.Rows[i][2].ToString(),
                             table.Rows[i][3].ToString(),
@@ -133,7 +136,7 @@ namespace ProjectLibrary
                             );
                     }
 
-                    lbRentQty.Text = qty.ToString();
+                   // lbRentQty.Text = qty.ToString();
                     dateExpire = DateTime.Parse(table.Rows[0][10].ToString());
                     if (dateNow.CompareTo(dateExpire) == 1)
                     {
@@ -143,7 +146,7 @@ namespace ProjectLibrary
                         lbPrice.Text = priceFine.ToString();
                         priceTotal = qty * betweendate;
                         lbPriceTotal.Text = priceTotal.ToString();
-                        lbShowBooksExpire.Text = "ສົ່ງຊ້າ: " + betweendate.ToString() + " ມື້.";
+                        lbShowBooksExpire.Text = "ສົ່ງຊ້າ: " + betweendate.ToString() + " ວັນ";
                     }
                 }
             }

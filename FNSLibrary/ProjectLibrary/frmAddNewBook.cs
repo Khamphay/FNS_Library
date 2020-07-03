@@ -72,8 +72,8 @@ namespace ProjectLibrary
         AutoCompleteStringCollection my_auto;
 
         string bid = "", catgid = "", typeid = "", barcode = "", cname = "", typename="";
-        string[] auth = new string[4];
-        string[] authname = new string[4];
+        string[] auth = new string[6];
+        string[] authname = new string[6];
 
         int id = 0;
 
@@ -454,7 +454,6 @@ namespace ProjectLibrary
         {
             MyModel.getSwitchLanguage();
 
-
           //  MaxID();
             LoadCtg_Name();
             LoadType_name();
@@ -464,11 +463,24 @@ namespace ProjectLibrary
             cmbCtg.SelectedItem = cname;
             cmbType.SelectedItem = typename;
 
-            ComboBox[] combo = { cmbAuthor1, cmbAuthor2, cmbAuthor3, cmbAuthor4 };
+            TextBox[] text = {txtSurname1,txtSurname2, txtSurname3, txtSurname4,txtSurname5,txtSurname6 };
+            ComboBox[] combo = { cmbAuthor1, cmbAuthor2, cmbAuthor3, cmbAuthor4,cmbAuthor5,cmbAuthor6 };
+
+            for(int con = 0; con < combo.Length; con++)
+            {
+                //Set the size to all combobox and textbox before But don't set size to the first combobox and textbox
+                if (con < combo.Length-1)
+                {
+                    combo[con + 1].Size = new Size(0, 0);
+                    text[con + 1].Size = new Size(0, 0);
+                }
+            }
+
+
             for (int i = 0; i < authname.Length; i++)
             {
                 if (authname[i] != null)
-                { 
+                {
                     combo[i].SelectedItem = authname[i];
                 }
                 authname[i] = null;
@@ -553,14 +565,26 @@ namespace ProjectLibrary
         {
             try
             {
-                cmd = new SqlCommand("Select athid, lname From tbAthor Where fname=N'" + cmbAuthor1.Text + "'",con);
-                dr = cmd.ExecuteReader();
-                while (dr.Read())
+                if (cmbAuthor1.Text != cmbAuthor2.Text && cmbAuthor1.Text != cmbAuthor3.Text && cmbAuthor1.Text != cmbAuthor4.Text && cmbAuthor1.Text != cmbAuthor5.Text && cmbAuthor1.Text != cmbAuthor6.Text)
                 {
-                    auth[0] = dr["athid"].ToString();
-                    txtSurname1.Text = dr["lname"].ToString();
+                    cmd = new SqlCommand("Select athid, lname From tbAthor Where fname=N'" + cmbAuthor1.Text + "'", con);
+                    dr = cmd.ExecuteReader();
+                    while (dr.Read())
+                    {
+                        auth[0] = dr["athid"].ToString();
+                        txtSurname1.Text = dr["lname"].ToString();
+                        cmbAuthor2.Size = new Size(192, 31);
+                        txtSurname2.Size = new Size(192, 30);
+                    }
                 }
-            }catch(Exception ex)
+                else
+                {
+                    MyMessageBox.ShowMesage("ກະລຸນາເລືອກຊື່ອື່ນ ເນື່ອງຈາກຊື່ຜູ້ແຕ່ງຊ້ຳກັນ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    cmbAuthor1.ResetText();
+                    txtSurname1.Clear();
+                }
+            }
+            catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -573,13 +597,25 @@ namespace ProjectLibrary
         {
             try
             {
-                cmd = new SqlCommand("Select athid, lname From tbAthor Where fname=N'" + cmbAuthor2.Text + "'", con);
-                dr = cmd.ExecuteReader();
-                while (dr.Read())
+                if (cmbAuthor2.Text != cmbAuthor1.Text && cmbAuthor2.Text != cmbAuthor3.Text && cmbAuthor2.Text != cmbAuthor4.Text && cmbAuthor2.Text != cmbAuthor5.Text && cmbAuthor2.Text != cmbAuthor6.Text)
                 {
-                    auth[1] = dr["athid"].ToString();
-                    txtSurname2.Text = dr["lname"].ToString();
+                    cmd = new SqlCommand("Select athid, lname From tbAthor Where fname=N'" + cmbAuthor2.Text + "'", con);
+                    dr = cmd.ExecuteReader();
+                    while (dr.Read())
+                    {
+                        auth[1] = dr["athid"].ToString();
+                        txtSurname2.Text = dr["lname"].ToString();
+                        cmbAuthor3.Size = new Size(192, 31);
+                        txtSurname3.Size = new Size(192, 30);
+                    }
                 }
+                else
+                {
+                    MyMessageBox.ShowMesage("ກະລຸນາເລືອກຊື່ອື່ນ ເນື່ອງຈາກຊື່ຜູ້ແຕ່ງຊ້ຳກັນ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    cmbAuthor2.ResetText();
+                    txtSurname2.Clear();
+                }
+                
             }
             catch (Exception ex)
             {
@@ -595,12 +631,23 @@ namespace ProjectLibrary
         {
             try
             {
-                cmd = new SqlCommand("Select athid, lname From tbAthor Where fname=N'" + cmbAuthor3.Text + "'", con);
-                dr = cmd.ExecuteReader();
-                while (dr.Read())
+                if (cmbAuthor3.Text != cmbAuthor1.Text && cmbAuthor3.Text != cmbAuthor2.Text && cmbAuthor3.Text != cmbAuthor4.Text && cmbAuthor3.Text != cmbAuthor5.Text && cmbAuthor3.Text != cmbAuthor6.Text) 
                 {
-                    auth[2] = dr["athid"].ToString();
-                    txtSurname3.Text = dr["lname"].ToString();
+                    cmd = new SqlCommand("Select athid, lname From tbAthor Where fname=N'" + cmbAuthor3.Text + "'", con);
+                    dr = cmd.ExecuteReader();
+                    while (dr.Read())
+                    {
+                        auth[2] = dr["athid"].ToString();
+                        txtSurname3.Text = dr["lname"].ToString();
+                        cmbAuthor4.Size = new Size(192, 31);
+                        txtSurname4.Size = new Size(192, 30);
+                    }
+                }
+                else
+                {
+                    MyMessageBox.ShowMesage("ກະລຸນາເລືອກຊື່ອື່ນ ເນື່ອງຈາກຊື່ຜູ້ແຕ່ງຊ້ຳກັນ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    cmbAuthor3.ResetText();
+                    txtSurname3.Clear();
                 }
             }
             catch (Exception ex)
@@ -617,12 +664,85 @@ namespace ProjectLibrary
         {
             try
             {
-                cmd = new SqlCommand("Select athid, lname From tbAthor Where fname=N'" + cmbAuthor4.Text + "'", con);
-                dr = cmd.ExecuteReader();
-                while (dr.Read())
+                if (cmbAuthor4.Text != cmbAuthor1.Text && cmbAuthor4.Text != cmbAuthor2.Text && cmbAuthor4.Text != cmbAuthor3.Text && cmbAuthor4.Text != cmbAuthor5.Text && cmbAuthor4.Text != cmbAuthor6.Text)
                 {
-                    auth[3] = dr["athid"].ToString();
-                    txtSurname4.Text = dr["lname"].ToString();
+                    cmd = new SqlCommand("Select athid, lname From tbAthor Where fname=N'" + cmbAuthor4.Text + "'", con);
+                    dr = cmd.ExecuteReader();
+                    while (dr.Read())
+                    {
+                        auth[3] = dr["athid"].ToString();
+                        txtSurname4.Text = dr["lname"].ToString();
+                        cmbAuthor5.Size = new Size(192, 31);
+                        txtSurname5.Size = new Size(192, 30);
+                    }
+                }
+                else
+                {
+                    MyMessageBox.ShowMesage("ກະລຸນາເລືອກຊື່ອື່ນ ເນື່ອງຈາກຊື່ຜູ້ແຕ່ງຊ້ຳກັນ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    cmbAuthor4.ResetText();
+                    txtSurname4.Clear();
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+                dr.Close();
+            }
+        }
+        private void cmbAuthor5_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (cmbAuthor5.Text != cmbAuthor1.Text && cmbAuthor5.Text != cmbAuthor2.Text && cmbAuthor5.Text != cmbAuthor3.Text && cmbAuthor5.Text != cmbAuthor4.Text && cmbAuthor5.Text != cmbAuthor6.Text) 
+                { 
+                    cmd = new SqlCommand("Select athid, lname From tbAthor Where fname=N'" + cmbAuthor4.Text + "'", con);
+                    dr = cmd.ExecuteReader();
+                    while (dr.Read())
+                    {
+                        auth[5] = dr["athid"].ToString();
+                        txtSurname5.Text = dr["lname"].ToString();
+                        cmbAuthor6.Size = new Size(192, 31);
+                        txtSurname6.Size = new Size(192, 30);
+                    }
+                }
+                else
+                {
+                    MyMessageBox.ShowMesage("ກະລຸນາເລືອກຊື່ອື່ນ ເນື່ອງຈາກຊື່ຜູ້ແຕ່ງຊ້ຳກັນ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    cmbAuthor5.ResetText();
+                    txtSurname5.Clear();
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+                dr.Close();
+            }
+        }
+        private void cmbAuthor6_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (cmbAuthor6.Text != cmbAuthor1.Text && cmbAuthor6.Text != cmbAuthor2.Text && cmbAuthor6.Text != cmbAuthor3.Text && cmbAuthor6.Text != cmbAuthor5.Text)
+                {
+                    cmd = new SqlCommand("Select athid, lname From tbAthor Where fname=N'" + cmbAuthor4.Text + "'", con);
+                    dr = cmd.ExecuteReader();
+                    while (dr.Read())
+                    {
+                        auth[6] = dr["athid"].ToString();
+                        txtSurname6.Text = dr["lname"].ToString();
+                    }
+                }
+                else
+                {
+                    MyMessageBox.ShowMesage("ກະລຸນາເລືອກຊື່ອື່ນ ເນື່ອງຈາກຊື່ຜູ້ແຕ່ງຊ້ຳກັນ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    cmbAuthor6.ResetText();
+                    txtSurname6.Clear();
                 }
             }
             catch (Exception ex)

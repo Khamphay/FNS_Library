@@ -34,6 +34,13 @@ namespace ProjectLibrary
         DsBarcode ds;
         ReportDocument crd;
 
+        //Use Pass staff infor
+        ParameterFieldDefinition fieldDefinition;
+        ParameterFieldDefinitions fieldDefinitions;
+        ParameterDiscreteValue discreteValue = new ParameterDiscreteValue();
+        ParameterValues parameterValues = new ParameterValues();
+
+
         private void Reprot_All_Member()
         {
             ds = new DsBarcode();
@@ -54,6 +61,34 @@ namespace ProjectLibrary
             
             crd.Load(Application.StartupPath+ "\\CrReportMember.rpt");
             crd.SetDataSource(ds);
+
+            //Pass staff id
+            discreteValue.Value = MyModel.staff[0];
+            fieldDefinitions = crd.DataDefinition.ParameterFields;
+            fieldDefinition = fieldDefinitions["staff_id"];
+            parameterValues = fieldDefinition.CurrentValues;
+            parameterValues.Clear();
+            parameterValues.Add(discreteValue);
+            fieldDefinition.ApplyCurrentValues(parameterValues);
+
+            //Pass staff name
+            discreteValue.Value = MyModel.staff[1] + " " + MyModel.staff[2];
+            fieldDefinitions = crd.DataDefinition.ParameterFields;
+            fieldDefinition = fieldDefinitions["name"];
+            parameterValues = fieldDefinition.CurrentValues;
+            parameterValues.Clear();
+            parameterValues.Add(discreteValue);
+            fieldDefinition.ApplyCurrentValues(parameterValues);
+
+            //Pass staff tel
+            discreteValue.Value = MyModel.staff[3];
+            fieldDefinitions = crd.DataDefinition.ParameterFields;
+            fieldDefinition = fieldDefinitions["tel"];
+            parameterValues = fieldDefinition.CurrentValues;
+            parameterValues.Clear();
+            parameterValues.Add(discreteValue);
+            fieldDefinition.ApplyCurrentValues(parameterValues);
+
             crystalReportViewer1.ReportSource = crd;
             crystalReportViewer1.Refresh();
 

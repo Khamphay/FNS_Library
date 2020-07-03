@@ -82,14 +82,21 @@ namespace ProjectLibrary
         {
             try
             {
-                cmd = new SqlCommand("Insert Into tbType Values(@id,@name)", con);
-                cmd.Parameters.AddWithValue("id", id);
-                cmd.Parameters.AddWithValue("name", name);
-                if (cmd.ExecuteNonQuery() == 1)
+                if(id!="" && name!="")
                 {
-                    Show_data();
-                    MyModel.fsh_action = 1;
-                }               
+                    cmd = new SqlCommand("Insert Into tbType Values(@id,@name)", con);
+                    cmd.Parameters.AddWithValue("id", id);
+                    cmd.Parameters.AddWithValue("name", name);
+                    if (cmd.ExecuteNonQuery() == 1)
+                    {
+                        Show_data();
+                        MyModel.fsh_action = 1;
+                    }
+                }
+                else
+                {
+                    MyMessageBox.ShowMesage("ກະລຸນາກວດສອບຂໍ້ມູນແລ້ວລອງໃຫມ່ອີກຄັ້ງ", "Warign", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                }            
             }
             catch (Exception ex)
             {
@@ -102,14 +109,21 @@ namespace ProjectLibrary
         {
             try
             {
-                cmd = new SqlCommand("Update tbType Set typename=@name Where typeid=@id", con);
-                cmd.Parameters.AddWithValue("id", id);
-                cmd.Parameters.AddWithValue("name", name);
-               if(cmd.ExecuteNonQuery() == 1)
+                if(id!="" && name != "")
                 {
-                    Show_data();
-                    MyModel.fsh_action = 1;
-                }                
+                    cmd = new SqlCommand("Update tbType Set typename=@name Where typeid=@id", con);
+                    cmd.Parameters.AddWithValue("id", id);
+                    cmd.Parameters.AddWithValue("name", name);
+                    if (cmd.ExecuteNonQuery() == 1)
+                    {
+                        Show_data();
+                        MyModel.fsh_action = 1;
+                    }
+                }
+                else
+                {
+                    MyMessageBox.ShowMesage("ກະລຸນາກວດສອບຂໍ້ມູນແລ້ວລອງໃຫມ່ອີກຄັ້ງ", "Warign", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                }
             }
             catch (Exception ex)
             {
@@ -156,7 +170,7 @@ namespace ProjectLibrary
             }
             else if (e.ColumnIndex == 3)
             {
-                DialogResult dialog = MyMessageBox.ShowMesage("ທ່ານແນ່ໃຈທີ່ຈະລົບຂໍ້ມູນອອກບໍ່?", "Warring", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+                DialogResult dialog = MyMessageBox.ShowMesage("ທ່ານແນ່ໃຈທີ່ຈະລົບຂໍ້ມູນອອກບໍ່?", "Warning", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
                 if (dialog == DialogResult.Yes)
                 {
                     Delete(dgvtype.Rows[e.RowIndex].Cells[0].Value.ToString());

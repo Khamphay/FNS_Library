@@ -237,7 +237,7 @@ namespace ProjectLibrary
             }
             else
             {
-                MyMessageBox.ShowMesage("ກະລຸນາປ້ອນລະຫັດສະມາຊິກ", "Warring", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MyMessageBox.ShowMesage("ກະລຸນາປ້ອນລະຫັດສະມາຊິກ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

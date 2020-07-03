@@ -153,7 +153,7 @@ namespace ProjectLibrary
             {
                 Shearch_Data(txtSearch.Text);
                 if (treeView_Books.Nodes.Count < 1) {
-                    MyMessageBox.ShowMesage("ບໍ່ມີປຶ້ມທ່ານກຳລັງຊອກຫາ", "Warring", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MyMessageBox.ShowMesage("ບໍ່ມີປຶ້ມທ່ານກຳລັງຊອກຫາ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             else

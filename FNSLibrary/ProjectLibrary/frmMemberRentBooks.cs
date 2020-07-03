@@ -59,7 +59,7 @@ namespace ProjectLibrary
             }
             else
             {
-                MessageBox.Show("Please check the member information and try again", "Warring", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please check the member information and try again", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
                 
         }
@@ -102,7 +102,7 @@ namespace ProjectLibrary
                 dr.Read();
                 if (dr.HasRows && dr["mbid"].ToString() == txtmemberid.Text)
                 {
-                    MessageBox.Show("This member is rented!!!", "Warring", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("This member is rented!!!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     btsave.Enabled = false;
                 }
                 {
@@ -142,7 +142,7 @@ namespace ProjectLibrary
                 }
                 else
                 {
-                    MessageBox.Show("This card is expire", "Warring", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("This card is expire", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     btsave.Enabled = false;
                 }
             }

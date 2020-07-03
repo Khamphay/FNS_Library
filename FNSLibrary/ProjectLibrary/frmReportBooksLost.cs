@@ -35,17 +35,69 @@ namespace ProjectLibrary
         DsBarcode ds;
         ReportDocument rd;
 
-        private void ReportAll()
+        //Use for Pass parameter(Staff infor) to report
+        ParameterFieldDefinitions fieldDefinitions;
+        ParameterFieldDefinition fieldDefinition;
+        ParameterValues parameterValues = new ParameterValues();
+        ParameterDiscreteValue discreteValue = new ParameterDiscreteValue();
+
+        private void Report()
         {
             try
             {
                 ds = new DsBarcode();
-                ds.Clear();
-                da = new SqlDataAdapter("Select * From tbBook_Lost", con);
+                ds.Tables["tbBook_Lost"].Clear();
+                if (cbYear.Checked == true)
+                {
+                    cmd = new SqlCommand("Select * From vw_BookLost Where Year([date])=@year", con);
+                    cmd.Parameters.AddWithValue("year", DbType.Int64).Value = DateTime.Now.Year;
+                }else if (cbMouth.Checked == true)
+                {
+                    cmd = new SqlCommand("Select * From vw_BookLost Where Month([date]) =@year", con);
+                    cmd.Parameters.AddWithValue("year", DbType.Int64).Value = DateTime.Now.Month;
+                }
+                else
+                {
+                    cmd = new SqlCommand("Select * From vw_BookLost", con);
+                }
+                
+                da = new SqlDataAdapter(cmd);
                 da.Fill(ds, "tbBook_Lost");
                 rd = new ReportDocument();
                 rd.Load(Application.StartupPath+"\\CrReportBookLost.rpt");
                 rd.SetDataSource(ds);
+
+                //Pass staff id
+                discreteValue.Value = MyModel.staff[0];
+                fieldDefinitions = rd.DataDefinition.ParameterFields;
+                fieldDefinition = fieldDefinitions["staff_id"];
+                parameterValues = fieldDefinition.CurrentValues;
+
+                parameterValues.Clear();
+                parameterValues.Add(discreteValue);
+                fieldDefinition.ApplyCurrentValues(parameterValues);
+
+                //Pass staff name
+                discreteValue.Value = MyModel.staff[1] + " " + MyModel.staff[2];
+                fieldDefinitions = rd.DataDefinition.ParameterFields;
+                fieldDefinition = fieldDefinitions["name"];
+                parameterValues = fieldDefinition.CurrentValues;
+
+                parameterValues.Clear();
+                parameterValues.Add(discreteValue);
+                fieldDefinition.ApplyCurrentValues(parameterValues);
+
+                //Pass staff tel
+                discreteValue.Value = MyModel.staff[3];
+                fieldDefinitions = rd.DataDefinition.ParameterFields;
+                fieldDefinition = fieldDefinitions["tel"];
+                parameterValues = fieldDefinition.CurrentValues;
+
+                parameterValues.Clear();
+                parameterValues.Add(discreteValue);
+                fieldDefinition.ApplyCurrentValues(parameterValues);
+
+                //Show Report
                 crystalReportViewer1.ReportSource = rd;
                 crystalReportViewer1.Refresh();
             }
@@ -54,56 +106,14 @@ namespace ProjectLibrary
                 MessageBox.Show("Error: " + ex.Message);
             }
         }
-        private void ReportByYear(int year)
-        {
-            try
-            {
-                ds = new DsBarcode();
-                ds.Tables["tbBook_Lost"].Clear();
-                cmd = new SqlCommand("Select barcode, bname, page, qty, cost, catgname, typename, tbdid, [date] From vw_Book_Lost_ByYear Where year_now=@year", con);
-                cmd.Parameters.AddWithValue("year", DbType.Int64).Value = year;
-                da = new SqlDataAdapter(cmd);
-                da.Fill(ds, "tbBook_Lost");
-                rd = new ReportDocument();
-                rd.Load(Application.StartupPath+"\\CrReportBookLost.rpt");
-                rd.SetDataSource(ds);
-                crystalReportViewer1.ReportSource = rd;
-                crystalReportViewer1.Refresh();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
-        }  
        
-        private void ReportByMonth(int month)
-        {
-            try
-            {
-                ds = new DsBarcode();
-                ds.Tables["tbBook_Lost"].Clear();
-                cmd = new SqlCommand("Select barcode, bname, page, qty, cost, catgname, typename, tbdid, [date] from vw_Book_Lost_ByMonth Where month_now=@month", con);
-                cmd.Parameters.AddWithValue("month", DbType.Int64).Value = month;
-                da = new SqlDataAdapter(cmd);
-                da.Fill(ds, "tbBook_Lost");
-                rd = new ReportDocument();
-                rd.Load(Application.StartupPath+"\\CrReportBookLost.rpt");
-                rd.SetDataSource(ds);
-                crystalReportViewer1.ReportSource = rd;
-                crystalReportViewer1.Refresh();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
-        }
         private void ReportByDate(DateTime date1, DateTime date2)
         {
             try
             {
                 ds = new DsBarcode();
                 ds.Tables["tbBook_Lost"].Clear();
-                cmd = new SqlCommand("Select * From tbBook_Lost Where [date] Between @date1 And @date2", con);
+                cmd = new SqlCommand("Select * From vw_BookLost Where [date] Between @date1 And @date2", con);
                 cmd.Parameters.AddWithValue("date1", DbType.Date).Value = date1.Date;
                 cmd.Parameters.AddWithValue("date2", DbType.Date).Value = date2.Date;
                 da = new SqlDataAdapter(cmd);
@@ -111,6 +121,35 @@ namespace ProjectLibrary
                 rd = new ReportDocument();
                 rd.Load(Application.StartupPath+"\\CrReportBookLost.rpt");
                 rd.SetDataSource(ds);
+
+                //Pass staff id
+                discreteValue.Value = MyModel.staff[0];
+                fieldDefinitions = rd.DataDefinition.ParameterFields;
+                fieldDefinition = fieldDefinitions["staff_id"];
+                parameterValues = fieldDefinition.CurrentValues;
+                parameterValues.Clear();
+                parameterValues.Add(discreteValue);
+                fieldDefinition.ApplyCurrentValues(parameterValues);
+
+                //Pass staff name
+                discreteValue.Value = MyModel.staff[1] + " " + MyModel.staff[2];
+                fieldDefinitions = rd.DataDefinition.ParameterFields;
+                fieldDefinition = fieldDefinitions["name"];
+                parameterValues = fieldDefinition.CurrentValues;
+                parameterValues.Clear();
+                parameterValues.Add(discreteValue);
+                fieldDefinition.ApplyCurrentValues(parameterValues);
+
+                //Pass staff tel
+                discreteValue.Value = MyModel.staff[3];
+                fieldDefinitions = rd.DataDefinition.ParameterFields;
+                fieldDefinition = fieldDefinitions["tel"];
+                parameterValues = fieldDefinition.CurrentValues;
+                parameterValues.Clear();
+                parameterValues.Add(discreteValue);
+                fieldDefinition.ApplyCurrentValues(parameterValues);
+
+
                 crystalReportViewer1.ReportSource = rd;
                 crystalReportViewer1.Refresh();
             }
@@ -120,11 +159,6 @@ namespace ProjectLibrary
             }
         }
 
-        private void txtShearch_TextChanged(object sender, EventArgs e)
-        {
-            //crtReportBooksLost crt = new crtReportBooksLost();
-            //TextObject txtob=(TextObject)crt.ReportDefinition.Sections["Section3"].ReportObjects["txtShearch"]
-        }
 
         private void btExit_Click(object sender, EventArgs e)
         {
@@ -139,33 +173,17 @@ namespace ProjectLibrary
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if (cbYear.Checked == true)
-            {
-                cbMouth.Checked = false;
-                ReportByYear(DateTime.Now.Year);
-            }
-            else if(cbYear.Checked==false && cbMouth.Checked==false)
-            {
-                ReportAll();
-            }
+            Report();
         }
 
         private void cbMouth_CheckedChanged(object sender, EventArgs e)
         {
-            if (cbMouth.Checked == true)
-            {
-                cbYear.Checked = false;
-                ReportByMonth(DateTime.Now.Month);
-            }
-            else if (cbYear.Checked == false && cbMouth.Checked == false)
-            {
-                ReportAll();
-            }
+            Report();
         }
 
         private void frmReportBooksLost_Load(object sender, EventArgs e)
         {
-            ReportAll();
+            Report();
         }
 
         private void btShow_Click(object sender, EventArgs e)

@@ -211,7 +211,7 @@
             this.pnAdminMenu.Controls.Add(this.btRegister);
             this.pnAdminMenu.Location = new System.Drawing.Point(204, 56);
             this.pnAdminMenu.Name = "pnAdminMenu";
-            this.pnAdminMenu.Size = new System.Drawing.Size(609, 36);
+            this.pnAdminMenu.Size = new System.Drawing.Size(624, 36);
             this.pnAdminMenu.TabIndex = 0;
             // 
             // btServiceMenu
@@ -233,7 +233,7 @@
             this.btServiceMenu.Image = ((System.Drawing.Image)(resources.GetObject("btServiceMenu.Image")));
             this.btServiceMenu.ImageSize = new System.Drawing.Size(25, 25);
             this.btServiceMenu.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btServiceMenu.Location = new System.Drawing.Point(232, 2);
+            this.btServiceMenu.Location = new System.Drawing.Point(240, 2);
             this.btServiceMenu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btServiceMenu.Name = "btServiceMenu";
             this.btServiceMenu.OnHoverBaseColor = System.Drawing.Color.White;
@@ -277,7 +277,7 @@
             this.btBooksMenu.OnHoverImage = ((System.Drawing.Image)(resources.GetObject("btBooksMenu.OnHoverImage")));
             this.btBooksMenu.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
             this.btBooksMenu.OnPressedColor = System.Drawing.Color.Gainsboro;
-            this.btBooksMenu.Size = new System.Drawing.Size(95, 36);
+            this.btBooksMenu.Size = new System.Drawing.Size(103, 36);
             this.btBooksMenu.TabIndex = 0;
             this.btBooksMenu.Text = "ຂໍ້ມູນປຶ້ມ";
             this.btBooksMenu.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.ClearTypeGridFit;
@@ -303,7 +303,7 @@
             this.btPersonMenu.Image = ((System.Drawing.Image)(resources.GetObject("btPersonMenu.Image")));
             this.btPersonMenu.ImageSize = new System.Drawing.Size(25, 25);
             this.btPersonMenu.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btPersonMenu.Location = new System.Drawing.Point(106, 2);
+            this.btPersonMenu.Location = new System.Drawing.Point(114, 2);
             this.btPersonMenu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btPersonMenu.Name = "btPersonMenu";
             this.btPersonMenu.OnHoverBaseColor = System.Drawing.Color.White;
@@ -338,7 +338,7 @@
             this.btReportMenu.Image = ((System.Drawing.Image)(resources.GetObject("btReportMenu.Image")));
             this.btReportMenu.ImageSize = new System.Drawing.Size(25, 25);
             this.btReportMenu.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btReportMenu.Location = new System.Drawing.Point(484, 1);
+            this.btReportMenu.Location = new System.Drawing.Point(492, 1);
             this.btReportMenu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btReportMenu.Name = "btReportMenu";
             this.btReportMenu.OnHoverBaseColor = System.Drawing.Color.White;
@@ -373,7 +373,7 @@
             this.btRegister.Image = ((System.Drawing.Image)(resources.GetObject("btRegister.Image")));
             this.btRegister.ImageSize = new System.Drawing.Size(25, 25);
             this.btRegister.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btRegister.Location = new System.Drawing.Point(358, 2);
+            this.btRegister.Location = new System.Drawing.Point(366, 2);
             this.btRegister.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btRegister.Name = "btRegister";
             this.btRegister.OnHoverBaseColor = System.Drawing.Color.White;

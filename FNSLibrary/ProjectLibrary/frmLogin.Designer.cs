@@ -232,7 +232,7 @@
             // cbShowPass1
             // 
             this.cbShowPass1.ImageCheckedOff = ((System.Drawing.Image)(resources.GetObject("cbShowPass1.ImageCheckedOff")));
-            this.cbShowPass1.ImageCheckedOn = ((System.Drawing.Image)(resources.GetObject("cbShowPass1.ImageCheckedOn")));
+            this.cbShowPass1.ImageCheckedOn = global::ProjectLibrary.Properties.Resources.eye2;
             this.cbShowPass1.ImageSize = new System.Drawing.Size(20, 20);
             this.cbShowPass1.Location = new System.Drawing.Point(455, 166);
             this.cbShowPass1.Name = "cbShowPass1";
