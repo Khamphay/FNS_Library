@@ -48,7 +48,7 @@
             this.label2.Font = new System.Drawing.Font("Phetsarath OT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(73, 124);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 23);
+            this.label2.Size = new System.Drawing.Size(77, 21);
             this.label2.TabIndex = 1;
             this.label2.Text = "ຊື່ປະເພດປຶ້ມ";
             // 
@@ -109,6 +109,8 @@
             this.txtname.Size = new System.Drawing.Size(254, 30);
             this.txtname.TabIndex = 1;
             this.txtname.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtid_KeyDown);
+            this.txtname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtname_KeyPress);
+            this.txtname.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtname_KeyUp);
             // 
             // label1
             // 
@@ -116,7 +118,7 @@
             this.label1.Font = new System.Drawing.Font("Phetsarath OT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(73, 50);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 23);
+            this.label1.Size = new System.Drawing.Size(85, 21);
             this.label1.TabIndex = 1;
             this.label1.Text = "ລະຫັດປະເພດ";
             // 
@@ -192,7 +194,7 @@
             // 
             // frmEditType
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(387, 282);
             this.Controls.Add(this.panel2);

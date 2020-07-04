@@ -54,6 +54,25 @@ namespace ProjectLibrary
                 MyMessageBox.ShowMesage("ບັນທືກບໍ່ສຳເລັດເນື່ອງຈາກເກີດບັນຫາ: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        private void Save()
+        {
+
+            if (txtOldUserName.Text == MyModel.staff[4])
+            {
+                if (txtOldPass.Text == MyModel.staff[5])
+                {
+                    Edit_User();
+                }
+                else
+                {
+                    MyMessageBox.ShowMesage("ລະຫັດເກົ່າບໍ່ຖຶກຕ້ອງ. ກະລຸນາກວດສອບແລັວລອງໃໝ່ແລ້ວອີກຄັ້ງ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            else
+            {
+                MyMessageBox.ShowMesage("ຊື່ຜູ້ໃຊ້ເກົ່າບໍ່ຖຶກຕ້ອງ. ກະລຸນາກວດສອບແລັວລອງໃໝ່ແລ້ວອີກຄັ້ງ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
         private void Clear_Data()
         {
             txtid.Clear();
@@ -121,21 +140,7 @@ namespace ProjectLibrary
 
         private void btsave_Click(object sender, EventArgs e)
         {
-            if (txtOldUserName.Text==MyModel.staff[4])
-            {
-                if (txtOldPass.Text == MyModel.staff[5])
-                {
-                    Edit_User();
-                }
-                else
-                {
-                    MyMessageBox.ShowMesage("ລະຫັດເກົ່າບໍ່ຖຶກຕ້ອງ. ກະລຸນາກວດສອບແລັວລອງໃໝ່ແລ້ວອີກຄັ້ງ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-            }
-            else
-            {
-                MyMessageBox.ShowMesage("ຊື່ຜູ້ໃຊ້ເກົ່າບໍ່ຖຶກຕ້ອງ. ກະລຸນາກວດສອບແລັວລອງໃໝ່ແລ້ວອີກຄັ້ງ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+            Save();
         }
 
         private void NextControl(object sender, KeyEventArgs e)
@@ -150,6 +155,14 @@ namespace ProjectLibrary
         {
             this.Close();
             _home.ShowHomePage();
+        }
+
+        private void txtRePass_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                Save();
+            }
         }
     }
 }

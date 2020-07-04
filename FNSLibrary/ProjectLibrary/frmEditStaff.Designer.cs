@@ -55,7 +55,7 @@
             this.groupBox1.Controls.Add(this.radifiman);
             this.groupBox1.Controls.Add(this.radimal);
             this.groupBox1.Font = new System.Drawing.Font("Phetsarath OT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(63, 320);
+            this.groupBox1.Location = new System.Drawing.Point(63, 251);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(270, 64);
             this.groupBox1.TabIndex = 31;
@@ -68,7 +68,7 @@
             this.radifiman.CheckedOffColor = System.Drawing.Color.Black;
             this.radifiman.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(206)))));
             this.radifiman.FillColor = System.Drawing.Color.White;
-            this.radifiman.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radifiman.Font = new System.Drawing.Font("Phetsarath OT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radifiman.Location = new System.Drawing.Point(184, 28);
             this.radifiman.MinimumSize = new System.Drawing.Size(55, 27);
             this.radifiman.Name = "radifiman";
@@ -84,7 +84,7 @@
             this.radimal.CheckedOffColor = System.Drawing.Color.Black;
             this.radimal.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(206)))));
             this.radimal.FillColor = System.Drawing.Color.White;
-            this.radimal.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radimal.Font = new System.Drawing.Font("Phetsarath OT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radimal.Location = new System.Drawing.Point(48, 28);
             this.radimal.MinimumSize = new System.Drawing.Size(65, 27);
             this.radimal.Name = "radimal";
@@ -95,26 +95,28 @@
             // 
             // txtid
             // 
+            this.txtid.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
             this.txtid.Font = new System.Drawing.Font("Phetsarath OT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtid.Location = new System.Drawing.Point(63, 76);
             this.txtid.Margin = new System.Windows.Forms.Padding(8, 23, 8, 23);
             this.txtid.Name = "txtid";
             this.txtid.Size = new System.Drawing.Size(270, 30);
-            this.txtid.TabIndex = 24;
+            this.txtid.TabIndex = 1;
             this.txtid.Enter += new System.EventHandler(this.txtid_Enter);
             this.txtid.KeyDown += new System.Windows.Forms.KeyEventHandler(this.NextControl);
             // 
             // txttel
             // 
             this.txttel.Font = new System.Drawing.Font("Phetsarath OT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txttel.Location = new System.Drawing.Point(63, 277);
+            this.txttel.Location = new System.Drawing.Point(63, 348);
             this.txttel.Margin = new System.Windows.Forms.Padding(8, 23, 8, 23);
             this.txttel.Name = "txttel";
             this.txttel.Size = new System.Drawing.Size(270, 30);
-            this.txttel.TabIndex = 32;
+            this.txttel.TabIndex = 4;
             this.txttel.Enter += new System.EventHandler(this.txttel_Enter);
-            this.txttel.KeyDown += new System.Windows.Forms.KeyEventHandler(this.NextControl);
+            this.txttel.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txttel_KeyDown);
             this.txttel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txttel_KeyPress);
+            this.txttel.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txttel_KeyUp);
             // 
             // btsave
             // 
@@ -160,10 +162,10 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Phetsarath OT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(63, 252);
+            this.label7.Location = new System.Drawing.Point(63, 323);
             this.label7.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(73, 23);
+            this.label7.Size = new System.Drawing.Size(74, 21);
             this.label7.TabIndex = 25;
             this.label7.Text = "ເບີໂທລະສັບ";
             // 
@@ -174,7 +176,7 @@
             this.label2.Location = new System.Drawing.Point(63, 51);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(99, 23);
+            this.label2.Size = new System.Drawing.Size(101, 21);
             this.label2.TabIndex = 26;
             this.label2.Text = "ລະຫັດພະນັກງານ";
             // 
@@ -185,7 +187,7 @@
             this.txtname.Margin = new System.Windows.Forms.Padding(8, 23, 8, 23);
             this.txtname.Name = "txtname";
             this.txtname.Size = new System.Drawing.Size(270, 30);
-            this.txtname.TabIndex = 27;
+            this.txtname.TabIndex = 2;
             this.txtname.KeyDown += new System.Windows.Forms.KeyEventHandler(this.NextControl);
             this.txtname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyLetter);
             // 
@@ -196,7 +198,7 @@
             this.txtsurename.Margin = new System.Windows.Forms.Padding(8, 23, 8, 23);
             this.txtsurename.Name = "txtsurename";
             this.txtsurename.Size = new System.Drawing.Size(270, 30);
-            this.txtsurename.TabIndex = 30;
+            this.txtsurename.TabIndex = 3;
             this.txtsurename.KeyDown += new System.Windows.Forms.KeyEventHandler(this.NextControl);
             this.txtsurename.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyLetter);
             // 
@@ -207,7 +209,7 @@
             this.label3.Location = new System.Drawing.Point(63, 185);
             this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 23);
+            this.label3.Size = new System.Drawing.Size(69, 21);
             this.label3.TabIndex = 28;
             this.label3.Text = "ນາມສະກຸນ";
             // 
@@ -218,7 +220,7 @@
             this.label1.Location = new System.Drawing.Point(63, 119);
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 23);
+            this.label1.Size = new System.Drawing.Size(74, 21);
             this.label1.TabIndex = 29;
             this.label1.Text = "ຊື່ພະນັກງານ";
             // 
@@ -295,7 +297,7 @@
             // 
             // frmEditStaff
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(389, 465);
             this.Controls.Add(this.panel2);

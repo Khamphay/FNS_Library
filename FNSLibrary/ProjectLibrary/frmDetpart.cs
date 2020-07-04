@@ -129,7 +129,17 @@ namespace ProjectLibrary
                 MyMessageBox.ShowMesage("ລົບບໍ່ສຳເລັດເນື່ອງຈາກເກີດບັນຫາ: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
+        private void ShowFormEdit(int idx)
+        {
+            if (idx >= 0)
+            {
+                depart = new frmEditDepart(this);
+                depart.id = dgvdepart.Rows[idx].Cells[0].Value.ToString();
+                depart.name = dgvdepart.Rows[idx].Cells[1].Value.ToString();
+                depart.edit = true; ;
+                depart.ShowDialog();
+            }
+        }
         private void frmDetpart_Load(object sender, EventArgs e)
         {
             MyModel.getSwitchLanguage();
@@ -147,11 +157,7 @@ namespace ProjectLibrary
         {
             if (e.ColumnIndex == 2)
             {
-                depart = new frmEditDepart(this);
-                depart.id = dgvdepart.Rows[e.RowIndex].Cells[0].Value.ToString();
-                depart.name = dgvdepart.Rows[e.RowIndex].Cells[1].Value.ToString();
-                depart.edit = true; ;
-                depart.ShowDialog();
+                ShowFormEdit(e.RowIndex);
             }
             else if(e.ColumnIndex==3)
             {
@@ -187,6 +193,11 @@ namespace ProjectLibrary
         private void panel1_Click(object sender, EventArgs e)
         {
             _home.Clear_PanelMenu();
+        }
+
+        private void dgvdepart_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            ShowFormEdit(e.RowIndex);
         }
     }
 }

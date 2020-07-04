@@ -51,6 +51,8 @@
             this.txtname.Size = new System.Drawing.Size(252, 30);
             this.txtname.TabIndex = 11;
             this.txtname.KeyDown += new System.Windows.Forms.KeyEventHandler(this.NextControl);
+            this.txtname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtname_KeyPress);
+            this.txtname.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtname_KeyUp);
             // 
             // txtid
             // 
@@ -70,7 +72,7 @@
             this.label1.Location = new System.Drawing.Point(66, 59);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 23);
+            this.label1.Size = new System.Drawing.Size(92, 21);
             this.label1.TabIndex = 9;
             this.label1.Text = "ລະຫັດພາກວິຊາ";
             // 
@@ -120,7 +122,7 @@
             this.label2.Location = new System.Drawing.Point(66, 130);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 23);
+            this.label2.Size = new System.Drawing.Size(65, 21);
             this.label2.TabIndex = 10;
             this.label2.Text = "ຊື່ພາກວິຊາ";
             // 
@@ -196,7 +198,7 @@
             // 
             // frmEditDepart
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(374, 304);
             this.Controls.Add(this.panel2);

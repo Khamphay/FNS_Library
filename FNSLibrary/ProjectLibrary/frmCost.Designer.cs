@@ -61,6 +61,7 @@
             this.txtcost.Size = new System.Drawing.Size(210, 34);
             this.txtcost.TabIndex = 2;
             this.txtcost.Enter += new System.EventHandler(this.txtcost_Enter);
+            this.txtcost.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtcost_KeyDown);
             // 
             // label2
             // 
@@ -139,7 +140,7 @@
             // 
             // frmCost
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(396, 222);
             this.Controls.Add(this.lbCost);

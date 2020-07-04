@@ -76,7 +76,7 @@
             this.label3.Location = new System.Drawing.Point(57, 176);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 23);
+            this.label3.Size = new System.Drawing.Size(69, 21);
             this.label3.TabIndex = 20;
             this.label3.Text = "ນາມສະກຸນ";
             // 
@@ -130,6 +130,7 @@
             this.txttel.Enter += new System.EventHandler(this.txttel_Enter);
             this.txttel.KeyDown += new System.Windows.Forms.KeyEventHandler(this.NextControl);
             this.txttel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txttel_KeyPress);
+            this.txttel.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txttel_KeyUp);
             // 
             // label2
             // 
@@ -139,7 +140,7 @@
             this.label2.Location = new System.Drawing.Point(57, 110);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 23);
+            this.label2.Size = new System.Drawing.Size(51, 21);
             this.label2.TabIndex = 21;
             this.label2.Text = "ຊື່ຜູ້ແຕ່ງ";
             // 
@@ -151,7 +152,7 @@
             this.label5.Location = new System.Drawing.Point(57, 241);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(40, 23);
+            this.label5.Size = new System.Drawing.Size(39, 21);
             this.label5.TabIndex = 22;
             this.label5.Text = "ເບີໂທ";
             // 
@@ -163,7 +164,7 @@
             this.label1.Location = new System.Drawing.Point(57, 44);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 23);
+            this.label1.Size = new System.Drawing.Size(78, 21);
             this.label1.TabIndex = 23;
             this.label1.Text = "ລະຫັດຜູ້ແຕ່ງ";
             // 
@@ -250,7 +251,7 @@
             // 
             // frmEditAuthor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(377, 374);
             this.Controls.Add(this.panel2);

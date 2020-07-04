@@ -21,6 +21,29 @@ namespace ProjectLibrary
             _depart = depart;
         }
 
+        private void SaveAndEdit()
+        {
+            if (edit == false)
+            {
+                // if return 1 "Complete" else if 0 "Don't complete"
+                if (_depart.Save(txtid.Text, txtname.Text) == 1)
+                {
+                    txtid.Clear();
+                    txtname.Clear();
+                }
+            }
+            else
+            {
+                // if return 1 "Complete" else if 0 "Don't complete"
+                if (_depart.Edit(txtid.Text, txtname.Text) == 1)
+                {
+                    edit = false;
+                    this.Close();
+                    txtid.Clear();
+                    txtname.Clear();
+                }
+            }
+        }
         private void frmEditDepart_Load(object sender, EventArgs e)
         {
             // Load this Model for Switch Languase when focus on the TextBox
@@ -44,26 +67,7 @@ namespace ProjectLibrary
 
         private void btsave_Click(object sender, EventArgs e)
         {
-            if (edit == false)
-            {
-                // if return 1 "Complete" else if 0 "Don't complete"
-               if( _depart.Save(txtid.Text, txtname.Text) == 1)
-                {
-                    txtid.Clear();
-                    txtname.Clear();
-                }
-            }
-            else
-            {
-                // if return 1 "Complete" else if 0 "Don't complete"
-                if (_depart.Edit(txtid.Text, txtname.Text) == 1)
-                {
-                    edit = false;
-                    this.Close();
-                    txtid.Clear();
-                    txtname.Clear();
-                }
-            }
+            SaveAndEdit();
         }
 
         private void txtClear_Click(object sender, EventArgs e)
@@ -74,6 +78,20 @@ namespace ProjectLibrary
             name = "";
             txtid.Enabled = true;
             edit = false;
+        }
+
+        private void txtname_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                SaveAndEdit();
+                txtid.Focus();
+            }
+        }
+
+        private void txtname_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            InputLanguage.CurrentInputLanguage = MyModel.lao;
         }
 
         private void txtid_Enter(object sender, EventArgs e)

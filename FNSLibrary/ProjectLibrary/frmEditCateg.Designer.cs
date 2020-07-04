@@ -51,6 +51,8 @@
             this.txtname.Size = new System.Drawing.Size(245, 30);
             this.txtname.TabIndex = 11;
             this.txtname.KeyDown += new System.Windows.Forms.KeyEventHandler(this.NextControl);
+            this.txtname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtname_KeyPress);
+            this.txtname.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtname_KeyUp);
             // 
             // label2
             // 
@@ -59,7 +61,7 @@
             this.label2.Location = new System.Drawing.Point(53, 128);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 23);
+            this.label2.Size = new System.Drawing.Size(69, 21);
             this.label2.TabIndex = 8;
             this.label2.Text = "ຊື່ໝວດປຶ້ມ";
             // 
@@ -120,7 +122,7 @@
             this.label1.Location = new System.Drawing.Point(53, 48);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 23);
+            this.label1.Size = new System.Drawing.Size(77, 21);
             this.label1.TabIndex = 10;
             this.label1.Text = "ລະຫັດໝວດ";
             // 
@@ -196,7 +198,7 @@
             // 
             // frmEditCateg
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(356, 290);
             this.Controls.Add(this.panel2);

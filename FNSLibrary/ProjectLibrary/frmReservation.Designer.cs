@@ -160,7 +160,7 @@
             this.Column1.HeaderText = "ລະຫັດປຶ້ມ";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
-            this.Column1.Width = 92;
+            this.Column1.Width = 97;
             // 
             // Column2
             // 
@@ -174,14 +174,14 @@
             this.Column4.HeaderText = "ຈຳນວນໜ້າ";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
-            this.Column4.Width = 102;
+            this.Column4.Width = 109;
             // 
             // Column5
             // 
             this.Column5.HeaderText = "ຈຳນວນ";
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
-            this.Column5.Width = 80;
+            this.Column5.Width = 83;
             // 
             // Column3
             // 
@@ -202,7 +202,7 @@
             this.Column6.HeaderText = "ລະຫັດຕູ້";
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
-            this.Column6.Width = 81;
+            this.Column6.Width = 86;
             // 
             // gunaSeparator1
             // 
@@ -442,6 +442,7 @@
             this.txtTel.Size = new System.Drawing.Size(245, 34);
             this.txtTel.TabIndex = 4;
             this.txtTel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.EanableKey);
+            this.txtTel.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtTel_KeyUp);
             // 
             // txtlname
             // 
@@ -536,7 +537,7 @@
             // 
             // frmReservation
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.ClientSize = new System.Drawing.Size(1168, 552);

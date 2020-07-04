@@ -68,26 +68,36 @@ namespace ProjectLibrary
         {
             try
             {
-                if (txtNewPass.Text == txtRePass.Text)
+                cmd = new SqlCommand("Select * From tbUser Where empid='" + txtid.Text + "' And user_name='" + txtusername.Text + "' And password='" + txtNewPass.Text + "'", con);
+                da = new SqlDataAdapter(cmd);
+                table.Clear();
+                da.Fill(table);
+                if (table.Rows.Count <= 0)
                 {
-                    cmd = new SqlCommand("Insert Into tbUser Values(@id, @user, @pass)", con);
-                    cmd.Parameters.AddWithValue("id", txtid.Text);
-                    cmd.Parameters.AddWithValue("user", txtusername.Text);
-                    cmd.Parameters.AddWithValue("pass", txtNewPass.Text);
-                    if(cmd.ExecuteNonQuery() == 1)
+                    if (txtNewPass.Text == txtRePass.Text)
                     {
-                        MyMessageBox.ShowMesage("ບັນທືກສຳເສັດແລ້ວ", "Save", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        Clear_Text();
+                        cmd = new SqlCommand("Insert Into tbUser Values(@id, @user, @pass)", con);
+                        cmd.Parameters.AddWithValue("id", txtid.Text);
+                        cmd.Parameters.AddWithValue("user", txtusername.Text);
+                        cmd.Parameters.AddWithValue("pass", txtNewPass.Text);
+                        if (cmd.ExecuteNonQuery() == 1)
+                        {
+                            MyMessageBox.ShowMesage("ບັນທືກສຳເສັດແລ້ວ", "Save", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            Clear_Text();
+                        }
+
                     }
-                    
+                    else
+                    {
+                        MyMessageBox.ShowMesage("ຊື່ ແລະ ລະຫັດບໍ່ຖຶກຕ້ອງ. ກະລຸນາກວດສອບແລັວລອງໃໝ່ແລ້ວອີກຄັ້ງ", "Save", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
                 }
                 else
                 {
-                    MyMessageBox.ShowMesage("ຊື່ ແລະ ລະຫັດບໍ່ຖຶກຕ້ອງ. ກະລຸນາກວດສອບແລັວລອງໃໝ່ແລ້ວອີກຄັ້ງ", "Save", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MyMessageBox.ShowMesage("ມີບັນຊີຜູ້ໃຊ້ນີ້ແລ້ວ", "Save", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MyMessageBox.ShowMesage("ບັນທືກບໍ່ສຳເລັດເນື່ອງຈາກເກີດບັນຫາ: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -117,17 +127,7 @@ namespace ProjectLibrary
 
         private void btsave_Click(object sender, EventArgs e)
         {
-            cmd = new SqlCommand("Select * From tbUser Where empid='" + txtid.Text + "' And user_name='" + txtusername.Text + "' And password='" + txtNewPass.Text + "'",con);
-            da = new SqlDataAdapter(cmd);
-            table.Clear();
-            da.Fill(table);
-            if (table.Rows.Count <= 0) {
-                AddNew_User();
-            }
-            else
-            {
-                MyMessageBox.ShowMesage("ມີບັນຊີຜູ້ໃຊ້ນີ້ແລ້ວ", "Save", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            AddNew_User();
         }
 
         private void cmbname_SelectedIndexChanged(object sender, EventArgs e)
@@ -230,6 +230,14 @@ namespace ProjectLibrary
         {
             this.Close();
             _home.ShowHomePage();
+        }
+
+        private void txtRePass_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                AddNew_User();
+            }
         }
     }
 }

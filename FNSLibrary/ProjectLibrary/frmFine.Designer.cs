@@ -61,6 +61,7 @@
             this.txtPrice.Size = new System.Drawing.Size(198, 34);
             this.txtPrice.TabIndex = 2;
             this.txtPrice.Enter += new System.EventHandler(this.txtPrice_Enter);
+            this.txtPrice.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPrice_KeyDown);
             this.txtPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrice_KeyPress);
             // 
             // btsave
@@ -140,7 +141,7 @@
             // 
             // frmFine
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(396, 222);
             this.Controls.Add(this.lbCost);

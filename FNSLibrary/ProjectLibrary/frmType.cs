@@ -146,6 +146,18 @@ namespace ProjectLibrary
                 MyMessageBox.ShowMesage("ລົບບໍ່ສຳເລັດເນື່ອງຈາກເກີດບັນຫາ: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        private void ShowFormEdit(int idx)
+        {
+            if (idx >= 0)
+            {
+                type = new frmEditType(this);
+                type.tid = dgvtype.Rows[idx].Cells[0].Value.ToString();
+                type.tname = dgvtype.Rows[idx].Cells[1].Value.ToString();
+                type.edit = true;
+
+                type.ShowDialog();
+            }
+        }
 
         private void frmType_Load(object sender, EventArgs e) { 
             Show_data();
@@ -161,12 +173,7 @@ namespace ProjectLibrary
         {
             if (e.ColumnIndex == 2)
             {
-                type = new frmEditType(this);
-                type.tid = dgvtype.Rows[e.RowIndex].Cells[0].Value.ToString();
-                type.tname = dgvtype.Rows[e.RowIndex].Cells[1].Value.ToString();
-                type.edit = true;
-
-                type.ShowDialog();
+                ShowFormEdit(e.RowIndex);
             }
             else if (e.ColumnIndex == 3)
             {
@@ -207,6 +214,11 @@ namespace ProjectLibrary
         private void gunaGroupBox1_Click(object sender, EventArgs e)
         {
             _home.Clear_PanelMenu();
+        }
+
+        private void dgvtype_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            ShowFormEdit(e.RowIndex);
         }
     }
 }

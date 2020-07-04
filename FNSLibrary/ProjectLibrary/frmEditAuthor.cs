@@ -20,6 +20,27 @@ namespace ProjectLibrary
         }
 
         public bool edit = false;
+        private void SaveAndEdit()
+        {
+            if (edit == false)
+            {
+                // if return 1 "Complete" else if 0 "Don't complete"
+                if (_author.Save(txtid.Text, txtfname.Text, txtlname.Text, txttel.Text) == 1)
+                {
+                    Clear_Data();
+                }
+            }
+            else
+            {
+                // if return 1 "Complete" else if 0 "Don't complete"
+                if (_author.Edit(txtid.Text, txtfname.Text, txtlname.Text, txttel.Text) == 1)
+                {
+                    edit = false;
+                    Clear_Data();
+                    this.Close();
+                }
+            }
+        }
         public string[] data = new string[4];
         private void Clear_Data()
         {
@@ -34,6 +55,8 @@ namespace ProjectLibrary
                 data[i] = "";
             }
         }
+
+
         private void frmEditAuthor_Load(object sender, EventArgs e)
         {
             MyModel.getSwitchLanguage();
@@ -83,23 +106,15 @@ namespace ProjectLibrary
 
         private void btsave_Click(object sender, EventArgs e)
         {
-            if (edit == false)
+            SaveAndEdit();
+        }
+
+        private void txttel_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
             {
-                // if return 1 "Complete" else if 0 "Don't complete"
-                if ( _author.Save(txtid.Text, txtfname.Text, txtlname.Text, txttel.Text) == 1)
-                {
-                    Clear_Data();
-                }
-            }
-            else
-            {
-                // if return 1 "Complete" else if 0 "Don't complete"
-                if (_author.Edit(txtid.Text, txtfname.Text, txtlname.Text, txttel.Text) == 1)
-                {
-                    edit = false;
-                    Clear_Data();
-                    this.Close();
-                }
+                SaveAndEdit();
+                txtid.Focus();
             }
         }
     }

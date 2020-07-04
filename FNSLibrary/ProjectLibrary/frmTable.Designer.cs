@@ -128,6 +128,7 @@
             this.dgvtable.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(233)))), ((int)(((byte)(255)))));
             this.dgvtable.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.dgvtable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvtable_CellContentClick);
+            this.dgvtable.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvtable_CellDoubleClick);
             this.dgvtable.Click += new System.EventHandler(this.gunaGroupBox1_Click);
             // 
             // Column1
@@ -301,7 +302,7 @@
             // 
             // frmTable
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.ClientSize = new System.Drawing.Size(1011, 518);

@@ -11,9 +11,9 @@ namespace ProjectLibrary
 {
     class SQLIte_ServerName
     {
-        static SQLiteConnection mysqlitecon = new SQLiteConnection("Data Source=dbServerName.sqlite3;");
-        static SQLiteCommand cmd;
-        static SQLiteDataReader sdr;
+        public static SQLiteConnection mysqlitecon = new SQLiteConnection("Data Source=dbServerName.sqlite3;");
+        public static SQLiteCommand cmd;
+        public static SQLiteDataReader sdr;
 
 
         public static void CreateNewDatabase()
@@ -26,7 +26,7 @@ namespace ProjectLibrary
             mysqlitecon.Open();
 
             //Create Table
-             cmd = new SQLiteCommand("Create table tbServer(SVname varchar(100), DBname Varchar(50), UserID Varchar(20), Pass Varchar(20));", mysqlitecon);
+             cmd = new SQLiteCommand("Create table tbServer(SVname varchar(100), UserID Varchar(20), Pass Varchar(20));", mysqlitecon);
             cmd.ExecuteNonQueryAsync();
 
             mysqlitecon.Close();
@@ -43,7 +43,6 @@ namespace ProjectLibrary
                 {
                     sdr.Read();
                     MyConnected.ServerName = sdr["SVname"].ToString();
-                    MyConnected.batabase = sdr["DBname"].ToString();
                     MyConnected.UserID = sdr["UserID"].ToString();
                     MyConnected.Pass = sdr["Pass"].ToString();
                 }

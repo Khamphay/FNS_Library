@@ -254,6 +254,19 @@ namespace ProjectLibrary
             _home.Clear_PanelMenu();
         }
 
+        private void dgvtable_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                tbtable = new frmEditTable(this);
+                tbtable.id1 = dgvtable.Rows[e.RowIndex].Cells[0].Value.ToString();
+                tbtable.id2 = dgvtable.Rows[e.RowIndex].Cells[1].Value.ToString();
+                tbtable.edit = true;
+                tbtable.ShowDialog();
+            }
+            
+        }
+
         private void dgvtable_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)

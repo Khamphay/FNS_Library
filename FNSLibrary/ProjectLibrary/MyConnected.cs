@@ -11,12 +11,12 @@ namespace ProjectLibrary
     class MyConnected
     {
 
-        public static string ServerName, batabase, UserID, Pass;
+        public static string ServerName, UserID, Pass;
 
         static SqlConnection con = new SqlConnection();
         public static SqlConnection getConnect()
         {
-            string strpath = @"Data Source="+ ServerName + ";Initial Catalog="+ batabase + ";Integrated Security=True; User ID="+ UserID + ";Password="+ Pass+ ";";
+            string strpath = @"Data Source=" + ServerName + "; Initial Catalog = db_Libary; Persist Security Info = True; User ID = " + UserID + ";Password=" + Pass + ";";
             try
             {
                 if (con.State == ConnectionState.Open)

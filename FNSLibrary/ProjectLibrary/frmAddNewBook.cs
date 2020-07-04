@@ -773,23 +773,26 @@ namespace ProjectLibrary
             {
                 //Print Barcode
                 int CountLine = txtid_Barcode.Lines.Length - 1;
-                string[] data = new string[CountLine];
-                for (int i = 0; i < CountLine; i++)
+                if (CountLine > 0)
                 {
-                    data[i] = txtid_Barcode.Lines[i];
-                    PictureBox picBarCode = new PictureBox();
-                    BarcodeWriter barcode = new BarcodeWriter() { Format = BarcodeFormat.CODE_128 };
+                    string[] data = new string[CountLine];
+                    for (int i = 0; i < CountLine; i++)
+                    {
+                        data[i] = txtid_Barcode.Lines[i];
+                        PictureBox picBarCode = new PictureBox();
+                        BarcodeWriter barcode = new BarcodeWriter() { Format = BarcodeFormat.CODE_128 };
 
-                    picBarCode.Name = "picBar" + i;
-                    // MessageBox.Show(data[i]);
-                    picBarCode.Image = barcode.Write(data[i]);
-                    picBarCode.SizeMode = PictureBoxSizeMode.StretchImage;
-                    picBarCode.Height = 80;
-                    MemoryStream memo = new MemoryStream();
-                    picBarCode.Image.Save(memo, ImageFormat.Png);
-                    byte[] image = memo.ToArray();
+                        picBarCode.Name = "picBar" + i;
+                        // MessageBox.Show(data[i]);
+                        picBarCode.Image = barcode.Write(data[i]);
+                        picBarCode.SizeMode = PictureBoxSizeMode.StretchImage;
+                        picBarCode.Height = 80;
+                        MemoryStream memo = new MemoryStream();
+                        picBarCode.Image.Save(memo, ImageFormat.Png);
+                        byte[] image = memo.ToArray();
 
-                    MyModel.table.Rows.Add(data[i], image);
+                        MyModel.table.Rows.Add(data[i], image);
+                    }
                 }
             }
             //string[] data = new string[CountLine];

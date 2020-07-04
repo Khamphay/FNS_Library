@@ -74,19 +74,9 @@ namespace ProjectLibrary
                 MyMessageBox.ShowMesage("ແກ້ໄຂບໍ່ສຳເລັດເນື່ອງຈາກເກີດບັນຫາ: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        private void frmCost_Load(object sender, EventArgs e)
+        private void SaveAndEdit()
         {
-            MyModel.getSwitchLanguage();
-            Show_Data();
-        }
 
-        private void txtcost_Enter(object sender, EventArgs e)
-        {
-            InputLanguage.CurrentInputLanguage = MyModel.eng;
-        }
-
-        private void btsave_Click(object sender, EventArgs e)
-        {
             table = new DataTable();
             table.Clear();
             da = new SqlDataAdapter("Select cost From tbRegister_cost Where rgid=1", con);
@@ -100,6 +90,30 @@ namespace ProjectLibrary
                 Edit();
             }
             txtcost.Clear();
+        }
+
+        private void frmCost_Load(object sender, EventArgs e)
+        {
+            MyModel.getSwitchLanguage();
+            Show_Data();
+        }
+
+        private void txtcost_Enter(object sender, EventArgs e)
+        {
+            InputLanguage.CurrentInputLanguage = MyModel.eng;
+        }
+
+        private void btsave_Click(object sender, EventArgs e)
+        {
+            SaveAndEdit();
+        }
+
+        private void txtcost_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                SaveAndEdit();
+            }
         }
     }
 }

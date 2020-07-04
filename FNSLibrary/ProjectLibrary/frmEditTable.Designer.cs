@@ -56,6 +56,7 @@
             this.txtQty.Enter += new System.EventHandler(this.txtQty_Enter);
             this.txtQty.KeyDown += new System.Windows.Forms.KeyEventHandler(this.NextControl);
             this.txtQty.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtQty_KeyPress);
+            this.txtQty.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtQty_KeyUp);
             // 
             // txtidd
             // 
@@ -83,7 +84,7 @@
             this.label3.Location = new System.Drawing.Point(53, 112);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 23);
+            this.label3.Size = new System.Drawing.Size(51, 21);
             this.label3.TabIndex = 25;
             this.label3.Text = "ຈຳນວນ";
             // 
@@ -133,7 +134,7 @@
             this.label1.Location = new System.Drawing.Point(53, 47);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 23);
+            this.label1.Size = new System.Drawing.Size(55, 21);
             this.label1.TabIndex = 26;
             this.label1.Text = "ລະຫັດຕູ້";
             // 
@@ -144,7 +145,7 @@
             this.label2.Location = new System.Drawing.Point(53, 177);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 23);
+            this.label2.Size = new System.Drawing.Size(82, 21);
             this.label2.TabIndex = 27;
             this.label2.Text = "ລະຫັດຕູ້ຍ່ອຍ";
             // 
@@ -220,7 +221,7 @@
             // 
             // frmEditTable
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(370, 407);
             this.Controls.Add(this.panel2);

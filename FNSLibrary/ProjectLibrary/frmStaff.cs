@@ -98,6 +98,20 @@ namespace ProjectLibrary
                 MyMessageBox.ShowMesage("ເກີດບັນຫາໃນການສະແດງຂໍ້ມູນ: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        private void ShowFormEdit(int idx)
+        {
+            if (idx >= 0)
+            {
+                edstaff = new frmEditStaff(this);
+                edstaff.data[0] = dgvStaff.Rows[idx].Cells[0].Value.ToString();
+                edstaff.data[1] = dgvStaff.Rows[idx].Cells[1].Value.ToString();
+                edstaff.data[2] = dgvStaff.Rows[idx].Cells[2].Value.ToString();
+                edstaff.data[3] = dgvStaff.Rows[idx].Cells[3].Value.ToString();
+                edstaff.data[4] = dgvStaff.Rows[idx].Cells[4].Value.ToString();
+                edstaff.edit = true;
+                edstaff.ShowDialog();
+            }
+        }
         // Return 1 "Complete action" If Return 0 "Don't complete action"
         public int Save(string id, string name, string surename, string gen, string tel)
         {
@@ -176,7 +190,6 @@ namespace ProjectLibrary
             Show_Data();
         }
 
-
         private void txtid_Enter(object sender, EventArgs e)
         {
             InputLanguage.CurrentInputLanguage = MyModel.eng;
@@ -206,17 +219,7 @@ namespace ProjectLibrary
 
             if (e.ColumnIndex == 5)
             {
-                edstaff = new frmEditStaff(this);
-                if (e.RowIndex >= 0)
-                {
-                    edstaff.data[0] = dgvStaff.Rows[e.RowIndex].Cells[0].Value.ToString();
-                    edstaff.data[1] = dgvStaff.Rows[e.RowIndex].Cells[1].Value.ToString();
-                    edstaff.data[2] = dgvStaff.Rows[e.RowIndex].Cells[2].Value.ToString();
-                    edstaff.data[3] = dgvStaff.Rows[e.RowIndex].Cells[3].Value.ToString();
-                    edstaff.data[4] = dgvStaff.Rows[e.RowIndex].Cells[4].Value.ToString();
-                }
-                edstaff.edit = true;
-                edstaff.ShowDialog();
+                ShowFormEdit(e.RowIndex);
             }
             else if(e.ColumnIndex==6)
             {
@@ -249,5 +252,9 @@ namespace ProjectLibrary
             _home.Clear_PanelMenu();
         }
 
+        private void dgvStaff_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            ShowFormEdit(e.RowIndex);
+        }
     }
 }

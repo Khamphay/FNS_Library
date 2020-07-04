@@ -19,6 +19,34 @@ namespace ProjectLibrary
             _staff = staff;
         }
 
+        private void SaveAndEdit()
+        {
+            if (radimal.Checked == true)
+            {
+                gender = radimal.Text;
+            }
+            else
+            {
+                gender = radifiman.Text;
+            }
+            if (edit == false)
+            {
+                // Return 1 "Complete action" If Return 0 "Don't complete action"
+                if (_staff.Save(txtid.Text, txtname.Text, txtsurename.Text, gender, txttel.Text) == 1)
+                {
+                    ClearData();
+                }
+            }
+            else
+            {
+                // Return 1 "Complete action" If Return 0 "Don't complete action"
+                if (_staff.Edit(txtid.Text, txtname.Text, txtsurename.Text, gender, txttel.Text) == 1)
+                {
+                    edit = false;
+                    this.Close();
+                }
+            }
+        }
         private void ClearData()
         {
             for (int i = 0; i < data.Length; i++)
@@ -39,31 +67,7 @@ namespace ProjectLibrary
         public bool edit = false;
         private void btsave_Click(object sender, EventArgs e)
         {
-            if (radimal.Checked == true)
-            {
-                gender = radimal.Text;
-            }
-            else
-            {
-                gender = radifiman.Text;
-            }
-            if (edit == false)
-            {
-                // Return 1 "Complete action" If Return 0 "Don't complete action"
-                if(_staff.Save(txtid.Text, txtname.Text, txtsurename.Text, gender, txttel.Text) == 1)
-                {
-                    ClearData();
-                }
-            }
-            else
-            {
-                // Return 1 "Complete action" If Return 0 "Don't complete action"
-                if (_staff.Edit(txtid.Text, txtname.Text, txtsurename.Text, gender, txttel.Text) == 1)
-                {
-                    edit = false;
-                    this.Close();
-                }                
-            }
+            SaveAndEdit();
         }
 
         private void frmEditStaff_Load(object sender, EventArgs e)
@@ -120,6 +124,20 @@ namespace ProjectLibrary
         private void txttel_Enter(object sender, EventArgs e)
         {
             InputLanguage.CurrentInputLanguage = MyModel.eng;
+        }
+
+        private void txttel_KeyUp(object sender, KeyEventArgs e)
+        {
+            
+        }
+
+        private void txttel_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                SaveAndEdit();
+                txtid.Focus();
+            }
         }
     }
 }

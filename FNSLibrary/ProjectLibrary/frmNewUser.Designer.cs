@@ -74,6 +74,7 @@
             this.txtRePass.TabIndex = 5;
             this.txtRePass.UseSystemPasswordChar = true;
             this.txtRePass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.NextControl);
+            this.txtRePass.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtRePass_KeyUp);
             // 
             // cbShowPass1
             // 
@@ -107,7 +108,7 @@
             this.cmbname.FormattingEnabled = true;
             this.cmbname.Location = new System.Drawing.Point(55, 165);
             this.cmbname.Name = "cmbname";
-            this.cmbname.Size = new System.Drawing.Size(244, 31);
+            this.cmbname.Size = new System.Drawing.Size(244, 29);
             this.cmbname.TabIndex = 1;
             this.cmbname.SelectedIndexChanged += new System.EventHandler(this.cmbname_SelectedIndexChanged);
             this.cmbname.KeyDown += new System.Windows.Forms.KeyEventHandler(this.NextControl);
@@ -201,7 +202,7 @@
             this.lbNewpass.Location = new System.Drawing.Point(405, 139);
             this.lbNewpass.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lbNewpass.Name = "lbNewpass";
-            this.lbNewpass.Size = new System.Drawing.Size(68, 23);
+            this.lbNewpass.Size = new System.Drawing.Size(69, 21);
             this.lbNewpass.TabIndex = 1;
             this.lbNewpass.Text = "ລະຫັດຜ່ານ";
             // 
@@ -214,7 +215,7 @@
             this.label4.Location = new System.Drawing.Point(405, 67);
             this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(45, 23);
+            this.label4.Size = new System.Drawing.Size(44, 21);
             this.label4.TabIndex = 1;
             this.label4.Text = "ຊື່ຜູ້ໃຊ້";
             // 
@@ -240,7 +241,7 @@
             this.label3.Location = new System.Drawing.Point(55, 213);
             this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 23);
+            this.label3.Size = new System.Drawing.Size(69, 21);
             this.label3.TabIndex = 1;
             this.label3.Text = "ນາມສະກຸນ";
             // 
@@ -279,7 +280,7 @@
             this.label1.Location = new System.Drawing.Point(55, 139);
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 23);
+            this.label1.Size = new System.Drawing.Size(74, 21);
             this.label1.TabIndex = 1;
             this.label1.Text = "ຊື່ພະນັກງານ";
             // 
@@ -306,7 +307,7 @@
             this.label2.Location = new System.Drawing.Point(55, 67);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(99, 23);
+            this.label2.Size = new System.Drawing.Size(101, 21);
             this.label2.TabIndex = 1;
             this.label2.Text = "ລະຫັດພະນັກງານ";
             // 
@@ -319,7 +320,7 @@
             this.label6.Location = new System.Drawing.Point(405, 213);
             this.label6.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(113, 23);
+            this.label6.Size = new System.Drawing.Size(114, 21);
             this.label6.TabIndex = 1;
             this.label6.Text = "ປ້ອນລະຫັດຜ່ານຄືນ";
             // 
@@ -347,7 +348,7 @@
             // 
             // frmNewUser
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(692, 401);
             this.Controls.Add(this.pictureBox4);

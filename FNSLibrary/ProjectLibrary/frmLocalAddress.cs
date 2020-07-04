@@ -25,28 +25,30 @@ namespace ProjectLibrary
             try
             {
                 MyConnected.ServerName = txtServer.Text;
-                MyConnected.batabase = txtDB.Text;
                 MyConnected.UserID = txtUser.Text;
                 MyConnected.Pass = txtPass.Text;
 
                 SqlConnection con = MyConnected.getConnect();
 
-                if (con.State == ConnectionState.Open)
+                if (con!=null)
                 {
                     SQLiteConnection mysqlitecon = new SQLiteConnection("Data Source=dbServerName.sqlite3;");
                     mysqlitecon.Open();
-                    SQLiteCommand cmd = new SQLiteCommand("Insert Into tbServer Values(@server, @db, @user, @pass);", mysqlitecon);
+                    SQLiteCommand cmd = new SQLiteCommand("Insert Into tbServer Values(@server, @user, @pass);", mysqlitecon);
                     cmd.Parameters.AddWithValue("server", txtServer.Text);
-                    cmd.Parameters.AddWithValue("db", txtDB.Text);
                     cmd.Parameters.AddWithValue("user", txtUser.Text);
                     cmd.Parameters.AddWithValue("pass", txtPass.Text);
                     if (cmd.ExecuteNonQuery() == 1)
                     {
-                        MyMessageBox.ShowMesage("ເຊື່ອມຕໍ່ຖານຂໍ້ມູນສຳເລັດແລ້ວ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MyMessageBox.ShowMesage("ເຊື່ອມຕໍ່ຖານຂໍ້ມູນສຳເລັດແລ້ວ", "Connect Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         Form1 mainhome = new Form1();
                         mainhome.Show();
                         this.Hide();
                     }
+                }
+                else
+                {
+                    MyMessageBox.ShowMesage("ເຊື່ອມຕໍ່ຖານຂໍ້ມູນບໍ່ສຳເລັດ ກະລຸນາກວດສອບຂໍ້ມູນແລ້ວລອງໃຫມ່ອີກຄັ້ງ", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
                 }
             }
             catch (Exception ex)
@@ -89,7 +91,6 @@ namespace ProjectLibrary
         private void btCacel_Click(object sender, EventArgs e)
         {
             txtServer.Clear();
-            txtDB.Clear();
             txtUser.Clear();
             txtPass.Clear();
             cbHasUP.Checked = false;
@@ -109,7 +110,10 @@ namespace ProjectLibrary
 
         private void txtPass_KeyUp(object sender, KeyEventArgs e)
         {
-            ConnectSQLServer();
+            if (e.KeyCode == Keys.Enter)
+            {
+                ConnectSQLServer();
+            }
         }
     }
 }

@@ -163,7 +163,21 @@ namespace ProjectLibrary
                 MyMessageBox.ShowMesage("ລົບບໍ່ສຳເລັດເນື່ອງຈາກເກີດບັນຫາ: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-       
+        private void ShowFormEdit(int idx)
+        {
+            if (idx >= 0)
+            {
+                author = new frmEditAuthor(this);
+
+                author.data[0] = dgvAuthor.Rows[idx].Cells[0].Value.ToString();
+                author.data[1] = dgvAuthor.Rows[idx].Cells[1].Value.ToString();
+                author.data[2] = dgvAuthor.Rows[idx].Cells[2].Value.ToString();
+                author.data[3] = dgvAuthor.Rows[idx].Cells[3].Value.ToString();
+                author.edit = true;
+
+                author.ShowDialog();
+            }
+        }
         private void frmAuthor_Load(object sender, EventArgs e)
         {
             Show_Data();
@@ -207,16 +221,7 @@ namespace ProjectLibrary
             
             if (e.ColumnIndex == 4)
             {
-                author = new frmEditAuthor(this);
-                if (e.RowIndex >= 0)
-                {
-                    author.data[0] = dgvAuthor.Rows[e.RowIndex].Cells[0].Value.ToString();
-                    author.data[1] = dgvAuthor.Rows[e.RowIndex].Cells[1].Value.ToString();
-                    author.data[2] = dgvAuthor.Rows[e.RowIndex].Cells[2].Value.ToString();
-                    author.data[3] = dgvAuthor.Rows[e.RowIndex].Cells[3].Value.ToString();
-                    author.edit = true;
-                }
-                author.ShowDialog();
+                ShowFormEdit(e.RowIndex);
             }
             else if (e.ColumnIndex == 5)
             {
@@ -245,6 +250,11 @@ namespace ProjectLibrary
         private void panel1_Click(object sender, EventArgs e)
         {
             _home.Clear_PanelMenu();
+        }
+
+        private void dgvAuthor_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            ShowFormEdit(e.RowIndex);
         }
     }
 }

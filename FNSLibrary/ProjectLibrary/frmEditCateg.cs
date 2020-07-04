@@ -21,7 +21,29 @@ namespace ProjectLibrary
 
         public bool edit = false;
         public string id = "", name = "";
-
+        private void SaveAndEdit()
+        {
+            if (edit == false)
+            {
+                // if return 1 "Complete" else if 0 "Don't complete"
+                if (_cotg.Save(txtid.Text, txtname.Text) == 1)
+                {
+                    txtid.Clear();
+                    txtname.Clear();
+                }
+            }
+            else
+            {
+                // if return 1 "Complete" else if 0 "Don't complete"
+                if (_cotg.Edit(txtid.Text, txtname.Text) == 1)
+                {
+                    txtid.Clear();
+                    txtname.Clear();
+                    edit = false;
+                    this.Close();
+                }
+            }
+        }
         private void NextControl(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -45,26 +67,7 @@ namespace ProjectLibrary
 
         private void btsave_Click(object sender, EventArgs e)
         {
-            if (edit == false)
-            {
-                // if return 1 "Complete" else if 0 "Don't complete"
-                if ( _cotg.Save(txtid.Text, txtname.Text) == 1)
-                {
-                    txtid.Clear();
-                    txtname.Clear();
-                }
-            }
-            else
-            {
-                // if return 1 "Complete" else if 0 "Don't complete"
-               if( _cotg.Edit(txtid.Text, txtname.Text) == 1)
-                {
-                    txtid.Clear();
-                    txtname.Clear();
-                    edit = false;
-                    this.Close();
-                }
-            }
+            SaveAndEdit();
         }
 
         private void txtClear_Click(object sender, EventArgs e)
@@ -75,6 +78,20 @@ namespace ProjectLibrary
             txtid.Enabled = true;
             id = "";
             name = "";
+        }
+
+        private void txtname_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                SaveAndEdit();
+                txtid.Focus();
+            }
+        }
+
+        private void txtname_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            InputLanguage.CurrentInputLanguage = MyModel.lao;
         }
 
         private void txtid_Enter(object sender, EventArgs e)

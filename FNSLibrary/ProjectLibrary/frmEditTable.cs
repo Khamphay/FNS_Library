@@ -30,6 +30,31 @@ namespace ProjectLibrary
         int subid = 0;
         string maxid = "";
 
+        private void SaveAndEdit()
+        {
+            if (edit == false)
+            {
+                // Return 1 "Complete action" If Return 0 "Don't complete action"
+                if (_fmtable.Save(txtid.Text, int.Parse(txtQty.Text)) == 1)
+                {
+                    txtid.Clear();
+                    txtidd.Clear();
+                    txtQty.Clear();
+                }
+            }
+            else
+            {
+                // Return 1 "Complete action" If Return 0 "Don't complete action"
+                if (_fmtable.Edit(txtidd.Text) == 1)
+                {
+                    edit = false;
+                    this.Close();
+                    txtid.Clear();
+                    txtidd.Clear();
+                    txtQty.Clear();
+                }
+            }
+        }
         private void ClearData()
         {
             txtid.Clear();
@@ -53,15 +78,19 @@ namespace ProjectLibrary
                     table.Clear();
                     da = new SqlDataAdapter("select Max(tbdid) from tbTable Where tbid='" + txtid.Text + "'", con);
                     da.Fill(table);
-
-                    //MessageBox.Show(maxid = table.Rows[0][0].ToString());
-
                     if (table.Rows.Count > 0 && table.Rows[0][0].ToString() != "")
                     {
                         maxid = table.Rows[0][0].ToString();
-                        subid = int.Parse(maxid.Substring(1, maxid.Length - 1));
-                        //MessageBox.Show(maxid+"  "+subid.ToString());
-
+                        char[] m= maxid.ToCharArray();
+                        int a = 1;
+                        for(int c=0; c < m.Length; c++)
+                        {
+                            if (char.IsLetter(m[c]))
+                            {
+                                a += 1;
+                            }
+                        }
+                        subid = int.Parse(maxid.Substring(a));
                     }
 
                     if (txtid.Text == "")
@@ -139,28 +168,7 @@ namespace ProjectLibrary
 
         private void btsave_Click(object sender, EventArgs e)
         {
-            if (edit == false)
-            {
-                // Return 1 "Complete action" If Return 0 "Don't complete action"
-                if (_fmtable.Save(txtid.Text, int.Parse(txtQty.Text)) == 1)
-                {
-                    txtid.Clear();
-                    txtidd.Clear();
-                    txtQty.Clear();
-                }
-            }
-            else
-            {
-                // Return 1 "Complete action" If Return 0 "Don't complete action"
-                if (_fmtable.Edit(txtidd.Text) == 1)
-                {
-                    edit = false;
-                    this.Close();
-                    txtid.Clear();
-                    txtidd.Clear();
-                    txtQty.Clear();
-                }                
-            }
+            SaveAndEdit();
         }
 
         private void txtClear_Click(object sender, EventArgs e)
@@ -171,6 +179,15 @@ namespace ProjectLibrary
             edit = false;
             txtid.Enabled = true;
             txtQty.Enabled = true;
+        }
+
+        private void txtQty_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                SaveAndEdit();
+                txtid.Focus();
+            }
         }
 
         private void frmEditTable_Load(object sender, EventArgs e)

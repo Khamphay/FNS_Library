@@ -140,6 +140,29 @@ namespace ProjectLibrary
                 MyMessageBox.ShowMesage("ເກີດບັນຫາໃນການສະແດງຂໍ້ມູນ: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        private void ShowFormEdit(int idx)
+        {
+            //Fill Data to valible data[]
+            if (idx >= 0)
+            {
+                for (int i = 0; i < dgvMember.ColumnCount - 2; i++)
+                {
+                    data[i] = dgvMember.Rows[idx].Cells[i].Value.ToString();
+                }
+                //Open Edit page
+                frmRegister rigister = new frmRegister(data);
+                rigister.status = true;
+                rigister.ShowDialog();
+                if (rigister.Visible == false)
+                {
+                    Show_Data();
+                    for (int i = 0; i < data.Length; i++)
+                    {
+                        data[i] = "";
+                    }
+                }
+            }
+        }
         private void frmMember_Load(object sender, EventArgs e)
         {
             Show_Data();
@@ -159,29 +182,9 @@ namespace ProjectLibrary
         {
             _home.Clear_PanelMenu();
 
-            //Fill Data to valible data[]
-                int index = e.RowIndex;
-                if (index >= 0)
-                {
-                    for (int i = 0; i < dgvMember.ColumnCount - 2; i++)
-                    {
-                        data[i] = dgvMember.Rows[e.RowIndex].Cells[i].Value.ToString();
-                    }
-                }
             if (e.ColumnIndex == 12)
             {
-                //Open Edit page
-                frmRegister rigister = new frmRegister(data);
-                rigister.status = true;
-                rigister.ShowDialog();
-                if (rigister.Visible == false)
-                {
-                    Show_Data();
-                    for (int i = 0; i < data.Length; i++)
-                    {
-                        data[i] = "";
-                    }
-                }
+                ShowFormEdit(e.RowIndex);
             }
             else if (e.ColumnIndex == 13)
             {
@@ -191,7 +194,7 @@ namespace ProjectLibrary
                     if (dialog == DialogResult.Yes)
                     {
                         cmd = new SqlCommand("Delete From tbMember Where mid=@id", con);
-                        cmd.Parameters.AddWithValue("id", data[0]);
+                        cmd.Parameters.AddWithValue("id", dgvMember.Rows[e.RowIndex].Cells[0].Value.ToString());
                         cmd.ExecuteNonQuery();
                         Show_Data();
                     }
@@ -219,6 +222,11 @@ namespace ProjectLibrary
         {
             this.Close();
             _home.ShowHomePage();
+        }
+
+        private void dgvMember_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            ShowFormEdit(e.RowIndex);
         }
     }
 }

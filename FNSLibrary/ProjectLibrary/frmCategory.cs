@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using ProjectLibrary.MSDialog;
+using System;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Data.SqlClient;
-using ProjectLibrary.MSDialog;
+using System.Windows.Forms;
 
 namespace ProjectLibrary
 {
@@ -132,6 +126,17 @@ namespace ProjectLibrary
                 MyMessageBox.ShowMesage("ລົບບໍ່ສຳເລັດເນື່ອງຈາກເກີດບັນຫາ: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        private void ShowFromdit(int idx)
+        {
+            if (idx >= 0)
+            {
+                editctg = new frmEditCateg(this);
+                editctg.id = dgvcategory.Rows[idx].Cells[0].Value.ToString();
+                editctg.name = dgvcategory.Rows[idx].Cells[1].Value.ToString();
+                editctg.edit = true;
+                editctg.ShowDialog();
+            }
+        }
 
         private void frmCategory_Load(object sender, EventArgs e)
         {
@@ -148,11 +153,7 @@ namespace ProjectLibrary
         {
             if (e.ColumnIndex == 2)
             {
-                editctg = new frmEditCateg(this);
-                editctg.id = dgvcategory.Rows[e.RowIndex].Cells[0].Value.ToString();
-                editctg.name = dgvcategory.Rows[e.RowIndex].Cells[1].Value.ToString();
-                editctg.edit = true;
-                editctg.ShowDialog();
+                ShowFromdit(e.RowIndex);
             }else if (e.ColumnIndex == 3)
             {
                 Delete(dgvcategory.Rows[e.RowIndex].Cells[0].Value.ToString());
@@ -192,6 +193,11 @@ namespace ProjectLibrary
         private void panel1_Click(object sender, EventArgs e)
         {
             _home.Clear_PanelMenu();
+        }
+
+        private void dgvcategory_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            ShowFromdit(e.RowIndex);
         }
     }
 }

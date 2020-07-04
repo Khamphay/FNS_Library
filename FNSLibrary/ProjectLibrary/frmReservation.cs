@@ -140,59 +140,66 @@ namespace ProjectLibrary
         {
             try
             {
-                cmd = new SqlCommand("Insert Into tbReserve_Detail Values(@id, @mid, @datest, @dated)", con);
-                cmd.Parameters.AddWithValue("id", txtRentId.Text);
-                cmd.Parameters.AddWithValue("mid", txtmemberid.Text);
-                cmd.Parameters.AddWithValue("datest", SqlDbType.DateTime).Value = dateST.Value;
-                cmd.Parameters.AddWithValue("dated", SqlDbType.DateTime).Value = dateED.Value;
-                cmd.ExecuteNonQuery();
-
-                for(int i = 0; i < dgvReserbooks.RowCount; i++)
+                if (txtmemberid.Text != "")
                 {
-                    cmd = new SqlCommand("Insert Into tbReserve Values(@rsid, @bid, @qty)", con);
-                    cmd.Parameters.AddWithValue("rsid", txtRentId.Text);
-                    cmd.Parameters.AddWithValue("bid", dgvReserbooks.Rows[i].Cells[0].Value.ToString());
-                    cmd.Parameters.AddWithValue("qty", dgvReserbooks.Rows[i].Cells[3].Value.ToString());
-                    if (cmd.ExecuteNonQuery() == 1)
+                    cmd = new SqlCommand("Insert Into tbReserve_Detail Values(@id, @mid, @datest, @dated)", con);
+                    cmd.Parameters.AddWithValue("id", txtRentId.Text);
+                    cmd.Parameters.AddWithValue("mid", txtmemberid.Text);
+                    cmd.Parameters.AddWithValue("datest", SqlDbType.DateTime).Value = dateST.Value;
+                    cmd.Parameters.AddWithValue("dated", SqlDbType.DateTime).Value = dateED.Value;
+                    cmd.ExecuteNonQuery();
+
+                    for (int i = 0; i < dgvReserbooks.RowCount; i++)
                     {
-                        cmd = new SqlCommand("Update tbBooks Set status=N'ກຳລັງຈອງ' Where barcode='" + dgvReserbooks.Rows[i].Cells[0].Value.ToString() + "'", con);
-                        cmd.ExecuteNonQuery();
-
-                        //int indx = 0;
-                        string bid = "";
-                        //char[] ch = dgvReserbooks.Rows[i].Cells[0].Value.ToString().ToCharArray();
-
-                        da = new SqlDataAdapter("Select bid From tbBooks Where barcode='" + dgvReserbooks.Rows[i].Cells[0].Value.ToString() + "'", con);
-                        table = new DataTable();
-                        table.Clear();
-                        da.Fill(table);
-
-                        if (table.Rows.Count>0)
+                        cmd = new SqlCommand("Insert Into tbReserve Values(@rsid, @bid, @qty)", con);
+                        cmd.Parameters.AddWithValue("rsid", txtRentId.Text);
+                        cmd.Parameters.AddWithValue("bid", dgvReserbooks.Rows[i].Cells[0].Value.ToString());
+                        cmd.Parameters.AddWithValue("qty", dgvReserbooks.Rows[i].Cells[3].Value.ToString());
+                        if (cmd.ExecuteNonQuery() == 1)
                         {
-                            bid = table.Rows[0][0].ToString();
+                            cmd = new SqlCommand("Update tbBooks Set status=N'ກຳລັງຈອງ' Where barcode='" + dgvReserbooks.Rows[i].Cells[0].Value.ToString() + "'", con);
+                            cmd.ExecuteNonQuery();
+
+                            //int indx = 0;
+                            string bid = "";
+                            //char[] ch = dgvReserbooks.Rows[i].Cells[0].Value.ToString().ToCharArray();
+
+                            da = new SqlDataAdapter("Select bid From tbBooks Where barcode='" + dgvReserbooks.Rows[i].Cells[0].Value.ToString() + "'", con);
+                            table = new DataTable();
+                            table.Clear();
+                            da.Fill(table);
+
+                            if (table.Rows.Count > 0)
+                            {
+                                bid = table.Rows[0][0].ToString();
+                            }
+
+                            //for (int J = 0; J < ch.Length; J++)
+                            //{
+                            //    if (char.IsLetter(ch[J]))
+                            //    {
+                            //        indx += 1;
+                            //    }
+                            //}
+                            //bid = dgvReserbooks.Rows[i].Cells[0].Value.ToString().Substring(0, indx);
+
+                            cmd = new SqlCommand("Update tbBooks_Detail Set reserQty+=" + int.Parse(dgvReserbooks.Rows[i].Cells[3].Value.ToString()) + " Where bid='" + bid + "'", con);
+                            cmd.ExecuteNonQuery();
+                            bid = "";
+                            comflim = true;
+
                         }
-
-                        //for (int J = 0; J < ch.Length; J++)
-                        //{
-                        //    if (char.IsLetter(ch[J]))
-                        //    {
-                        //        indx += 1;
-                        //    }
-                        //}
-                        //bid = dgvReserbooks.Rows[i].Cells[0].Value.ToString().Substring(0, indx);
-
-                        cmd = new SqlCommand("Update tbBooks_Detail Set reserQty+=" + int.Parse(dgvReserbooks.Rows[i].Cells[3].Value.ToString()) + " Where bid='" + bid + "'", con);
-                        cmd.ExecuteNonQuery();
-                        bid = "";
-                        comflim = true;
-
                     }
+                    dgvReserbooks.Rows.Clear();
+                    MyMessageBox.ShowMesage("ບັນທືກການຈອງສຳເສັດແລ້ວ", "Save", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
                 }
-                dgvReserbooks.Rows.Clear();
-                MyMessageBox.ShowMesage("ບັນທືກການຈອງສຳເສັດແລ້ວ", "Save", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close();
-
-            }catch(Exception ex)
+                else
+                {
+                    MyMessageBox.ShowMesage("ກະລຸນາກວດສອບຂໍ້ມູນສະມາຊິກຂອງທ່ານ ແລ້ວລອງໃຫມ່ອີກຄັ້ງ", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception ex)
             {
                 MyMessageBox.ShowMesage("ບັນທືກບໍ່ສຳເລັດເນື່ອງຈາກເກີດບັນຫາ: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -235,14 +242,8 @@ namespace ProjectLibrary
             //    if(!dr.HasRows)
             //    {
             //        dr.Close();
-            if (txtmemberid.Text != "")
-            {
-                Save();
-            }
-            else
-            {
-                MyMessageBox.ShowMesage("ກະລຸນາກວດສອບຂໍ້ມູນສະມາຊິກຂອງທ່ານ ແລ້ວລອງໃຫມ່ອີກຄັ້ງ", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
-            }
+
+            Save();
             //    }
             //    else
             //    {
@@ -351,6 +352,14 @@ namespace ProjectLibrary
         private void btExit_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtTel_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                Save();
+            }
         }
 
         private void btedit_Click(object sender, EventArgs e)

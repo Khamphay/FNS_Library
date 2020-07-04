@@ -49,10 +49,12 @@ namespace ProjectLibrary
                 ds.Tables["tbBook_Lost"].Clear();
                 if (cbYear.Checked == true)
                 {
+                    cbMouth.Checked = false;
                     cmd = new SqlCommand("Select * From vw_BookLost Where Year([date])=@year", con);
                     cmd.Parameters.AddWithValue("year", DbType.Int64).Value = DateTime.Now.Year;
                 }else if (cbMouth.Checked == true)
                 {
+                    cbYear.Checked = false;
                     cmd = new SqlCommand("Select * From vw_BookLost Where Month([date]) =@year", con);
                     cmd.Parameters.AddWithValue("year", DbType.Int64).Value = DateTime.Now.Month;
                 }

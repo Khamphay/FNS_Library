@@ -33,12 +33,10 @@
             this.cbShow = new System.Windows.Forms.CheckBox();
             this.txtPass = new System.Windows.Forms.TextBox();
             this.txtUser = new System.Windows.Forms.TextBox();
-            this.txtDB = new System.Windows.Forms.TextBox();
             this.txtServer = new System.Windows.Forms.TextBox();
             this.cbHasUP = new System.Windows.Forms.CheckBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -53,17 +51,15 @@
             this.groupBox1.Controls.Add(this.cbShow);
             this.groupBox1.Controls.Add(this.txtPass);
             this.groupBox1.Controls.Add(this.txtUser);
-            this.groupBox1.Controls.Add(this.txtDB);
             this.groupBox1.Controls.Add(this.txtServer);
             this.groupBox1.Controls.Add(this.cbHasUP);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Font = new System.Drawing.Font("Saysettha OT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 103);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(448, 322);
+            this.groupBox1.Size = new System.Drawing.Size(448, 256);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "ປ້ອນຂໍ້ມູນ:";
@@ -71,7 +67,7 @@
             // cbShow
             // 
             this.cbShow.AutoSize = true;
-            this.cbShow.Location = new System.Drawing.Point(394, 279);
+            this.cbShow.Location = new System.Drawing.Point(394, 215);
             this.cbShow.Name = "cbShow";
             this.cbShow.Size = new System.Drawing.Size(15, 14);
             this.cbShow.TabIndex = 7;
@@ -82,7 +78,7 @@
             // 
             this.txtPass.Enabled = false;
             this.txtPass.Font = new System.Drawing.Font("Saysettha OT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPass.Location = new System.Drawing.Point(69, 271);
+            this.txtPass.Location = new System.Drawing.Point(69, 207);
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(320, 30);
             this.txtPass.TabIndex = 3;
@@ -94,20 +90,11 @@
             // 
             this.txtUser.Enabled = false;
             this.txtUser.Font = new System.Drawing.Font("Saysettha OT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUser.Location = new System.Drawing.Point(69, 213);
+            this.txtUser.Location = new System.Drawing.Point(69, 149);
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(320, 30);
             this.txtUser.TabIndex = 2;
             this.txtUser.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Next_Control);
-            // 
-            // txtDB
-            // 
-            this.txtDB.Font = new System.Drawing.Font("Saysettha OT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDB.Location = new System.Drawing.Point(69, 116);
-            this.txtDB.Name = "txtDB";
-            this.txtDB.Size = new System.Drawing.Size(320, 30);
-            this.txtDB.TabIndex = 1;
-            this.txtDB.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Next_Control);
             // 
             // txtServer
             // 
@@ -122,7 +109,7 @@
             // 
             this.cbHasUP.AutoSize = true;
             this.cbHasUP.Font = new System.Drawing.Font("Saysettha OT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbHasUP.Location = new System.Drawing.Point(69, 160);
+            this.cbHasUP.Location = new System.Drawing.Point(69, 96);
             this.cbHasUP.Name = "cbHasUP";
             this.cbHasUP.Size = new System.Drawing.Size(140, 25);
             this.cbHasUP.TabIndex = 6;
@@ -134,7 +121,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Saysettha OT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(69, 244);
+            this.label7.Location = new System.Drawing.Point(69, 180);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(140, 21);
             this.label7.TabIndex = 2;
@@ -144,21 +131,11 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Saysettha OT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(65, 191);
+            this.label6.Location = new System.Drawing.Point(65, 127);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(81, 21);
             this.label6.TabIndex = 2;
             this.label6.Text = "ຊື່ (User ID)";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Saysettha OT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(69, 94);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(175, 21);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "ຊື່ຖານຂໍ້ມູນ (Database Name)";
             // 
             // label4
             // 
@@ -184,17 +161,17 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Saysettha OT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(105, 29);
+            this.label2.Location = new System.Drawing.Point(105, 34);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(274, 24);
+            this.label2.Size = new System.Drawing.Size(160, 24);
             this.label2.TabIndex = 2;
-            this.label2.Text = "1. ປ້ອນ Server Name ແລະ ຊື່ຖານຂໍ້ມູນ.";
+            this.label2.Text = "1. ປ້ອນ Server Name";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Saysettha OT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(105, 62);
+            this.label3.Location = new System.Drawing.Point(105, 67);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(355, 24);
             this.label3.TabIndex = 2;
@@ -206,7 +183,7 @@
             this.btConnect.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(179)))), ((int)(((byte)(232)))));
             this.btConnect.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(233)))), ((int)(((byte)(255)))));
             this.btConnect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btConnect.Location = new System.Drawing.Point(124, 431);
+            this.btConnect.Location = new System.Drawing.Point(131, 383);
             this.btConnect.Name = "btConnect";
             this.btConnect.Size = new System.Drawing.Size(90, 39);
             this.btConnect.TabIndex = 4;
@@ -220,7 +197,7 @@
             this.btCacel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(179)))), ((int)(((byte)(232)))));
             this.btCacel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(233)))), ((int)(((byte)(255)))));
             this.btCacel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btCacel.Location = new System.Drawing.Point(245, 431);
+            this.btCacel.Location = new System.Drawing.Point(252, 383);
             this.btCacel.Name = "btCacel";
             this.btCacel.Size = new System.Drawing.Size(90, 39);
             this.btCacel.TabIndex = 5;
@@ -233,7 +210,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(481, 493);
+            this.ClientSize = new System.Drawing.Size(481, 439);
             this.Controls.Add(this.btCacel);
             this.Controls.Add(this.btConnect);
             this.Controls.Add(this.label3);
@@ -243,8 +220,8 @@
             this.Font = new System.Drawing.Font("Saysettha OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.MaximumSize = new System.Drawing.Size(497, 532);
-            this.MinimumSize = new System.Drawing.Size(497, 532);
+            this.MaximumSize = new System.Drawing.Size(497, 478);
+            this.MinimumSize = new System.Drawing.Size(497, 478);
             this.Name = "frmLocalAddress";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmLocalAddress";
@@ -265,10 +242,8 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtPass;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtUser;
-        private System.Windows.Forms.TextBox txtDB;
         private System.Windows.Forms.TextBox txtServer;
         private System.Windows.Forms.Button btConnect;
         private System.Windows.Forms.Button btCacel;

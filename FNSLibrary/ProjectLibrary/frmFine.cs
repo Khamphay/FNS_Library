@@ -78,19 +78,7 @@ namespace ProjectLibrary
 
             }
         }
-
-        private void frmFine_Load(object sender, EventArgs e)
-        {
-            MyModel.getSwitchLanguage();
-            Show_Data();
-        }
-
-        private void txtPrice_Enter(object sender, EventArgs e)
-        {
-            InputLanguage.CurrentInputLanguage = MyModel.eng;
-        }
-
-        private void btsave_Click(object sender, EventArgs e)
+        private void SaveAndEdit()
         {
             table = new DataTable();
             table.Clear();
@@ -106,10 +94,33 @@ namespace ProjectLibrary
             }
             txtPrice.Clear();
         }
+        private void frmFine_Load(object sender, EventArgs e)
+        {
+            MyModel.getSwitchLanguage();
+            Show_Data();
+        }
+
+        private void txtPrice_Enter(object sender, EventArgs e)
+        {
+            InputLanguage.CurrentInputLanguage = MyModel.eng;
+        }
+
+        private void btsave_Click(object sender, EventArgs e)
+        {
+            SaveAndEdit();
+        }
 
         private void txtPrice_KeyPress(object sender, KeyPressEventArgs e)
         {
             MyModel.KeyNumber(e);
+        }
+
+        private void txtPrice_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                SaveAndEdit();
+            }
         }
     }
 }
