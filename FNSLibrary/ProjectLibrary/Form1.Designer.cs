@@ -129,7 +129,7 @@
             this.lbName.ForeColor = System.Drawing.Color.White;
             this.lbName.Location = new System.Drawing.Point(934, 56);
             this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(43, 20);
+            this.lbName.Size = new System.Drawing.Size(42, 18);
             this.lbName.TabIndex = 2;
             this.lbName.Text = "Name";
             this.lbName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -153,7 +153,7 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(915, 25);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(42, 20);
+            this.label3.Size = new System.Drawing.Size(44, 18);
             this.label3.TabIndex = 2;
             this.label3.Text = "ລະຫັດ:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -165,7 +165,7 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(915, 56);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(21, 20);
+            this.label2.Size = new System.Drawing.Size(20, 18);
             this.label2.TabIndex = 3;
             this.label2.Text = "ຊື່:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -198,7 +198,7 @@
             this.lbStatus.Font = new System.Drawing.Font("Phetsarath OT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbStatus.Location = new System.Drawing.Point(398, 13);
             this.lbStatus.Name = "lbStatus";
-            this.lbStatus.Size = new System.Drawing.Size(60, 23);
+            this.lbStatus.Size = new System.Drawing.Size(63, 21);
             this.lbStatus.TabIndex = 5;
             this.lbStatus.Text = "ສະຖານະ:";
             // 
@@ -768,7 +768,7 @@
             this.btTable.Image = ((System.Drawing.Image)(resources.GetObject("btTable.Image")));
             this.btTable.ImageSize = new System.Drawing.Size(25, 25);
             this.btTable.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btTable.Location = new System.Drawing.Point(0, 149);
+            this.btTable.Location = new System.Drawing.Point(0, 105);
             this.btTable.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btTable.Name = "btTable";
             this.btTable.OnHoverBaseColor = System.Drawing.Color.White;
@@ -802,7 +802,7 @@
             this.btBooks.Image = ((System.Drawing.Image)(resources.GetObject("btBooks.Image")));
             this.btBooks.ImageSize = new System.Drawing.Size(25, 25);
             this.btBooks.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btBooks.Location = new System.Drawing.Point(0, 103);
+            this.btBooks.Location = new System.Drawing.Point(0, 148);
             this.btBooks.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btBooks.Name = "btBooks";
             this.btBooks.OnHoverBaseColor = System.Drawing.Color.White;
@@ -870,7 +870,7 @@
             this.btCatecory.Image = ((System.Drawing.Image)(resources.GetObject("btCatecory.Image")));
             this.btCatecory.ImageSize = new System.Drawing.Size(25, 25);
             this.btCatecory.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btCatecory.Location = new System.Drawing.Point(0, 60);
+            this.btCatecory.Location = new System.Drawing.Point(0, 61);
             this.btCatecory.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btCatecory.Name = "btCatecory";
             this.btCatecory.OnHoverBaseColor = System.Drawing.Color.White;
@@ -1035,7 +1035,7 @@
             this.btUser.OnPressedColor = System.Drawing.Color.Gainsboro;
             this.btUser.Size = new System.Drawing.Size(245, 34);
             this.btUser.TabIndex = 0;
-            this.btUser.Text = "ແກ້ໄຂ້ຂໍ້ມູນຜູ້ໃຊ້";
+            this.btUser.Text = "ເພີ່ມຜູ້ໃຊ້";
             this.btUser.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.ClearTypeGridFit;
             this.btUser.Click += new System.EventHandler(this.btUser_Click);
             // 
@@ -1361,7 +1361,7 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;

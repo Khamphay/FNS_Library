@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BarcodeStandard;
+using ProjectLibrary.MSDialog;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,30 +23,37 @@ namespace ProjectLibrary
 
         private void SaveAndEdit()
         {
-            if (radimal.Checked == true)
+            if (txtid.Text!="" && txtname.Text!="" && txtsurename.Text!="" && txttel.Text!="")
             {
-                gender = radimal.Text;
-            }
-            else
-            {
-                gender = radifiman.Text;
-            }
-            if (edit == false)
-            {
-                // Return 1 "Complete action" If Return 0 "Don't complete action"
-                if (_staff.Save(txtid.Text, txtname.Text, txtsurename.Text, gender, txttel.Text) == 1)
+                if (radimal.Checked == true)
                 {
-                    ClearData();
+                    gender = radimal.Text;
+                }
+                else
+                {
+                    gender = radifiman.Text;
+                }
+                if (edit == false)
+                {
+                    // Return 1 "Complete action" If Return 0 "Don't complete action"
+                    if (_staff.Save(txtid.Text, txtname.Text, txtsurename.Text, gender, txttel.Text) == 1)
+                    {
+                        ClearData();
+                    }
+                }
+                else
+                {
+                    // Return 1 "Complete action" If Return 0 "Don't complete action"
+                    if (_staff.Edit(txtid.Text, txtname.Text, txtsurename.Text, gender, txttel.Text) == 1)
+                    {
+                        edit = false;
+                        this.Close();
+                    }
                 }
             }
             else
             {
-                // Return 1 "Complete action" If Return 0 "Don't complete action"
-                if (_staff.Edit(txtid.Text, txtname.Text, txtsurename.Text, gender, txttel.Text) == 1)
-                {
-                    edit = false;
-                    this.Close();
-                }
+                MyMessageBox.ShowMesage("ກະລຸນາກວດສອບຂໍ້ມູນ ແລ້ວລອງໃຫມ່ອີກຄັ້ງ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
         private void ClearData()
@@ -126,17 +135,12 @@ namespace ProjectLibrary
             InputLanguage.CurrentInputLanguage = MyModel.eng;
         }
 
-        private void txttel_KeyUp(object sender, KeyEventArgs e)
-        {
-            
-        }
 
-        private void txttel_KeyDown(object sender, KeyEventArgs e)
+        private void txttel_KeyDown_1(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
                 SaveAndEdit();
-                txtid.Focus();
             }
         }
     }

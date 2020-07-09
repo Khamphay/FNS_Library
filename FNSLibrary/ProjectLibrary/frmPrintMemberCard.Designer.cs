@@ -81,6 +81,8 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.Name = "frmPrintMemberCard";
+            this.Text = "Print Member Card";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmPrintMemberCard_FormClosed);
             this.Load += new System.EventHandler(this.frmShowRentBooks_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

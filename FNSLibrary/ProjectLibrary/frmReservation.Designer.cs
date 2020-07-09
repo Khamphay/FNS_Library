@@ -554,7 +554,7 @@
             this.MinimumSize = new System.Drawing.Size(1184, 591);
             this.Name = "frmReservation";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmReservation";
+            this.Text = "Reservation";
             this.Load += new System.EventHandler(this.frmReservation_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvReserbooks)).EndInit();
             this.panel1.ResumeLayout(false);

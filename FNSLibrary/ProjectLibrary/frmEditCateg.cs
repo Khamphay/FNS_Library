@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjectLibrary.MSDialog;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,25 +24,32 @@ namespace ProjectLibrary
         public string id = "", name = "";
         private void SaveAndEdit()
         {
-            if (edit == false)
+            if (txtid.Text != "" && txtname.Text != "")
             {
-                // if return 1 "Complete" else if 0 "Don't complete"
-                if (_cotg.Save(txtid.Text, txtname.Text) == 1)
+                if (edit == false)
                 {
-                    txtid.Clear();
-                    txtname.Clear();
+                    // if return 1 "Complete" else if 0 "Don't complete"
+                    if (_cotg.Save(txtid.Text, txtname.Text) == 1)
+                    {
+                        txtid.Clear();
+                        txtname.Clear();
+                    }
+                }
+                else
+                {
+                    // if return 1 "Complete" else if 0 "Don't complete"
+                    if (_cotg.Edit(txtid.Text, txtname.Text) == 1)
+                    {
+                        txtid.Clear();
+                        txtname.Clear();
+                        edit = false;
+                        this.Close();
+                    }
                 }
             }
             else
             {
-                // if return 1 "Complete" else if 0 "Don't complete"
-                if (_cotg.Edit(txtid.Text, txtname.Text) == 1)
-                {
-                    txtid.Clear();
-                    txtname.Clear();
-                    edit = false;
-                    this.Close();
-                }
+                MyMessageBox.ShowMesage("ກະລຸນາກວດສອບຂໍ້ມູນ ແລ້ວລອງໃຫມ່ອີກຄັ້ງ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
         private void NextControl(object sender, KeyEventArgs e)
@@ -80,18 +88,18 @@ namespace ProjectLibrary
             name = "";
         }
 
-        private void txtname_KeyUp(object sender, KeyEventArgs e)
+        private void txtname_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            InputLanguage.CurrentInputLanguage = MyModel.lao;
+        }
+
+        private void txtname_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
                 SaveAndEdit();
                 txtid.Focus();
             }
-        }
-
-        private void txtname_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            InputLanguage.CurrentInputLanguage = MyModel.lao;
         }
 
         private void txtid_Enter(object sender, EventArgs e)

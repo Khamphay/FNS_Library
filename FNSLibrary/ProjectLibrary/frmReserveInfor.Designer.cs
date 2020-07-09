@@ -233,7 +233,7 @@
             this.Column1.HeaderText = "ລະຫັດປຶ້ມ/Barcode";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
-            this.Column1.Width = 158;
+            this.Column1.Width = 154;
             // 
             // Column2
             // 
@@ -247,7 +247,7 @@
             this.Column3.HeaderText = "ຈຳນວນໜ້າ";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
-            this.Column3.Width = 102;
+            this.Column3.Width = 109;
             // 
             // Column4
             // 
@@ -268,14 +268,14 @@
             this.Column6.HeaderText = "ລະຫັດຕູ້";
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
-            this.Column6.Width = 81;
+            this.Column6.Width = 86;
             // 
             // Column7
             // 
             this.Column7.HeaderText = "ວັນທີຈອງ";
             this.Column7.Name = "Column7";
             this.Column7.ReadOnly = true;
-            this.Column7.Width = 91;
+            this.Column7.Width = 94;
             // 
             // Column8
             // 
@@ -283,7 +283,7 @@
             this.Column8.HeaderText = "ວັນທີໝົດອາຍຸ";
             this.Column8.Name = "Column8";
             this.Column8.ReadOnly = true;
-            this.Column8.Width = 117;
+            this.Column8.Width = 124;
             // 
             // Column9
             // 
@@ -332,7 +332,7 @@
             // 
             // frmReserveInfor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1128, 553);
             this.Controls.Add(this.txtMemberID);
@@ -348,7 +348,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmReserveInfor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmReserveInfor";
+            this.Text = "Reserve Information";
             this.Load += new System.EventHandler(this.frmReserveInfor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvReserInfor)).EndInit();
             this.panel1.ResumeLayout(false);

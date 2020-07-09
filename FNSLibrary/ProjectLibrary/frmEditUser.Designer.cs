@@ -29,12 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEditUser));
-            this.btExit = new Guna.UI.WinForms.GunaAdvenceButton();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.cbShowPass1 = new Guna.UI.WinForms.GunaImageCheckBox();
             this.cbShowPass2 = new Guna.UI.WinForms.GunaImageCheckBox();
             this.cbShowPass3 = new Guna.UI.WinForms.GunaImageCheckBox();
-            this.btdel = new Guna.UI.WinForms.GunaAdvenceButton();
             this.label6 = new System.Windows.Forms.Label();
             this.btsave = new Guna.UI.WinForms.GunaAdvenceButton();
             this.label7 = new System.Windows.Forms.Label();
@@ -54,45 +52,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label20 = new System.Windows.Forms.Label();
+            this.btClear = new Guna.UI.WinForms.GunaAdvenceButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btExit
-            // 
-            this.btExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btExit.AnimationHoverSpeed = 0.07F;
-            this.btExit.AnimationSpeed = 0.03F;
-            this.btExit.BackColor = System.Drawing.Color.Transparent;
-            this.btExit.BaseColor = System.Drawing.Color.Transparent;
-            this.btExit.BorderColor = System.Drawing.Color.Black;
-            this.btExit.CheckedBaseColor = System.Drawing.Color.Gray;
-            this.btExit.CheckedBorderColor = System.Drawing.Color.Black;
-            this.btExit.CheckedForeColor = System.Drawing.Color.White;
-            this.btExit.CheckedImage = ((System.Drawing.Image)(resources.GetObject("btExit.CheckedImage")));
-            this.btExit.CheckedLineColor = System.Drawing.Color.DimGray;
-            this.btExit.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btExit.FocusedColor = System.Drawing.Color.Empty;
-            this.btExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btExit.ForeColor = System.Drawing.Color.White;
-            this.btExit.Image = ((System.Drawing.Image)(resources.GetObject("btExit.Image")));
-            this.btExit.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btExit.ImageSize = new System.Drawing.Size(25, 25);
-            this.btExit.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btExit.Location = new System.Drawing.Point(578, 2);
-            this.btExit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btExit.Name = "btExit";
-            this.btExit.OnHoverBaseColor = System.Drawing.Color.Red;
-            this.btExit.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btExit.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(206)))));
-            this.btExit.OnHoverImage = ((System.Drawing.Image)(resources.GetObject("btExit.OnHoverImage")));
-            this.btExit.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btExit.OnPressedColor = System.Drawing.Color.Gainsboro;
-            this.btExit.Radius = 2;
-            this.btExit.Size = new System.Drawing.Size(20, 20);
-            this.btExit.TabIndex = 35;
-            this.btExit.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.ClearTypeGridFit;
-            this.btExit.Click += new System.EventHandler(this.btExit_Click);
             // 
             // pictureBox4
             // 
@@ -139,46 +102,6 @@
             this.cbShowPass3.Size = new System.Drawing.Size(27, 21);
             this.cbShowPass3.TabIndex = 28;
             this.cbShowPass3.CheckedChanged += new System.EventHandler(this.cbShowPass3_CheckedChanged);
-            // 
-            // btdel
-            // 
-            this.btdel.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btdel.Animated = true;
-            this.btdel.AnimationHoverSpeed = 3F;
-            this.btdel.AnimationSpeed = 2F;
-            this.btdel.BackColor = System.Drawing.Color.Transparent;
-            this.btdel.BaseColor = System.Drawing.Color.Transparent;
-            this.btdel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(206)))));
-            this.btdel.BorderSize = 1;
-            this.btdel.CheckedBaseColor = System.Drawing.Color.Gray;
-            this.btdel.CheckedBorderColor = System.Drawing.Color.Black;
-            this.btdel.CheckedForeColor = System.Drawing.Color.White;
-            this.btdel.CheckedImage = ((System.Drawing.Image)(resources.GetObject("btdel.CheckedImage")));
-            this.btdel.CheckedLineColor = System.Drawing.Color.DimGray;
-            this.btdel.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btdel.FocusedColor = System.Drawing.Color.Empty;
-            this.btdel.Font = new System.Drawing.Font("Saysettha OT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btdel.ForeColor = System.Drawing.Color.Black;
-            this.btdel.Image = null;
-            this.btdel.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btdel.ImageSize = new System.Drawing.Size(30, 30);
-            this.btdel.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btdel.Location = new System.Drawing.Point(297, 352);
-            this.btdel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btdel.Name = "btdel";
-            this.btdel.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(206)))));
-            this.btdel.OnHoverBorderColor = System.Drawing.Color.White;
-            this.btdel.OnHoverForeColor = System.Drawing.Color.White;
-            this.btdel.OnHoverImage = null;
-            this.btdel.OnHoverLineColor = System.Drawing.Color.White;
-            this.btdel.OnPressedColor = System.Drawing.Color.White;
-            this.btdel.Radius = 2;
-            this.btdel.Size = new System.Drawing.Size(77, 36);
-            this.btdel.TabIndex = 21;
-            this.btdel.Text = "ເພີ່ມຜູ້ໃຊ້";
-            this.btdel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btdel.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.AntiAlias;
-            this.btdel.Click += new System.EventHandler(this.btdel_Click);
             // 
             // label6
             // 
@@ -322,8 +245,7 @@
             this.txtRePass.Size = new System.Drawing.Size(244, 30);
             this.txtRePass.TabIndex = 7;
             this.txtRePass.UseSystemPasswordChar = true;
-            this.txtRePass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.NextControl);
-            this.txtRePass.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtRePass_KeyUp);
+            this.txtRePass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtRePass_KeyDown);
             // 
             // txtOldPass
             // 
@@ -433,7 +355,6 @@
             // 
             this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel2.Controls.Add(this.btExit);
             this.panel2.Controls.Add(this.label20);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -446,17 +367,60 @@
             this.label20.AutoSize = true;
             this.label20.BackColor = System.Drawing.Color.Transparent;
             this.label20.Font = new System.Drawing.Font("Saysettha OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(63, 4);
+            this.label20.Location = new System.Drawing.Point(40, 4);
+            this.label20.MaximumSize = new System.Drawing.Size(116, 24);
+            this.label20.MinimumSize = new System.Drawing.Size(116, 24);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(116, 24);
             this.label20.TabIndex = 0;
             this.label20.Text = "ແກ້ໄຂ້ຂໍ້ມູນຜູ້ໃຊ້";
+            // 
+            // btClear
+            // 
+            this.btClear.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btClear.Animated = true;
+            this.btClear.AnimationHoverSpeed = 3F;
+            this.btClear.AnimationSpeed = 2F;
+            this.btClear.BackColor = System.Drawing.Color.Transparent;
+            this.btClear.BaseColor = System.Drawing.Color.Transparent;
+            this.btClear.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(206)))));
+            this.btClear.BorderSize = 1;
+            this.btClear.CheckedBaseColor = System.Drawing.Color.Gray;
+            this.btClear.CheckedBorderColor = System.Drawing.Color.Black;
+            this.btClear.CheckedForeColor = System.Drawing.Color.White;
+            this.btClear.CheckedImage = ((System.Drawing.Image)(resources.GetObject("btClear.CheckedImage")));
+            this.btClear.CheckedLineColor = System.Drawing.Color.DimGray;
+            this.btClear.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btClear.FocusedColor = System.Drawing.Color.Empty;
+            this.btClear.Font = new System.Drawing.Font("Saysettha OT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btClear.ForeColor = System.Drawing.Color.Black;
+            this.btClear.Image = null;
+            this.btClear.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btClear.ImageSize = new System.Drawing.Size(30, 30);
+            this.btClear.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.btClear.Location = new System.Drawing.Point(301, 352);
+            this.btClear.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btClear.Name = "btClear";
+            this.btClear.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(206)))));
+            this.btClear.OnHoverBorderColor = System.Drawing.Color.White;
+            this.btClear.OnHoverForeColor = System.Drawing.Color.White;
+            this.btClear.OnHoverImage = null;
+            this.btClear.OnHoverLineColor = System.Drawing.Color.White;
+            this.btClear.OnPressedColor = System.Drawing.Color.White;
+            this.btClear.Radius = 2;
+            this.btClear.Size = new System.Drawing.Size(77, 36);
+            this.btClear.TabIndex = 56;
+            this.btClear.Text = "ຍົກເລີກ";
+            this.btClear.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btClear.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.AntiAlias;
+            this.btClear.Click += new System.EventHandler(this.btClear_Click);
             // 
             // frmEditUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 424);
+            this.Controls.Add(this.btClear);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.label5);
@@ -466,7 +430,6 @@
             this.Controls.Add(this.txtid);
             this.Controls.Add(this.cbShowPass3);
             this.Controls.Add(this.txtfName);
-            this.Controls.Add(this.btdel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtOldUserName);
@@ -483,8 +446,11 @@
             this.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MaximumSize = new System.Drawing.Size(616, 463);
+            this.MinimumSize = new System.Drawing.Size(616, 463);
             this.Name = "frmEditUser";
-            this.Text = "frmEditUser";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Edit User";
             this.Load += new System.EventHandler(this.frmEditUser_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel2.ResumeLayout(false);
@@ -495,7 +461,6 @@
         }
 
         #endregion
-        private Guna.UI.WinForms.GunaAdvenceButton btdel;
         private System.Windows.Forms.Label label6;
         private Guna.UI.WinForms.GunaAdvenceButton btsave;
         private System.Windows.Forms.Label label7;
@@ -516,9 +481,9 @@
         private System.Windows.Forms.TextBox txtfName;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtNewsUser;
-        private Guna.UI.WinForms.GunaAdvenceButton btExit;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label20;
+        private Guna.UI.WinForms.GunaAdvenceButton btClear;
     }
 }

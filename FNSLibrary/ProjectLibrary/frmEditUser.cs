@@ -17,10 +17,6 @@ namespace ProjectLibrary
         public frmEditUser()
         {
             InitializeComponent();
-
-            txtid.Text = MyModel.staff[0];
-            txtfName.Text = MyModel.staff[1];
-            txtlname.Text = MyModel.staff[2];
         }
 
         Form1 _home;
@@ -28,6 +24,10 @@ namespace ProjectLibrary
         {
             InitializeComponent();
             _home = home;
+
+            txtid.Text = MyModel.staff[0];
+            txtfName.Text = MyModel.staff[1];
+            txtlname.Text = MyModel.staff[2];
         }
 
         SqlConnection con = MyConnected.getConnect();
@@ -156,13 +156,17 @@ namespace ProjectLibrary
             this.Close();
             _home.ShowHomePage();
         }
-
-        private void txtRePass_KeyUp(object sender, KeyEventArgs e)
+        private void txtRePass_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
                 Save();
             }
+        }
+
+        private void btClear_Click(object sender, EventArgs e)
+        {
+            Clear_Data();
         }
     }
 }

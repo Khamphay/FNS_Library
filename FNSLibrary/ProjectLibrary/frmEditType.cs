@@ -77,7 +77,7 @@ namespace ProjectLibrary
             InputLanguage.CurrentInputLanguage = MyModel.lao;
         }
 
-        private void txtname_KeyUp(object sender, KeyEventArgs e)
+        private void txtname_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {

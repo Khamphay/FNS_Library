@@ -34,7 +34,6 @@
             this.cbShowPass1 = new Guna.UI.WinForms.GunaImageCheckBox();
             this.cbShowPass2 = new Guna.UI.WinForms.GunaImageCheckBox();
             this.cmbname = new System.Windows.Forms.ComboBox();
-            this.btdel = new Guna.UI.WinForms.GunaAdvenceButton();
             this.btsave = new Guna.UI.WinForms.GunaAdvenceButton();
             this.lbNewpass = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -48,13 +47,14 @@
             this.label6 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label20 = new System.Windows.Forms.Label();
+            this.btEdit = new Guna.UI.WinForms.GunaAdvenceButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
             this.pictureBox4.Location = new System.Drawing.Point(356, 326);
             this.pictureBox4.Name = "pictureBox4";
@@ -64,7 +64,7 @@
             // 
             // txtRePass
             // 
-            this.txtRePass.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtRePass.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtRePass.Font = new System.Drawing.Font("Phetsarath OT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRePass.ForeColor = System.Drawing.Color.Black;
             this.txtRePass.Location = new System.Drawing.Point(405, 238);
@@ -78,7 +78,7 @@
             // 
             // cbShowPass1
             // 
-            this.cbShowPass1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cbShowPass1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cbShowPass1.ImageCheckedOff = ((System.Drawing.Image)(resources.GetObject("cbShowPass1.ImageCheckedOff")));
             this.cbShowPass1.ImageCheckedOn = ((System.Drawing.Image)(resources.GetObject("cbShowPass1.ImageCheckedOn")));
             this.cbShowPass1.ImageSize = new System.Drawing.Size(20, 20);
@@ -90,7 +90,7 @@
             // 
             // cbShowPass2
             // 
-            this.cbShowPass2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cbShowPass2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cbShowPass2.ImageCheckedOff = ((System.Drawing.Image)(resources.GetObject("cbShowPass2.ImageCheckedOff")));
             this.cbShowPass2.ImageCheckedOn = ((System.Drawing.Image)(resources.GetObject("cbShowPass2.ImageCheckedOn")));
             this.cbShowPass2.ImageSize = new System.Drawing.Size(20, 20);
@@ -102,7 +102,7 @@
             // 
             // cmbname
             // 
-            this.cmbname.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cmbname.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbname.Font = new System.Drawing.Font("Phetsarath OT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbname.ForeColor = System.Drawing.Color.Black;
             this.cmbname.FormattingEnabled = true;
@@ -113,49 +113,9 @@
             this.cmbname.SelectedIndexChanged += new System.EventHandler(this.cmbname_SelectedIndexChanged);
             this.cmbname.KeyDown += new System.Windows.Forms.KeyEventHandler(this.NextControl);
             // 
-            // btdel
-            // 
-            this.btdel.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btdel.Animated = true;
-            this.btdel.AnimationHoverSpeed = 3F;
-            this.btdel.AnimationSpeed = 2F;
-            this.btdel.BackColor = System.Drawing.Color.Transparent;
-            this.btdel.BaseColor = System.Drawing.Color.Transparent;
-            this.btdel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(206)))));
-            this.btdel.BorderSize = 1;
-            this.btdel.CheckedBaseColor = System.Drawing.Color.Gray;
-            this.btdel.CheckedBorderColor = System.Drawing.Color.Black;
-            this.btdel.CheckedForeColor = System.Drawing.Color.White;
-            this.btdel.CheckedImage = ((System.Drawing.Image)(resources.GetObject("btdel.CheckedImage")));
-            this.btdel.CheckedLineColor = System.Drawing.Color.DimGray;
-            this.btdel.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btdel.FocusedColor = System.Drawing.Color.Empty;
-            this.btdel.Font = new System.Drawing.Font("Saysettha OT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btdel.ForeColor = System.Drawing.Color.Black;
-            this.btdel.Image = null;
-            this.btdel.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btdel.ImageSize = new System.Drawing.Size(30, 30);
-            this.btdel.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btdel.Location = new System.Drawing.Point(375, 327);
-            this.btdel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btdel.Name = "btdel";
-            this.btdel.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(206)))));
-            this.btdel.OnHoverBorderColor = System.Drawing.Color.White;
-            this.btdel.OnHoverForeColor = System.Drawing.Color.White;
-            this.btdel.OnHoverImage = null;
-            this.btdel.OnHoverLineColor = System.Drawing.Color.White;
-            this.btdel.OnPressedColor = System.Drawing.Color.White;
-            this.btdel.Radius = 2;
-            this.btdel.Size = new System.Drawing.Size(77, 36);
-            this.btdel.TabIndex = 21;
-            this.btdel.Text = "ຍົກເລີກ";
-            this.btdel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btdel.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.AntiAlias;
-            this.btdel.Click += new System.EventHandler(this.btdel_Click);
-            // 
             // btsave
             // 
-            this.btsave.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btsave.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btsave.Animated = true;
             this.btsave.AnimationHoverSpeed = 3F;
             this.btsave.AnimationSpeed = 2F;
@@ -195,7 +155,7 @@
             // 
             // lbNewpass
             // 
-            this.lbNewpass.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lbNewpass.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbNewpass.AutoSize = true;
             this.lbNewpass.Font = new System.Drawing.Font("Phetsarath OT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbNewpass.ForeColor = System.Drawing.Color.Black;
@@ -208,7 +168,7 @@
             // 
             // label4
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Phetsarath OT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
@@ -221,7 +181,7 @@
             // 
             // txtlname
             // 
-            this.txtlname.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtlname.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtlname.Font = new System.Drawing.Font("Phetsarath OT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtlname.ForeColor = System.Drawing.Color.Black;
             this.txtlname.Location = new System.Drawing.Point(55, 238);
@@ -234,7 +194,7 @@
             // 
             // label3
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Phetsarath OT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
@@ -247,7 +207,7 @@
             // 
             // txtNewPass
             // 
-            this.txtNewPass.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtNewPass.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtNewPass.Font = new System.Drawing.Font("Phetsarath OT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNewPass.ForeColor = System.Drawing.Color.Black;
             this.txtNewPass.Location = new System.Drawing.Point(405, 165);
@@ -260,7 +220,7 @@
             // 
             // txtusername
             // 
-            this.txtusername.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtusername.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtusername.Font = new System.Drawing.Font("Phetsarath OT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtusername.ForeColor = System.Drawing.Color.Black;
             this.txtusername.Location = new System.Drawing.Point(405, 93);
@@ -273,7 +233,7 @@
             // 
             // label1
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Phetsarath OT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
@@ -286,7 +246,7 @@
             // 
             // txtid
             // 
-            this.txtid.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtid.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtid.Font = new System.Drawing.Font("Phetsarath OT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtid.ForeColor = System.Drawing.Color.Black;
             this.txtid.Location = new System.Drawing.Point(55, 93);
@@ -300,7 +260,7 @@
             // 
             // label2
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Phetsarath OT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
@@ -313,7 +273,7 @@
             // 
             // label6
             // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Phetsarath OT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
@@ -340,17 +300,58 @@
             this.label20.AutoSize = true;
             this.label20.BackColor = System.Drawing.Color.Transparent;
             this.label20.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(73, 4);
+            this.label20.Location = new System.Drawing.Point(82, 4);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(90, 22);
             this.label20.TabIndex = 0;
             this.label20.Text = "New User";
+            // 
+            // btEdit
+            // 
+            this.btEdit.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btEdit.Animated = true;
+            this.btEdit.AnimationHoverSpeed = 3F;
+            this.btEdit.AnimationSpeed = 2F;
+            this.btEdit.BackColor = System.Drawing.Color.Transparent;
+            this.btEdit.BaseColor = System.Drawing.Color.Transparent;
+            this.btEdit.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(206)))));
+            this.btEdit.BorderSize = 1;
+            this.btEdit.CheckedBaseColor = System.Drawing.Color.Gray;
+            this.btEdit.CheckedBorderColor = System.Drawing.Color.Black;
+            this.btEdit.CheckedForeColor = System.Drawing.Color.White;
+            this.btEdit.CheckedImage = ((System.Drawing.Image)(resources.GetObject("btEdit.CheckedImage")));
+            this.btEdit.CheckedLineColor = System.Drawing.Color.DimGray;
+            this.btEdit.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btEdit.FocusedColor = System.Drawing.Color.Empty;
+            this.btEdit.Font = new System.Drawing.Font("Saysettha OT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btEdit.ForeColor = System.Drawing.Color.Black;
+            this.btEdit.Image = null;
+            this.btEdit.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btEdit.ImageSize = new System.Drawing.Size(30, 30);
+            this.btEdit.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.btEdit.Location = new System.Drawing.Point(372, 327);
+            this.btEdit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btEdit.Name = "btEdit";
+            this.btEdit.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(206)))));
+            this.btEdit.OnHoverBorderColor = System.Drawing.Color.White;
+            this.btEdit.OnHoverForeColor = System.Drawing.Color.White;
+            this.btEdit.OnHoverImage = null;
+            this.btEdit.OnHoverLineColor = System.Drawing.Color.White;
+            this.btEdit.OnPressedColor = System.Drawing.Color.White;
+            this.btEdit.Radius = 2;
+            this.btEdit.Size = new System.Drawing.Size(77, 36);
+            this.btEdit.TabIndex = 55;
+            this.btEdit.Text = "ແກ້ໄຂ";
+            this.btEdit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btEdit.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.AntiAlias;
+            this.btEdit.Click += new System.EventHandler(this.btEditClick_1);
             // 
             // frmNewUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(692, 401);
+            this.Controls.Add(this.btEdit);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.txtRePass);
@@ -360,7 +361,6 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.cmbname);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.btdel);
             this.Controls.Add(this.txtid);
             this.Controls.Add(this.btsave);
             this.Controls.Add(this.label1);
@@ -373,8 +373,6 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(708, 440);
-            this.MinimumSize = new System.Drawing.Size(631, 440);
             this.Name = "frmNewUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add New User";
@@ -395,7 +393,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtid;
         private System.Windows.Forms.Label label2;
-        private Guna.UI.WinForms.GunaAdvenceButton btdel;
         private Guna.UI.WinForms.GunaAdvenceButton btsave;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lbNewpass;
@@ -407,5 +404,6 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label20;
+        private Guna.UI.WinForms.GunaAdvenceButton btEdit;
     }
 }

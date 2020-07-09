@@ -114,9 +114,8 @@
             this.txttel.Size = new System.Drawing.Size(270, 30);
             this.txttel.TabIndex = 4;
             this.txttel.Enter += new System.EventHandler(this.txttel_Enter);
-            this.txttel.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txttel_KeyDown);
+            this.txttel.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txttel_KeyDown_1);
             this.txttel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txttel_KeyPress);
-            this.txttel.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txttel_KeyUp);
             // 
             // btsave
             // 
@@ -321,7 +320,7 @@
             this.MinimumSize = new System.Drawing.Size(405, 504);
             this.Name = "frmEditStaff";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmEditStaff";
+            this.Text = "Edit Staff";
             this.Load += new System.EventHandler(this.frmEditStaff_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

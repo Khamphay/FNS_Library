@@ -224,7 +224,7 @@
             this.MinimumSize = new System.Drawing.Size(497, 478);
             this.Name = "frmLocalAddress";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmLocalAddress";
+            this.Text = "Configuration Server";
             this.Load += new System.EventHandler(this.frmLocalAddress_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

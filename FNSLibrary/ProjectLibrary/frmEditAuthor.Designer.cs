@@ -128,9 +128,8 @@
             this.txttel.Size = new System.Drawing.Size(265, 30);
             this.txttel.TabIndex = 25;
             this.txttel.Enter += new System.EventHandler(this.txttel_Enter);
-            this.txttel.KeyDown += new System.Windows.Forms.KeyEventHandler(this.NextControl);
+            this.txttel.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txttel_KeyDown);
             this.txttel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txttel_KeyPress);
-            this.txttel.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txttel_KeyUp);
             // 
             // label2
             // 
@@ -274,7 +273,7 @@
             this.MinimumSize = new System.Drawing.Size(393, 413);
             this.Name = "frmEditAuthor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmEditAuthor";
+            this.Text = "Edit Author";
             this.Load += new System.EventHandler(this.frmEditAuthor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);

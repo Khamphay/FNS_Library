@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjectLibrary.MSDialog;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -22,23 +23,30 @@ namespace ProjectLibrary
         public bool edit = false;
         private void SaveAndEdit()
         {
-            if (edit == false)
+            if (txtid.Text != "" && txtlname.Text != "" && txtfname.Text != "")
             {
-                // if return 1 "Complete" else if 0 "Don't complete"
-                if (_author.Save(txtid.Text, txtfname.Text, txtlname.Text, txttel.Text) == 1)
+                if (edit == false)
                 {
-                    Clear_Data();
+                    // if return 1 "Complete" else if 0 "Don't complete"
+                    if (_author.Save(txtid.Text, txtfname.Text, txtlname.Text, txttel.Text) == 1)
+                    {
+                        Clear_Data();
+                    }
+                }
+                else
+                {
+                    // if return 1 "Complete" else if 0 "Don't complete"
+                    if (_author.Edit(txtid.Text, txtfname.Text, txtlname.Text, txttel.Text) == 1)
+                    {
+                        edit = false;
+                        Clear_Data();
+                        this.Close();
+                    }
                 }
             }
             else
             {
-                // if return 1 "Complete" else if 0 "Don't complete"
-                if (_author.Edit(txtid.Text, txtfname.Text, txtlname.Text, txttel.Text) == 1)
-                {
-                    edit = false;
-                    Clear_Data();
-                    this.Close();
-                }
+                MyMessageBox.ShowMesage("ກະລຸນາກວດສອບຂໍ້ມູນ ແລ້ວລອງໃຫມ່ອີກຄັ້ງ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
         public string[] data = new string[4];
@@ -111,11 +119,12 @@ namespace ProjectLibrary
 
         private void txttel_KeyUp(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
-            {
-                SaveAndEdit();
-                txtid.Focus();
-            }
+
+        }
+
+        private void txttel_KeyDown(object sender, KeyEventArgs e)
+        {
+
         }
     }
 }

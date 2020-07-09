@@ -30,5 +30,10 @@ namespace ProjectLibrary
             crystalReportViewer1.ReportSource = rd;
             crystalReportViewer1.Refresh();
         }
+
+        private void frmPrintMemberCard_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            MyModel.tablecard.Rows.Clear();
+        }
     }
 }

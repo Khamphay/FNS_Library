@@ -68,33 +68,40 @@ namespace ProjectLibrary
         {
             try
             {
-                cmd = new SqlCommand("Select * From tbUser Where empid='" + txtid.Text + "' And user_name='" + txtusername.Text + "' And password='" + txtNewPass.Text + "'", con);
-                da = new SqlDataAdapter(cmd);
-                table.Clear();
-                da.Fill(table);
-                if (table.Rows.Count <= 0)
-                {
-                    if (txtNewPass.Text == txtRePass.Text)
+                if (txtid.Text != "" && cmbname.Text!="" && txtlname.Text!=""&&txtusername.Text!="" && txtNewPass.Text!="" && txtRePass.Text!="")
+                { 
+                    cmd = new SqlCommand("Select * From tbUser Where empid='" + txtid.Text + "' And user_name='" + txtusername.Text + "' And password='" + txtNewPass.Text + "'", con);
+                    da = new SqlDataAdapter(cmd);
+                    table.Clear();
+                    da.Fill(table);
+                    if (table.Rows.Count <= 0)
                     {
-                        cmd = new SqlCommand("Insert Into tbUser Values(@id, @user, @pass)", con);
-                        cmd.Parameters.AddWithValue("id", txtid.Text);
-                        cmd.Parameters.AddWithValue("user", txtusername.Text);
-                        cmd.Parameters.AddWithValue("pass", txtNewPass.Text);
-                        if (cmd.ExecuteNonQuery() == 1)
+                        if (txtNewPass.Text == txtRePass.Text)
                         {
-                            MyMessageBox.ShowMesage("ບັນທືກສຳເສັດແລ້ວ", "Save", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            Clear_Text();
-                        }
+                            cmd = new SqlCommand("Insert Into tbUser Values(@id, @user, @pass)", con);
+                            cmd.Parameters.AddWithValue("id", txtid.Text);
+                            cmd.Parameters.AddWithValue("user", txtusername.Text);
+                            cmd.Parameters.AddWithValue("pass", txtNewPass.Text);
+                            if (cmd.ExecuteNonQuery() == 1)
+                            {
+                                MyMessageBox.ShowMesage("ບັນທືກສຳເສັດແລ້ວ", "Save", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                Clear_Text();
+                            }
 
+                        }
+                        else
+                        {
+                            MyMessageBox.ShowMesage("ຊື່ ແລະ ລະຫັດບໍ່ຖຶກຕ້ອງ. ກະລຸນາກວດສອບແລັວລອງໃໝ່ແລ້ວອີກຄັ້ງ", "Save", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
                     }
                     else
                     {
-                        MyMessageBox.ShowMesage("ຊື່ ແລະ ລະຫັດບໍ່ຖຶກຕ້ອງ. ກະລຸນາກວດສອບແລັວລອງໃໝ່ແລ້ວອີກຄັ້ງ", "Save", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MyMessageBox.ShowMesage("ມີບັນຊີຜູ້ໃຊ້ນີ້ແລ້ວ", "Save", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
                 else
                 {
-                    MyMessageBox.ShowMesage("ມີບັນຊີຜູ້ໃຊ້ນີ້ແລ້ວ", "Save", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MyMessageBox.ShowMesage("ກະລຸນາກວດສອບແລັວລອງໃໝ່ແລ້ວອີກຄັ້ງ", "Save", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             catch (Exception ex)
@@ -173,11 +180,6 @@ namespace ProjectLibrary
             }
         }
 
-        private void btdel_Click(object sender, EventArgs e)
-        {
-            Clear_Text();
-        }
-
         private void txtlname_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = true;
@@ -238,6 +240,12 @@ namespace ProjectLibrary
             {
                 AddNew_User();
             }
+        }
+
+        private void btEditClick_1(object sender, EventArgs e)
+        {
+            frmEditUser edit = new frmEditUser(_home);
+            edit.ShowDialog();
         }
     }
 }

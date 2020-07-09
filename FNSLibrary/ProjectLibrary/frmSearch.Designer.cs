@@ -56,6 +56,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1000, 34);
             this.panel2.TabIndex = 59;
+            this.panel2.Click += new System.EventHandler(this.btSearch_Click_1);
             // 
             // label20
             // 
@@ -115,7 +116,7 @@
             this.btSearch.Text = "ຄົ້ນຫາ";
             this.btSearch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btSearch.UseVisualStyleBackColor = true;
-            this.btSearch.Click += new System.EventHandler(this.btSearch_Click);
+            this.btSearch.Click += new System.EventHandler(this.btSearch_Click_1);
             // 
             // txtSearch
             // 
@@ -124,6 +125,7 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(306, 35);
             this.txtSearch.TabIndex = 61;
+            this.txtSearch.Click += new System.EventHandler(this.btSearch_Click_1);
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // treeView_Books
@@ -142,6 +144,7 @@
             this.treeView_Books.Name = "treeView_Books";
             this.treeView_Books.Size = new System.Drawing.Size(697, 423);
             this.treeView_Books.TabIndex = 62;
+            this.treeView_Books.Click += new System.EventHandler(this.btSearch_Click_1);
             // 
             // frmSearch
             // 
@@ -158,6 +161,7 @@
             this.Name = "frmSearch";
             this.Text = "frmShearch";
             this.Load += new System.EventHandler(this.frmSearch_Load);
+            this.Click += new System.EventHandler(this.btSearch_Click_1);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);

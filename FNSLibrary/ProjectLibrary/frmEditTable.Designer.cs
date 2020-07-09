@@ -54,9 +54,8 @@
             this.txtQty.TabIndex = 24;
             this.txtQty.TextChanged += new System.EventHandler(this.txtQty_TextChanged);
             this.txtQty.Enter += new System.EventHandler(this.txtQty_Enter);
-            this.txtQty.KeyDown += new System.Windows.Forms.KeyEventHandler(this.NextControl);
+            this.txtQty.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtQty_KeyDown);
             this.txtQty.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtQty_KeyPress);
-            this.txtQty.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtQty_KeyUp);
             // 
             // txtidd
             // 
@@ -242,7 +241,7 @@
             this.MinimumSize = new System.Drawing.Size(386, 446);
             this.Name = "frmEditTable";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmEditTable";
+            this.Text = "Edit Table";
             this.Load += new System.EventHandler(this.frmEditTable_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);

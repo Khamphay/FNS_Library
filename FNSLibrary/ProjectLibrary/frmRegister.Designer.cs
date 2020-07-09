@@ -42,7 +42,7 @@
             this.btdel = new Guna.UI.WinForms.GunaAdvenceButton();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.gunaAdvenceButton1 = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.btPrint = new Guna.UI.WinForms.GunaAdvenceButton();
             this.btsave = new Guna.UI.WinForms.GunaAdvenceButton();
             this.label11 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -73,7 +73,7 @@
             // 
             this.pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(273, 381);
+            this.pictureBox4.Location = new System.Drawing.Point(273, 402);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(1, 42);
             this.pictureBox4.TabIndex = 39;
@@ -83,7 +83,7 @@
             // 
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(364, 381);
+            this.pictureBox2.Location = new System.Drawing.Point(364, 402);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(1, 42);
             this.pictureBox2.TabIndex = 37;
@@ -246,7 +246,7 @@
             this.btdel.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btdel.ImageSize = new System.Drawing.Size(30, 30);
             this.btdel.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btdel.Location = new System.Drawing.Point(284, 386);
+            this.btdel.Location = new System.Drawing.Point(284, 407);
             this.btdel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btdel.Name = "btdel";
             this.btdel.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(206)))));
@@ -289,44 +289,45 @@
             this.label6.TabIndex = 1;
             this.label6.Text = "ເມືອງ";
             // 
-            // gunaAdvenceButton1
+            // btPrint
             // 
-            this.gunaAdvenceButton1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.gunaAdvenceButton1.Animated = true;
-            this.gunaAdvenceButton1.AnimationHoverSpeed = 3F;
-            this.gunaAdvenceButton1.AnimationSpeed = 2F;
-            this.gunaAdvenceButton1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaAdvenceButton1.BaseColor = System.Drawing.Color.Transparent;
-            this.gunaAdvenceButton1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(206)))));
-            this.gunaAdvenceButton1.BorderSize = 1;
-            this.gunaAdvenceButton1.CheckedBaseColor = System.Drawing.Color.Gray;
-            this.gunaAdvenceButton1.CheckedBorderColor = System.Drawing.Color.Black;
-            this.gunaAdvenceButton1.CheckedForeColor = System.Drawing.Color.White;
-            this.gunaAdvenceButton1.CheckedImage = ((System.Drawing.Image)(resources.GetObject("gunaAdvenceButton1.CheckedImage")));
-            this.gunaAdvenceButton1.CheckedLineColor = System.Drawing.Color.DimGray;
-            this.gunaAdvenceButton1.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaAdvenceButton1.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaAdvenceButton1.Font = new System.Drawing.Font("Saysettha OT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaAdvenceButton1.ForeColor = System.Drawing.Color.Black;
-            this.gunaAdvenceButton1.Image = global::ProjectLibrary.Properties.Resources.print_48px;
-            this.gunaAdvenceButton1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.gunaAdvenceButton1.ImageSize = new System.Drawing.Size(30, 30);
-            this.gunaAdvenceButton1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.gunaAdvenceButton1.Location = new System.Drawing.Point(377, 386);
-            this.gunaAdvenceButton1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.gunaAdvenceButton1.Name = "gunaAdvenceButton1";
-            this.gunaAdvenceButton1.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(206)))));
-            this.gunaAdvenceButton1.OnHoverBorderColor = System.Drawing.Color.White;
-            this.gunaAdvenceButton1.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaAdvenceButton1.OnHoverImage = null;
-            this.gunaAdvenceButton1.OnHoverLineColor = System.Drawing.Color.White;
-            this.gunaAdvenceButton1.OnPressedColor = System.Drawing.Color.White;
-            this.gunaAdvenceButton1.Radius = 2;
-            this.gunaAdvenceButton1.Size = new System.Drawing.Size(83, 36);
-            this.gunaAdvenceButton1.TabIndex = 23;
-            this.gunaAdvenceButton1.Text = "ພິມ";
-            this.gunaAdvenceButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.gunaAdvenceButton1.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.AntiAlias;
+            this.btPrint.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btPrint.Animated = true;
+            this.btPrint.AnimationHoverSpeed = 3F;
+            this.btPrint.AnimationSpeed = 2F;
+            this.btPrint.BackColor = System.Drawing.Color.Transparent;
+            this.btPrint.BaseColor = System.Drawing.Color.Transparent;
+            this.btPrint.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(206)))));
+            this.btPrint.BorderSize = 1;
+            this.btPrint.CheckedBaseColor = System.Drawing.Color.Gray;
+            this.btPrint.CheckedBorderColor = System.Drawing.Color.Black;
+            this.btPrint.CheckedForeColor = System.Drawing.Color.White;
+            this.btPrint.CheckedImage = ((System.Drawing.Image)(resources.GetObject("btPrint.CheckedImage")));
+            this.btPrint.CheckedLineColor = System.Drawing.Color.DimGray;
+            this.btPrint.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btPrint.FocusedColor = System.Drawing.Color.Empty;
+            this.btPrint.Font = new System.Drawing.Font("Saysettha OT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btPrint.ForeColor = System.Drawing.Color.Black;
+            this.btPrint.Image = global::ProjectLibrary.Properties.Resources.print_48px;
+            this.btPrint.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btPrint.ImageSize = new System.Drawing.Size(30, 30);
+            this.btPrint.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.btPrint.Location = new System.Drawing.Point(377, 407);
+            this.btPrint.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btPrint.Name = "btPrint";
+            this.btPrint.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(206)))));
+            this.btPrint.OnHoverBorderColor = System.Drawing.Color.White;
+            this.btPrint.OnHoverForeColor = System.Drawing.Color.White;
+            this.btPrint.OnHoverImage = null;
+            this.btPrint.OnHoverLineColor = System.Drawing.Color.White;
+            this.btPrint.OnPressedColor = System.Drawing.Color.White;
+            this.btPrint.Radius = 2;
+            this.btPrint.Size = new System.Drawing.Size(83, 36);
+            this.btPrint.TabIndex = 23;
+            this.btPrint.Text = "ພິມ";
+            this.btPrint.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btPrint.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.AntiAlias;
+            this.btPrint.Click += new System.EventHandler(this.btPrint_Click);
             // 
             // btsave
             // 
@@ -351,7 +352,7 @@
             this.btsave.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btsave.ImageSize = new System.Drawing.Size(30, 30);
             this.btsave.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btsave.Location = new System.Drawing.Point(194, 386);
+            this.btsave.Location = new System.Drawing.Point(194, 407);
             this.btsave.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btsave.Name = "btsave";
             this.btsave.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(206)))));
@@ -614,10 +615,10 @@
             // 
             // frmRegister
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.ClientSize = new System.Drawing.Size(654, 444);
+            this.ClientSize = new System.Drawing.Size(654, 457);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox2);
@@ -625,7 +626,7 @@
             this.Controls.Add(this.txtpro);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.btdel);
-            this.Controls.Add(this.gunaAdvenceButton1);
+            this.Controls.Add(this.btPrint);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btsave);
             this.Controls.Add(this.birdDate);
@@ -654,7 +655,7 @@
             this.MaximizeBox = false;
             this.Name = "frmRegister";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmRegister";
+            this.Text = "Register";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmRegister_FormClosing);
             this.Load += new System.EventHandler(this.frmRegister_Load);
             this.Click += new System.EventHandler(this.gunaGroupBox1_Click);
@@ -698,7 +699,7 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private Guna.UI.WinForms.GunaAdvenceButton btExit;
-        private Guna.UI.WinForms.GunaAdvenceButton gunaAdvenceButton1;
+        private Guna.UI.WinForms.GunaAdvenceButton btPrint;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Panel panel1;

@@ -148,18 +148,12 @@ namespace ProjectLibrary
 
         private void btSearch_Click(object sender, EventArgs e)
         {
-            treeView_Books.Nodes.Clear();
-            if (txtSearch.Text != "")
-            {
-                Shearch_Data(txtSearch.Text);
-                if (treeView_Books.Nodes.Count < 1) {
-                    MyMessageBox.ShowMesage("ບໍ່ມີປຶ້ມທ່ານກຳລັງຊອກຫາ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-            }
-            else
-            {
-                Show_Data();
-            }
+
+        }
+
+        private void btSearch_Click_1(object sender, EventArgs e)
+        {
+            _home.Clear_PanelMenu();
         }
 
         private void frmSearch_Load(object sender, EventArgs e)

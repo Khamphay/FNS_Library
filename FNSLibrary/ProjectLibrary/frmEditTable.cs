@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using ProjectLibrary.MSDialog;
 
 namespace ProjectLibrary
 {
@@ -32,27 +33,35 @@ namespace ProjectLibrary
 
         private void SaveAndEdit()
         {
-            if (edit == false)
+            if (txtid.Text != "" && txtQty.Text != "" && txtidd.Text != "")
             {
-                // Return 1 "Complete action" If Return 0 "Don't complete action"
-                if (_fmtable.Save(txtid.Text, int.Parse(txtQty.Text)) == 1)
+
+                if (edit == false)
                 {
-                    txtid.Clear();
-                    txtidd.Clear();
-                    txtQty.Clear();
+                    // Return 1 "Complete action" If Return 0 "Don't complete action"
+                    if (_fmtable.Save(txtid.Text, int.Parse(txtQty.Text)) == 1)
+                    {
+                        txtid.Clear();
+                        txtidd.Clear();
+                        txtQty.Clear();
+                    }
+                }
+                else
+                {
+                    // Return 1 "Complete action" If Return 0 "Don't complete action"
+                    if (_fmtable.Edit(txtidd.Text) == 1)
+                    {
+                        edit = false;
+                        this.Close();
+                        txtid.Clear();
+                        txtidd.Clear();
+                        txtQty.Clear();
+                    }
                 }
             }
             else
             {
-                // Return 1 "Complete action" If Return 0 "Don't complete action"
-                if (_fmtable.Edit(txtidd.Text) == 1)
-                {
-                    edit = false;
-                    this.Close();
-                    txtid.Clear();
-                    txtidd.Clear();
-                    txtQty.Clear();
-                }
+                MyMessageBox.ShowMesage("ກະລຸນາກວດສອບຂໍ້ມູນ ແລ້ວລອງໃຫມ່ອີກຄັ້ງ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
         private void ClearData()
@@ -182,6 +191,11 @@ namespace ProjectLibrary
         }
 
         private void txtQty_KeyUp(object sender, KeyEventArgs e)
+        {
+           
+        }
+
+        private void txtQty_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {

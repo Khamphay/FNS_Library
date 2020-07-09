@@ -95,6 +95,7 @@ namespace ProjectLibrary
         {
             try
             {
+                cmbCtg.Items.Clear();
                 my_auto = new AutoCompleteStringCollection();
                 cmd = new SqlCommand("Select name From tbCategory", con);
                 dr = cmd.ExecuteReader();
@@ -120,6 +121,7 @@ namespace ProjectLibrary
         {
             try
             {
+                cmbType.Items.Clear();
                 my_auto = new AutoCompleteStringCollection();
                 cmd = new SqlCommand("Select typename From tbType", con);
                 dr = cmd.ExecuteReader();
@@ -145,6 +147,12 @@ namespace ProjectLibrary
         {
             try
             {
+                cmbAuthor1.Items.Clear();
+                cmbAuthor2.Items.Clear();
+                cmbAuthor3.Items.Clear();
+                cmbAuthor4.Items.Clear();
+                cmbAuthor5.Items.Clear();
+                cmbAuthor6.Items.Clear();
                 my_auto = new AutoCompleteStringCollection();
                 cmd = new SqlCommand("Select fname From tbAthor", con);
                 dr = cmd.ExecuteReader();
@@ -154,6 +162,8 @@ namespace ProjectLibrary
                     cmbAuthor2.Items.Add(dr["fname"].ToString());
                     cmbAuthor3.Items.Add(dr["fname"].ToString());
                     cmbAuthor4.Items.Add(dr["fname"].ToString());
+                    cmbAuthor5.Items.Add(dr["fname"].ToString());
+                    cmbAuthor6.Items.Add(dr["fname"].ToString());
                     my_auto.Add(dr["fname"].ToString());
                 }
 
@@ -190,6 +200,7 @@ namespace ProjectLibrary
         {
             try
             {
+                cmbTable.Items.Clear();
                 my_auto = new AutoCompleteStringCollection();
                 cmd = new SqlCommand("Select tbdid From tbTable", con);
                 dr = cmd.ExecuteReader();
@@ -830,6 +841,38 @@ namespace ProjectLibrary
                     printBarC.ShowDialog();
                 }
             }
+        }
+
+        private void btAddCatg_Click(object sender, EventArgs e)
+        {
+            frmCategory category = new frmCategory();
+            frmEditCateg addcateg = new frmEditCateg(category);
+            addcateg.ShowDialog();
+            LoadCtg_Name();
+        }
+
+        private void btAddType_Click(object sender, EventArgs e)
+        {
+            frmType type = new frmType();
+            frmEditType addttype = new frmEditType(type);
+            addttype.ShowDialog();
+            LoadType_name();
+        }
+
+        private void btAddTable_Click(object sender, EventArgs e)
+        {
+            frmTable table = new frmTable();
+            frmEditTable addtable = new frmEditTable(table);
+            addtable.ShowDialog();
+            Load_Table();
+            
+        }
+
+        private void btAddAuthor_Click(object sender, EventArgs e)
+        {
+            frmAuthor author = new frmAuthor();
+            frmEditAuthor addauthor = new frmEditAuthor(author);
+            addauthor.ShowDialog();
         }
 
         private void cmbType_SelectedIndexChanged(object sender, EventArgs e)

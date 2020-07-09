@@ -150,9 +150,6 @@ namespace ProjectLibrary
                 y3,
                 y4
                 );
-            frmPrintMemberCard membercard = new frmPrintMemberCard(MyModel.tablecard);
-            membercard.Show();
-
         }
         private void Save()
         {
@@ -184,6 +181,7 @@ namespace ProjectLibrary
                     cmd.Parameters.AddWithValue("dateEd", DbType.Date).Value = dateEd.Value;
                     if (cmd.ExecuteNonQuery() == 1)
                     {
+                        MyMessageBox.ShowMesage("ບັນທືກຂໍ້ມູນສຳເລັດແລ້ວ", "Save", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         PrintCard();
                     }
                 }
@@ -194,7 +192,7 @@ namespace ProjectLibrary
             }
             catch (Exception ex)
             {
-                MyMessageBox.ShowMesage("ເກີດບັນຫາ: "+ex.Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MyMessageBox.ShowMesage("ບັນທືກບໍ່ສຳເລັດ ເນື່ອງຈາກເກີດບັນຫາ: "+ex.Message, "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
             }
         }
         private void Edit()
@@ -234,12 +232,12 @@ namespace ProjectLibrary
                 }
                 else
                 {
-                    MessageBox.Show("Please in check data and try agrian", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MyMessageBox.ShowMesage("ກະລຸນາກວດສອບຂໍ້ມູນ ແລະ ລອງໃຫມ່ອີກຄັ້ງ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error editing data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MyMessageBox.ShowMesage("ແກ້ໄຂບໍ່ສຳເລັດ ເນື່ອງຈາກເກີດບັນຫາ: " + ex.Message, "Error", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
             }
         }
         private void ClearData()
@@ -354,6 +352,17 @@ namespace ProjectLibrary
         private void frmRegister_FormClosing(object sender, FormClosingEventArgs e)
         {
             status = false;
+        }
+
+        private void btPrint_Click(object sender, EventArgs e)
+        {
+            if (txtid.Enabled == false)
+            {
+                //Fill information to MyModel.tablecard
+                PrintCard();
+            }
+            frmPrintMemberCard membercard = new frmPrintMemberCard(MyModel.tablecard);
+            membercard.Show();
         }
 
         private void txttel_Enter(object sender, EventArgs e)

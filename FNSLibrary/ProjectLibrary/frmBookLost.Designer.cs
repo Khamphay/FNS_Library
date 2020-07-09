@@ -86,7 +86,7 @@
             this.label9.Location = new System.Drawing.Point(19, 25);
             this.label9.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(98, 23);
+            this.label9.Size = new System.Drawing.Size(100, 21);
             this.label9.TabIndex = 25;
             this.label9.Text = "ລະຫັດສະມາຊິກ:";
             // 
@@ -182,7 +182,7 @@
             this.Column1.HeaderText = "ລະຫັດບາໂຄດ";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
-            this.Column1.Width = 116;
+            this.Column1.Width = 120;
             // 
             // Column2
             // 
@@ -191,7 +191,7 @@
             this.Column2.HeaderText = "ຊື່ປຶ້ມ";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
-            this.Column2.Width = 64;
+            this.Column2.Width = 63;
             // 
             // Column3
             // 
@@ -200,7 +200,7 @@
             this.Column3.HeaderText = "ຈຳນວນໜ້າ";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
-            this.Column3.Width = 102;
+            this.Column3.Width = 109;
             // 
             // Column9
             // 
@@ -209,7 +209,7 @@
             this.Column9.HeaderText = "ຈຳນວນ";
             this.Column9.Name = "Column9";
             this.Column9.ReadOnly = true;
-            this.Column9.Width = 80;
+            this.Column9.Width = 83;
             // 
             // Column10
             // 
@@ -332,7 +332,7 @@
             this.label11.ForeColor = System.Drawing.Color.Black;
             this.label11.Location = new System.Drawing.Point(839, 4);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(44, 23);
+            this.label11.Size = new System.Drawing.Size(43, 21);
             this.label11.TabIndex = 54;
             this.label11.Text = "ເບີໂທ:";
             // 
@@ -343,7 +343,7 @@
             this.lbMemberName.ForeColor = System.Drawing.Color.Black;
             this.lbMemberName.Location = new System.Drawing.Point(601, 4);
             this.lbMemberName.Name = "lbMemberName";
-            this.lbMemberName.Size = new System.Drawing.Size(0, 23);
+            this.lbMemberName.Size = new System.Drawing.Size(0, 21);
             this.lbMemberName.TabIndex = 55;
             // 
             // label13
@@ -353,7 +353,7 @@
             this.label13.ForeColor = System.Drawing.Color.Black;
             this.label13.Location = new System.Drawing.Point(480, 4);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(115, 23);
+            this.label13.Size = new System.Drawing.Size(117, 21);
             this.label13.TabIndex = 56;
             this.label13.Text = "ຊື່ ແລະ ນາມສະກຸນ:";
             // 
@@ -364,7 +364,7 @@
             this.lbMember.ForeColor = System.Drawing.Color.Black;
             this.lbMember.Location = new System.Drawing.Point(247, 4);
             this.lbMember.Name = "lbMember";
-            this.lbMember.Size = new System.Drawing.Size(98, 23);
+            this.lbMember.Size = new System.Drawing.Size(100, 21);
             this.lbMember.TabIndex = 51;
             this.lbMember.Text = "ລະຫັດສະມາຊິກ:";
             // 
@@ -412,7 +412,7 @@
             this.lbAllCost.ForeColor = System.Drawing.Color.Black;
             this.lbAllCost.Location = new System.Drawing.Point(1021, 26);
             this.lbAllCost.Name = "lbAllCost";
-            this.lbAllCost.Size = new System.Drawing.Size(57, 23);
+            this.lbAllCost.Size = new System.Drawing.Size(57, 21);
             this.lbAllCost.TabIndex = 56;
             this.lbAllCost.Text = "CostAll";
             // 
@@ -423,7 +423,7 @@
             this.lbCost.ForeColor = System.Drawing.Color.Black;
             this.lbCost.Location = new System.Drawing.Point(769, 26);
             this.lbCost.Name = "lbCost";
-            this.lbCost.Size = new System.Drawing.Size(41, 23);
+            this.lbCost.Size = new System.Drawing.Size(41, 21);
             this.lbCost.TabIndex = 56;
             this.lbCost.Text = "Cost";
             // 
@@ -434,7 +434,7 @@
             this.cbAll.ForeColor = System.Drawing.Color.Black;
             this.cbAll.Location = new System.Drawing.Point(527, 24);
             this.cbAll.Name = "cbAll";
-            this.cbAll.Size = new System.Drawing.Size(106, 27);
+            this.cbAll.Size = new System.Drawing.Size(107, 25);
             this.cbAll.TabIndex = 26;
             this.cbAll.Text = "ສະແດງທັງໝົດ";
             this.cbAll.UseVisualStyleBackColor = true;
@@ -447,7 +447,7 @@
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(907, 26);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(108, 23);
+            this.label2.Size = new System.Drawing.Size(104, 21);
             this.label2.TabIndex = 56;
             this.label2.Text = "ຄ່າປັບໃໝ່ທັງໝົດ:";
             // 
@@ -458,7 +458,7 @@
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(694, 26);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 23);
+            this.label1.Size = new System.Drawing.Size(66, 21);
             this.label1.TabIndex = 56;
             this.label1.Text = "ຄ່າປັບໃໝ່:";
             // 
@@ -474,7 +474,7 @@
             // 
             // frmBookLost
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1192, 601);
             this.Controls.Add(this.gunaSeparator1);
@@ -489,6 +489,7 @@
             this.MinimumSize = new System.Drawing.Size(1208, 640);
             this.Name = "frmBookLost";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Books Lost";
             this.Load += new System.EventHandler(this.frmBookLost_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBooksLost)).EndInit();
             this.panel2.ResumeLayout(false);

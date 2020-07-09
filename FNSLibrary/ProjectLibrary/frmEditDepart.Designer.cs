@@ -50,9 +50,8 @@
             this.txtname.Name = "txtname";
             this.txtname.Size = new System.Drawing.Size(252, 30);
             this.txtname.TabIndex = 11;
-            this.txtname.KeyDown += new System.Windows.Forms.KeyEventHandler(this.NextControl);
+            this.txtname.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtname_KeyDown);
             this.txtname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtname_KeyPress);
-            this.txtname.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtname_KeyUp);
             // 
             // txtid
             // 
@@ -217,7 +216,7 @@
             this.MinimumSize = new System.Drawing.Size(390, 343);
             this.Name = "frmEditDepart";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmEditDepart";
+            this.Text = "Edit Department";
             this.Load += new System.EventHandler(this.frmEditDepart_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);

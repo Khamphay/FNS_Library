@@ -108,9 +108,8 @@
             this.txtname.Name = "txtname";
             this.txtname.Size = new System.Drawing.Size(254, 30);
             this.txtname.TabIndex = 1;
-            this.txtname.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtid_KeyDown);
+            this.txtname.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtname_KeyDown);
             this.txtname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtname_KeyPress);
-            this.txtname.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtname_KeyUp);
             // 
             // label1
             // 
@@ -213,7 +212,7 @@
             this.MinimumSize = new System.Drawing.Size(403, 321);
             this.Name = "frmEditType";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmEditType";
+            this.Text = "Edit Type";
             this.Load += new System.EventHandler(this.frmEditType_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);

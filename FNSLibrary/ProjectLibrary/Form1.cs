@@ -206,7 +206,6 @@ namespace ProjectLibrary
             frm.TopMost = true;
             frm.FormBorderStyle = FormBorderStyle.None;
             frm.Dock = DockStyle.Fill;
-            // frm.StartPosition = FormStartPosition.CenterScreen;
             pnShowFrm.Controls.Add(frm);
             frm.Show();
         }
@@ -400,7 +399,7 @@ namespace ProjectLibrary
 
         private void btUser_Click(object sender, EventArgs e)
         {
-            frmEditUser user = new frmEditUser(this);
+            frmNewUser user = new frmNewUser(this);
             ShowSubForm(user);
         }
 

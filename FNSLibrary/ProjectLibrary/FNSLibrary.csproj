@@ -729,6 +729,8 @@
     <None Include="Resources\Login_System.png" />
     <None Include="Resources\Login_System2.png" />
     <None Include="Resources\invisible_100px.png" />
+    <None Include="Resources\add_24px.png" />
+    <None Include="Resources\add_30px.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

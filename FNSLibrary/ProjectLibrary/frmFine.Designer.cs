@@ -157,7 +157,7 @@
             this.MinimumSize = new System.Drawing.Size(412, 235);
             this.Name = "frmFine";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmFine";
+            this.Text = "Fine";
             this.Load += new System.EventHandler(this.frmFine_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
