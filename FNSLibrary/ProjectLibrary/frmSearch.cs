@@ -19,6 +19,8 @@ namespace ProjectLibrary
         {
             InitializeComponent();
             _home = home;
+            treeView_Books.ImageList = imageList1;
+            
         }
 
         SqlConnection con = MyConnected.getConnect();
@@ -70,9 +72,11 @@ namespace ProjectLibrary
                     cmd = new SqlCommand(@"SELECT dbo.tbBooks.barcode, dbo.tbBooks_Detail.page, dbo.tbBooks_Detail.ISBN, dbo.tbCategory.name, dbo.tbType.typename, dbo.tbBooks_Detail.tbdid, dbo.tbBooks.status FROM   dbo.tbBooks INNER JOIN dbo.tbBooks_Detail ON dbo.tbBooks.bid = dbo.tbBooks_Detail.bid INNER JOIN dbo.tbCategory ON dbo.tbBooks_Detail.catgid = dbo.tbCategory.catgid INNER JOIN dbo.tbType ON dbo.tbBooks_Detail.typeid = dbo.tbType.typeid Where tbBooks.bid='" + table.Rows[nod][0].ToString() + "'", con);
                     dr = cmd.ExecuteReader();
                     tNode1 = new TreeNode($"{table.Rows[nod][0].ToString()} : {table.Rows[nod][1].ToString()}  ຈຳນວນ: {table.Rows[nod][2].ToString()} ຫົວ");
+                    tNode1.SelectedImageIndex = 0;
                     while (dr.Read())
                     {
                         tNode1.Nodes.Add(tNode2 = new TreeNode($"ລະຫັດ Barcode: {dr["barcode"].ToString()} ສະຖານະ: {dr["status"].ToString()}"));
+                        tNode2.ImageIndex = 1;
                         tNode2.Nodes.Add($"ຈຳນວນໜ້າ: {dr["page"].ToString()}");
                         tNode2.Nodes.Add($"ISBN: {dr["ISBN"].ToString()}");
                         tNode2.Nodes.Add($"ໝວດ: {dr["name"].ToString()}");
@@ -104,9 +108,11 @@ namespace ProjectLibrary
                     cmd = new SqlCommand(@"SELECT dbo.tbBooks.barcode, dbo.tbBooks_Detail.page, dbo.tbBooks_Detail.ISBN, dbo.tbCategory.name, dbo.tbType.typename, dbo.tbBooks_Detail.tbdid, dbo.tbBooks.status FROM   dbo.tbBooks INNER JOIN dbo.tbBooks_Detail ON dbo.tbBooks.bid = dbo.tbBooks_Detail.bid INNER JOIN dbo.tbCategory ON dbo.tbBooks_Detail.catgid = dbo.tbCategory.catgid INNER JOIN dbo.tbType ON dbo.tbBooks_Detail.typeid = dbo.tbType.typeid Where tbBooks.bid='" + table.Rows[nod][0].ToString() + "'", con);
                     dr = cmd.ExecuteReader();
                     tNode1 = new TreeNode($"{table.Rows[nod][0].ToString()} : {table.Rows[nod][1].ToString()}  ຈຳນວນ: {table.Rows[nod][2].ToString()} ຫົວ");
+                    tNode1.SelectedImageIndex = 0;
                     while (dr.Read())
                     {
                         tNode1.Nodes.Add(tNode2 = new TreeNode($"ລະຫັດ Barcode: {dr["barcode"].ToString()} ສະຖານະ: {dr["status"].ToString()}"));
+                        tNode2.ImageIndex = 1;
                         tNode2.Nodes.Add($"ຈຳນວນໜ້າ: {dr["page"].ToString()}");
                         tNode2.Nodes.Add($"ISBN: {dr["ISBN"].ToString()}");
                         tNode2.Nodes.Add($"ໝວດ: {dr["name"].ToString()}");

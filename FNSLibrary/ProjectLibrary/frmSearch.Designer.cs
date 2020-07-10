@@ -37,6 +37,7 @@
             this.btSearch = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.treeView_Books = new System.Windows.Forms.TreeView();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -137,14 +138,24 @@
             this.treeView_Books.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.treeView_Books.Cursor = System.Windows.Forms.Cursors.Hand;
             this.treeView_Books.Font = new System.Drawing.Font("Saysettha OT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.treeView_Books.ImageIndex = 0;
+            this.treeView_Books.ImageList = this.imageList1;
             this.treeView_Books.ImeMode = System.Windows.Forms.ImeMode.AlphaFull;
             this.treeView_Books.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(206)))));
             this.treeView_Books.Location = new System.Drawing.Point(132, 99);
             this.treeView_Books.Margin = new System.Windows.Forms.Padding(6);
             this.treeView_Books.Name = "treeView_Books";
+            this.treeView_Books.SelectedImageIndex = 0;
             this.treeView_Books.Size = new System.Drawing.Size(697, 423);
             this.treeView_Books.TabIndex = 62;
             this.treeView_Books.Click += new System.EventHandler(this.btSearch_Click_1);
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "books_emoji_48px.png");
+            this.imageList1.Images.SetKeyName(1, "books_48px.png");
             // 
             // frmSearch
             // 
@@ -177,5 +188,6 @@
         private System.Windows.Forms.Button btSearch;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.TreeView treeView_Books;
+        private System.Windows.Forms.ImageList imageList1;
     }
 }
