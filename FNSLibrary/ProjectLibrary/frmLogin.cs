@@ -85,7 +85,7 @@ namespace ProjectLibrary
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
-            txtUser.Focus();
+            txtUser.SelectNextControl((Control)sender, true, true, true, true);
         }
 
         private void txtUser_KeyDown(object sender, KeyEventArgs e)

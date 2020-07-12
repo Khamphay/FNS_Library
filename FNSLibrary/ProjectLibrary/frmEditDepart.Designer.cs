@@ -48,8 +48,8 @@
             this.txtname.Location = new System.Drawing.Point(66, 155);
             this.txtname.Margin = new System.Windows.Forms.Padding(6, 11, 6, 11);
             this.txtname.Name = "txtname";
-            this.txtname.Size = new System.Drawing.Size(252, 30);
-            this.txtname.TabIndex = 11;
+            this.txtname.Size = new System.Drawing.Size(252, 41);
+            this.txtname.TabIndex = 0;
             this.txtname.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtname_KeyDown);
             this.txtname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtname_KeyPress);
             // 
@@ -59,7 +59,7 @@
             this.txtid.Location = new System.Drawing.Point(66, 84);
             this.txtid.Margin = new System.Windows.Forms.Padding(6, 11, 6, 11);
             this.txtid.Name = "txtid";
-            this.txtid.Size = new System.Drawing.Size(252, 30);
+            this.txtid.Size = new System.Drawing.Size(252, 41);
             this.txtid.TabIndex = 8;
             this.txtid.Enter += new System.EventHandler(this.txtid_Enter);
             this.txtid.KeyDown += new System.Windows.Forms.KeyEventHandler(this.NextControl);
@@ -71,7 +71,7 @@
             this.label1.Location = new System.Drawing.Point(66, 59);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 21);
+            this.label1.Size = new System.Drawing.Size(143, 34);
             this.label1.TabIndex = 9;
             this.label1.Text = "ລະຫັດພາກວິຊາ";
             // 
@@ -121,7 +121,7 @@
             this.label2.Location = new System.Drawing.Point(66, 130);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 21);
+            this.label2.Size = new System.Drawing.Size(101, 34);
             this.label2.TabIndex = 10;
             this.label2.Text = "ຊື່ພາກວິຊາ";
             // 
@@ -181,7 +181,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(374, 34);
+            this.panel2.Size = new System.Drawing.Size(368, 34);
             this.panel2.TabIndex = 57;
             // 
             // label20
@@ -191,15 +191,15 @@
             this.label20.Font = new System.Drawing.Font("Saysettha OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.Location = new System.Drawing.Point(24, 4);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(76, 24);
+            this.label20.Size = new System.Drawing.Size(116, 38);
             this.label20.TabIndex = 0;
             this.label20.Text = "ປ້ອນຂໍ້ມູນ";
             // 
             // frmEditDepart
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 34F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(374, 304);
+            this.ClientSize = new System.Drawing.Size(368, 287);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.txtClear);

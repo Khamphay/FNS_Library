@@ -73,6 +73,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvtype.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvtype.ColumnHeadersHeight = 35;
+            this.dgvtype.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvtype.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column2,
             this.Column3,
@@ -117,7 +118,7 @@
             this.dgvtype.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvtype.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Phetsarath OT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvtype.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.Black;
-            this.dgvtype.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgvtype.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvtype.ThemeStyle.HeaderStyle.Height = 35;
             this.dgvtype.ThemeStyle.ReadOnly = true;
             this.dgvtype.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;

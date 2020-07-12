@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -18,9 +19,68 @@ namespace ProjectLibrary
             InitializeComponent();
             _type = type;
         }
+        SqlConnection con = MyConnected.getConnect();
+        SqlCommand cmd;
+        SqlDataReader dr;
 
         public  bool edit = false;
         public string tid = "", tname = "";
+
+        private void Maxid()
+        {
+            try
+            {
+                cmd = new SqlCommand("Select Max(typeid) maxid From tbType", con);
+                dr = cmd.ExecuteReader();
+                dr.Read();
+                if (dr.HasRows)
+                {
+                    string textid = "", numid = "";
+
+                    string maxid = dr["maxid"].ToString();
+                    char[] ch = maxid.ToCharArray();
+                    for (int i = 0; i < ch.Length; i++)
+                    {
+                        if (!char.IsDigit(ch[i]))
+                        {
+                            textid += ch[i];
+                        }
+                        else
+                        {
+                            numid += ch[i];
+                        }
+                    }
+
+                    int id = int.Parse(maxid.Substring(maxid.Length - numid.Length)) + 1;
+                    if (id >= 100)
+                    {
+                        txtid.Text = textid + id.ToString();
+                    }
+                    else if (id >= 10 && id < 100)
+                    {
+                        txtid.Text = textid + "0" + id.ToString();
+                    }
+                    else
+                    {
+                        txtid.Text = textid + "00" + id.ToString();
+                    }
+
+                }
+                else
+                {
+                    txtid.Text = "";
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                dr.Close();
+            }
+        }
+
         private void SaveAndEdit()
         {
             if (edit == false)
@@ -47,6 +107,10 @@ namespace ProjectLibrary
         private void frmEditType_Load(object sender, EventArgs e)
         {
             MyModel.getSwitchLanguage();
+
+            //Focus Texbox txtname
+            txtname.SelectNextControl((Control)sender, true, true, true, true);
+
             if (edit == true)
             {
                 txtid.Text = tid;
@@ -54,6 +118,10 @@ namespace ProjectLibrary
                 txtid.Enabled = false;
                 tid = "";
                 tname = "";
+            }
+            else
+            {
+                Maxid();
             }
         }
 
@@ -82,7 +150,6 @@ namespace ProjectLibrary
             if (e.KeyCode == Keys.Enter)
             {
                 SaveAndEdit();
-                txtid.Focus();
             }
         }
 

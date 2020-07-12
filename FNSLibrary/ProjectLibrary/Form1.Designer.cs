@@ -116,7 +116,7 @@
             this.pnBorderTop.Location = new System.Drawing.Point(0, 0);
             this.pnBorderTop.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pnBorderTop.Name = "pnBorderTop";
-            this.pnBorderTop.Size = new System.Drawing.Size(1193, 93);
+            this.pnBorderTop.Size = new System.Drawing.Size(1137, 93);
             this.pnBorderTop.TabIndex = 0;
             this.pnBorderTop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             this.pnBorderTop.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
@@ -127,7 +127,7 @@
             this.lbName.AutoSize = true;
             this.lbName.Font = new System.Drawing.Font("Phetsarath OT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbName.ForeColor = System.Drawing.Color.White;
-            this.lbName.Location = new System.Drawing.Point(934, 56);
+            this.lbName.Location = new System.Drawing.Point(917, 56);
             this.lbName.Name = "lbName";
             this.lbName.Size = new System.Drawing.Size(42, 18);
             this.lbName.TabIndex = 2;
@@ -139,7 +139,7 @@
             this.lbID.AutoSize = true;
             this.lbID.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbID.ForeColor = System.Drawing.Color.White;
-            this.lbID.Location = new System.Drawing.Point(955, 28);
+            this.lbID.Location = new System.Drawing.Point(938, 28);
             this.lbID.Name = "lbID";
             this.lbID.Size = new System.Drawing.Size(20, 15);
             this.lbID.TabIndex = 2;
@@ -151,7 +151,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Phetsarath OT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(915, 25);
+            this.label3.Location = new System.Drawing.Point(898, 25);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(44, 18);
             this.label3.TabIndex = 2;
@@ -163,7 +163,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Phetsarath OT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(915, 56);
+            this.label2.Location = new System.Drawing.Point(898, 56);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(20, 18);
             this.label2.TabIndex = 3;
@@ -173,7 +173,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(849, 18);
+            this.pictureBox1.Location = new System.Drawing.Point(832, 18);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(70, 70);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -182,10 +182,11 @@
             // 
             // lbTel
             // 
+            this.lbTel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbTel.AutoSize = true;
             this.lbTel.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTel.ForeColor = System.Drawing.Color.White;
-            this.lbTel.Location = new System.Drawing.Point(1100, 59);
+            this.lbTel.Location = new System.Drawing.Point(1048, 58);
             this.lbTel.Name = "lbTel";
             this.lbTel.Size = new System.Drawing.Size(26, 15);
             this.lbTel.TabIndex = 2;
@@ -396,7 +397,7 @@
             this.gunaSeparator1.LineColor = System.Drawing.Color.White;
             this.gunaSeparator1.Location = new System.Drawing.Point(0, 92);
             this.gunaSeparator1.Name = "gunaSeparator1";
-            this.gunaSeparator1.Size = new System.Drawing.Size(1193, 1);
+            this.gunaSeparator1.Size = new System.Drawing.Size(1137, 1);
             this.gunaSeparator1.TabIndex = 0;
             // 
             // pictureBox2
@@ -411,10 +412,11 @@
             // 
             // label4
             // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(1074, 59);
+            this.label4.Location = new System.Drawing.Point(1022, 58);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(26, 15);
             this.label4.TabIndex = 2;
@@ -454,7 +456,7 @@
             this.btMini.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btMini.ImageSize = new System.Drawing.Size(25, 25);
             this.btMini.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btMini.Location = new System.Drawing.Point(1094, 3);
+            this.btMini.Location = new System.Drawing.Point(1038, 3);
             this.btMini.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btMini.Name = "btMini";
             this.btMini.OnHoverBaseColor = System.Drawing.Color.White;
@@ -491,7 +493,7 @@
             this.btMax.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btMax.ImageSize = new System.Drawing.Size(25, 25);
             this.btMax.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btMax.Location = new System.Drawing.Point(1132, 3);
+            this.btMax.Location = new System.Drawing.Point(1076, 3);
             this.btMax.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btMax.Name = "btMax";
             this.btMax.OnHoverBaseColor = System.Drawing.Color.White;
@@ -528,7 +530,7 @@
             this.btExit.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btExit.ImageSize = new System.Drawing.Size(25, 25);
             this.btExit.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btExit.Location = new System.Drawing.Point(1169, 3);
+            this.btExit.Location = new System.Drawing.Point(1113, 3);
             this.btExit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btExit.Name = "btExit";
             this.btExit.OnHoverBaseColor = System.Drawing.Color.Red;
@@ -589,7 +591,7 @@
             this.pnDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnDesktop.Location = new System.Drawing.Point(0, 93);
             this.pnDesktop.Name = "pnDesktop";
-            this.pnDesktop.Size = new System.Drawing.Size(1193, 538);
+            this.pnDesktop.Size = new System.Drawing.Size(1137, 538);
             this.pnDesktop.TabIndex = 1;
             // 
             // pnMenuBook
@@ -1350,7 +1352,7 @@
             this.pnShowFrm.Location = new System.Drawing.Point(0, 0);
             this.pnShowFrm.Margin = new System.Windows.Forms.Padding(0);
             this.pnShowFrm.Name = "pnShowFrm";
-            this.pnShowFrm.Size = new System.Drawing.Size(1193, 538);
+            this.pnShowFrm.Size = new System.Drawing.Size(1137, 538);
             this.pnShowFrm.TabIndex = 2;
             this.pnShowFrm.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnShowFrm_MouseClick);
             // 
@@ -1365,14 +1367,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1193, 631);
+            this.ClientSize = new System.Drawing.Size(1137, 631);
             this.Controls.Add(this.pnDesktop);
             this.Controls.Add(this.pnBorderTop);
             this.Font = new System.Drawing.Font("Phetsarath OT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.MinimumSize = new System.Drawing.Size(1193, 581);
+            this.MinimumSize = new System.Drawing.Size(1137, 631);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";

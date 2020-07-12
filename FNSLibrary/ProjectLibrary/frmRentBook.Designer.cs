@@ -146,6 +146,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvRentbooks.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvRentbooks.ColumnHeadersHeight = 40;
+            this.dgvRentbooks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvRentbooks.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
@@ -198,7 +199,7 @@
             this.dgvRentbooks.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvRentbooks.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Phetsarath OT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvRentbooks.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.Black;
-            this.dgvRentbooks.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgvRentbooks.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvRentbooks.ThemeStyle.HeaderStyle.Height = 40;
             this.dgvRentbooks.ThemeStyle.ReadOnly = true;
             this.dgvRentbooks.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
@@ -217,7 +218,7 @@
             this.Column1.HeaderText = "ລະຫັດປຶ້ມ";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
-            this.Column1.Width = 92;
+            this.Column1.Width = 97;
             // 
             // Column2
             // 
@@ -233,7 +234,7 @@
             this.Column4.HeaderText = "ຈຳນວນໜ້າ";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
-            this.Column4.Width = 102;
+            this.Column4.Width = 109;
             // 
             // Column5
             // 
@@ -241,7 +242,7 @@
             this.Column5.HeaderText = "ຈຳນວນ";
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
-            this.Column5.Width = 80;
+            this.Column5.Width = 83;
             // 
             // ໝວດ
             // 
@@ -249,7 +250,7 @@
             this.ໝວດ.HeaderText = "ໝວດ";
             this.ໝວດ.Name = "ໝວດ";
             this.ໝວດ.ReadOnly = true;
-            this.ໝວດ.Width = 68;
+            this.ໝວດ.Width = 71;
             // 
             // Column3
             // 
@@ -257,7 +258,7 @@
             this.Column3.HeaderText = "ປະເພດ";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
-            this.Column3.Width = 75;
+            this.Column3.Width = 81;
             // 
             // Column6
             // 
@@ -265,7 +266,7 @@
             this.Column6.HeaderText = "ລະຫັດຕູ້";
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
-            this.Column6.Width = 81;
+            this.Column6.Width = 86;
             // 
             // Column7
             // 
@@ -273,7 +274,7 @@
             this.Column7.HeaderText = "ວັນທີຢືມ";
             this.Column7.Name = "Column7";
             this.Column7.ReadOnly = true;
-            this.Column7.Width = 85;
+            this.Column7.Width = 88;
             // 
             // Column8
             // 
@@ -282,7 +283,7 @@
             this.Column8.HeaderText = "ວັນທີສົ່ງ";
             this.Column8.Name = "Column8";
             this.Column8.ReadOnly = true;
-            this.Column8.Width = 82;
+            this.Column8.Width = 85;
             // 
             // Column9
             // 
@@ -292,7 +293,7 @@
             this.Column9.Image = ((System.Drawing.Image)(resources.GetObject("Column9.Image")));
             this.Column9.Name = "Column9";
             this.Column9.ReadOnly = true;
-            this.Column9.Width = 62;
+            this.Column9.Width = 63;
             // 
             // dateED
             // 
@@ -452,7 +453,7 @@
             this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(896, 5);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(44, 23);
+            this.label4.Size = new System.Drawing.Size(43, 21);
             this.label4.TabIndex = 50;
             this.label4.Text = "ເບີໂທ:";
             // 
@@ -473,7 +474,7 @@
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(479, 5);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(115, 23);
+            this.label3.Size = new System.Drawing.Size(117, 21);
             this.label3.TabIndex = 50;
             this.label3.Text = "ຊື່ ແລະ ນາມສະກຸນ:";
             // 
@@ -530,7 +531,7 @@
             this.lbMember.ForeColor = System.Drawing.Color.Black;
             this.lbMember.Location = new System.Drawing.Point(246, 5);
             this.lbMember.Name = "lbMember";
-            this.lbMember.Size = new System.Drawing.Size(98, 23);
+            this.lbMember.Size = new System.Drawing.Size(100, 21);
             this.lbMember.TabIndex = 32;
             this.lbMember.Text = "ລະຫັດສະມາຊິກ:";
             // 
@@ -565,7 +566,7 @@
             // 
             // frmRentBook
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1246, 607);
             this.Controls.Add(this.gunaSeparator1);

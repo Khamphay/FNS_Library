@@ -198,7 +198,7 @@
             this.lbEpxireDate.ForeColor = System.Drawing.Color.Black;
             this.lbEpxireDate.Location = new System.Drawing.Point(125, 219);
             this.lbEpxireDate.Name = "lbEpxireDate";
-            this.lbEpxireDate.Size = new System.Drawing.Size(46, 23);
+            this.lbEpxireDate.Size = new System.Drawing.Size(55, 21);
             this.lbEpxireDate.TabIndex = 0;
             this.lbEpxireDate.Text = ".........";
             // 
@@ -209,7 +209,7 @@
             this.lbPriceTotal.ForeColor = System.Drawing.Color.Black;
             this.lbPriceTotal.Location = new System.Drawing.Point(125, 277);
             this.lbPriceTotal.Name = "lbPriceTotal";
-            this.lbPriceTotal.Size = new System.Drawing.Size(46, 23);
+            this.lbPriceTotal.Size = new System.Drawing.Size(55, 21);
             this.lbPriceTotal.TabIndex = 0;
             this.lbPriceTotal.Text = ".........";
             // 
@@ -220,7 +220,7 @@
             this.lbDateExpire.ForeColor = System.Drawing.Color.Black;
             this.lbDateExpire.Location = new System.Drawing.Point(125, 190);
             this.lbDateExpire.Name = "lbDateExpire";
-            this.lbDateExpire.Size = new System.Drawing.Size(46, 23);
+            this.lbDateExpire.Size = new System.Drawing.Size(55, 21);
             this.lbDateExpire.TabIndex = 0;
             this.lbDateExpire.Text = ".........";
             // 
@@ -231,7 +231,7 @@
             this.lbPrice.ForeColor = System.Drawing.Color.Black;
             this.lbPrice.Location = new System.Drawing.Point(125, 248);
             this.lbPrice.Name = "lbPrice";
-            this.lbPrice.Size = new System.Drawing.Size(46, 23);
+            this.lbPrice.Size = new System.Drawing.Size(55, 21);
             this.lbPrice.TabIndex = 0;
             this.lbPrice.Text = ".........";
             // 
@@ -242,7 +242,7 @@
             this.lbDateSt.ForeColor = System.Drawing.Color.Black;
             this.lbDateSt.Location = new System.Drawing.Point(125, 161);
             this.lbDateSt.Name = "lbDateSt";
-            this.lbDateSt.Size = new System.Drawing.Size(46, 23);
+            this.lbDateSt.Size = new System.Drawing.Size(55, 21);
             this.lbDateSt.TabIndex = 0;
             this.lbDateSt.Text = ".........";
             // 
@@ -253,7 +253,7 @@
             this.lbRentQty.ForeColor = System.Drawing.Color.Black;
             this.lbRentQty.Location = new System.Drawing.Point(125, 130);
             this.lbRentQty.Name = "lbRentQty";
-            this.lbRentQty.Size = new System.Drawing.Size(46, 23);
+            this.lbRentQty.Size = new System.Drawing.Size(55, 21);
             this.lbRentQty.TabIndex = 0;
             this.lbRentQty.Text = ".........";
             // 
@@ -264,7 +264,7 @@
             this.lbMemberName.ForeColor = System.Drawing.Color.Black;
             this.lbMemberName.Location = new System.Drawing.Point(125, 103);
             this.lbMemberName.Name = "lbMemberName";
-            this.lbMemberName.Size = new System.Drawing.Size(46, 23);
+            this.lbMemberName.Size = new System.Drawing.Size(55, 21);
             this.lbMemberName.TabIndex = 0;
             this.lbMemberName.Text = ".........";
             // 
@@ -275,7 +275,7 @@
             this.lbMemID.ForeColor = System.Drawing.Color.Black;
             this.lbMemID.Location = new System.Drawing.Point(125, 73);
             this.lbMemID.Name = "lbMemID";
-            this.lbMemID.Size = new System.Drawing.Size(46, 23);
+            this.lbMemID.Size = new System.Drawing.Size(55, 21);
             this.lbMemID.TabIndex = 0;
             this.lbMemID.Text = ".........";
             // 
@@ -286,7 +286,7 @@
             this.lbID.ForeColor = System.Drawing.Color.Black;
             this.lbID.Location = new System.Drawing.Point(125, 45);
             this.lbID.Name = "lbID";
-            this.lbID.Size = new System.Drawing.Size(46, 23);
+            this.lbID.Size = new System.Drawing.Size(55, 21);
             this.lbID.TabIndex = 0;
             this.lbID.Text = ".........";
             // 
@@ -297,7 +297,7 @@
             this.lbShowBooksExpire.ForeColor = System.Drawing.Color.Red;
             this.lbShowBooksExpire.Location = new System.Drawing.Point(10, 368);
             this.lbShowBooksExpire.Name = "lbShowBooksExpire";
-            this.lbShowBooksExpire.Size = new System.Drawing.Size(0, 23);
+            this.lbShowBooksExpire.Size = new System.Drawing.Size(0, 21);
             this.lbShowBooksExpire.TabIndex = 0;
             // 
             // label8
@@ -307,7 +307,7 @@
             this.label8.ForeColor = System.Drawing.Color.Black;
             this.label8.Location = new System.Drawing.Point(10, 277);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(108, 23);
+            this.label8.Size = new System.Drawing.Size(104, 21);
             this.label8.TabIndex = 0;
             this.label8.Text = "ຄ່າປັບໃໝ່ທັງໝົດ:";
             // 
@@ -318,7 +318,7 @@
             this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Location = new System.Drawing.Point(57, 190);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(57, 23);
+            this.label7.Size = new System.Drawing.Size(57, 21);
             this.label7.TabIndex = 0;
             this.label7.Text = "ວັນທີສົ່ງ:";
             // 
@@ -329,7 +329,7 @@
             this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(53, 161);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(61, 23);
+            this.label5.Size = new System.Drawing.Size(61, 21);
             this.label5.TabIndex = 0;
             this.label5.Text = "ວັນທີຢືມ:";
             // 
@@ -340,7 +340,7 @@
             this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.Location = new System.Drawing.Point(3, 248);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(114, 23);
+            this.label6.Size = new System.Drawing.Size(111, 21);
             this.label6.TabIndex = 0;
             this.label6.Text = "ຄ່າປັບໃໝ່/ຫົວ/ວັນ:";
             // 
@@ -351,7 +351,7 @@
             this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(9, 219);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(107, 23);
+            this.label4.Size = new System.Drawing.Size(105, 21);
             this.label4.TabIndex = 0;
             this.label4.Text = "ຈຳນວນວັນທີ່ເກີນ:";
             // 
@@ -362,7 +362,7 @@
             this.lbQtyTotal.ForeColor = System.Drawing.Color.Black;
             this.lbQtyTotal.Location = new System.Drawing.Point(30, 130);
             this.lbQtyTotal.Name = "lbQtyTotal";
-            this.lbQtyTotal.Size = new System.Drawing.Size(85, 23);
+            this.lbQtyTotal.Size = new System.Drawing.Size(84, 21);
             this.lbQtyTotal.TabIndex = 0;
             this.lbQtyTotal.Text = "ຈຳນວນທີ່ຢຶມ:";
             // 
@@ -373,7 +373,7 @@
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(41, 103);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 23);
+            this.label2.Size = new System.Drawing.Size(73, 21);
             this.label2.TabIndex = 0;
             this.label2.Text = "ຊື່ສະມາຊິກ:";
             // 
@@ -384,7 +384,7 @@
             this.label10.ForeColor = System.Drawing.Color.Black;
             this.label10.Location = new System.Drawing.Point(14, 73);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(98, 23);
+            this.label10.Size = new System.Drawing.Size(100, 21);
             this.label10.TabIndex = 0;
             this.label10.Text = "ລະຫັດສະມາຊິກ:";
             // 
@@ -395,7 +395,7 @@
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(45, 45);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 23);
+            this.label1.Size = new System.Drawing.Size(69, 21);
             this.label1.TabIndex = 0;
             this.label1.Text = "ລະຫັດຢືມ:";
             // 
@@ -433,6 +433,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvReturnbooks.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvReturnbooks.ColumnHeadersHeight = 40;
+            this.dgvReturnbooks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvReturnbooks.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
@@ -482,7 +483,7 @@
             this.dgvReturnbooks.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvReturnbooks.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Phetsarath OT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvReturnbooks.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.Black;
-            this.dgvReturnbooks.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgvReturnbooks.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvReturnbooks.ThemeStyle.HeaderStyle.Height = 40;
             this.dgvReturnbooks.ThemeStyle.ReadOnly = true;
             this.dgvReturnbooks.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
@@ -501,7 +502,7 @@
             this.Column1.HeaderText = "ລະຫັດບາໂຄດ";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
-            this.Column1.Width = 116;
+            this.Column1.Width = 120;
             // 
             // Column2
             // 
@@ -549,7 +550,7 @@
             this.Column8.MinimumWidth = 40;
             this.Column8.Name = "Column8";
             this.Column8.ReadOnly = true;
-            this.Column8.Width = 62;
+            this.Column8.Width = 63;
             // 
             // btBookLost
             // 
@@ -663,7 +664,7 @@
             // 
             // frmReturnBooks
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1141, 571);
             this.Controls.Add(this.pictureBox1);

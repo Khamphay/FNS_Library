@@ -167,6 +167,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvbooks.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvbooks.ColumnHeadersHeight = 40;
+            this.dgvbooks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvbooks.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
@@ -219,7 +220,7 @@
             this.dgvbooks.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvbooks.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Saysettha OT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvbooks.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.Black;
-            this.dgvbooks.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgvbooks.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvbooks.ThemeStyle.HeaderStyle.Height = 40;
             this.dgvbooks.ThemeStyle.ReadOnly = true;
             this.dgvbooks.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;

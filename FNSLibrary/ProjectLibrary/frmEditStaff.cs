@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -19,6 +20,70 @@ namespace ProjectLibrary
         {
             InitializeComponent();
             _staff = staff;
+        }
+
+
+        SqlConnection con = MyConnected.getConnect();
+        SqlCommand cmd;
+        SqlDataReader dr;
+
+        string gender = "";
+        public string[] data = new string[5];
+        public bool edit = false;
+
+        private void Maxid()
+        {
+            try
+            {
+                cmd = new SqlCommand("Select Max(empid) maxid From tbStaff", con);
+                dr = cmd.ExecuteReader();
+                dr.Read();
+                if (dr.HasRows)
+                {
+                    string textid = "", numid = "";
+
+                    string maxid = dr["maxid"].ToString();
+                    char[] ch = maxid.ToCharArray();
+                    for (int i = 0; i < ch.Length; i++)
+                    {
+                        if (!char.IsDigit(ch[i]))
+                        {
+                            textid += ch[i];
+                        }
+                        else
+                        {
+                            numid += ch[i];
+                        }
+                    }
+
+                    int id = int.Parse(maxid.Substring(maxid.Length - numid.Length)) + 1;
+                    if (id >= 100)
+                    {
+                        txtid.Text = textid + id.ToString();
+                    }
+                    else if (id >= 10 && id < 100)
+                    {
+                        txtid.Text = textid + "0" + id.ToString();
+                    }
+                    else
+                    {
+                        txtid.Text = textid + "00" + id.ToString();
+                    }
+
+                }
+                else
+                {
+                    txtid.Text = "";
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                dr.Close();
+            }
         }
 
         private void SaveAndEdit()
@@ -69,11 +134,9 @@ namespace ProjectLibrary
             radimal.Checked = true;
             txtid.Enabled = true;
             gender = "";
+            Maxid();
         }
 
-        string gender = "";
-        public string[] data = new string[5];
-        public bool edit = false;
         private void btsave_Click(object sender, EventArgs e)
         {
             SaveAndEdit();
@@ -83,7 +146,9 @@ namespace ProjectLibrary
         {
             //Load Model for Switch Language
             MyModel.getSwitchLanguage();
-            //
+            //Focus Texbox txtname
+            txtname.SelectNextControl((Control)sender, true, true, true, true);
+
             if (edit == true)
             {
                 txtid.Enabled = false;
@@ -99,6 +164,10 @@ namespace ProjectLibrary
                     radifiman.Checked = true;
                 }
                 txttel.Text = data[4];
+            }
+            else
+            {
+                Maxid();
             }
         }
 

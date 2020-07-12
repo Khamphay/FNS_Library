@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -20,7 +21,69 @@ namespace ProjectLibrary
             _author = author;
         }
 
+
+
+        SqlConnection con = MyConnected.getConnect();
+        SqlCommand cmd;
+        SqlDataReader dr;
+
         public bool edit = false;
+        public string[] data = new string[4];
+
+        private void Maxid()
+        {
+            try
+            {
+                cmd = new SqlCommand("Select Max(athid) maxid From tbAthor", con);
+                dr = cmd.ExecuteReader();
+                dr.Read();
+                if (dr.HasRows)
+                {
+                    string textid = "", numid = "";
+
+                    string maxid = dr["maxid"].ToString();
+                    char[] ch = maxid.ToCharArray();
+                    for (int i = 0; i < ch.Length; i++)
+                    {
+                        if (!char.IsDigit(ch[i]))
+                        {
+                            textid += ch[i];
+                        }
+                        else
+                        {
+                            numid += ch[i];
+                        }
+                    }
+
+                    int id = int.Parse(maxid.Substring(maxid.Length - numid.Length)) + 1;
+                    if (id >= 100)
+                    {
+                        txtid.Text = textid + id.ToString();
+                    }
+                    else if (id >= 10 && id < 100)
+                    {
+                        txtid.Text = textid + "0" + id.ToString();
+                    }
+                    else
+                    {
+                        txtid.Text = textid + "00" + id.ToString();
+                    }
+
+                }
+                else
+                {
+                    txtid.Text = "";
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                dr.Close();
+            }
+        }
         private void SaveAndEdit()
         {
             if (txtid.Text != "" && txtlname.Text != "" && txtfname.Text != "")
@@ -49,7 +112,6 @@ namespace ProjectLibrary
                 MyMessageBox.ShowMesage("ກະລຸນາກວດສອບຂໍ້ມູນ ແລ້ວລອງໃຫມ່ອີກຄັ້ງ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-        public string[] data = new string[4];
         private void Clear_Data()
         {
             txtid.Clear();
@@ -62,12 +124,15 @@ namespace ProjectLibrary
             {
                 data[i] = "";
             }
+            Maxid();
         }
-
 
         private void frmEditAuthor_Load(object sender, EventArgs e)
         {
             MyModel.getSwitchLanguage();
+            //Focus Texbox txtname
+            txtfname.SelectNextControl((Control)sender, true, true, true, true);
+
             if (edit == true)
             {
                 txtid.Text = data[0];
@@ -124,7 +189,10 @@ namespace ProjectLibrary
 
         private void txttel_KeyDown(object sender, KeyEventArgs e)
         {
-
+            if (e.KeyCode == Keys.Enter)
+            {
+                SaveAndEdit();
+            }
         }
     }
 }

@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCategory));
             this.dgvcategory = new Guna.UI.WinForms.GunaDataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,8 +55,8 @@
             // 
             this.dgvcategory.AllowUserToAddRows = false;
             this.dgvcategory.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.dgvcategory.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.dgvcategory.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvcategory.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -66,28 +66,29 @@
             this.dgvcategory.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvcategory.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvcategory.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Phetsarath OT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvcategory.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Phetsarath OT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvcategory.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvcategory.ColumnHeadersHeight = 35;
+            this.dgvcategory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvcategory.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column4,
             this.Column3});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Phetsarath OT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(233)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvcategory.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Phetsarath OT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(233)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvcategory.DefaultCellStyle = dataGridViewCellStyle7;
             this.dgvcategory.EnableHeadersVisualStyles = false;
             this.dgvcategory.GridColor = System.Drawing.Color.DimGray;
             this.dgvcategory.Location = new System.Drawing.Point(7, 109);
@@ -95,18 +96,19 @@
             this.dgvcategory.MultiSelect = false;
             this.dgvcategory.Name = "dgvcategory";
             this.dgvcategory.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Phetsarath OT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(234)))), ((int)(((byte)(237)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvcategory.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Phetsarath OT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(234)))), ((int)(((byte)(237)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvcategory.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvcategory.RowHeadersVisible = false;
-            this.dgvcategory.RowTemplate.Height = 30;
+            this.dgvcategory.RowHeadersWidth = 62;
+            this.dgvcategory.RowTemplate.Height = 40;
             this.dgvcategory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvcategory.Size = new System.Drawing.Size(915, 384);
+            this.dgvcategory.Size = new System.Drawing.Size(1062, 384);
             this.dgvcategory.TabIndex = 4;
             this.dgvcategory.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.LightGrid;
             this.dgvcategory.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -120,14 +122,14 @@
             this.dgvcategory.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvcategory.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Phetsarath OT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvcategory.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.Black;
-            this.dgvcategory.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgvcategory.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvcategory.ThemeStyle.HeaderStyle.Height = 35;
             this.dgvcategory.ThemeStyle.ReadOnly = true;
             this.dgvcategory.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvcategory.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvcategory.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Phetsarath OT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvcategory.ThemeStyle.RowsStyle.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.dgvcategory.ThemeStyle.RowsStyle.Height = 30;
+            this.dgvcategory.ThemeStyle.RowsStyle.Height = 40;
             this.dgvcategory.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(233)))), ((int)(((byte)(255)))));
             this.dgvcategory.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.dgvcategory.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvcategory_CellContentClick);
@@ -150,6 +152,7 @@
             this.Column2.DividerWidth = 1;
             this.Column2.FillWeight = 2.737564F;
             this.Column2.HeaderText = "ໝວດປຶ້ມ";
+            this.Column2.MinimumWidth = 8;
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
             // 
@@ -182,7 +185,7 @@
             this.gunaSeparator1.LineColor = System.Drawing.Color.Gray;
             this.gunaSeparator1.Location = new System.Drawing.Point(7, 145);
             this.gunaSeparator1.Name = "gunaSeparator1";
-            this.gunaSeparator1.Size = new System.Drawing.Size(915, 1);
+            this.gunaSeparator1.Size = new System.Drawing.Size(1062, 1);
             this.gunaSeparator1.TabIndex = 19;
             // 
             // label1
@@ -229,7 +232,7 @@
             this.btsave.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btsave.ImageSize = new System.Drawing.Size(30, 30);
             this.btsave.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btsave.Location = new System.Drawing.Point(836, 24);
+            this.btsave.Location = new System.Drawing.Point(983, 24);
             this.btsave.Name = "btsave";
             this.btsave.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(206)))));
             this.btsave.OnHoverBorderColor = System.Drawing.Color.White;
@@ -266,7 +269,7 @@
             this.btExit.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btExit.ImageSize = new System.Drawing.Size(25, 25);
             this.btExit.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btExit.Location = new System.Drawing.Point(907, 3);
+            this.btExit.Location = new System.Drawing.Point(1054, 3);
             this.btExit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btExit.Name = "btExit";
             this.btExit.OnHoverBaseColor = System.Drawing.Color.Red;
@@ -290,7 +293,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(930, 34);
+            this.panel2.Size = new System.Drawing.Size(1077, 34);
             this.panel2.TabIndex = 57;
             // 
             // label20
@@ -298,7 +301,7 @@
             this.label20.AutoSize = true;
             this.label20.BackColor = System.Drawing.Color.Transparent;
             this.label20.Font = new System.Drawing.Font("Saysettha OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(63, 4);
+            this.label20.Location = new System.Drawing.Point(73, 4);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(81, 24);
             this.label20.TabIndex = 0;
@@ -312,17 +315,17 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 34);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(930, 70);
+            this.panel1.Size = new System.Drawing.Size(1077, 70);
             this.panel1.TabIndex = 58;
             this.panel1.Click += new System.EventHandler(this.panel1_Click);
             // 
             // frmCategory
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.ClientSize = new System.Drawing.Size(930, 499);
+            this.ClientSize = new System.Drawing.Size(1077, 499);
             this.Controls.Add(this.gunaSeparator1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgvcategory);
@@ -332,7 +335,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmCategory";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmCategory";
+            this.Text = "Category";
             this.Load += new System.EventHandler(this.frmCategory_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvcategory)).EndInit();
             this.panel2.ResumeLayout(false);

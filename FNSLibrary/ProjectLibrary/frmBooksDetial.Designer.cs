@@ -96,6 +96,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvbooks.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvbooks.ColumnHeadersHeight = 40;
+            this.dgvbooks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Phetsarath OT", 10F);
@@ -136,7 +137,7 @@
             this.dgvbooks.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvbooks.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Phetsarath OT", 10F, System.Drawing.FontStyle.Bold);
             this.dgvbooks.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.Black;
-            this.dgvbooks.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgvbooks.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvbooks.ThemeStyle.HeaderStyle.Height = 40;
             this.dgvbooks.ThemeStyle.ReadOnly = true;
             this.dgvbooks.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
@@ -329,7 +330,7 @@
             this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Location = new System.Drawing.Point(15, 172);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(80, 20);
+            this.label7.Size = new System.Drawing.Size(79, 18);
             this.label7.TabIndex = 0;
             this.label7.Text = "ຈຳນວນທີ່ຈອງ:";
             // 
@@ -340,7 +341,7 @@
             this.lbAuthor4.ForeColor = System.Drawing.Color.Black;
             this.lbAuthor4.Location = new System.Drawing.Point(111, 325);
             this.lbAuthor4.Name = "lbAuthor4";
-            this.lbAuthor4.Size = new System.Drawing.Size(52, 20);
+            this.lbAuthor4.Size = new System.Drawing.Size(51, 18);
             this.lbAuthor4.TabIndex = 0;
             this.lbAuthor4.Text = "4.........";
             // 
@@ -351,7 +352,7 @@
             this.lbAuthor3.ForeColor = System.Drawing.Color.Black;
             this.lbAuthor3.Location = new System.Drawing.Point(111, 293);
             this.lbAuthor3.Name = "lbAuthor3";
-            this.lbAuthor3.Size = new System.Drawing.Size(53, 20);
+            this.lbAuthor3.Size = new System.Drawing.Size(51, 18);
             this.lbAuthor3.TabIndex = 0;
             this.lbAuthor3.Text = "3.........";
             // 
@@ -362,7 +363,7 @@
             this.lbAuthor2.ForeColor = System.Drawing.Color.Black;
             this.lbAuthor2.Location = new System.Drawing.Point(111, 262);
             this.lbAuthor2.Name = "lbAuthor2";
-            this.lbAuthor2.Size = new System.Drawing.Size(52, 20);
+            this.lbAuthor2.Size = new System.Drawing.Size(51, 18);
             this.lbAuthor2.TabIndex = 0;
             this.lbAuthor2.Text = "2.........";
             // 
@@ -384,7 +385,7 @@
             this.lbAuthor1.ForeColor = System.Drawing.Color.Black;
             this.lbAuthor1.Location = new System.Drawing.Point(111, 233);
             this.lbAuthor1.Name = "lbAuthor1";
-            this.lbAuthor1.Size = new System.Drawing.Size(52, 20);
+            this.lbAuthor1.Size = new System.Drawing.Size(51, 18);
             this.lbAuthor1.TabIndex = 0;
             this.lbAuthor1.Text = "1.........";
             // 
@@ -428,7 +429,7 @@
             this.lbBookName.ForeColor = System.Drawing.Color.Black;
             this.lbBookName.Location = new System.Drawing.Point(111, 79);
             this.lbBookName.Name = "lbBookName";
-            this.lbBookName.Size = new System.Drawing.Size(45, 20);
+            this.lbBookName.Size = new System.Drawing.Size(44, 18);
             this.lbBookName.TabIndex = 0;
             this.lbBookName.Text = ".........";
             // 
@@ -450,7 +451,7 @@
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(19, 141);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 20);
+            this.label3.Size = new System.Drawing.Size(75, 18);
             this.label3.TabIndex = 0;
             this.label3.Text = "ຈຳນວນທີ່ຢຶມ:";
             // 
@@ -461,7 +462,7 @@
             this.label9.ForeColor = System.Drawing.Color.Black;
             this.label9.Location = new System.Drawing.Point(38, 201);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(60, 20);
+            this.label9.Size = new System.Drawing.Size(58, 18);
             this.label9.TabIndex = 0;
             this.label9.Text = "ແຕ່ງໃນປີ: ";
             // 
@@ -472,7 +473,7 @@
             this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(41, 233);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(54, 20);
+            this.label4.Size = new System.Drawing.Size(54, 18);
             this.label4.TabIndex = 0;
             this.label4.Text = "ແຕ່ງໂດຍ:";
             // 
@@ -483,7 +484,7 @@
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(11, 112);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 20);
+            this.label2.Size = new System.Drawing.Size(83, 18);
             this.label2.TabIndex = 0;
             this.label2.Text = "ຈຳນວນທັງໝົດ:";
             // 
@@ -494,7 +495,7 @@
             this.label10.ForeColor = System.Drawing.Color.Black;
             this.label10.Location = new System.Drawing.Point(57, 79);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(38, 20);
+            this.label10.Size = new System.Drawing.Size(37, 18);
             this.label10.TabIndex = 0;
             this.label10.Text = "ຊື່ປຶ້ມ:";
             // 
@@ -505,7 +506,7 @@
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(33, 49);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 20);
+            this.label1.Size = new System.Drawing.Size(61, 18);
             this.label1.TabIndex = 0;
             this.label1.Text = "ລະຫັດປຶ້ມ:";
             // 
@@ -615,7 +616,7 @@
             // 
             // frmBooksDetial
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;

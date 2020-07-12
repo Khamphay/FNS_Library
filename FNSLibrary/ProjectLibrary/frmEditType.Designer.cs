@@ -48,7 +48,7 @@
             this.label2.Font = new System.Drawing.Font("Phetsarath OT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(73, 124);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 21);
+            this.label2.Size = new System.Drawing.Size(119, 34);
             this.label2.TabIndex = 1;
             this.label2.Text = "ຊື່ປະເພດປຶ້ມ";
             // 
@@ -58,8 +58,8 @@
             this.txtid.Location = new System.Drawing.Point(73, 76);
             this.txtid.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtid.Name = "txtid";
-            this.txtid.Size = new System.Drawing.Size(254, 30);
-            this.txtid.TabIndex = 0;
+            this.txtid.Size = new System.Drawing.Size(254, 41);
+            this.txtid.TabIndex = 1;
             this.txtid.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtid_KeyDown);
             // 
             // btsave
@@ -106,8 +106,8 @@
             this.txtname.Location = new System.Drawing.Point(73, 150);
             this.txtname.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtname.Name = "txtname";
-            this.txtname.Size = new System.Drawing.Size(254, 30);
-            this.txtname.TabIndex = 1;
+            this.txtname.Size = new System.Drawing.Size(254, 41);
+            this.txtname.TabIndex = 0;
             this.txtname.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtname_KeyDown);
             this.txtname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtname_KeyPress);
             // 
@@ -117,7 +117,7 @@
             this.label1.Font = new System.Drawing.Font("Phetsarath OT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(73, 50);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 21);
+            this.label1.Size = new System.Drawing.Size(132, 34);
             this.label1.TabIndex = 1;
             this.label1.Text = "ລະຫັດປະເພດ";
             // 
@@ -177,7 +177,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(387, 34);
+            this.panel2.Size = new System.Drawing.Size(381, 34);
             this.panel2.TabIndex = 58;
             // 
             // label20
@@ -187,15 +187,15 @@
             this.label20.Font = new System.Drawing.Font("Saysettha OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.Location = new System.Drawing.Point(24, 4);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(76, 24);
+            this.label20.Size = new System.Drawing.Size(116, 38);
             this.label20.TabIndex = 0;
             this.label20.Text = "ປ້ອນຂໍ້ມູນ";
             // 
             // frmEditType
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 34F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(387, 282);
+            this.ClientSize = new System.Drawing.Size(381, 265);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.txtClear);

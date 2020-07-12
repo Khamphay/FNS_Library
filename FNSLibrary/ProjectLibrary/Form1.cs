@@ -120,7 +120,7 @@ namespace ProjectLibrary
                             btReportMenu.Enabled = true;
                             btServiceMenu.Enabled = true;
                             ClickLogIn_Out();
-                            lbStatus.Text= "ສະຖານະ: ທ່ານໄດ້ເຂົ້າລະບົບແລ້ວ (ກະລຸນາອອກຈາກລະບົບເມື່ອບໍ່ໃຊ້ງານແລ້ວ)";
+                            lbStatus.Text= "ສະຖານະ: ເຂົ້າລະບົບແລ້ວ (ກະລຸນາອອກຈາກລະບົບເມື່ອບໍ່ໃຊ້ງານແລ້ວ)";
 
                             MyModel.table_staff.Rows.Add(MyModel.staff[0], MyModel.staff[1], MyModel.staff[2], MyModel.staff[3]);
 
