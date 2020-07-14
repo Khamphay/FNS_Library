@@ -607,6 +607,7 @@
             this.txtSurname1.Name = "txtSurname1";
             this.txtSurname1.Size = new System.Drawing.Size(192, 30);
             this.txtSurname1.TabIndex = 20;
+            this.txtSurname1.TextChanged += new System.EventHandler(this.txtSurname1_TextChanged);
             // 
             // txtSurname2
             // 

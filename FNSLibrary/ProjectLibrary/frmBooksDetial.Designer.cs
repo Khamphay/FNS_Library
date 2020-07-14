@@ -64,6 +64,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.lbAuthor5 = new System.Windows.Forms.Label();
+            this.lbAuthor6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvbooks)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -298,6 +300,8 @@
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.lbAuthor6);
+            this.groupBox1.Controls.Add(this.lbAuthor5);
             this.groupBox1.Controls.Add(this.lbAuthor4);
             this.groupBox1.Controls.Add(this.lbAuthor3);
             this.groupBox1.Controls.Add(this.lbAuthor2);
@@ -328,7 +332,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Phetsarath OT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(15, 172);
+            this.label7.Location = new System.Drawing.Point(15, 161);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(79, 18);
             this.label7.TabIndex = 0;
@@ -339,7 +343,7 @@
             this.lbAuthor4.AutoSize = true;
             this.lbAuthor4.Font = new System.Drawing.Font("Phetsarath OT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbAuthor4.ForeColor = System.Drawing.Color.Black;
-            this.lbAuthor4.Location = new System.Drawing.Point(111, 325);
+            this.lbAuthor4.Location = new System.Drawing.Point(97, 309);
             this.lbAuthor4.Name = "lbAuthor4";
             this.lbAuthor4.Size = new System.Drawing.Size(51, 18);
             this.lbAuthor4.TabIndex = 0;
@@ -350,7 +354,7 @@
             this.lbAuthor3.AutoSize = true;
             this.lbAuthor3.Font = new System.Drawing.Font("Phetsarath OT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbAuthor3.ForeColor = System.Drawing.Color.Black;
-            this.lbAuthor3.Location = new System.Drawing.Point(111, 293);
+            this.lbAuthor3.Location = new System.Drawing.Point(97, 281);
             this.lbAuthor3.Name = "lbAuthor3";
             this.lbAuthor3.Size = new System.Drawing.Size(51, 18);
             this.lbAuthor3.TabIndex = 0;
@@ -361,7 +365,7 @@
             this.lbAuthor2.AutoSize = true;
             this.lbAuthor2.Font = new System.Drawing.Font("Phetsarath OT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbAuthor2.ForeColor = System.Drawing.Color.Black;
-            this.lbAuthor2.Location = new System.Drawing.Point(111, 262);
+            this.lbAuthor2.Location = new System.Drawing.Point(97, 253);
             this.lbAuthor2.Name = "lbAuthor2";
             this.lbAuthor2.Size = new System.Drawing.Size(51, 18);
             this.lbAuthor2.TabIndex = 0;
@@ -372,7 +376,7 @@
             this.lbYear.AutoSize = true;
             this.lbYear.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbYear.ForeColor = System.Drawing.Color.Black;
-            this.lbYear.Location = new System.Drawing.Point(111, 201);
+            this.lbYear.Location = new System.Drawing.Point(97, 190);
             this.lbYear.Name = "lbYear";
             this.lbYear.Size = new System.Drawing.Size(44, 17);
             this.lbYear.TabIndex = 0;
@@ -383,7 +387,7 @@
             this.lbAuthor1.AutoSize = true;
             this.lbAuthor1.Font = new System.Drawing.Font("Phetsarath OT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbAuthor1.ForeColor = System.Drawing.Color.Black;
-            this.lbAuthor1.Location = new System.Drawing.Point(111, 233);
+            this.lbAuthor1.Location = new System.Drawing.Point(97, 222);
             this.lbAuthor1.Name = "lbAuthor1";
             this.lbAuthor1.Size = new System.Drawing.Size(51, 18);
             this.lbAuthor1.TabIndex = 0;
@@ -394,7 +398,7 @@
             this.lbReserveQty.AutoSize = true;
             this.lbReserveQty.Font = new System.Drawing.Font("Saysettha OT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbReserveQty.ForeColor = System.Drawing.Color.Black;
-            this.lbReserveQty.Location = new System.Drawing.Point(111, 172);
+            this.lbReserveQty.Location = new System.Drawing.Point(97, 161);
             this.lbReserveQty.Name = "lbReserveQty";
             this.lbReserveQty.Size = new System.Drawing.Size(46, 21);
             this.lbReserveQty.TabIndex = 0;
@@ -405,7 +409,7 @@
             this.lbRentQty.AutoSize = true;
             this.lbRentQty.Font = new System.Drawing.Font("Saysettha OT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbRentQty.ForeColor = System.Drawing.Color.Black;
-            this.lbRentQty.Location = new System.Drawing.Point(111, 141);
+            this.lbRentQty.Location = new System.Drawing.Point(97, 130);
             this.lbRentQty.Name = "lbRentQty";
             this.lbRentQty.Size = new System.Drawing.Size(46, 21);
             this.lbRentQty.TabIndex = 0;
@@ -416,7 +420,7 @@
             this.lbAllQty.AutoSize = true;
             this.lbAllQty.Font = new System.Drawing.Font("Saysettha OT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbAllQty.ForeColor = System.Drawing.Color.Black;
-            this.lbAllQty.Location = new System.Drawing.Point(111, 112);
+            this.lbAllQty.Location = new System.Drawing.Point(97, 101);
             this.lbAllQty.Name = "lbAllQty";
             this.lbAllQty.Size = new System.Drawing.Size(46, 21);
             this.lbAllQty.TabIndex = 0;
@@ -427,7 +431,7 @@
             this.lbBookName.AutoSize = true;
             this.lbBookName.Font = new System.Drawing.Font("Phetsarath OT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbBookName.ForeColor = System.Drawing.Color.Black;
-            this.lbBookName.Location = new System.Drawing.Point(111, 79);
+            this.lbBookName.Location = new System.Drawing.Point(97, 68);
             this.lbBookName.Name = "lbBookName";
             this.lbBookName.Size = new System.Drawing.Size(44, 18);
             this.lbBookName.TabIndex = 0;
@@ -438,7 +442,7 @@
             this.lbID.AutoSize = true;
             this.lbID.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbID.ForeColor = System.Drawing.Color.Black;
-            this.lbID.Location = new System.Drawing.Point(111, 49);
+            this.lbID.Location = new System.Drawing.Point(97, 38);
             this.lbID.Name = "lbID";
             this.lbID.Size = new System.Drawing.Size(44, 17);
             this.lbID.TabIndex = 0;
@@ -449,7 +453,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Phetsarath OT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(19, 141);
+            this.label3.Location = new System.Drawing.Point(19, 130);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(75, 18);
             this.label3.TabIndex = 0;
@@ -460,7 +464,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Phetsarath OT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(38, 201);
+            this.label9.Location = new System.Drawing.Point(38, 190);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(58, 18);
             this.label9.TabIndex = 0;
@@ -471,7 +475,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Phetsarath OT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(41, 233);
+            this.label4.Location = new System.Drawing.Point(41, 222);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(54, 18);
             this.label4.TabIndex = 0;
@@ -482,7 +486,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Phetsarath OT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(11, 112);
+            this.label2.Location = new System.Drawing.Point(11, 101);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(83, 18);
             this.label2.TabIndex = 0;
@@ -493,7 +497,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Phetsarath OT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(57, 79);
+            this.label10.Location = new System.Drawing.Point(57, 68);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(37, 18);
             this.label10.TabIndex = 0;
@@ -504,7 +508,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Phetsarath OT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(33, 49);
+            this.label1.Location = new System.Drawing.Point(33, 38);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(61, 18);
             this.label1.TabIndex = 0;
@@ -614,6 +618,28 @@
             this.pictureBox4.TabIndex = 44;
             this.pictureBox4.TabStop = false;
             // 
+            // lbAuthor5
+            // 
+            this.lbAuthor5.AutoSize = true;
+            this.lbAuthor5.Font = new System.Drawing.Font("Phetsarath OT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAuthor5.ForeColor = System.Drawing.Color.Black;
+            this.lbAuthor5.Location = new System.Drawing.Point(97, 338);
+            this.lbAuthor5.Name = "lbAuthor5";
+            this.lbAuthor5.Size = new System.Drawing.Size(51, 18);
+            this.lbAuthor5.TabIndex = 0;
+            this.lbAuthor5.Text = "5.........";
+            // 
+            // lbAuthor6
+            // 
+            this.lbAuthor6.AutoSize = true;
+            this.lbAuthor6.Font = new System.Drawing.Font("Phetsarath OT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAuthor6.ForeColor = System.Drawing.Color.Black;
+            this.lbAuthor6.Location = new System.Drawing.Point(97, 366);
+            this.lbAuthor6.Name = "lbAuthor6";
+            this.lbAuthor6.Size = new System.Drawing.Size(51, 18);
+            this.lbAuthor6.TabIndex = 0;
+            this.lbAuthor6.Text = "6.........";
+            // 
             // frmBooksDetial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
@@ -677,5 +703,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Label lbAuthor6;
+        private System.Windows.Forms.Label lbAuthor5;
     }
 }

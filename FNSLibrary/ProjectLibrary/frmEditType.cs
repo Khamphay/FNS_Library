@@ -33,7 +33,7 @@ namespace ProjectLibrary
                 cmd = new SqlCommand("Select Max(typeid) maxid From tbType", con);
                 dr = cmd.ExecuteReader();
                 dr.Read();
-                if (dr.HasRows)
+                if (dr.HasRows && dr["maxid"].ToString()!="")
                 {
                     string textid = "", numid = "";
 
@@ -90,6 +90,7 @@ namespace ProjectLibrary
                 {
                     txtid.Clear();
                     txtname.Clear();
+                    Maxid();
                 }
             }
             else

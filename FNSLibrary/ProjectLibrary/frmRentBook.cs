@@ -307,9 +307,10 @@ namespace ProjectLibrary
         {
             try
             {
-                cmd = new SqlCommand("Insert into tbRent_Detail Values(@rid, @mid, @datest, @dated)", con);
+                cmd = new SqlCommand("Insert into tbRent_Detail Values(@rid, @mid, @qty, @datest, @dated)", con);
                 cmd.Parameters.AddWithValue("rid", txtRentId.Text);
                 cmd.Parameters.AddWithValue("mid", txtmemberid.Text);
+                cmd.Parameters.AddWithValue("qty", dgvRentbooks.Rows.Count);
                 cmd.Parameters.AddWithValue("datest", dateST.Value);
                 cmd.Parameters.AddWithValue("dated", dateED.Value);
                
@@ -368,6 +369,7 @@ namespace ProjectLibrary
                     MyMessageBox.ShowMesage("ບັນທືກການຢືມສຳເສັດແລ້ວ", "Save", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     dgvRentbooks.Rows.Clear();
                     ClearData();
+                    MaxID();
                 }
             }catch (Exception ex)
             {

@@ -121,7 +121,7 @@ namespace ProjectLibrary
                     lbMemberName.Text = table.Rows[0][12].ToString() + " " + table.Rows[0][13].ToString();
                     lbDateSt.Text = DateTime.Parse(table.Rows[0][9].ToString()).ToString("dd-MM-yyyy");
                     lbDateExpire.Text = DateTime.Parse(table.Rows[0][10].ToString()).ToString("dd-MM-yyyy");
-                    lbQtyTotal.Text = table.Rows[0][14].ToString()+" ຫົວ";
+                    lbRentQty.Text = table.Rows[0][14].ToString()+" ຫົວ";
                     for (int i = 0; i < table.Rows.Count; i++)
                     {
                        // qty += int.Parse(table.Rows[0][7].ToString());
@@ -135,8 +135,8 @@ namespace ProjectLibrary
                             table.Rows[i][8].ToString()
                             );
                     }
-
-                   // lbRentQty.Text = qty.ToString();
+                    lbShowBooksExpire.Text = "0 ວັນ";
+                    // lbRentQty.Text = qty.ToString();
                     dateExpire = DateTime.Parse(table.Rows[0][10].ToString());
                     if (dateNow.CompareTo(dateExpire) == 1)
                     {

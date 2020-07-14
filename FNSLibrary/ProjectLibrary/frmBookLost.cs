@@ -215,7 +215,9 @@ namespace ProjectLibrary
                     cbAll.Enabled = true;
                     cbAll.Checked = true;
                 }
-
+                lbMemberID.ResetText();
+                lbMemberName.ResetText();
+                lbTel.ResetText();
         }
             catch (Exception ex)
             {

@@ -34,7 +34,7 @@ namespace ProjectLibrary
                 cmd = new SqlCommand("Select Max(catgid) maxid From tbCategory", con);
                 dr = cmd.ExecuteReader();
                 dr.Read();
-                if (dr.HasRows)
+                if (dr.HasRows && dr["maxid"].ToString()!="")
                 {
                     string textid = "", numid = "";
 

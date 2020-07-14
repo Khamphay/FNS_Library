@@ -192,6 +192,7 @@ namespace ProjectLibrary
                     }
                     dgvReserbooks.Rows.Clear();
                     MyMessageBox.ShowMesage("ບັນທືກການຈອງສຳເສັດແລ້ວ", "Save", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MaxID();
                     this.Close();
                 }
                 else

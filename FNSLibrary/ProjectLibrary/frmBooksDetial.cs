@@ -148,6 +148,8 @@ namespace ProjectLibrary
             lbAuthor2.ResetText();
             lbAuthor3.ResetText();
             lbAuthor4.ResetText();
+            lbAuthor5.ResetText();
+            lbAuthor6.ResetText();
 
             btedit.Enabled = false;
             btdel.Enabled = false;
@@ -238,7 +240,7 @@ namespace ProjectLibrary
                         //MessageBox.Show("Has data2");
                     }
 
-                    Label[] author_name = { lbAuthor1, lbAuthor2, lbAuthor3, lbAuthor4};
+                    Label[] author_name = { lbAuthor1, lbAuthor2, lbAuthor3, lbAuthor4, lbAuthor5, lbAuthor6};
 
                     for (int i=0; i < author.Length; i++)
                     {

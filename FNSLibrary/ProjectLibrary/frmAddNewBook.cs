@@ -432,7 +432,9 @@ namespace ProjectLibrary
             txtSurname1.Clear();
             txtSurname2.Clear();
             txtSurname3.Clear();
-            txtSurname4.Clear();
+            txtSurname4.Clear(); 
+            txtSurname5.Clear();
+            txtSurname6.Clear();
             cmbCtg.ResetText();
             cmbType.ResetText();
             cmbTable.ResetText();
@@ -440,35 +442,27 @@ namespace ProjectLibrary
             cmbAuthor2.ResetText();
             cmbAuthor3.ResetText();
             cmbAuthor4.ResetText();
+            cmbAuthor5.ResetText();
+            cmbAuthor6.ResetText();
             bid = "";
             barcode = "";
             catgid = "";
             typeid = "";
             id = 0;
+            ResetComb();
             for (int i = 0; i< auth.Length; i++){
                 auth[i] = null;
             }
         }
-
-        private void frmAddNewBook_Load(object sender, EventArgs e)
+        private void ResetComb()
         {
-            MyModel.getSwitchLanguage();
+            TextBox[] text = { txtSurname1, txtSurname2, txtSurname3, txtSurname4, txtSurname5, txtSurname6 };
+            ComboBox[] combo = { cmbAuthor1, cmbAuthor2, cmbAuthor3, cmbAuthor4, cmbAuthor5, cmbAuthor6 };
 
-          //  MaxID();
-            LoadCtg_Name();
-            LoadType_name();
-            Load_Author();
-            Load_Table();
-            cmbCtg.SelectedItem = cname;
-            cmbType.SelectedItem = typename;
-
-            TextBox[] text = {txtSurname1,txtSurname2, txtSurname3, txtSurname4,txtSurname5,txtSurname6 };
-            ComboBox[] combo = { cmbAuthor1, cmbAuthor2, cmbAuthor3, cmbAuthor4,cmbAuthor5,cmbAuthor6 };
-
-            for(int con = 0; con < combo.Length; con++)
+            for (int con = 0; con < combo.Length; con++)
             {
                 //Set the size to all combobox and textbox before But don't set size to the first combobox and textbox
-                if (con < combo.Length-1)
+                if (con < combo.Length - 1)
                 {
                     combo[con + 1].Size = new Size(0, 0);
                     text[con + 1].Size = new Size(0, 0);
@@ -484,6 +478,23 @@ namespace ProjectLibrary
                 }
                 authname[i] = null;
             }
+        }
+
+
+        private void frmAddNewBook_Load(object sender, EventArgs e)
+        {
+            MyModel.getSwitchLanguage();
+
+          //  MaxID();
+            LoadCtg_Name();
+            LoadType_name();
+            Load_Author();
+            Load_Table();
+            cmbCtg.SelectedItem = cname;
+            cmbType.SelectedItem = typename;
+
+            //Reset ComboBox of Author
+            ResetComb();
         }
 
         private void txtqty_TextChanged(object sender, EventArgs e)
@@ -700,7 +711,7 @@ namespace ProjectLibrary
             {
                 if (cmbAuthor5.Text != cmbAuthor1.Text && cmbAuthor5.Text != cmbAuthor2.Text && cmbAuthor5.Text != cmbAuthor3.Text && cmbAuthor5.Text != cmbAuthor4.Text && cmbAuthor5.Text != cmbAuthor6.Text) 
                 { 
-                    cmd = new SqlCommand("Select athid, lname From tbAthor Where fname=N'" + cmbAuthor4.Text + "'", con);
+                    cmd = new SqlCommand("Select athid, lname From tbAthor Where fname=N'" + cmbAuthor5.Text + "'", con);
                     dr = cmd.ExecuteReader();
                     while (dr.Read())
                     {
@@ -732,7 +743,7 @@ namespace ProjectLibrary
             {
                 if (cmbAuthor6.Text != cmbAuthor1.Text && cmbAuthor6.Text != cmbAuthor2.Text && cmbAuthor6.Text != cmbAuthor3.Text && cmbAuthor6.Text != cmbAuthor5.Text)
                 {
-                    cmd = new SqlCommand("Select athid, lname From tbAthor Where fname=N'" + cmbAuthor4.Text + "'", con);
+                    cmd = new SqlCommand("Select athid, lname From tbAthor Where fname=N'" + cmbAuthor6.Text + "'", con);
                     dr = cmd.ExecuteReader();
                     while (dr.Read())
                     {
@@ -873,6 +884,12 @@ namespace ProjectLibrary
             frmAuthor author = new frmAuthor();
             frmEditAuthor addauthor = new frmEditAuthor(author);
             addauthor.ShowDialog();
+            Load_Author();
+        }
+
+        private void txtSurname1_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
         private void cmbType_SelectedIndexChanged(object sender, EventArgs e)
