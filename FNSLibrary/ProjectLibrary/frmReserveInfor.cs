@@ -25,6 +25,11 @@ namespace ProjectLibrary
             {
                 btRent.Enabled = true;
                 btRent.Size = new Size(0, 0);
+                rdbShowAll.Size = new Size(0, 0);
+            }
+            else
+            {
+                rdbShowAll.Checked = true;
             }
         }
 
@@ -164,13 +169,14 @@ namespace ProjectLibrary
         {
             try
             {
+                rdbShowAll.Checked = false;
                 if (txtMemberID.Text != "")
                 {
                     lbReserveID.ResetText();
                     table = new DataTable();
                     table.Clear();
                     dgvReserInfor.Rows.Clear();
-                    da = new SqlDataAdapter("Select barcode, bname, page, name, typename, tbdid, dateSt, dateEd, rsid From vw_Reserves_Books Where mid Like'"+txtMemberID.Text+"%'", con);
+                    da = new SqlDataAdapter("Select barcode, bname, page, name, typename, tbdid, dateSt, dateEd, rsid From vw_Reserves_Books Where mid = '"+txtMemberID.Text+"'", con);
                     da.Fill(table);
                     for (int i = 0; i < table.Rows.Count; i++)
                     {
@@ -189,7 +195,10 @@ namespace ProjectLibrary
                 }
                 else
                 {
-                   // ShowData();
+                   if(MyModel.staff[0]!=null &&MyModel.staff[1]!=null &&MyModel.staff[2]!=null)
+                    {
+                        rdbShowAll.Checked = true;
+                    }
                 }
                
             }
@@ -248,6 +257,39 @@ namespace ProjectLibrary
                 barcode = dgvReserInfor.Rows[e.RowIndex].Cells[0].Value.ToString();
                 Delete();
             }
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rdbShowAll.Checked == true)
+            {
+                try
+                {
+                        lbReserveID.ResetText();
+                        table = new DataTable();
+                        table.Clear();
+                        dgvReserInfor.Rows.Clear();
+                        da = new SqlDataAdapter("Select barcode, bname, page, name, typename, tbdid, dateSt, dateEd, rsid From vw_Reserves_Books", con);
+                        da.Fill(table);
+                    for (int i = 0; i < table.Rows.Count; i++)
+                    {
+                        dgvReserInfor.Rows.Add(
+                                            table.Rows[i][0].ToString(),
+                                            table.Rows[i][1].ToString(),
+                                            table.Rows[i][2].ToString(),
+                                            table.Rows[i][3].ToString(),
+                                            table.Rows[i][4].ToString(),
+                                            table.Rows[i][5].ToString(),
+                                             DateTime.Parse(table.Rows[i][6].ToString()).ToString("dd-MM-yyyy"),
+                                            DateTime.Parse(table.Rows[i][7].ToString()).ToString("dd-MM-yyyy")
+                                            );
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            } 
         }
 
         private void dgvReserInfor_CellClick_1(object sender, DataGridViewCellEventArgs e)

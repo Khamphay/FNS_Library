@@ -531,7 +531,6 @@ C:\Users\txamm\OneDrive\เอกสาร\GitHub\FNS_Library\FNSLibrary\Project
 C:\Users\txamm\OneDrive\เอกสาร\GitHub\FNS_Library\FNSLibrary\ProjectLibrary\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
 C:\Users\txamm\OneDrive\เอกสาร\GitHub\FNS_Library\FNSLibrary\ProjectLibrary\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
 C:\Users\txamm\OneDrive\เอกสาร\GitHub\FNS_Library\FNSLibrary\ProjectLibrary\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
-C:\Users\txamm\OneDrive\เอกสาร\GitHub\FNS_Library\FNSLibrary\ProjectLibrary\obj\Debug\FNSLibrary.csprojAssemblyReference.cache
 C:\Users\txamm\OneDrive\เอกสาร\GitHub\FNS_Library\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.exe.config
 C:\Users\txamm\OneDrive\เอกสาร\GitHub\FNS_Library\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.Form1.resources
 C:\Users\txamm\OneDrive\เอกสาร\GitHub\FNS_Library\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.frmAddNewBook.resources
@@ -580,3 +579,5 @@ C:\Users\txamm\OneDrive\เอกสาร\GitHub\FNS_Library\FNSLibrary\Project
 C:\Users\txamm\OneDrive\เอกสาร\GitHub\FNS_Library\FNSLibrary\ProjectLibrary\obj\Debug\FNSLibrary.csproj.CopyComplete
 C:\Users\txamm\OneDrive\เอกสาร\GitHub\FNS_Library\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.exe
 C:\Users\txamm\OneDrive\เอกสาร\GitHub\FNS_Library\FNSLibrary\ProjectLibrary\obj\Debug\ProjectLibrary.pdb
+C:\Users\txamm\OneDrive\เอกสาร\GitHub\FNS_Library\FNSLibrary\ProjectLibrary\obj\Debug\FNSLibrary.csprojAssemblyReference.cache
+C:\Users\txamm\OneDrive\เอกสาร\GitHub\FNS_Library\FNSLibrary\ProjectLibrary\bin\Debug\Guna.UI.dll

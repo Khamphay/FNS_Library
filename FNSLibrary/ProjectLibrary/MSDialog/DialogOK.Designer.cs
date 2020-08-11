@@ -43,9 +43,10 @@
             this.btOK.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btOK.Name = "btOK";
             this.btOK.Size = new System.Drawing.Size(52, 31);
-            this.btOK.TabIndex = 6;
-            this.btOK.Text = "&OK";
-            this.btOK.UseVisualStyleBackColor = true;
+            this.btOK.TabIndex = 0;
+            this.btOK.TabStop = false;
+            this.btOK.Text = "OK";
+            this.btOK.UseVisualStyleBackColor = false;
             // 
             // lbMessage
             // 
@@ -86,6 +87,7 @@
             this.Name = "DialogOK";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DialogOK";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.DialogOK_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.picIcon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

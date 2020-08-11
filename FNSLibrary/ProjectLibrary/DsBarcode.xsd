@@ -42,7 +42,7 @@ FROM            tbBooks_Detail INNER JOIN
   <xs:element name="DsBarcode" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DsBarcode" msprop:Generator_UserDSName="DsBarcode">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="dtBarcode" msprop:Generator_TableClassName="dtBarcodeDataTable" msprop:Generator_TableVarName="tabledtBarcode" msprop:Generator_RowChangedName="dtBarcodeRowChanged" msprop:Generator_TablePropName="dtBarcode" msprop:Generator_RowDeletingName="dtBarcodeRowDeleting" msprop:Generator_RowChangingName="dtBarcodeRowChanging" msprop:Generator_RowEvHandlerName="dtBarcodeRowChangeEventHandler" msprop:Generator_RowDeletedName="dtBarcodeRowDeleted" msprop:Generator_RowClassName="dtBarcodeRow" msprop:Generator_UserTableName="dtBarcode" msprop:Generator_RowEvArgName="dtBarcodeRowChangeEvent">
+        <xs:element name="dtBarcode" msprop:Generator_TableClassName="dtBarcodeDataTable" msprop:Generator_TableVarName="tabledtBarcode" msprop:Generator_TablePropName="dtBarcode" msprop:Generator_RowDeletingName="dtBarcodeRowDeleting" msprop:Generator_RowChangingName="dtBarcodeRowChanging" msprop:Generator_RowEvHandlerName="dtBarcodeRowChangeEventHandler" msprop:Generator_RowDeletedName="dtBarcodeRowDeleted" msprop:Generator_UserTableName="dtBarcode" msprop:Generator_RowChangedName="dtBarcodeRowChanged" msprop:Generator_RowEvArgName="dtBarcodeRowChangeEvent" msprop:Generator_RowClassName="dtBarcodeRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Barcode" msprop:Generator_ColumnVarNameInTable="columnBarcode" msprop:Generator_ColumnPropNameInRow="Barcode" msprop:Generator_ColumnPropNameInTable="BarcodeColumn" msprop:Generator_UserColumnName="Barcode" type="xs:string" minOccurs="0" />
@@ -50,14 +50,14 @@ FROM            tbBooks_Detail INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="dtAll_Barcode" msprop:Generator_TableClassName="dtAll_BarcodeDataTable" msprop:Generator_TableVarName="tabledtAll_Barcode" msprop:Generator_RowChangedName="dtAll_BarcodeRowChanged" msprop:Generator_TablePropName="dtAll_Barcode" msprop:Generator_RowDeletingName="dtAll_BarcodeRowDeleting" msprop:Generator_RowChangingName="dtAll_BarcodeRowChanging" msprop:Generator_RowEvHandlerName="dtAll_BarcodeRowChangeEventHandler" msprop:Generator_RowDeletedName="dtAll_BarcodeRowDeleted" msprop:Generator_RowClassName="dtAll_BarcodeRow" msprop:Generator_UserTableName="dtAll_Barcode" msprop:Generator_RowEvArgName="dtAll_BarcodeRowChangeEvent">
+        <xs:element name="dtAll_Barcode" msprop:Generator_TableClassName="dtAll_BarcodeDataTable" msprop:Generator_TableVarName="tabledtAll_Barcode" msprop:Generator_TablePropName="dtAll_Barcode" msprop:Generator_RowDeletingName="dtAll_BarcodeRowDeleting" msprop:Generator_RowChangingName="dtAll_BarcodeRowChanging" msprop:Generator_RowEvHandlerName="dtAll_BarcodeRowChangeEventHandler" msprop:Generator_RowDeletedName="dtAll_BarcodeRowDeleted" msprop:Generator_UserTableName="dtAll_Barcode" msprop:Generator_RowChangedName="dtAll_BarcodeRowChanged" msprop:Generator_RowEvArgName="dtAll_BarcodeRowChangeEvent" msprop:Generator_RowClassName="dtAll_BarcodeRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="AllBarcode" msprop:Generator_ColumnVarNameInTable="columnAllBarcode" msprop:Generator_ColumnPropNameInRow="AllBarcode" msprop:Generator_ColumnPropNameInTable="AllBarcodeColumn" msprop:Generator_UserColumnName="AllBarcode" type="xs:base64Binary" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tbBooks" msprop:Generator_TableClassName="tbBooksDataTable" msprop:Generator_TableVarName="tabletbBooks" msprop:Generator_RowChangedName="tbBooksRowChanged" msprop:Generator_TablePropName="tbBooks" msprop:Generator_RowDeletingName="tbBooksRowDeleting" msprop:Generator_RowChangingName="tbBooksRowChanging" msprop:Generator_RowEvHandlerName="tbBooksRowChangeEventHandler" msprop:Generator_RowDeletedName="tbBooksRowDeleted" msprop:Generator_RowClassName="tbBooksRow" msprop:Generator_UserTableName="tbBooks" msprop:Generator_RowEvArgName="tbBooksRowChangeEvent">
+        <xs:element name="tbBooks" msprop:Generator_TableClassName="tbBooksDataTable" msprop:Generator_TableVarName="tabletbBooks" msprop:Generator_TablePropName="tbBooks" msprop:Generator_RowDeletingName="tbBooksRowDeleting" msprop:Generator_RowChangingName="tbBooksRowChanging" msprop:Generator_RowEvHandlerName="tbBooksRowChangeEventHandler" msprop:Generator_RowDeletedName="tbBooksRowDeleted" msprop:Generator_UserTableName="tbBooks" msprop:Generator_RowChangedName="tbBooksRowChanged" msprop:Generator_RowEvArgName="tbBooksRowChangeEvent" msprop:Generator_RowClassName="tbBooksRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="bid" msprop:Generator_ColumnVarNameInTable="columnbid" msprop:Generator_ColumnPropNameInRow="bid" msprop:Generator_ColumnPropNameInTable="bidColumn" msprop:Generator_UserColumnName="bid">
@@ -107,7 +107,7 @@ FROM            tbBooks_Detail INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tbMember" msprop:Generator_TableClassName="tbMemberDataTable" msprop:Generator_TableVarName="tabletbMember" msprop:Generator_TablePropName="tbMember" msprop:Generator_RowDeletingName="tbMemberRowDeleting" msprop:Generator_RowChangingName="tbMemberRowChanging" msprop:Generator_RowEvHandlerName="tbMemberRowChangeEventHandler" msprop:Generator_RowDeletedName="tbMemberRowDeleted" msprop:Generator_UserTableName="tbMember" msprop:Generator_RowChangedName="tbMemberRowChanged" msprop:Generator_RowEvArgName="tbMemberRowChangeEvent" msprop:Generator_RowClassName="tbMemberRow">
+        <xs:element name="tbMember" msprop:Generator_TableClassName="tbMemberDataTable" msprop:Generator_TableVarName="tabletbMember" msprop:Generator_RowChangedName="tbMemberRowChanged" msprop:Generator_TablePropName="tbMember" msprop:Generator_RowDeletingName="tbMemberRowDeleting" msprop:Generator_RowChangingName="tbMemberRowChanging" msprop:Generator_RowEvHandlerName="tbMemberRowChangeEventHandler" msprop:Generator_RowDeletedName="tbMemberRowDeleted" msprop:Generator_RowClassName="tbMemberRow" msprop:Generator_UserTableName="tbMember" msprop:Generator_RowEvArgName="tbMemberRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="mid" msprop:Generator_ColumnVarNameInTable="columnmid" msprop:Generator_ColumnPropNameInRow="mid" msprop:Generator_ColumnPropNameInTable="midColumn" msprop:Generator_UserColumnName="mid">
@@ -179,7 +179,7 @@ FROM            tbBooks_Detail INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tbMemberCard" msprop:Generator_TableClassName="tbMemberCardDataTable" msprop:Generator_TableVarName="tabletbMemberCard" msprop:Generator_RowChangedName="tbMemberCardRowChanged" msprop:Generator_TablePropName="tbMemberCard" msprop:Generator_RowDeletingName="tbMemberCardRowDeleting" msprop:Generator_RowChangingName="tbMemberCardRowChanging" msprop:Generator_RowEvHandlerName="tbMemberCardRowChangeEventHandler" msprop:Generator_RowDeletedName="tbMemberCardRowDeleted" msprop:Generator_RowClassName="tbMemberCardRow" msprop:Generator_UserTableName="tbMemberCard" msprop:Generator_RowEvArgName="tbMemberCardRowChangeEvent">
+        <xs:element name="tbMemberCard" msprop:Generator_TableClassName="tbMemberCardDataTable" msprop:Generator_TableVarName="tabletbMemberCard" msprop:Generator_TablePropName="tbMemberCard" msprop:Generator_RowDeletingName="tbMemberCardRowDeleting" msprop:Generator_RowChangingName="tbMemberCardRowChanging" msprop:Generator_RowEvHandlerName="tbMemberCardRowChangeEventHandler" msprop:Generator_RowDeletedName="tbMemberCardRowDeleted" msprop:Generator_UserTableName="tbMemberCard" msprop:Generator_RowChangedName="tbMemberCardRowChanged" msprop:Generator_RowEvArgName="tbMemberCardRowChangeEvent" msprop:Generator_RowClassName="tbMemberCardRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="mid" msprop:Generator_ColumnVarNameInTable="columnmid" msprop:Generator_ColumnPropNameInRow="mid" msprop:Generator_ColumnPropNameInTable="midColumn" msprop:Generator_UserColumnName="mid">
@@ -207,7 +207,7 @@ FROM            tbBooks_Detail INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tbBook_Lost" msprop:Generator_TableClassName="tbBook_LostDataTable" msprop:Generator_TableVarName="tabletbBook_Lost" msprop:Generator_RowChangedName="tbBook_LostRowChanged" msprop:Generator_TablePropName="tbBook_Lost" msprop:Generator_RowDeletingName="tbBook_LostRowDeleting" msprop:Generator_RowChangingName="tbBook_LostRowChanging" msprop:Generator_RowEvHandlerName="tbBook_LostRowChangeEventHandler" msprop:Generator_RowDeletedName="tbBook_LostRowDeleted" msprop:Generator_RowClassName="tbBook_LostRow" msprop:Generator_UserTableName="tbBook_Lost" msprop:Generator_RowEvArgName="tbBook_LostRowChangeEvent">
+        <xs:element name="tbBook_Lost" msprop:Generator_TableClassName="tbBook_LostDataTable" msprop:Generator_TableVarName="tabletbBook_Lost" msprop:Generator_TablePropName="tbBook_Lost" msprop:Generator_RowDeletingName="tbBook_LostRowDeleting" msprop:Generator_RowChangingName="tbBook_LostRowChanging" msprop:Generator_RowEvHandlerName="tbBook_LostRowChangeEventHandler" msprop:Generator_RowDeletedName="tbBook_LostRowDeleted" msprop:Generator_UserTableName="tbBook_Lost" msprop:Generator_RowChangedName="tbBook_LostRowChanged" msprop:Generator_RowEvArgName="tbBook_LostRowChangeEvent" msprop:Generator_RowClassName="tbBook_LostRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="losid" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnlosid" msprop:Generator_ColumnPropNameInRow="losid" msprop:Generator_ColumnPropNameInTable="losidColumn" msprop:Generator_UserColumnName="losid" type="xs:int" />
@@ -253,13 +253,69 @@ FROM            tbBooks_Detail INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tbStaff" msprop:Generator_TableClassName="tbStaffDataTable" msprop:Generator_TableVarName="tabletbStaff" msprop:Generator_TablePropName="tbStaff" msprop:Generator_RowDeletingName="tbStaffRowDeleting" msprop:Generator_RowChangingName="tbStaffRowChanging" msprop:Generator_RowEvHandlerName="tbStaffRowChangeEventHandler" msprop:Generator_RowDeletedName="tbStaffRowDeleted" msprop:Generator_UserTableName="tbStaff" msprop:Generator_RowChangedName="tbStaffRowChanged" msprop:Generator_RowEvArgName="tbStaffRowChangeEvent" msprop:Generator_RowClassName="tbStaffRow">
+        <xs:element name="tbStaff" msprop:Generator_TableClassName="tbStaffDataTable" msprop:Generator_TableVarName="tabletbStaff" msprop:Generator_RowChangedName="tbStaffRowChanged" msprop:Generator_TablePropName="tbStaff" msprop:Generator_RowDeletingName="tbStaffRowDeleting" msprop:Generator_RowChangingName="tbStaffRowChanging" msprop:Generator_RowEvHandlerName="tbStaffRowChangeEventHandler" msprop:Generator_RowDeletedName="tbStaffRowDeleted" msprop:Generator_RowClassName="tbStaffRow" msprop:Generator_UserTableName="tbStaff" msprop:Generator_RowEvArgName="tbStaffRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:string" minOccurs="0" />
               <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name" type="xs:string" minOccurs="0" />
               <xs:element name="Surename" msprop:Generator_ColumnVarNameInTable="columnSurename" msprop:Generator_ColumnPropNameInRow="Surename" msprop:Generator_ColumnPropNameInTable="SurenameColumn" msprop:Generator_UserColumnName="Surename" type="xs:string" minOccurs="0" />
               <xs:element name="Tel" msprop:Generator_ColumnVarNameInTable="columnTel" msprop:Generator_ColumnPropNameInRow="Tel" msprop:Generator_ColumnPropNameInTable="TelColumn" msprop:Generator_UserColumnName="Tel" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="vw_Book" msprop:Generator_TableClassName="vw_BookDataTable" msprop:Generator_TableVarName="tablevw_Book" msprop:Generator_TablePropName="vw_Book" msprop:Generator_RowDeletingName="vw_BookRowDeleting" msprop:Generator_RowChangingName="vw_BookRowChanging" msprop:Generator_RowEvHandlerName="vw_BookRowChangeEventHandler" msprop:Generator_RowDeletedName="vw_BookRowDeleted" msprop:Generator_UserTableName="vw_Book" msprop:Generator_RowChangedName="vw_BookRowChanged" msprop:Generator_RowEvArgName="vw_BookRowChangeEvent" msprop:Generator_RowClassName="vw_BookRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="barcode" msprop:Generator_ColumnVarNameInTable="columnbarcode" msprop:Generator_ColumnPropNameInRow="barcode" msprop:Generator_ColumnPropNameInTable="barcodeColumn" msprop:Generator_UserColumnName="barcode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="bname" msprop:Generator_ColumnVarNameInTable="columnbname" msprop:Generator_ColumnPropNameInRow="bname" msprop:Generator_ColumnPropNameInTable="bnameColumn" msprop:Generator_UserColumnName="bname">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="page" msprop:Generator_ColumnVarNameInTable="columnpage" msprop:Generator_ColumnPropNameInRow="page" msprop:Generator_ColumnPropNameInTable="pageColumn" msprop:Generator_UserColumnName="page" type="xs:int" />
+              <xs:element name="ISBN" msprop:Generator_ColumnVarNameInTable="columnISBN" msprop:Generator_ColumnPropNameInRow="ISBN" msprop:Generator_ColumnPropNameInTable="ISBNColumn" msprop:Generator_UserColumnName="ISBN" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="name" msprop:Generator_ColumnVarNameInTable="columnname" msprop:Generator_ColumnPropNameInRow="name" msprop:Generator_ColumnPropNameInTable="nameColumn" msprop:Generator_UserColumnName="name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="typename" msprop:Generator_ColumnVarNameInTable="columntypename" msprop:Generator_ColumnPropNameInRow="typename" msprop:Generator_ColumnPropNameInTable="typenameColumn" msprop:Generator_UserColumnName="typename" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tbdid" msprop:Generator_ColumnVarNameInTable="columntbdid" msprop:Generator_ColumnPropNameInRow="tbdid" msprop:Generator_ColumnPropNameInTable="tbdidColumn" msprop:Generator_UserColumnName="tbdid">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="status" msprop:Generator_ColumnVarNameInTable="columnstatus" msprop:Generator_ColumnPropNameInRow="status" msprop:Generator_ColumnPropNameInTable="statusColumn" msprop:Generator_UserColumnName="status" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -276,6 +332,10 @@ FROM            tbBooks_Detail INNER JOIN
     <xs:unique name="tbBook_Lost_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:tbBook_Lost" />
       <xs:field xpath="mstns:losid" />
+    </xs:unique>
+    <xs:unique name="vw_Book_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vw_Book" />
+      <xs:field xpath="mstns:barcode" />
     </xs:unique>
   </xs:element>
 </xs:schema>

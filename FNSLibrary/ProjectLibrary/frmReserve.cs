@@ -164,6 +164,7 @@ namespace ProjectLibrary
             frmReservation reservation = new frmReservation();
             reservation.val = list; //val virible in form 'frmReservation'
             reservation.ShowDialog();
+            // If Form  frmReservation is close
             if (reservation.Visible == false && reservation.comflim==true)
             {
                 barc[0] = null;
@@ -182,6 +183,7 @@ namespace ProjectLibrary
             btsave.Enabled = false;
             ShowType();
             Show_Data();
+            _home.DateleifExpireReservetion();
         }
 
         private void btsave_Click(object sender, EventArgs e)

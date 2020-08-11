@@ -74,9 +74,9 @@ namespace ProjectLibrary
 
                         cmd = new SqlCommand("Update tbBooks_Detail SET rentQty-=" + int.Parse(dgvReturnbooks.Rows[i].Cells[5].Value.ToString())+ " Where bid='"+bid+"'", con);
                         cmd.ExecuteNonQuery();
-                        Clear_Data();
                     }                    
                 }
+                Clear_Data();
                 
             }catch(Exception ex)
             {

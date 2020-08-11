@@ -439,6 +439,7 @@
             // lbTel
             // 
             this.lbTel.AutoSize = true;
+            this.lbTel.BackColor = System.Drawing.Color.Transparent;
             this.lbTel.Font = new System.Drawing.Font("Saysettha OT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTel.ForeColor = System.Drawing.Color.Black;
             this.lbTel.Location = new System.Drawing.Point(945, 5);

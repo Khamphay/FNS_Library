@@ -56,6 +56,9 @@
     <StartupObject>
     </StartupObject>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icons8_group_objects.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="BarcodeStandard, Version=2.2.5.0, Culture=neutral, processorArchitecture=MSIL">
@@ -72,7 +75,7 @@
       <HintPath>..\packages\EntityFramework.6.3.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Guna.UI">
-      <HintPath>..\..\..\..\Information\For Desktop App\VB Net\Guna.UI-Framework-Lib-master\Guna.UI-Framework-Lib\.net 4.0\Guna.UI.dll</HintPath>
+      <HintPath>D:\Cshart3cs2\CShard_3cs2_Lad_P2_Salary\CShard_3cs2_Lad_P2_Salary\bin\Debug\Guna.UI.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
@@ -141,6 +144,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CrReportBookLost.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="crReportBooks_Book.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crReportBooks_Book.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="CrReportMember.cs">
@@ -434,6 +443,10 @@
     <EmbeddedResource Include="CrReportBookLost.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrReportBookLost.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crReportBooks_Book.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crReportBooks_Book.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="CrReportMember.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -731,6 +744,8 @@
     <None Include="Resources\invisible_100px.png" />
     <None Include="Resources\add_24px.png" />
     <None Include="Resources\add_30px.png" />
+    <None Include="Resources\cancel_30px.png" />
+    <Content Include="icons8_group_objects.ico" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

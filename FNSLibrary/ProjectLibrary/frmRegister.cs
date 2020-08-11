@@ -183,6 +183,7 @@ namespace ProjectLibrary
                     {
                         MyMessageBox.ShowMesage("ບັນທືກຂໍ້ມູນສຳເລັດແລ້ວ", "Save", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         PrintCard();
+                        ClearData();
                     }
                 }
                 else
@@ -227,6 +228,7 @@ namespace ProjectLibrary
                     cmd.Parameters.AddWithValue("dateEd", DbType.Date).Value = dateEd.Value;
                     if (cmd.ExecuteNonQuery() == 1)
                     {
+                        MyMessageBox.ShowMesage("ແກ້ໄຂຂໍ້ມູນສຳເລັດແລ້ວ", "Edit", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.Close();
                     }
                 }
