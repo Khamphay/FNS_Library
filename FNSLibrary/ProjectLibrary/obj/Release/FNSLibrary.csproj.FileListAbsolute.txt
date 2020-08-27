@@ -147,6 +147,7 @@ C:\Users\txamm\OneDrive\เอกสาร\GitHub\FNS_Library\FNSLibrary\Project
 C:\Users\txamm\OneDrive\เอกสาร\GitHub\FNS_Library\FNSLibrary\ProjectLibrary\obj\Release\FNSLibrary.csproj.CopyComplete
 C:\Users\txamm\OneDrive\เอกสาร\GitHub\FNS_Library\FNSLibrary\ProjectLibrary\obj\Release\ProjectLibrary.exe
 C:\Users\txamm\OneDrive\เอกสาร\GitHub\FNS_Library\FNSLibrary\ProjectLibrary\obj\Release\ProjectLibrary.pdb
+<<<<<<< HEAD
 C:\Users\txamm\Desktop\FNS_Library\FNSLibrary\ProjectLibrary\bin\Release\x86\sqlite3.dll
 C:\Users\txamm\Desktop\FNS_Library\FNSLibrary\ProjectLibrary\bin\Release\x64\sqlite3.dll
 C:\Users\txamm\Desktop\FNS_Library\FNSLibrary\ProjectLibrary\bin\Release\SqlServerTypes\x64\msvcr120.dll
@@ -296,3 +297,5 @@ C:\Users\txamm\Desktop\FNS_Library\FNSLibrary\ProjectLibrary\obj\Release\FNSLibr
 C:\Users\txamm\Desktop\FNS_Library\FNSLibrary\ProjectLibrary\obj\Release\ProjectLibrary.exe
 C:\Users\txamm\Desktop\FNS_Library\FNSLibrary\ProjectLibrary\obj\Release\ProjectLibrary.pdb
 C:\Users\txamm\Desktop\FNS_Library\FNSLibrary\ProjectLibrary\obj\Release\FNSLibrary.csprojAssemblyReference.cache
+=======
+>>>>>>> 60f6a39635c633be36d69f21f0332216ec957eba

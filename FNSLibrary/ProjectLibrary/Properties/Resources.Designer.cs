@@ -163,26 +163,6 @@ namespace ProjectLibrary.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap delete_30px {
-            get {
-                object obj = ResourceManager.GetObject("delete_30px", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap delete_bin_20px {
-            get {
-                object obj = ResourceManager.GetObject("delete_bin_20px", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap delete_document_50px {
             get {
                 object obj = ResourceManager.GetObject("delete_document_50px", resourceCulture);
@@ -226,16 +206,6 @@ namespace ProjectLibrary.Properties {
         internal static System.Drawing.Bitmap edit_pie_chart_report_50px2 {
             get {
                 object obj = ResourceManager.GetObject("edit_pie_chart_report_50px2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap edit_property_20px {
-            get {
-                object obj = ResourceManager.GetObject("edit_property_20px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
