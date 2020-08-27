@@ -118,12 +118,13 @@
             this.pnBorderTop.Name = "pnBorderTop";
             this.pnBorderTop.Size = new System.Drawing.Size(1137, 93);
             this.pnBorderTop.TabIndex = 0;
-            this.pnBorderTop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
-            this.pnBorderTop.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
-            this.pnBorderTop.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseUp);
+            this.pnBorderTop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MoveForm);
+            this.pnBorderTop.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MouseMoveForm);
+            this.pnBorderTop.MouseUp += new System.Windows.Forms.MouseEventHandler(this.UpMovedForm);
             // 
             // lbName
             // 
+            this.lbName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbName.AutoSize = true;
             this.lbName.Font = new System.Drawing.Font("Phetsarath OT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbName.ForeColor = System.Drawing.Color.White;
@@ -136,6 +137,7 @@
             // 
             // lbID
             // 
+            this.lbID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbID.AutoSize = true;
             this.lbID.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbID.ForeColor = System.Drawing.Color.White;
@@ -148,6 +150,7 @@
             // 
             // label3
             // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Phetsarath OT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
@@ -160,6 +163,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Phetsarath OT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
@@ -172,6 +176,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(832, 18);
             this.pictureBox1.Name = "pictureBox1";
@@ -179,6 +184,9 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MoveForm);
+            this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MouseMoveForm);
+            this.pictureBox1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.UpMovedForm);
             // 
             // lbTel
             // 
@@ -202,6 +210,9 @@
             this.lbStatus.Size = new System.Drawing.Size(63, 21);
             this.lbStatus.TabIndex = 5;
             this.lbStatus.Text = "ສະຖານະ:";
+            this.lbStatus.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MoveForm);
+            this.lbStatus.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MouseMoveForm);
+            this.lbStatus.MouseUp += new System.Windows.Forms.MouseEventHandler(this.UpMovedForm);
             // 
             // pnAdminMenu
             // 
@@ -409,6 +420,9 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MoveForm);
+            this.pictureBox2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MouseMoveForm);
+            this.pictureBox2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.UpMovedForm);
             // 
             // label4
             // 
@@ -434,6 +448,9 @@
             this.label1.Size = new System.Drawing.Size(293, 27);
             this.label1.TabIndex = 1;
             this.label1.Text = "Libary System Managemeant";
+            this.label1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MoveForm);
+            this.label1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MouseMoveForm);
+            this.label1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.UpMovedForm);
             // 
             // btMini
             // 

@@ -30,9 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DialogOKCancel));
             this.btOK = new System.Windows.Forms.Button();
-            this.lbMessage = new System.Windows.Forms.Label();
             this.picIcon = new System.Windows.Forms.PictureBox();
             this.btCancel = new System.Windows.Forms.Button();
+            this.lbMessage = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.picIcon)).BeginInit();
             this.SuspendLayout();
             // 
@@ -40,29 +40,18 @@
             // 
             this.btOK.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btOK.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btOK.Location = new System.Drawing.Point(277, 104);
+            this.btOK.Location = new System.Drawing.Point(285, 114);
             this.btOK.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btOK.Name = "btOK";
             this.btOK.Size = new System.Drawing.Size(52, 31);
-            this.btOK.TabIndex = 6;
+            this.btOK.TabIndex = 4;
             this.btOK.Text = "&OK";
             this.btOK.UseVisualStyleBackColor = true;
-            // 
-            // lbMessage
-            // 
-            this.lbMessage.AutoSize = true;
-            this.lbMessage.Font = new System.Drawing.Font("Saysettha OT", 9F);
-            this.lbMessage.Location = new System.Drawing.Point(63, 43);
-            this.lbMessage.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbMessage.Name = "lbMessage";
-            this.lbMessage.Size = new System.Drawing.Size(46, 19);
-            this.lbMessage.TabIndex = 4;
-            this.lbMessage.Text = "ສະແດງ";
             // 
             // picIcon
             // 
             this.picIcon.Image = ((System.Drawing.Image)(resources.GetObject("picIcon.Image")));
-            this.picIcon.Location = new System.Drawing.Point(2, 24);
+            this.picIcon.Location = new System.Drawing.Point(4, 3);
             this.picIcon.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.picIcon.Name = "picIcon";
             this.picIcon.Size = new System.Drawing.Size(51, 51);
@@ -74,13 +63,25 @@
             // 
             this.btCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btCancel.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btCancel.Location = new System.Drawing.Point(354, 104);
+            this.btCancel.Location = new System.Drawing.Point(362, 114);
             this.btCancel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btCancel.Name = "btCancel";
             this.btCancel.Size = new System.Drawing.Size(52, 31);
-            this.btCancel.TabIndex = 6;
+            this.btCancel.TabIndex = 3;
             this.btCancel.Text = "&Cancel";
             this.btCancel.UseVisualStyleBackColor = true;
+            // 
+            // lbMessage
+            // 
+            this.lbMessage.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lbMessage.Enabled = false;
+            this.lbMessage.Location = new System.Drawing.Point(60, 4);
+            this.lbMessage.Multiline = true;
+            this.lbMessage.Name = "lbMessage";
+            this.lbMessage.ReadOnly = true;
+            this.lbMessage.Size = new System.Drawing.Size(346, 103);
+            this.lbMessage.TabIndex = 11;
+            this.lbMessage.Text = "Message";
             // 
             // DialogOKCancel
             // 
@@ -88,9 +89,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(419, 149);
+            this.Controls.Add(this.lbMessage);
             this.Controls.Add(this.btCancel);
             this.Controls.Add(this.btOK);
-            this.Controls.Add(this.lbMessage);
             this.Controls.Add(this.picIcon);
             this.Font = new System.Drawing.Font("Saysettha OT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -108,8 +109,8 @@
 
         #endregion
         private System.Windows.Forms.Button btOK;
-        private System.Windows.Forms.Label lbMessage;
         private System.Windows.Forms.PictureBox picIcon;
         private System.Windows.Forms.Button btCancel;
+        private System.Windows.Forms.TextBox lbMessage;
     }
 }

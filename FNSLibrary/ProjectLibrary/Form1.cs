@@ -73,6 +73,7 @@ namespace ProjectLibrary
         int mouseX = 0, mouseY = 0;
         // Thenical 2:
         private Point mousePt;
+        int mouse = 0, mouX = 0, mouY = 0;
 
         private void EnableMenuBar()
         {
@@ -148,7 +149,7 @@ namespace ProjectLibrary
             }
         }
 
-        private void DateleifExpireReservetion()
+        public void DateleifExpireReservetion()
         {
             try
             {
@@ -168,7 +169,7 @@ namespace ProjectLibrary
                     //if (dateNow.CompareTo(DateTime.Parse(dttable.Rows[0][1].ToString())) == 1)
                     //{
                     //Delete from tbReserve_Detail
-                    cmd = new SqlCommand("Delete From tbReserve_Detail Where dateEd<@dateNow", con);
+                    cmd = new SqlCommand("Delete From tbReserve_Detail Where dateEd<@dateNow OR qty<=0", con);
                     cmd.Parameters.AddWithValue("dateNow", DbType.Date).Value = dateNow.ToString("yyyy-MM-dd");
                     cmd.ExecuteNonQuery();
                     //}
@@ -465,17 +466,8 @@ namespace ProjectLibrary
         }
 
         private void panel1_MouseMove(object sender, MouseEventArgs e)
-        { 
-            if (mouseDrag)
-            {
-                // Thenical 1:
-                mouseX = MousePosition.X-500;
-                mouseY = MousePosition.Y-45;
-                this.SetDesktopLocation(mouseX, mouseY);
-                // Thenical 2:
-                //Point p = PointToScreen(e.Location);
-                //Location = new Point(p.X - this.mousePt.Y, p.Y - this.mousePt.Y);
-            }
+        {
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -547,10 +539,30 @@ namespace ProjectLibrary
             ShowSubForm(Replost);
         }
 
+        private void MouseMoveForm(object sender, MouseEventArgs e)
+        {
+            if (mouse == 1)
+            {
+                this.SetDesktopLocation(MousePosition.X - mouX, MousePosition.Y - mouY);
+            }
+        }
+
+        private void UpMovedForm(object sender, MouseEventArgs e)
+        {
+            mouse = 0;
+        }
+
         private void btReportMember_Click(object sender, EventArgs e)
         {
             frmReportMember member = new frmReportMember(this);
             ShowSubForm(member);
+        }
+
+        private void MoveForm(object sender, MouseEventArgs e)
+        {
+            mouse = 1;
+            mouX = e.X;
+            mouY = e.Y;
         }
 
         private void gunaAdvenceButton8_Click_1(object sender, EventArgs e)

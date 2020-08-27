@@ -263,6 +263,62 @@ FROM            tbBooks_Detail INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="vw_Book" msprop:Generator_TableClassName="vw_BookDataTable" msprop:Generator_TableVarName="tablevw_Book" msprop:Generator_RowChangedName="vw_BookRowChanged" msprop:Generator_TablePropName="vw_Book" msprop:Generator_RowDeletingName="vw_BookRowDeleting" msprop:Generator_RowChangingName="vw_BookRowChanging" msprop:Generator_RowEvHandlerName="vw_BookRowChangeEventHandler" msprop:Generator_RowDeletedName="vw_BookRowDeleted" msprop:Generator_RowClassName="vw_BookRow" msprop:Generator_UserTableName="vw_Book" msprop:Generator_RowEvArgName="vw_BookRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="barcode" msprop:Generator_ColumnVarNameInTable="columnbarcode" msprop:Generator_ColumnPropNameInRow="barcode" msprop:Generator_ColumnPropNameInTable="barcodeColumn" msprop:Generator_UserColumnName="barcode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="bname" msprop:Generator_ColumnVarNameInTable="columnbname" msprop:Generator_ColumnPropNameInRow="bname" msprop:Generator_ColumnPropNameInTable="bnameColumn" msprop:Generator_UserColumnName="bname">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="page" msprop:Generator_ColumnVarNameInTable="columnpage" msprop:Generator_ColumnPropNameInRow="page" msprop:Generator_ColumnPropNameInTable="pageColumn" msprop:Generator_UserColumnName="page" type="xs:int" />
+              <xs:element name="ISBN" msprop:Generator_ColumnVarNameInTable="columnISBN" msprop:Generator_ColumnPropNameInRow="ISBN" msprop:Generator_ColumnPropNameInTable="ISBNColumn" msprop:Generator_UserColumnName="ISBN" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="name" msprop:Generator_ColumnVarNameInTable="columnname" msprop:Generator_ColumnPropNameInRow="name" msprop:Generator_ColumnPropNameInTable="nameColumn" msprop:Generator_UserColumnName="name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="typename" msprop:Generator_ColumnVarNameInTable="columntypename" msprop:Generator_ColumnPropNameInRow="typename" msprop:Generator_ColumnPropNameInTable="typenameColumn" msprop:Generator_UserColumnName="typename" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tbdid" msprop:Generator_ColumnVarNameInTable="columntbdid" msprop:Generator_ColumnPropNameInRow="tbdid" msprop:Generator_ColumnPropNameInTable="tbdidColumn" msprop:Generator_UserColumnName="tbdid">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="status" msprop:Generator_ColumnVarNameInTable="columnstatus" msprop:Generator_ColumnPropNameInRow="status" msprop:Generator_ColumnPropNameInTable="statusColumn" msprop:Generator_UserColumnName="status" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
@@ -276,6 +332,10 @@ FROM            tbBooks_Detail INNER JOIN
     <xs:unique name="tbBook_Lost_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:tbBook_Lost" />
       <xs:field xpath="mstns:losid" />
+    </xs:unique>
+    <xs:unique name="vw_Book_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vw_Book" />
+      <xs:field xpath="mstns:barcode" />
     </xs:unique>
   </xs:element>
 </xs:schema>

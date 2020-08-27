@@ -341,21 +341,21 @@ namespace ProjectLibrary
                             _bookdt.Show_Data();
                         }
                     }
-                    
+
                     //Print Barcode
                     int CountLine = txtid_Barcode.Lines.Length - 1;
                     string[] data = new string[CountLine];
                     for (int i = 0; i < CountLine; i++)
                     {
                         data[i] = txtid_Barcode.Lines[i];
-                        PictureBox picBarCode = new PictureBox();
-                        BarcodeWriter barcode = new BarcodeWriter() { Format = BarcodeFormat.CODE_128 };
 
+                        PictureBox picBarCode = new PictureBox();
                         picBarCode.Name = "picBar" + i;
-                        // MessageBox.Show(data[i]);
+                        BarcodeWriter barcode = new BarcodeWriter() { Format = BarcodeFormat.CODE_128 };
                         picBarCode.Image = barcode.Write(data[i]);
                         picBarCode.SizeMode = PictureBoxSizeMode.StretchImage;
                         picBarCode.Height = 80;
+
                         MemoryStream memo = new MemoryStream();
                         picBarCode.Image.Save(memo, ImageFormat.Png);
                         byte[] image = memo.ToArray();

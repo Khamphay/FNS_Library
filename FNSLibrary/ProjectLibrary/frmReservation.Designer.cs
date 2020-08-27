@@ -28,19 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReservation));
             this.dgvReserbooks = new Guna.UI.WinForms.GunaDataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gunaSeparator1 = new Guna.UI.WinForms.GunaSeparator();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label20 = new System.Windows.Forms.Label();
@@ -52,7 +45,6 @@
             this.dateED = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.gunaLinePanel2 = new Guna.UI.WinForms.GunaLinePanel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtmemberid = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -62,13 +54,19 @@
             this.txtfname = new System.Windows.Forms.TextBox();
             this.txtTel = new System.Windows.Forms.TextBox();
             this.txtlname = new System.Windows.Forms.TextBox();
-            this.btedit = new Guna.UI.WinForms.GunaAdvenceButton();
             this.btsave = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReserbooks)).BeginInit();
             this.panel1.SuspendLayout();
             this.gunaLinePanel1.SuspendLayout();
             this.gunaLinePanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -77,21 +75,21 @@
             this.dgvReserbooks.AllowUserToAddRows = false;
             this.dgvReserbooks.AllowUserToDeleteRows = false;
             this.dgvReserbooks.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.dgvReserbooks.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.dgvReserbooks.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvReserbooks.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dgvReserbooks.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.dgvReserbooks.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvReserbooks.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvReserbooks.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Phetsarath OT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvReserbooks.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Phetsarath OT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvReserbooks.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvReserbooks.ColumnHeadersHeight = 40;
             this.dgvReserbooks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvReserbooks.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -101,15 +99,16 @@
             this.Column5,
             this.Column3,
             this.Column7,
-            this.Column6});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Phetsarath OT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(233)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvReserbooks.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Column6,
+            this.Column8});
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Phetsarath OT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(233)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvReserbooks.DefaultCellStyle = dataGridViewCellStyle7;
             this.dgvReserbooks.EnableHeadersVisualStyles = false;
             this.dgvReserbooks.GridColor = System.Drawing.Color.DimGray;
             this.dgvReserbooks.Location = new System.Drawing.Point(271, 112);
@@ -117,14 +116,14 @@
             this.dgvReserbooks.MultiSelect = false;
             this.dgvReserbooks.Name = "dgvReserbooks";
             this.dgvReserbooks.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(234)))), ((int)(((byte)(237)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvReserbooks.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(234)))), ((int)(((byte)(237)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvReserbooks.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvReserbooks.RowHeadersVisible = false;
             this.dgvReserbooks.RowHeadersWidth = 62;
             this.dgvReserbooks.RowTemplate.Height = 40;
@@ -154,56 +153,6 @@
             this.dgvReserbooks.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(233)))), ((int)(((byte)(255)))));
             this.dgvReserbooks.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.dgvReserbooks.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvReserbooks_CellClick);
-            this.dgvReserbooks.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvReserbooks_CellContentClick);
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "ລະຫັດປຶ້ມ";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 97;
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column2.HeaderText = "ຊື່ປຶ້ມ";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "ຈຳນວນໜ້າ";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 109;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "ຈຳນວນ";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Width = 83;
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column3.HeaderText = "ໝວດ";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column7
-            // 
-            this.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column7.HeaderText = "ປະເພດ";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "ລະຫັດຕູ້";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            this.Column6.Width = 86;
             // 
             // gunaSeparator1
             // 
@@ -300,7 +249,6 @@
             this.txtRentId.Name = "txtRentId";
             this.txtRentId.Size = new System.Drawing.Size(140, 25);
             this.txtRentId.TabIndex = 0;
-            this.txtRentId.TextChanged += new System.EventHandler(this.txtRentId_TextChanged);
             // 
             // dateED
             // 
@@ -328,9 +276,7 @@
             // gunaLinePanel2
             // 
             this.gunaLinePanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(237)))), ((int)(((byte)(242)))));
-            this.gunaLinePanel2.Controls.Add(this.pictureBox1);
             this.gunaLinePanel2.Controls.Add(this.groupBox1);
-            this.gunaLinePanel2.Controls.Add(this.btedit);
             this.gunaLinePanel2.Controls.Add(this.btsave);
             this.gunaLinePanel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.gunaLinePanel2.LineColor = System.Drawing.Color.DarkGray;
@@ -339,16 +285,6 @@
             this.gunaLinePanel2.Name = "gunaLinePanel2";
             this.gunaLinePanel2.Size = new System.Drawing.Size(270, 441);
             this.gunaLinePanel2.TabIndex = 52;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(133, 355);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1, 41);
-            this.pictureBox1.TabIndex = 46;
-            this.pictureBox1.TabStop = false;
             // 
             // groupBox1
             // 
@@ -455,47 +391,6 @@
             this.txtlname.TabIndex = 3;
             this.txtlname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.EanableKey);
             // 
-            // btedit
-            // 
-            this.btedit.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btedit.Animated = true;
-            this.btedit.AnimationHoverSpeed = 3F;
-            this.btedit.AnimationSpeed = 2F;
-            this.btedit.BackColor = System.Drawing.Color.Transparent;
-            this.btedit.BaseColor = System.Drawing.Color.Transparent;
-            this.btedit.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(206)))));
-            this.btedit.BorderSize = 1;
-            this.btedit.CheckedBaseColor = System.Drawing.Color.Gray;
-            this.btedit.CheckedBorderColor = System.Drawing.Color.Black;
-            this.btedit.CheckedForeColor = System.Drawing.Color.White;
-            this.btedit.CheckedImage = ((System.Drawing.Image)(resources.GetObject("btedit.CheckedImage")));
-            this.btedit.CheckedLineColor = System.Drawing.Color.DimGray;
-            this.btedit.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btedit.Enabled = false;
-            this.btedit.FocusedColor = System.Drawing.Color.Empty;
-            this.btedit.Font = new System.Drawing.Font("Saysettha OT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btedit.ForeColor = System.Drawing.Color.Black;
-            this.btedit.Image = null;
-            this.btedit.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btedit.ImageSize = new System.Drawing.Size(30, 30);
-            this.btedit.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btedit.Location = new System.Drawing.Point(148, 360);
-            this.btedit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btedit.Name = "btedit";
-            this.btedit.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(206)))));
-            this.btedit.OnHoverBorderColor = System.Drawing.Color.Empty;
-            this.btedit.OnHoverForeColor = System.Drawing.Color.White;
-            this.btedit.OnHoverImage = null;
-            this.btedit.OnHoverLineColor = System.Drawing.Color.White;
-            this.btedit.OnPressedColor = System.Drawing.Color.White;
-            this.btedit.Radius = 2;
-            this.btedit.Size = new System.Drawing.Size(71, 36);
-            this.btedit.TabIndex = 30;
-            this.btedit.Text = "ຍົກເລີກ";
-            this.btedit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btedit.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.AntiAlias;
-            this.btedit.Click += new System.EventHandler(this.btedit_Click);
-            // 
             // btsave
             // 
             this.btsave.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -519,7 +414,7 @@
             this.btsave.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btsave.ImageSize = new System.Drawing.Size(30, 30);
             this.btsave.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btsave.Location = new System.Drawing.Point(47, 360);
+            this.btsave.Location = new System.Drawing.Point(93, 364);
             this.btsave.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btsave.Name = "btsave";
             this.btsave.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(206)))));
@@ -535,6 +430,64 @@
             this.btsave.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btsave.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.AntiAlias;
             this.btsave.Click += new System.EventHandler(this.btsave_Click);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "ລະຫັດປຶ້ມ";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 97;
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column2.HeaderText = "ຊື່ປຶ້ມ";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "ຈຳນວນໜ້າ";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 109;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "ຈຳນວນ";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Width = 83;
+            // 
+            // Column3
+            // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column3.HeaderText = "ໝວດ";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column7
+            // 
+            this.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column7.HeaderText = "ປະເພດ";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.DividerWidth = 1;
+            this.Column6.HeaderText = "ລະຫັດຕູ້";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            this.Column6.Width = 87;
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "ຍົກເລີກ";
+            this.Column8.Image = global::ProjectLibrary.Properties.Resources.cancel_30px;
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            this.Column8.Width = 62;
             // 
             // frmReservation
             // 
@@ -563,7 +516,6 @@
             this.gunaLinePanel1.ResumeLayout(false);
             this.gunaLinePanel1.PerformLayout();
             this.gunaLinePanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -592,9 +544,7 @@
         private System.Windows.Forms.TextBox txtfname;
         private System.Windows.Forms.TextBox txtTel;
         private System.Windows.Forms.TextBox txtlname;
-        private Guna.UI.WinForms.GunaAdvenceButton btedit;
         private Guna.UI.WinForms.GunaAdvenceButton btsave;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
@@ -602,5 +552,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewImageColumn Column8;
     }
 }

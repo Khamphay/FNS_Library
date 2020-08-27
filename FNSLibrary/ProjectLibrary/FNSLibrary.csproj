@@ -56,6 +56,9 @@
     <StartupObject>
     </StartupObject>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icons8_bookmark_book.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="BarcodeStandard, Version=2.2.5.0, Culture=neutral, processorArchitecture=MSIL">
@@ -72,7 +75,7 @@
       <HintPath>..\packages\EntityFramework.6.3.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Guna.UI">
-      <HintPath>..\..\..\..\Information\For Desktop App\VB Net\Guna.UI-Framework-Lib-master\Guna.UI-Framework-Lib\.net 4.0\Guna.UI.dll</HintPath>
+      <HintPath>D:\Cshart3cs2\CShard_3cs2_Lad_P2_Salary\CShard_3cs2_Lad_P2_Salary\bin\Debug\Guna.UI.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
@@ -124,32 +127,44 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddRentBooks.cs" />
-    <Compile Include="CRBarcode.cs">
+    <Compile Include="ClassModel\AddRentBooks.cs" />
+    <Compile Include="Report\frmReportBooks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frmReportBooks.Designer.cs">
+      <DependentUpon>frmReportBooks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\CRBarcode.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CRBarcode.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="CrMemberCard.cs">
+    <Compile Include="Report\CrMemberCard.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CrMemberCard.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="CrReportBookLost.cs">
+    <Compile Include="Report\CrReportBookLost.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CrReportBookLost.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="CrReportMember.cs">
+    <Compile Include="Report\crReportBooks_Book.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crReportBooks_Book.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CrReportMember.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CrReportMember.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="CR_All_Barcode.cs">
+    <Compile Include="Report\CR_All_Barcode.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CR_All_Barcode.rpt</DependentUpon>
@@ -163,160 +178,154 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DsBarcode.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="FormShow\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
+    <Compile Include="FormShow\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAddNewBook.cs">
+    <Compile Include="FormShow\BooksInformation\frmAddNewBook.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAddNewBook.Designer.cs">
+    <Compile Include="FormShow\BooksInformation\frmAddNewBook.Designer.cs">
       <DependentUpon>frmAddNewBook.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAuthor.cs">
+    <Compile Include="FormShow\PersonInformation\frmAuthor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAuthor.Designer.cs">
+    <Compile Include="FormShow\PersonInformation\frmAuthor.Designer.cs">
       <DependentUpon>frmAuthor.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmBookLost.cs">
+    <Compile Include="FormShow\BooksInformation\frmBookLost.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmBookLost.Designer.cs">
+    <Compile Include="FormShow\BooksInformation\frmBookLost.Designer.cs">
       <DependentUpon>frmBookLost.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmBooksDetial.cs">
+    <Compile Include="FormShow\BooksInformation\frmBooksDetial.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmBooksDetial.Designer.cs">
+    <Compile Include="FormShow\BooksInformation\frmBooksDetial.Designer.cs">
       <DependentUpon>frmBooksDetial.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCard.cs">
+    <Compile Include="FormShow\PersonInformation\frmCard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCard.Designer.cs">
+    <Compile Include="FormShow\PersonInformation\frmCard.Designer.cs">
       <DependentUpon>frmCard.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmEditAuthor.cs">
+    <Compile Include="FormEdit\frmEditAuthor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmEditAuthor.Designer.cs">
+    <Compile Include="FormEdit\frmEditAuthor.Designer.cs">
       <DependentUpon>frmEditAuthor.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmEditCateg.cs">
+    <Compile Include="FormEdit\frmEditCateg.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmEditCateg.Designer.cs">
+    <Compile Include="FormEdit\frmEditCateg.Designer.cs">
       <DependentUpon>frmEditCateg.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmEditDepart.cs">
+    <Compile Include="FormEdit\frmEditDepart.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmEditDepart.Designer.cs">
+    <Compile Include="FormEdit\frmEditDepart.Designer.cs">
       <DependentUpon>frmEditDepart.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmEditStaff.cs">
+    <Compile Include="FormEdit\frmEditStaff.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmEditStaff.Designer.cs">
+    <Compile Include="FormEdit\frmEditStaff.Designer.cs">
       <DependentUpon>frmEditStaff.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmEditTable.cs">
+    <Compile Include="FormEdit\frmEditTable.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmEditTable.Designer.cs">
+    <Compile Include="FormEdit\frmEditTable.Designer.cs">
       <DependentUpon>frmEditTable.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmEditType.cs">
+    <Compile Include="FormEdit\frmEditType.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmEditType.Designer.cs">
+    <Compile Include="FormEdit\frmEditType.Designer.cs">
       <DependentUpon>frmEditType.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmEditUser.cs">
+    <Compile Include="FormEdit\frmEditUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmEditUser.Designer.cs">
+    <Compile Include="FormEdit\frmEditUser.Designer.cs">
       <DependentUpon>frmEditUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmLocalAddress.cs">
+    <Compile Include="FormShow\frmLocalAddress.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmLocalAddress.Designer.cs">
+    <Compile Include="FormShow\frmLocalAddress.Designer.cs">
       <DependentUpon>frmLocalAddress.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmLogin.cs">
+    <Compile Include="FormShow\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmLogin.Designer.cs">
+    <Compile Include="FormShow\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMemberRentBooks.cs">
+    <Compile Include="Report\frmPrintBarcode.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMemberRentBooks.Designer.cs">
-      <DependentUpon>frmMemberRentBooks.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmPrintBarcode.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmPrintBarcode.Designer.cs">
+    <Compile Include="Report\frmPrintBarcode.Designer.cs">
       <DependentUpon>frmPrintBarcode.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmRentBook.cs">
+    <Compile Include="FormShow\Service\frmRentBook.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmRentBook.Designer.cs">
+    <Compile Include="FormShow\Service\frmRentBook.Designer.cs">
       <DependentUpon>frmRentBook.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmReportBooksLost.cs">
+    <Compile Include="Report\frmReportBooksLost.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmReportBooksLost.Designer.cs">
+    <Compile Include="Report\frmReportBooksLost.Designer.cs">
       <DependentUpon>frmReportBooksLost.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmReportMember.cs">
+    <Compile Include="Report\frmReportMember.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmReportMember.Designer.cs">
+    <Compile Include="Report\frmReportMember.Designer.cs">
       <DependentUpon>frmReportMember.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmReservation.cs">
+    <Compile Include="FormShow\Service\frmReservation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmReservation.Designer.cs">
+    <Compile Include="FormShow\Service\frmReservation.Designer.cs">
       <DependentUpon>frmReservation.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmReserve.cs">
+    <Compile Include="FormShow\Service\frmReserve.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmReserve.Designer.cs">
+    <Compile Include="FormShow\Service\frmReserve.Designer.cs">
       <DependentUpon>frmReserve.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmReserveInfor.cs">
+    <Compile Include="FormShow\Service\frmReserveInfor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmReserveInfor.Designer.cs">
+    <Compile Include="FormShow\Service\frmReserveInfor.Designer.cs">
       <DependentUpon>frmReserveInfor.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmReturnBooks.cs">
+    <Compile Include="FormShow\Service\frmReturnBooks.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmReturnBooks.Designer.cs">
+    <Compile Include="FormShow\Service\frmReturnBooks.Designer.cs">
       <DependentUpon>frmReturnBooks.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPrintMemberCard.cs">
+    <Compile Include="Report\frmPrintMemberCard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPrintMemberCard.Designer.cs">
+    <Compile Include="Report\frmPrintMemberCard.Designer.cs">
       <DependentUpon>frmPrintMemberCard.cs</DependentUpon>
     </Compile>
-    <Compile Include="HomePage.cs">
+    <Compile Include="FormShow\HomePage.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="HomePage.Designer.cs">
+    <Compile Include="FormShow\HomePage.Designer.cs">
       <DependentUpon>HomePage.cs</DependentUpon>
     </Compile>
     <Compile Include="MSDialog\DialogOKCancel.cs">
@@ -344,214 +353,218 @@
     <Compile Include="MSDialog\DialogYesNoCancel.Designer.cs">
       <DependentUpon>DialogYesNoCancel.cs</DependentUpon>
     </Compile>
-    <Compile Include="MyConnected.cs" />
-    <Compile Include="frmCost.cs">
+    <Compile Include="ClassModel\MyConnected.cs" />
+    <Compile Include="FormShow\BooksInformation\frmCost.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCost.Designer.cs">
+    <Compile Include="FormShow\BooksInformation\frmCost.Designer.cs">
       <DependentUpon>frmCost.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmDetpart.cs">
+    <Compile Include="FormShow\BooksInformation\frmDetpart.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmDetpart.Designer.cs">
+    <Compile Include="FormShow\BooksInformation\frmDetpart.Designer.cs">
       <DependentUpon>frmDetpart.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCategory.cs">
+    <Compile Include="FormShow\BooksInformation\frmCategory.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCategory.Designer.cs">
+    <Compile Include="FormShow\BooksInformation\frmCategory.Designer.cs">
       <DependentUpon>frmCategory.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmFine.cs">
+    <Compile Include="FormShow\BooksInformation\frmFine.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmFine.Designer.cs">
+    <Compile Include="FormShow\BooksInformation\frmFine.Designer.cs">
       <DependentUpon>frmFine.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMember.cs">
+    <Compile Include="FormShow\PersonInformation\frmMember.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMember.Designer.cs">
+    <Compile Include="FormShow\PersonInformation\frmMember.Designer.cs">
       <DependentUpon>frmMember.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmRegister.cs">
+    <Compile Include="FormShow\PersonInformation\frmRegister.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmRegister.Designer.cs">
+    <Compile Include="FormShow\PersonInformation\frmRegister.Designer.cs">
       <DependentUpon>frmRegister.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmSearch.cs">
+    <Compile Include="FormShow\Service\frmSearch.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSearch.Designer.cs">
+    <Compile Include="FormShow\Service\frmSearch.Designer.cs">
       <DependentUpon>frmSearch.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmStaff.cs">
+    <Compile Include="FormShow\PersonInformation\frmStaff.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmStaff.Designer.cs">
+    <Compile Include="FormShow\PersonInformation\frmStaff.Designer.cs">
       <DependentUpon>frmStaff.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmTable.cs">
+    <Compile Include="FormShow\BooksInformation\frmTable.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmTable.Designer.cs">
+    <Compile Include="FormShow\BooksInformation\frmTable.Designer.cs">
       <DependentUpon>frmTable.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmType.cs">
+    <Compile Include="FormShow\BooksInformation\frmType.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmType.Designer.cs">
+    <Compile Include="FormShow\BooksInformation\frmType.Designer.cs">
       <DependentUpon>frmType.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmNewUser.cs">
+    <Compile Include="FormShow\PersonInformation\frmNewUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmNewUser.Designer.cs">
+    <Compile Include="FormShow\PersonInformation\frmNewUser.Designer.cs">
       <DependentUpon>frmNewUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="MyModel.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="ClassModel\MyModel.cs" />
+    <Compile Include="ClassModel\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ReportBarCode.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ReportBarCode.rpt</DependentUpon>
-      <SubType>Component</SubType>
+    <Compile Include="ClassModel\Reservation_DataList.cs" />
+    <Compile Include="ClassModel\SQLIte_ServerName.cs" />
+    <Compile Include="FormShow\Service\frmShowRent.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Reservation_DataList.cs" />
-    <Compile Include="SQLIte_ServerName.cs" />
+    <Compile Include="FormShow\Service\frmShowRent.Designer.cs">
+      <DependentUpon>frmShowRent.cs</DependentUpon>
+    </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
-    <EmbeddedResource Include="CRBarcode.rpt">
+    <EmbeddedResource Include="Report\frmReportBooks.resx">
+      <DependentUpon>frmReportBooks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CRBarcode.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CRBarcode.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="CrMemberCard.rpt">
+    <EmbeddedResource Include="Report\CrMemberCard.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrMemberCard.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="CrReportBookLost.rpt">
+    <EmbeddedResource Include="Report\CrReportBookLost.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrReportBookLost.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="CrReportMember.rpt">
+    <EmbeddedResource Include="Report\crReportBooks_Book.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crReportBooks_Book.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CrReportMember.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrReportMember.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="CR_All_Barcode.rpt">
+    <EmbeddedResource Include="Report\CR_All_Barcode.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CR_All_Barcode.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
+    <EmbeddedResource Include="FormShow\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAddNewBook.resx">
+    <EmbeddedResource Include="FormShow\BooksInformation\frmAddNewBook.resx">
       <DependentUpon>frmAddNewBook.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAuthor.resx">
+    <EmbeddedResource Include="FormShow\PersonInformation\frmAuthor.resx">
       <DependentUpon>frmAuthor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmBookLost.resx">
+    <EmbeddedResource Include="FormShow\BooksInformation\frmBookLost.resx">
       <DependentUpon>frmBookLost.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmBooksDetial.resx">
+    <EmbeddedResource Include="FormShow\BooksInformation\frmBooksDetial.resx">
       <DependentUpon>frmBooksDetial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCard.resx">
+    <EmbeddedResource Include="FormShow\PersonInformation\frmCard.resx">
       <DependentUpon>frmCard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCost.resx">
+    <EmbeddedResource Include="FormShow\BooksInformation\frmCost.resx">
       <DependentUpon>frmCost.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmDetpart.resx">
+    <EmbeddedResource Include="FormShow\BooksInformation\frmDetpart.resx">
       <DependentUpon>frmDetpart.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCategory.resx">
+    <EmbeddedResource Include="FormShow\BooksInformation\frmCategory.resx">
       <DependentUpon>frmCategory.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmEditAuthor.resx">
+    <EmbeddedResource Include="FormEdit\frmEditAuthor.resx">
       <DependentUpon>frmEditAuthor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmEditCateg.resx">
+    <EmbeddedResource Include="FormEdit\frmEditCateg.resx">
       <DependentUpon>frmEditCateg.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmEditDepart.resx">
+    <EmbeddedResource Include="FormEdit\frmEditDepart.resx">
       <DependentUpon>frmEditDepart.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmEditStaff.resx">
+    <EmbeddedResource Include="FormEdit\frmEditStaff.resx">
       <DependentUpon>frmEditStaff.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmEditTable.resx">
+    <EmbeddedResource Include="FormEdit\frmEditTable.resx">
       <DependentUpon>frmEditTable.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmEditType.resx">
+    <EmbeddedResource Include="FormEdit\frmEditType.resx">
       <DependentUpon>frmEditType.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmEditUser.resx">
+    <EmbeddedResource Include="FormEdit\frmEditUser.resx">
       <DependentUpon>frmEditUser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmFine.resx">
+    <EmbeddedResource Include="FormShow\BooksInformation\frmFine.resx">
       <DependentUpon>frmFine.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmLocalAddress.resx">
+    <EmbeddedResource Include="FormShow\frmLocalAddress.resx">
       <DependentUpon>frmLocalAddress.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmLogin.resx">
+    <EmbeddedResource Include="FormShow\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMember.resx">
+    <EmbeddedResource Include="FormShow\PersonInformation\frmMember.resx">
       <DependentUpon>frmMember.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMemberRentBooks.resx">
-      <DependentUpon>frmMemberRentBooks.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmPrintBarcode.resx">
+    <EmbeddedResource Include="Report\frmPrintBarcode.resx">
       <DependentUpon>frmPrintBarcode.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmRegister.resx">
+    <EmbeddedResource Include="FormShow\PersonInformation\frmRegister.resx">
       <DependentUpon>frmRegister.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmRentBook.resx">
+    <EmbeddedResource Include="FormShow\Service\frmRentBook.resx">
       <DependentUpon>frmRentBook.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmReportBooksLost.resx">
+    <EmbeddedResource Include="Report\frmReportBooksLost.resx">
       <DependentUpon>frmReportBooksLost.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmReportMember.resx">
+    <EmbeddedResource Include="Report\frmReportMember.resx">
       <DependentUpon>frmReportMember.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmReservation.resx">
+    <EmbeddedResource Include="FormShow\Service\frmReservation.resx">
       <DependentUpon>frmReservation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmReserve.resx">
+    <EmbeddedResource Include="FormShow\Service\frmReserve.resx">
       <DependentUpon>frmReserve.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmReserveInfor.resx">
+    <EmbeddedResource Include="FormShow\Service\frmReserveInfor.resx">
       <DependentUpon>frmReserveInfor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmReturnBooks.resx">
+    <EmbeddedResource Include="FormShow\Service\frmReturnBooks.resx">
       <DependentUpon>frmReturnBooks.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmSearch.resx">
+    <EmbeddedResource Include="FormShow\Service\frmSearch.resx">
       <DependentUpon>frmSearch.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPrintMemberCard.resx">
+    <EmbeddedResource Include="Report\frmPrintMemberCard.resx">
       <DependentUpon>frmPrintMemberCard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmStaff.resx">
+    <EmbeddedResource Include="FormShow\PersonInformation\frmStaff.resx">
       <DependentUpon>frmStaff.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmTable.resx">
+    <EmbeddedResource Include="FormShow\BooksInformation\frmTable.resx">
       <DependentUpon>frmTable.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmType.resx">
+    <EmbeddedResource Include="FormShow\BooksInformation\frmType.resx">
       <DependentUpon>frmType.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmNewUser.resx">
+    <EmbeddedResource Include="FormShow\PersonInformation\frmNewUser.resx">
       <DependentUpon>frmNewUser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HomePage.resx">
+    <EmbeddedResource Include="FormShow\HomePage.resx">
       <DependentUpon>HomePage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MSDialog\DialogOKCancel.resx">
@@ -576,9 +589,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="ReportBarCode.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>ReportBarCode.cs</LastGenOutput>
+    <EmbeddedResource Include="FormShow\Service\frmShowRent.resx">
+      <DependentUpon>frmShowRent.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="..\.editorconfig">
       <Link>.editorconfig</Link>
@@ -731,6 +743,12 @@
     <None Include="Resources\invisible_100px.png" />
     <None Include="Resources\add_24px.png" />
     <None Include="Resources\add_30px.png" />
+    <None Include="Resources\cancel_30px.png" />
+    <Content Include="icons8_bookmark_book.ico" />
+    <Content Include="icons8_group_objects.ico" />
+    <None Include="Resources\delete_bin_20px.png" />
+    <None Include="Resources\edit_property_20px.png" />
+    <None Include="Resources\delete_30px.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

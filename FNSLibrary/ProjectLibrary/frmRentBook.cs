@@ -33,7 +33,7 @@ namespace ProjectLibrary
         DataTable table;
         AutoCompleteStringCollection auto;
         DateTime dateNow;
-        string maxid = "", status = "ກຳລັງຢືມ", bid = "", myBarcode = "";
+        string maxid = "", status = "ກຳລັງຢືມ", rsid = "", myBarcode = "";
         int newid = 0, indx, day=0;
         public bool Reserve = false;
         DateTime ExpireMember;
@@ -70,10 +70,6 @@ namespace ProjectLibrary
                 if (dr.HasRows)
                 {
                     dr.Read();
-                    //txtBName.Text = dr["bname"].ToString();
-                    //txtPage.Text = dr["page"].ToString();
-                    //txtqty.Text = "1";
-                    //txttable.Text = dr["tbdid"].ToString();
                     if (dr["status"].ToString()!="ກຳລັງຈອງ")
                     {
                         dgvRentbooks.Rows.Add(
@@ -109,7 +105,6 @@ namespace ProjectLibrary
             finally
             {
                 dr.Close();
-                bid = "";
             }
 
         }
@@ -231,12 +226,12 @@ namespace ProjectLibrary
         {
             try
             {
-                cmd = new SqlCommand("Select mbid From tbRent_Detail Inner Join tbRent_Book On tbRent_Detail.rentid = tbRent_Book.rentid Where tbRent_Book.status=N'ກຳລັງຢືມ' AND tbRent_Detail.mbid='" + txtmemberid.Text + "'", con);
+                cmd = new SqlCommand("Select mbid, SUM(tbRent_Book.qty) as qty From tbRent_Detail Inner Join tbRent_Book On tbRent_Detail.rentid = tbRent_Book.rentid Where tbRent_Book.status=N'ກຳລັງຢືມ' AND tbRent_Detail.mbid='" + txtmemberid.Text + "' Group By mbid", con);
                 dr = cmd.ExecuteReader();
                 dr.Read();
-                if (dr.HasRows && dr["mbid"].ToString() == txtmemberid.Text)
+                if (dr.HasRows && dr["mbid"].ToString() == txtmemberid.Text && dr.GetInt32(1)==3)
                 {
-                    MyMessageBox.ShowMesage("ບໍ່ສາມາດຢືມໄດ້ເນື່ອງຈາກມີປຶ້ມທີ່ຢືມໄປແລ້ວ ແຕ່ຍັງບໍ່ໄດ້ສົ່ງຄືນ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MyMessageBox.ShowMesage("ບໍ່ສາມາດຢືມໄດ້ ເນື່ອງຈາກທ່ານໄດ້ຢືມປຶ້ມຄົບຕາມຈຳນວນທີ່ກຳນົດແລ້ວ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     btsave.Enabled = false;
                     txtmemberid.Clear();
                     dr.Close();
@@ -247,12 +242,12 @@ namespace ProjectLibrary
                     table = new DataTable();
                     table.Clear();
                     dgvRentbooks.Rows.Clear();
-                    da = new SqlDataAdapter(@" SELECT tbReserve.barcode, tbBooks_Detail.bname, tbBooks_Detail.page,     tbCategory.name, tbType.typename, tbBooks_Detail.tbdid FROM   tbBooks_Detail INNER JOIN
+                    da = new SqlDataAdapter(@" SELECT tbReserve.barcode, tbBooks_Detail.bname, tbBooks_Detail.page, tbCategory.name, tbType.typename, tbBooks_Detail.tbdid, tbReserve_Detail.rsid FROM   tbBooks_Detail INNER JOIN
                         tbBooks ON tbBooks_Detail.bid = tbBooks.bid INNER JOIN
                         tbType ON tbBooks_Detail.typeid = tbType.typeid INNER JOIN
                         tbReserve ON tbBooks.barcode = tbReserve.barcode INNER JOIN
                         tbReserve_Detail ON tbReserve.rsid = tbReserve_Detail.rsid INNER JOIN
-                        tbCategory ON tbBooks_Detail.catgid = tbCategory.catgid Where tbReserve_Detail.mid='"+txtmemberid.Text+"'", con);
+                        tbCategory ON tbBooks_Detail.catgid = tbCategory.catgid Where tbReserve_Detail.mid='" + txtmemberid.Text+"'", con);
                     da.Fill(table);
                     for (int row = 0; row < table.Rows.Count; row++)
                     {
@@ -267,8 +262,9 @@ namespace ProjectLibrary
                             dateST.Value.ToString("dd-MM-yyyy"),
                             dateED.Value.ToString("dd-MM-yyyy")
                             );
+                        rsid = table.Rows[row][6].ToString();
                     }
-
+                    Reserve = true;
                     btsave.Enabled = true;
                     txtbarcode.Enabled = true;
                 }
@@ -328,47 +324,46 @@ namespace ProjectLibrary
                             cmd = new SqlCommand("Update tbBooks Set status=@status Where barcode=@barcode", con);
                             cmd.Parameters.AddWithValue("barcode", dgvRentbooks.Rows[i].Cells[0].Value.ToString());
                             cmd.Parameters.AddWithValue("status", status);
-                            cmd.ExecuteNonQuery();
-
-                            //int indx = 0;
-                            string bid = "";
-                            //char[] ch = dgvRentbooks.Rows[i].Cells[0].Value.ToString().ToCharArray();
-                            //for (int J = 0; J < ch.Length; J++)
-                            //{
-                            //    if (char.IsLetter(ch[J]))
-                            //    {
-                            //        indx += 1;
-                            //    }
-                            //}
-                            //bid = dgvRentbooks.Rows[i].Cells[0].Value.ToString().Substring(0, indx);
-
-                            da = new SqlDataAdapter("Select bid From tbBooks Where barcode='" + dgvRentbooks.Rows[i].Cells[0].Value.ToString() + "'", con);
-                            table = new DataTable();
-                            table.Clear();
-                            da.Fill(table);
-
-                            if (table.Rows.Count > 0)
+                            if (cmd.ExecuteNonQuery() == 1)
                             {
-                                bid = table.Rows[0][0].ToString();
-                            }
+                                string bid = "";
+                                cmd = new SqlCommand("Select bid From tbBooks Where barcode='" + dgvRentbooks.Rows[i].Cells[0].Value.ToString() + "'", con);
+                                da = new SqlDataAdapter();
+                                MessageBox.Show("Ar (" + i + "): " + dgvRentbooks.Rows[i].Cells[0].Value.ToString());
+                                table = new DataTable();
+                                table.Clear();
+                                da.Fill(table);
 
-                            cmd = new SqlCommand("Update tbBooks_Detail Set rentQty+=@qty Where bid=@id", con);
-                            cmd.Parameters.AddWithValue("qty", dgvRentbooks.Rows[i].Cells[3].Value.ToString());
-                            cmd.Parameters.AddWithValue("id",bid);
-                            cmd.ExecuteNonQuery();
+                                if (table.Rows.Count > 0)
+                                {
+                                    bid = table.Rows[0][0].ToString();
+                                }
 
-                            if (Reserve == true)
-                            {
-                                cmd = new SqlCommand("Update tbBooks_Detail Set reserQty-=1 Where bid=@id", con);
-                                cmd.Parameters.AddWithValue("id", bid);
+                                cmd = new SqlCommand("Update tbBooks_Detail Set rentQty+=" + int.Parse(dgvRentbooks.Rows[i].Cells[3].Value.ToString()) + " Where bid='" + bid + "'", con);
                                 cmd.ExecuteNonQuery();
-                            }
 
+                                if (Reserve == true)
+                                {
+                                    cmd = new SqlCommand(@"if ('"+ dgvRentbooks.Rows[i].Cells[0].Value.ToString() + "') in (Select barcode From tbReserve) Update tbBooks_Detail Set reserQty -= 1 Where bid = '" + bid + "'", con);
+                                    if (cmd.ExecuteNonQuery() == 1)
+                                    {
+                                        cmd = new SqlCommand("Delete From  tbReserve Where barcode='" + dgvRentbooks.Rows[i].Cells[0].Value.ToString() + "'", con);
+                                        cmd.ExecuteNonQuery();
+                                        if (i == dgvRentbooks.RowCount)
+                                        {
+                                            cmd = new SqlCommand("Delete From  tbReserve_Detail Where rsid='" + rsid + "'", con);
+                                            cmd.ExecuteNonQuery();
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                     MyMessageBox.ShowMesage("ບັນທືກການຢືມສຳເສັດແລ້ວ", "Save", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     dgvRentbooks.Rows.Clear();
                     ClearData();
+                    Reserve = false;
+                    rsid = "";
                     MaxID();
                 }
             }catch (Exception ex)
@@ -400,7 +395,7 @@ namespace ProjectLibrary
             myBarcode += c;
             if (c == (char)Keys.Return)
             {
-                MessageBox.Show(myBarcode);
+                //MessageBox.Show(myBarcode);
                 AddDataToDgv(myBarcode);
                 myBarcode = "";
 
@@ -427,8 +422,16 @@ namespace ProjectLibrary
 
         private void txtbid_TextChanged(object sender, EventArgs e)
         {
-           // bid = txtbid.Text;
-            AddDataToDgv(txtbarcode.Text);
+            // bid = txtbid.Text;
+            MessageBox.Show(dgvRentbooks.RowCount.ToString());
+            if (dgvRentbooks.RowCount < 3)
+            {
+                AddDataToDgv(txtbarcode.Text);
+            }
+            else
+            {
+                MyMessageBox.ShowMesage("ຢືມໄດ້ຫຼາຍສຸດ 3 ຫົວ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
             //txtbid.Focus();
         }
 
@@ -457,7 +460,6 @@ namespace ProjectLibrary
         {
             e.Handled = true;
         }
-
 
         private void Swicth_Language(object sender, EventArgs e)
         {
@@ -511,6 +513,30 @@ namespace ProjectLibrary
                 {
                     if (dgvRentbooks.Rows.Count > 0)
                     {
+                        if (Reserve == true)
+                        {
+                            cmd = new SqlCommand("Delete From  tbReserve Where barcode='" + dgvRentbooks.Rows[e.RowIndex].Cells[0].Value.ToString() + "'", con);
+                            cmd.ExecuteNonQuery();
+                            cmd = new SqlCommand("Update tbBooks Set status=N'ຫວ່າງ' Where barcode='" + dgvRentbooks.Rows[e.RowIndex].Cells[0].Value.ToString() + "'", con);
+                            if (cmd.ExecuteNonQuery() == 1)
+                            {
+                                cmd = new SqlCommand("Select bid From tbBooks Where barcode='" + dgvRentbooks.Rows[e.RowIndex].Cells[0].Value.ToString() + "'", con);
+                                da = new SqlDataAdapter(cmd);
+                                table = new DataTable();
+                                table.Clear();
+                                da.Fill(table);
+
+                                if (table.Rows.Count > 0)
+                                {
+                                    cmd = new SqlCommand("Update tbBooks_Detail Set reserQty-=1 Where bid='" + table.Rows[0][0].ToString() + "'", con);
+                                    if (cmd.ExecuteNonQuery() == 1)
+                                    {
+                                        cmd = new SqlCommand("Update tbReserve_Detail Set qty-=1 Where rsid='" + rsid + "'", con);
+                                        cmd.ExecuteNonQuery();
+                                    }
+                                }
+                            }
+                        }
                         dgvRentbooks.Rows.RemoveAt(indx);
                     }
                         ClearData();
@@ -525,12 +551,6 @@ namespace ProjectLibrary
             //    SelectNextControl((Control)sender, true, true, true, true);
             //}
         }
-
-        //private void dateST_ValueChanged(object sender, EventArgs e)
-        //{
-        //    CancalarData();
-        //}
-
         private void dgvReserbooks_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             indx = e.RowIndex;

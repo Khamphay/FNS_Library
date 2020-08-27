@@ -15,6 +15,7 @@ namespace ProjectLibrary.MSDialog
         public DialogOK()
         {
             InitializeComponent();
+            btOK.Focus();
         }
 
         public Image MessageIcon
@@ -28,5 +29,14 @@ namespace ProjectLibrary.MSDialog
             get { return lbMessage.Text; }
             set { lbMessage.Text = value; }
         }
+
+        private void DialogOK_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btOK.Focus();
+            }
+        }
+
     }
 }

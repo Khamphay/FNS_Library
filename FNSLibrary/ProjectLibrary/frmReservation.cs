@@ -25,7 +25,7 @@ namespace ProjectLibrary
         SqlDataReader dr;
         DataTable table;
         string maxid = "", expid="";
-        int newid = 0, conutDay=0, indx=-1;
+        int newid = 0, qty=0, indx=-1;
         public bool comflim = false;
         DateTime dateNow;
         AutoCompleteStringCollection auto = new AutoCompleteStringCollection();
@@ -142,11 +142,12 @@ namespace ProjectLibrary
             {
                 if (txtmemberid.Text != "")
                 {
-                    cmd = new SqlCommand("Insert Into tbReserve_Detail Values(@id, @mid, @datest, @dated)", con);
+                    cmd = new SqlCommand("Insert Into tbReserve_Detail Values(@id, @mid, @datest, @dated, @qty)", con);
                     cmd.Parameters.AddWithValue("id", txtRentId.Text);
                     cmd.Parameters.AddWithValue("mid", txtmemberid.Text);
                     cmd.Parameters.AddWithValue("datest", SqlDbType.DateTime).Value = dateST.Value;
                     cmd.Parameters.AddWithValue("dated", SqlDbType.DateTime).Value = dateED.Value;
+                    cmd.Parameters.AddWithValue("qty", SqlDbType.Int).Value = dgvReserbooks.RowCount;
                     cmd.ExecuteNonQuery();
 
                     for (int i = 0; i < dgvReserbooks.RowCount; i++)
@@ -227,36 +228,19 @@ namespace ProjectLibrary
 
         private void dgvReserbooks_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            indx = e.RowIndex;
-            if (indx >= 0)
+            if (e.RowIndex >= 0 && e.ColumnIndex==7)
             {
-                btedit.Enabled = true;
+                dgvReserbooks.Rows.RemoveAt(e.RowIndex);
+                if (dgvReserbooks.RowCount == qty && qty>0)
+                {
+                    btsave.Enabled = true;
+                }
             }
         }
 
         private void btsave_Click(object sender, EventArgs e)
-        {
-            //try
-            //{
-            //    cmd = new SqlCommand("Select mid From tbReserve_Detail Where mid='" + txtmemberid.Text + "'", con);
-            //    dr = cmd.ExecuteReader();
-            //    if(!dr.HasRows)
-            //    {
-            //        dr.Close();
-
+        { 
             Save();
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show("You have reservaed ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //        dr.Close();
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show("Error checked reserved: "+ex.Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    dr.Close();
-            //}
         }
 
         private void EanableKey(object sender, KeyPressEventArgs e)
@@ -328,17 +312,31 @@ namespace ProjectLibrary
 
             try
             {
-                cmd = new SqlCommand("Select mid From tbReserve_Detail Where mid='" + txtmemberid.Text + "'", con);
+                cmd = new SqlCommand("Select mid, Sum(qty) as qty From tbReserve_Detail Where mid='" + txtmemberid.Text + "' Group By mid", con);
                 dr = cmd.ExecuteReader();
+                dr.Read();
                 if (dr.HasRows)
                 {
-                    MyMessageBox.ShowMesage("ບໍ່ສາມາດຈອງໄດ້ເນື່ອງຈາກທ່ານໄດ້ຈອງກ່ອນໜ້ານີ້ແລ້ວ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-                /* else
-                 {
+                    if (dr.GetInt32(1)<3)
+                    {
+                            qty = 3 - dr.GetInt32(1);
 
-                     dr.Close();
-                 }*/
+                        if ((dr.GetInt32(1) + dgvReserbooks.RowCount) > 3)
+                        {
+                            MyMessageBox.ShowMesage($"ທ່ານສາມາດຈອງໄດ້ປຶ້ມ {3 - dr.GetInt32(1)} ຫົວ ເນື່ອງຈາກໄດ້ຈອງກ່ອນໜ້ານີ້ {dr.GetInt32(1)} ຫົວແລ້ວ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            btsave.Enabled = false;
+                        }
+                    }
+                    else
+                    {
+                        MyMessageBox.ShowMesage("ບໍ່ສາມາດຈອງໄດ້ເນື່ອງຈາກທ່ານໄດ້ຈອງກ່ອນໜ້ານີ້ແລ້ວ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        btsave.Enabled = false;
+                    }
+                }
+                else
+                {
+                    btsave.Enabled = true;
+                }
             }
             catch (Exception ex)
             {
@@ -362,28 +360,6 @@ namespace ProjectLibrary
                 Save();
             }
         }
-
-        private void btedit_Click(object sender, EventArgs e)
-        {
-            if (indx >= 0)
-            {
-                dgvReserbooks.Rows.RemoveAt(indx);
-                btedit.Enabled = false;
-                indx = -1;
-            }
-
-        }
-
-        private void txtRentId_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dgvReserbooks_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
-        }
-
-        
+      
     }
 }

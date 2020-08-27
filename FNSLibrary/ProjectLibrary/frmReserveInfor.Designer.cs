@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReserveInfor));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gunaSeparator1 = new Guna.UI.WinForms.GunaSeparator();
             this.txtMemberID = new System.Windows.Forms.TextBox();
             this.lbReserveID = new System.Windows.Forms.Label();
@@ -51,6 +51,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label20 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.rdbShowAll = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReserInfor)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -72,7 +73,7 @@
             this.txtMemberID.Font = new System.Drawing.Font("Saysettha OT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMemberID.Location = new System.Drawing.Point(390, 51);
             this.txtMemberID.Name = "txtMemberID";
-            this.txtMemberID.Size = new System.Drawing.Size(217, 34);
+            this.txtMemberID.Size = new System.Drawing.Size(217, 40);
             this.txtMemberID.TabIndex = 32;
             this.txtMemberID.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
@@ -84,7 +85,7 @@
             this.lbReserveID.Location = new System.Drawing.Point(122, 56);
             this.lbReserveID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbReserveID.Name = "lbReserveID";
-            this.lbReserveID.Size = new System.Drawing.Size(50, 24);
+            this.lbReserveID.Size = new System.Drawing.Size(64, 31);
             this.lbReserveID.TabIndex = 2;
             this.lbReserveID.Text = "..........";
             // 
@@ -96,7 +97,7 @@
             this.label1.Location = new System.Drawing.Point(13, 56);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(108, 24);
+            this.label1.Size = new System.Drawing.Size(132, 31);
             this.label1.TabIndex = 2;
             this.label1.Text = "ລະຫັດການຈອງ:";
             // 
@@ -145,8 +146,8 @@
             this.dgvReserInfor.AllowUserToAddRows = false;
             this.dgvReserInfor.AllowUserToDeleteRows = false;
             this.dgvReserInfor.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.dgvReserInfor.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.dgvReserInfor.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvReserInfor.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -155,14 +156,14 @@
             this.dgvReserInfor.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvReserInfor.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvReserInfor.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Phetsarath OT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvReserInfor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Phetsarath OT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvReserInfor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dgvReserInfor.ColumnHeadersHeight = 40;
             this.dgvReserInfor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvReserInfor.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -175,14 +176,14 @@
             this.Column7,
             this.Column8,
             this.Column9});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Phetsarath OT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(233)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvReserInfor.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Phetsarath OT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(233)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvReserInfor.DefaultCellStyle = dataGridViewCellStyle11;
             this.dgvReserInfor.EnableHeadersVisualStyles = false;
             this.dgvReserInfor.GridColor = System.Drawing.Color.DimGray;
             this.dgvReserInfor.Location = new System.Drawing.Point(9, 98);
@@ -190,14 +191,14 @@
             this.dgvReserInfor.MultiSelect = false;
             this.dgvReserInfor.Name = "dgvReserInfor";
             this.dgvReserInfor.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Phetsarath OT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(234)))), ((int)(((byte)(237)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvReserInfor.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Phetsarath OT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(234)))), ((int)(((byte)(237)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvReserInfor.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dgvReserInfor.RowHeadersVisible = false;
             this.dgvReserInfor.RowHeadersWidth = 62;
             this.dgvReserInfor.RowTemplate.Height = 40;
@@ -232,28 +233,32 @@
             // Column1
             // 
             this.Column1.HeaderText = "ລະຫັດປຶ້ມ/Barcode";
+            this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
-            this.Column1.Width = 154;
+            this.Column1.Width = 191;
             // 
             // Column2
             // 
             this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column2.HeaderText = "ຊື່ປຶ້ມ";
+            this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "ຈຳນວນໜ້າ";
+            this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
-            this.Column3.Width = 109;
+            this.Column3.Width = 133;
             // 
             // Column4
             // 
             this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column4.HeaderText = "ໝວດ";
+            this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
             // 
@@ -261,30 +266,34 @@
             // 
             this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column5.HeaderText = "ປະເພດ";
+            this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
             // 
             // Column6
             // 
             this.Column6.HeaderText = "ລະຫັດຕູ້";
+            this.Column6.MinimumWidth = 6;
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
-            this.Column6.Width = 86;
+            this.Column6.Width = 107;
             // 
             // Column7
             // 
             this.Column7.HeaderText = "ວັນທີຈອງ";
+            this.Column7.MinimumWidth = 6;
             this.Column7.Name = "Column7";
             this.Column7.ReadOnly = true;
-            this.Column7.Width = 94;
+            this.Column7.Width = 116;
             // 
             // Column8
             // 
             this.Column8.DividerWidth = 1;
             this.Column8.HeaderText = "ວັນທີໝົດອາຍຸ";
+            this.Column8.MinimumWidth = 6;
             this.Column8.Name = "Column8";
             this.Column8.ReadOnly = true;
-            this.Column8.Width = 124;
+            this.Column8.Width = 154;
             // 
             // Column9
             // 
@@ -295,7 +304,7 @@
             this.Column9.MinimumWidth = 40;
             this.Column9.Name = "Column9";
             this.Column9.ReadOnly = true;
-            this.Column9.Width = 40;
+            this.Column9.Width = 42;
             // 
             // panel1
             // 
@@ -315,7 +324,7 @@
             this.label20.Font = new System.Drawing.Font("Saysettha OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.Location = new System.Drawing.Point(76, 4);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(127, 24);
+            this.label20.Size = new System.Drawing.Size(164, 32);
             this.label20.TabIndex = 0;
             this.label20.Text = "ຂໍ້ມູນການຈອງປຶ້ມ";
             // 
@@ -327,15 +336,27 @@
             this.label3.Location = new System.Drawing.Point(283, 56);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(109, 24);
+            this.label3.Size = new System.Drawing.Size(133, 31);
             this.label3.TabIndex = 2;
             this.label3.Text = "ລະຫັດສະມາຊິກ:";
             // 
+            // rdbShowAll
+            // 
+            this.rdbShowAll.Location = new System.Drawing.Point(776, 53);
+            this.rdbShowAll.Name = "rdbShowAll";
+            this.rdbShowAll.Size = new System.Drawing.Size(150, 31);
+            this.rdbShowAll.TabIndex = 49;
+            this.rdbShowAll.TabStop = true;
+            this.rdbShowAll.Text = "ສະແດງທັງໝົດ";
+            this.rdbShowAll.UseVisualStyleBackColor = true;
+            this.rdbShowAll.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
             // frmReserveInfor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 27F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1128, 553);
+            this.Controls.Add(this.rdbShowAll);
             this.Controls.Add(this.txtMemberID);
             this.Controls.Add(this.gunaSeparator1);
             this.Controls.Add(this.dgvReserInfor);
@@ -378,5 +399,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewImageColumn Column9;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.RadioButton rdbShowAll;
     }
 }
